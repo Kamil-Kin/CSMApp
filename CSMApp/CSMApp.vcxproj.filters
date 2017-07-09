@@ -13,5 +13,75 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Pakiet">
+      <UniqueIdentifier>{29a75cf0-d813-44fe-84cd-1b4260f6d9cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Kanał">
+      <UniqueIdentifier>{0a66b8d5-6243-4f01-9437-ea4a0288d0ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Symulacja">
+      <UniqueIdentifier>{f67f2b36-b336-4373-9661-49cd6a7ffc17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sieć">
+      <UniqueIdentifier>{593c3420-dc01-45d5-aeaf-a71f62fa99ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Nadajnik">
+      <UniqueIdentifier>{cc4fd289-324a-4af5-aa0d-66bf64f3559b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Generator">
+      <UniqueIdentifier>{7b49b9d8-020f-4859-898c-c48a1415856e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="nadajnik.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zdarzenie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pakiet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kanal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="siec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="symulacja.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generator_rownomierny.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generator_wykladniczy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="generator_rownomierny.cpp">
+      <Filter>Source Files\Generator</Filter>
+    </ClCompile>
+    <ClCompile Include="generator_wykladniczy.cpp">
+      <Filter>Source Files\Generator</Filter>
+    </ClCompile>
+    <ClCompile Include="symulacja.cpp">
+      <Filter>Source Files\Symulacja</Filter>
+    </ClCompile>
+    <ClCompile Include="siec.cpp">
+      <Filter>Source Files\Sieć</Filter>
+    </ClCompile>
+    <ClCompile Include="nadajnik.cpp">
+      <Filter>Source Files\Nadajnik</Filter>
+    </ClCompile>
+    <ClCompile Include="kanal.cpp">
+      <Filter>Source Files\Kanał</Filter>
+    </ClCompile>
+    <ClCompile Include="pakiet.cpp">
+      <Filter>Source Files\Pakiet</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

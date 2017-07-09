@@ -110,6 +110,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="generator_rownomierny.h" />
+    <ClInclude Include="generator_wykladniczy.h" />
+    <ClInclude Include="kanal.h" />
+    <ClInclude Include="nadajnik.h" />
+    <ClInclude Include="pakiet.h" />
+    <ClInclude Include="siec.h" />
+    <ClInclude Include="symulacja.h" />
+    <ClInclude Include="zdarzenie.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="generator_rownomierny.cpp" />
+    <ClCompile Include="generator_wykladniczy.cpp" />
+    <ClCompile Include="kanal.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="nadajnik.cpp" />
+    <ClCompile Include="pakiet.cpp" />
+    <ClCompile Include="siec.cpp" />
+    <ClCompile Include="symulacja.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

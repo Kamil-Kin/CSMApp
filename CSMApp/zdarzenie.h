@@ -1,0 +1,5 @@
+#ifndef CSMA_PP_ZDARZENIE_H
+#define CSMA_PP_ZDARZENIE_H
+
+
+#endif // !CSMA_PP_ZDARZENIE_H

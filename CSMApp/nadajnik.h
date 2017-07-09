@@ -1,0 +1,5 @@
+#ifndef CSMA_PP_NADAJNIK_H
+#define CSMA_PP_NADAJNIK_H
+
+
+#endif // !CSMA_PP_NADAJNIK_H

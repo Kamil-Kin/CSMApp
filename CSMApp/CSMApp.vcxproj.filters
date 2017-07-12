@@ -25,11 +25,14 @@
     <Filter Include="Source Files\Sieć">
       <UniqueIdentifier>{593c3420-dc01-45d5-aeaf-a71f62fa99ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Generator">
+      <UniqueIdentifier>{7b49b9d8-020f-4859-898c-c48a1415856e}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\Nadajnik">
       <UniqueIdentifier>{cc4fd289-324a-4af5-aa0d-66bf64f3559b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Generator">
-      <UniqueIdentifier>{7b49b9d8-020f-4859-898c-c48a1415856e}</UniqueIdentifier>
+    <Filter Include="Source Files\Ziarno">
+      <UniqueIdentifier>{70df83c7-b5c3-4daa-b99b-125f26e2fdc2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +60,9 @@
     <ClInclude Include="generator_wykladniczy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ziarno.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="generator_rownomierny.cpp">
@@ -82,6 +88,9 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ziarno.cpp">
+      <Filter>Source Files\Ziarno</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

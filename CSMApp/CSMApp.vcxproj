@@ -118,6 +118,7 @@
     <ClInclude Include="siec.h" />
     <ClInclude Include="symulacja.h" />
     <ClInclude Include="zdarzenie.h" />
+    <ClInclude Include="ziarno.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="generator_rownomierny.cpp" />
@@ -128,6 +129,7 @@
     <ClCompile Include="pakiet.cpp" />
     <ClCompile Include="siec.cpp" />
     <ClCompile Include="symulacja.cpp" />
+    <ClCompile Include="ziarno.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

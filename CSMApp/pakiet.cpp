@@ -1,14 +1,9 @@
 #include "pakiet.h"
 
-int Pakiet::getId() 
-{
-  return id_tx_;
-}
-
-void Pakiet::aktywacja(double czas) 
+void Pakiet::aktywacja(double czas)
 {
   moje_zd_->ustaw_czas_zd(/*zegar*/+czas);
-  //kalendarz.dodaj(moje_zd_)//
+  getTxId()->getWebId()->DodajDoKalendarza(moje_zd_);
 }
 
 void Pakiet::execute() 

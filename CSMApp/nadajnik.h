@@ -3,21 +3,29 @@
 
 #include <vector>
 #include "pakiet.h"
-
+#include "siec.h"
+class Siec;
 class Pakiet;
 
 class Nadajnik 
 {
 public:
-  Nadajnik(int id);
-  ~Nadajnik();
-  void setCGP(double CGP);
-  double getCGP();
+  Nadajnik(int idx) : id_(idx) { frame_ = new Pakiet(idx); }
+  ~Nadajnik() {}
+  void setCGP(double CGP) { CGP_ = CGP; }
+  double getCGP() { return CGP_; }
+  void DodajDoBufora(Pakiet* pak) { bufor_.push_back(pak); }
+  void UsunZBufora() { bufor_.pop_back(); }
+  Pakiet* CzyPierwszy() { return bufor_.front(); }
+
+  void setId(Siec* siec) { siec_ = siec; } //chyba niepotrzebne?
+  Siec* getWebId() { return siec_; }
 private:
   int id_;
   std::vector<Pakiet*> bufor_;
   double CGP_;
   Pakiet* frame_;
+  Siec* siec_;
 };
 
 #endif // !CSMA_PP_NADAJNIK_H

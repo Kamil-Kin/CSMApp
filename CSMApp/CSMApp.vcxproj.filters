@@ -19,12 +19,6 @@
     <Filter Include="Source Files\Kanał">
       <UniqueIdentifier>{0a66b8d5-6243-4f01-9437-ea4a0288d0ec}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Symulacja">
-      <UniqueIdentifier>{f67f2b36-b336-4373-9661-49cd6a7ffc17}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Sieć">
-      <UniqueIdentifier>{593c3420-dc01-45d5-aeaf-a71f62fa99ad}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Generator">
       <UniqueIdentifier>{7b49b9d8-020f-4859-898c-c48a1415856e}</UniqueIdentifier>
     </Filter>
@@ -70,9 +64,6 @@
     </ClCompile>
     <ClCompile Include="generator_wykladniczy.cpp">
       <Filter>Source Files\Generator</Filter>
-    </ClCompile>
-    <ClCompile Include="symulacja.cpp">
-      <Filter>Source Files\Symulacja</Filter>
     </ClCompile>
     <ClCompile Include="nadajnik.cpp">
       <Filter>Source Files\Nadajnik</Filter>

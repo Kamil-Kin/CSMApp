@@ -6,9 +6,11 @@
 class Symulacja 
 {
 public:
-  Symulacja() {};
-  ~Symulacja() {};
-  void run();
+  Symulacja() 
+  {
+    siec_ = new Siec();
+  }
+  ~Symulacja() {}
 private:
   Siec* siec_;
 };

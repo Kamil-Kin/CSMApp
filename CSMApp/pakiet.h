@@ -6,6 +6,8 @@
 
 //class Nadajnik;
 
+using namespace std;
+
 class Pakiet 
 {
 public:
@@ -14,13 +16,15 @@ public:
     moje_zd_ = new Zdarzenie(this); 
   }
   ~Pakiet() {}
-  
+
   void aktywacja(double czas);
   void execute();
+
+  Nadajnik* getTxId() { return nad_; }
+
+private: 
   int faza_;
   bool skonczony_;
-  Nadajnik* getTxId() { return nad_; }
-private:
   int id_tx_;
   Zdarzenie* moje_zd_;
   Nadajnik* nad_;

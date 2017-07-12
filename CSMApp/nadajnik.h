@@ -2,6 +2,7 @@
 #define CSMA_PP_NADAJNIK_H
 
 #include <vector>
+#include <iostream>
 #include "pakiet.h"
 #include "siec.h"
 class Siec;
@@ -14,8 +15,9 @@ public:
   ~Nadajnik() {}
   void setCGP(double CGP) { CGP_ = CGP; }
   double getCGP() { return CGP_; }
-  void DodajDoBufora(Pakiet* pak) { bufor_.push_back(pak); }
-  void UsunZBufora() { bufor_.pop_back(); }
+  void losujCGP()
+  void DodajDoBufora(Pakiet* pak);
+  void UsunZBufora();
   Pakiet* CzyPierwszy() { return bufor_.front(); }
 
   void setId(Siec* siec) { siec_ = siec; } //chyba niepotrzebne?

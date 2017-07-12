@@ -4,16 +4,20 @@ void Pakiet::aktywacja(double czas)
 {
   moje_zd_->ustaw_czas_zd(/*zegar*/+czas);
   getTxId()->getWebId()->DodajDoKalendarza(moje_zd_);
+  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zd_->pobierz_czas_zd << endl;
 }
 
-void Pakiet::execute() 
+void Pakiet::execute()
 {
   bool aktywny_ = true;
-  while (aktywny_) 
+  while (aktywny_)
   {
-    switch (faza_) 
+    switch (faza_)
     {
-    case 1: //generacja pakietu, dodanie do bufora
+    case 1:
+      cout << "FAZA 1: Generacja pakietu" << endl;
+
+      //generacja pakietu, dodanie do bufora
       //sprawdzenie czy pierwszy w buforze, jeœli tak to faza 2
     case 2://sprawdzenie zajêtoœci kana³u
       //jeœli wolny to faza 3

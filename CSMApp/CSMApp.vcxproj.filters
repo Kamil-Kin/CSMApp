@@ -74,9 +74,6 @@
     <ClCompile Include="symulacja.cpp">
       <Filter>Source Files\Symulacja</Filter>
     </ClCompile>
-    <ClCompile Include="siec.cpp">
-      <Filter>Source Files\Sieć</Filter>
-    </ClCompile>
     <ClCompile Include="nadajnik.cpp">
       <Filter>Source Files\Nadajnik</Filter>
     </ClCompile>

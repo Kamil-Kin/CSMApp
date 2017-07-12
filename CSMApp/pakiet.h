@@ -6,7 +6,10 @@
 class Pakiet 
 {
 public:
-  Pakiet(int idx): faza_(0), skonczony_(false), id_tx_(idx) { moje_zd_ = new Zdarzenie(this); }
+  Pakiet(int idx): faza_(0), skonczony_(false), id_tx_(idx) 
+  { 
+    moje_zd_ = new Zdarzenie(this); 
+  }
   ~Pakiet() {}
   void execute();
   void aktywacja(double czas);

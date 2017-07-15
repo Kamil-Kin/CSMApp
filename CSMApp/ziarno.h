@@ -9,8 +9,8 @@ class Ziarno
 {
 public:
   Ziarno() : odstep_ziaren_(100000), liczba_ziaren_(100) {}
-  Ziarno() {}
-  int GeneracjaZiaren();
+  ~Ziarno() {}
+  void GeneracjaZiaren();
 
 private:
   int odstep_ziaren_;

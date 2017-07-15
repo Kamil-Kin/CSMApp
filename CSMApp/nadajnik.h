@@ -4,18 +4,20 @@
 #include <vector>
 #include <iostream>
 #include "pakiet.h"
-#include "siec.h"
+//#include "siec.h"
+
 class Siec;
 class Pakiet;
 
 class Nadajnik 
 {
 public:
+  
   Nadajnik(int idx) : id_(idx) { frame_ = new Pakiet(idx); }
   ~Nadajnik() {}
   void setCGP(double CGP) { CGP_ = CGP; }
   double getCGP() { return CGP_; }
-  void losujCGP()
+  double losujCGP();//TO DO
   void DodajDoBufora(Pakiet* pak);
   void UsunZBufora();
   Pakiet* CzyPierwszy() { return bufor_.front(); }

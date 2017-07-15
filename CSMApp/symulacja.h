@@ -2,6 +2,8 @@
 #define CSMA_PP_SYMULACJA_H
 
 #include "siec.h"
+#include <cstdlib>
+#include <ctime>
 
 class Symulacja 
 {
@@ -11,6 +13,9 @@ public:
     siec_ = new Siec();
   }
   ~Symulacja() {}
+
+  void run();
+
 private:
   Siec* siec_;
 };

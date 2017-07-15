@@ -1,6 +1,6 @@
 #include "ziarno.h"
 
-int Ziarno::GeneracjaZiaren() 
+void Ziarno::GeneracjaZiaren() 
 {
   std::fstream plik;
   plik.open("ziarno.txt", std::ios::in | std::ios::out);

@@ -18,6 +18,6 @@ public:
 private:
   double lambda_;
   GenRownomierny *uniform_;
-}
+};
 
 #endif // !CSMA_PP_GENERATOR_WYKLADNICZY_H

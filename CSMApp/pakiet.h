@@ -2,9 +2,9 @@
 #define CSMA_PP_PAKIET_H
 
 #include "zdarzenie.h"
-#include "nadajnik.h"
-
-//class Nadajnik;
+//#include "nadajnik.h"
+#include <iostream>
+class Nadajnik;
 
 using namespace std;
 
@@ -16,16 +16,18 @@ public:
     moje_zd_ = new Zdarzenie(this); 
   }
   ~Pakiet() {}
-
+  int losujCTP();//TO DO
+  double losujPT();//TO DO
   void aktywacja(double czas);
   void execute();
 
-  Nadajnik* getTxId() { return nad_; }
+  //Nadajnik* getTxId() { return nad_; }
 
 private: 
   int faza_;
   bool skonczony_;
   int id_tx_;
+  int CTP_;
   Zdarzenie* moje_zd_;
   Nadajnik* nad_;
 };

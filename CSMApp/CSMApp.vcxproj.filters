@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Ziarno">
       <UniqueIdentifier>{70df83c7-b5c3-4daa-b99b-125f26e2fdc2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Symulacja">
+      <UniqueIdentifier>{ce16233c-24b7-438f-ab66-2e166f67e365}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="nadajnik.h">
@@ -79,6 +82,9 @@
     </ClCompile>
     <ClCompile Include="ziarno.cpp">
       <Filter>Source Files\Ziarno</Filter>
+    </ClCompile>
+    <ClCompile Include="symulacja.cpp">
+      <Filter>Source Files\Symulacja</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,9 +1,18 @@
 #include "pakiet.h"
+#include "siec.h"
+#include "nadajnik.h"
+#include "zdarzenie.h"
+
+Pakiet::Pakiet(int idx) :faza_(0), skonczony_(false), id_tx_(idx) 
+{
+  moje_zd_ = new Zdarzenie(this);
+}
+Pakiet::~Pakiet() {}
 
 void Pakiet::aktywacja(double czas)
 {
-  moje_zd_->ustaw_czas_zd(/*zegar*/+czas);
-  nad_->getWebId()->DodajDoKalendarza(moje_zd_);
+  moje_zd_->ustaw_czas_zd(/*zegar+*/czas);
+  siec_->DodajDoKalendarza(moje_zd_);
   cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zd_->pobierz_czas_zd() << endl;
 }
 

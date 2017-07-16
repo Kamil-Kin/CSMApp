@@ -1,35 +1,32 @@
 #ifndef CSMA_PP_PAKIET_H
 #define CSMA_PP_PAKIET_H
 
-#include "zdarzenie.h"
-//#include "nadajnik.h"
 #include <iostream>
+
+class Siec;
 class Nadajnik;
+class Zdarzenie;
 
 using namespace std;
 
 class Pakiet 
 {
 public:
-  Pakiet(int idx): faza_(0), skonczony_(false), id_tx_(idx) 
-  { 
-    moje_zd_ = new Zdarzenie(this); 
-  }
-  ~Pakiet() {}
+  Pakiet(int idx);
+  ~Pakiet();
   int losujCTP();//TO DO
   double losujPT();//TO DO
   void aktywacja(double czas);
   void execute();
 
-  //Nadajnik* getTxId() { return nad_; }
-
-private: 
+private:
   int faza_;
   bool skonczony_;
   int id_tx_;
   int CTP_;
   Zdarzenie* moje_zd_;
   Nadajnik* nad_;
+  Siec* siec_;
 };
 
 #endif // !CSMA_PP_PAKIET_H

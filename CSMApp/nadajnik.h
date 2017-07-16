@@ -3,30 +3,28 @@
 
 #include <vector>
 #include <iostream>
-#include "pakiet.h"
-//#include "siec.h"
 
 class Siec;
 class Pakiet;
+
+using std::vector;
 
 class Nadajnik 
 {
 public:
   
-  Nadajnik(int idx) : id_(idx) { frame_ = new Pakiet(idx); }
-  ~Nadajnik() {}
+  Nadajnik(int idx);
+  ~Nadajnik();
   void setCGP(double CGP) { CGP_ = CGP; }
   double getCGP() { return CGP_; }
   double losujCGP();//TO DO
   void DodajDoBufora(Pakiet* pak);
   void UsunZBufora();
-  Pakiet* CzyPierwszy() { return bufor_.front(); }
-
-  void setId(Siec* siec) { siec_ = siec; } //chyba niepotrzebne?
-  Siec* getWebId() { return siec_; }
+  Siec* getWebId();
+  Pakiet* CzyPierwszy();
 private:
   int id_;
-  std::vector<Pakiet*> bufor_;
+  vector<Pakiet*> bufor_;
   double CGP_;
   Pakiet* frame_;
   Siec* siec_;

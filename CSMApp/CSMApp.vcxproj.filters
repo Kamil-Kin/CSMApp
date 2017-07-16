@@ -31,6 +31,9 @@
     <Filter Include="Source Files\Symulacja">
       <UniqueIdentifier>{ce16233c-24b7-438f-ab66-2e166f67e365}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Sieć">
+      <UniqueIdentifier>{000ffd33-ac1a-4154-98b7-33e721b25252}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="nadajnik.h">
@@ -85,6 +88,9 @@
     </ClCompile>
     <ClCompile Include="symulacja.cpp">
       <Filter>Source Files\Symulacja</Filter>
+    </ClCompile>
+    <ClCompile Include="siec.cpp">
+      <Filter>Source Files\Sieć</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

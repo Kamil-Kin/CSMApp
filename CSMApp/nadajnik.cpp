@@ -3,16 +3,22 @@
 #include <iostream>
 
 using std::vector;
+using std::cout;
+using std::endl;
 
-Nadajnik::Nadajnik(int idx) :id_(idx) 
-{
-  frame_ = new Pakiet(idx);
-}
+Nadajnik::Nadajnik(int idx) :id_(idx) {}
 Nadajnik::~Nadajnik() {}
+
+void Nadajnik::NowyPakiet(int idx) 
+{
+  frame_ = new Pakiet(idx, this);
+}
 
 double Nadajnik::losujCGP() 
 {
-  return fmod(rand(), 10.0);
+  double cgp = fmod(rand(), 10.0);
+  cout << "Moment wygenerowania pakietu:" << cgp << endl;
+  return cgp;
 }
 
 void Nadajnik::DodajDoBufora(Pakiet* pak) 

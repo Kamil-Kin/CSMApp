@@ -1,21 +1,17 @@
 #ifndef CSMA_PP_PAKIET_H
 #define CSMA_PP_PAKIET_H
 
-#include <iostream>
-
 class Symulacja;
 class Nadajnik;
 class Zdarzenie;
 
-using namespace std;
-
 class Pakiet 
 {
 public:
-  Pakiet(int idx);
+  Pakiet(int idx, Nadajnik* tx);
   ~Pakiet();
-  int losujCTP();//TO DO
-  double losujPT();//TO DO
+  int losujCTP();
+  double losujPT();
   void aktywacja(double czas);
   void execute();
 
@@ -24,6 +20,7 @@ private:
   bool skonczony_;
   int id_tx_;
   int CTP_;
+
   Zdarzenie* moje_zd_;
   Nadajnik* nad_;
   Symulacja* sym_;

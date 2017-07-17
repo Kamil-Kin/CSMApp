@@ -12,6 +12,9 @@ class Nadajnik
 public:
   Nadajnik(int idx);
   ~Nadajnik();
+
+  void NowyPakiet(int idx);
+
   void setCGP(double CGP) { CGP_ = CGP; }
   double getCGP() { return CGP_; }
   double losujCGP();

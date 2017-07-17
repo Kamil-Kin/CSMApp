@@ -5,5 +5,5 @@
 void Symulacja::run() 
 {
   srand(time(NULL));
-  //pêtla g³ówna TO DO
+  //main loop TO DO
 }

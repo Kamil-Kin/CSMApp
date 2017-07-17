@@ -15,15 +15,19 @@ const auto comparer = [](Zdarzenie* z1, Zdarzenie* z2) {
 class Symulacja 
 {
 public:
-  Symulacja() { siec_ = new Siec(); }
+  Symulacja() :zegar_(0.0) { siec_ = new Siec(); }
   ~Symulacja() {}
 
   void run();
+  double PobierzStanZegara() { return zegar_; }
 
   void DodajDoKalendarza(Zdarzenie* zd) { kalendarz_->push(zd); }
   void UsunZKalendarza() { kalendarz_->pop(); }
   Zdarzenie* PobierzPierwszyElement() { kalendarz_->top(); }
+
 private:
+  double zegar_;
+
   Siec* siec_;
 
   priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)>* kalendarz_;

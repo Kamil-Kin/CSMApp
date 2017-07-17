@@ -2,10 +2,15 @@
 #include "symulacja.h"
 #include "nadajnik.h"
 #include "zdarzenie.h"
+#include <iostream>
 
-Pakiet::Pakiet(int idx) :faza_(0), skonczony_(false), id_tx_(idx) 
+using std::cout;
+using std::endl;
+
+Pakiet::Pakiet(int idx, Nadajnik* tx) :faza_(0), skonczony_(false), id_tx_(idx) 
 {
   moje_zd_ = new Zdarzenie(this);
+  nad_ = tx;
 }
 Pakiet::~Pakiet() {}
 
@@ -23,23 +28,50 @@ void Pakiet::execute()
   {
     switch (faza_)
     {
+    //============================================
+    // faza 1: generacja pakietu, 
+    //         sprawdzenie czy jest pierwszy w buforze
+    //============================================
     case 1:
       cout << "FAZA 1: Generacja pakietu" << endl;
+      nad_->NowyPakiet(id_tx_);
+      this->aktywacja(nad_->losujCGP());
+      if (nad_->CzyPierwszy() == this) faza_ = 2;
+      aktywny_ = false;
       break;
-      //generacja pakietu, dodanie do bufora
-      //sprawdzenie czy pierwszy w buforze, jeœli tak to faza 2
+    //============================================
+    // faza 2:
+    //============================================
     case 2:
+      aktywny_ = false;
       break;//sprawdzenie zajêtoœci kana³u
       //jeœli wolny to faza 3
       //jesli zajêty to czekaj 0.5 ms
+    //============================================
+    // faza 3:
+    //============================================ 
     case 3:
       break;//losowanie prawdopodobieñstwa
       //jeœli x<=PT to czekaj do szczeliny i sprawdŸ czy kolizja
-
+    //============================================
+    // faza 4:
+    //============================================
     case 4:
       break;//TO DO...
-
+    //============================================
+    // faza 5:
+    //============================================
     case 5:
+      break;
+    //============================================
+    // faza 6:
+    //============================================
+    case 6:
+      break;
+      //============================================
+      // faza 7:
+      //============================================
+    case 7:
       break;
     }
   }
@@ -47,7 +79,6 @@ void Pakiet::execute()
 
 int Pakiet::losujCTP() 
 {
-  //srand(time(NULL));
   int ctp = (rand() % 10) + 1;
   return ctp;
 }

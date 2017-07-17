@@ -2,13 +2,14 @@
 #define CSMA_PP_PAKIET_H
 
 class Symulacja;
+class Kanal;
 class Nadajnik;
 class Zdarzenie;
 
 class Pakiet 
 {
 public:
-  Pakiet(int idx, Nadajnik* tx);
+  Pakiet(int idx, Nadajnik* tx, Kanal* kanal);
   ~Pakiet();
   int losujCTP();
   double losujPT();
@@ -23,6 +24,7 @@ private:
 
   Zdarzenie* moje_zd_;
   Nadajnik* nad_;
+  Kanal* kanal_;
   Symulacja* sym_;
 };
 

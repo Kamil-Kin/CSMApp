@@ -4,7 +4,7 @@
 #include <vector>
 #include <iostream>
 
-class Symulacja;
+class Siec;
 class Pakiet;
 
 class Nadajnik 
@@ -26,7 +26,9 @@ private:
   int id_;
   std::vector<Pakiet*> bufor_;
   double CGP_;
-  Pakiet* frame_;
+
+  Pakiet* pak_;
+  Siec* siec_;
 };
 
 #endif // !CSMA_PP_NADAJNIK_H

@@ -11,6 +11,7 @@ class Siec
 public:
   Siec();
   ~Siec();
+  Kanal* getChannel();
 private:
   const int kLiczbaNad_ = 4;
   std::vector<Nadajnik*> nadajniki_;

@@ -1,5 +1,6 @@
 #include "pakiet.h"
 #include "symulacja.h"
+#include "kanal.h"
 #include "nadajnik.h"
 #include "zdarzenie.h"
 #include <iostream>
@@ -7,10 +8,11 @@
 using std::cout;
 using std::endl;
 
-Pakiet::Pakiet(int idx, Nadajnik* tx) :faza_(0), skonczony_(false), id_tx_(idx) 
+Pakiet::Pakiet(int idx, Nadajnik* tx, Kanal* kanal) :faza_(0), skonczony_(false), id_tx_(idx) 
 {
   moje_zd_ = new Zdarzenie(this);
   nad_ = tx;
+  kanal_ = kanal;
 }
 Pakiet::~Pakiet() {}
 
@@ -32,46 +34,91 @@ void Pakiet::execute()
     // faza 1: generacja pakietu, 
     //         sprawdzenie czy jest pierwszy w buforze
     //============================================
-    case 1:
+    case 1: 
+    {
       cout << "FAZA 1: Generacja pakietu" << endl;
       nad_->NowyPakiet(id_tx_);
       this->aktywacja(nad_->losujCGP());
-      if (nad_->CzyPierwszy() == this) faza_ = 2;
+      if (nad_->CzyPierwszy() == this) 
+      {
+        cout << "pakiet pierwszy w buforze, sprawdza stan kana³u" << endl;
+        faza_ = 2;
+      }
       aktywny_ = false;
+    }
       break;
     //============================================
-    // faza 2:
+    // faza 2: sprawdzenie zajêtoœci kana³u
     //============================================
-    case 2:
-      aktywny_ = false;
-      break;//sprawdzenie zajêtoœci kana³u
-      //jeœli wolny to faza 3
-      //jesli zajêty to czekaj 0.5 ms
+    case 2: 
+    {
+      cout << "FAZA 2: Sprawdzenie kana³u" << endl;
+      if (kanal_->StanLacza() == false) 
+      {
+        cout << "kana³ zajêty, czekaj 0.5 ms" << endl;
+        this->aktywacja(0.5);
+        aktywny_ = false;
+      }
+      else 
+      {
+        cout << "kana³ wolny, podejmij próbê transmisji" << endl;
+        faza_ = 3;
+      }
+    }
+      break;
     //============================================
-    // faza 3:
+    // faza 3: Próba transmisji
+    //         losowanie prawdopodobieñstwa
     //============================================ 
-    case 3:
+    case 3: 
+    {
+      cout << "FAZA 3: losowanie prawdopodobieñstwa transmisji" << endl;
+      double p = this->losujPT();
+      if (p <= 0.2) 
+      {
+        if (fmod(sym_->PobierzStanZegara(), 1.0) == 0) 
+        {
+          //kolizja
+        }
+        else 
+        {
+
+        }
+      }
+      else 
+      {
+
+      }
+    }
       break;//losowanie prawdopodobieñstwa
       //jeœli x<=PT to czekaj do szczeliny i sprawdŸ czy kolizja
     //============================================
     // faza 4:
     //============================================
-    case 4:
-      break;//TO DO...
+    case 4: 
+    {
+    }
+      break;
     //============================================
     // faza 5:
     //============================================
-    case 5:
+    case 5: 
+    {
+    }
       break;
     //============================================
     // faza 6:
     //============================================
-    case 6:
+    case 6: 
+    {
+    }
       break;
       //============================================
       // faza 7:
       //============================================
-    case 7:
+    case 7: 
+    {
+    }
       break;
     }
   }

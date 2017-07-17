@@ -11,3 +11,5 @@ Siec::Siec()
   kanal_ = new Kanal();
 }
 Siec::~Siec() {}
+
+Kanal* Siec::getChannel() { return kanal_; }

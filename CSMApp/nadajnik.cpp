@@ -1,3 +1,4 @@
+#include "siec.h"
 #include "nadajnik.h"
 #include "pakiet.h"
 #include <iostream>
@@ -11,7 +12,7 @@ Nadajnik::~Nadajnik() {}
 
 void Nadajnik::NowyPakiet(int idx) 
 {
-  frame_ = new Pakiet(idx, this);
+  pak_ = new Pakiet(idx, this,siec_->getChannel());
 }
 
 double Nadajnik::losujCGP() 

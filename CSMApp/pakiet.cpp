@@ -1,5 +1,5 @@
 #include "pakiet.h"
-#include "siec.h"
+#include "symulacja.h"
 #include "nadajnik.h"
 #include "zdarzenie.h"
 
@@ -12,7 +12,7 @@ Pakiet::~Pakiet() {}
 void Pakiet::aktywacja(double czas)
 {
   moje_zd_->ustaw_czas_zd(/*zegar+*/czas);
-  siec_->DodajDoKalendarza(moje_zd_);
+  sym_->DodajDoKalendarza(moje_zd_);
   cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zd_->pobierz_czas_zd() << endl;
 }
 

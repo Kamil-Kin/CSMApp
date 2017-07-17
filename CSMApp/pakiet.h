@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-class Siec;
+class Symulacja;
 class Nadajnik;
 class Zdarzenie;
 
@@ -26,7 +26,7 @@ private:
   int CTP_;
   Zdarzenie* moje_zd_;
   Nadajnik* nad_;
-  Siec* siec_;
+  Symulacja* sym_;
 };
 
 #endif // !CSMA_PP_PAKIET_H

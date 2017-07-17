@@ -70,7 +70,7 @@ void Pakiet::execute()
     // faza 3: Próba transmisji
     //         losowanie prawdopodobieñstwa
     //============================================ 
-    case 3: 
+    case 3: //todo
     {
       cout << "FAZA 3: losowanie prawdopodobieñstwa transmisji" << endl;
       double p = this->losujPT();
@@ -78,16 +78,21 @@ void Pakiet::execute()
       {
         if (fmod(sym_->PobierzStanZegara(), 1.0) == 0) 
         {
-          //kolizja
+          if (kanal_->CzyKolizja() == false) 
+          {
+            kanal_->DodajDoKanalu(this);
+            faza_ = 6;
+          }
         }
         else 
         {
-
+          this->aktywacja(1 - fmod(sym_->PobierzStanZegara(), 1.0));
+          aktywny_ = false;
         }
       }
       else 
       {
-
+        faza_ = 5;
       }
     }
       break;//losowanie prawdopodobieñstwa

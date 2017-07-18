@@ -6,6 +6,8 @@
 #include <vector>
 #include <queue>
 
+class Nadajnik;
+
 using std::vector;
 using std::priority_queue;
 
@@ -28,6 +30,7 @@ public:
 private:
   double zegar_;
 
+  Nadajnik* nad_;
   Siec* siec_;
 
   priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)>* kalendarz_;

@@ -17,6 +17,7 @@ public:
   void execute();
 
 private:
+  const double kPT = 0.2;
   int faza_;
   bool skonczony_;
   int id_tx_;

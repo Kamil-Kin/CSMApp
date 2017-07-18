@@ -12,7 +12,7 @@ Nadajnik::~Nadajnik() {}
 
 void Nadajnik::NowyPakiet(int idx) 
 {
-  pak_ = new Pakiet(idx, this,siec_->getChannel());
+  pak_ = new Pakiet(idx, this, siec_->getChannel());
 }
 
 double Nadajnik::losujCGP() 

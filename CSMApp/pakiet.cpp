@@ -47,6 +47,7 @@ void Pakiet::execute()
       aktywny_ = false;
     }
       break;
+
     //============================================
     // faza 2: sprawdzenie zajêtoœci kana³u
     //============================================
@@ -62,69 +63,100 @@ void Pakiet::execute()
       else 
       {
         cout << "kana³ wolny, podejmij próbê transmisji" << endl;
+        faza_ = 3;  //próba transmisji z p-ñstwem p
+      }
+    }
+      break;
+
+    //============================================
+    // faza 3: losowanie prawdopodobieñstwa
+    //============================================ 
+    case 3: 
+    {
+      cout << "FAZA 3: losowanie prawdopodobieñstwa transmisji" << endl;
+      double p = this->losujPT();
+      if (p <= kPT) 
+      {
+        cout << "prawdopodobieñstwo transmisji p = " << p << " mniejsze od PT = " << kPT << endl;
+        cout << "Mo¿na podj¹æ próbê transmisji" << endl;
+        faza_ = 5;
+      }
+      else 
+      {
+        cout << "prawdopodobieñstwo transmisji p = " << p << " wiêksze od PT = " << kPT << endl;
+        this->aktywacja(1 - fmod(sym_->PobierzStanZegara(), 1.0));
+        faza_ = 4;
+      }
+    }
+      break;
+
+    //============================================
+    // faza 4: ponowne sprawdzanie kana³u
+    //         z odpytywaniem co 1ms
+    //============================================
+    case 4: 
+    {
+      cout << "FAZA 4: Ponowne sprawdzenie kana³u" << endl;
+      if (kanal_->StanLacza() == true) 
+      {
+        cout << "kana³ wolny, ponowne losowanie prawdopodobieñstwa" << endl;
         faza_ = 3;
+      }
+      else 
+      {
+        cout << "kana³ zajêty, odpytywanie co 1.0 ms" << endl;
+        this->aktywacja(1.0);
+        aktywny_ = false;
       }
     }
       break;
     //============================================
-    // faza 3: Próba transmisji
-    //         losowanie prawdopodobieñstwa
-    //============================================ 
-    case 3: //todo
+    // faza 5: Próba transmisji: sprawdzenie zajêtoœci kana³u
+    //============================================
+    case 5: 
     {
-      cout << "FAZA 3: losowanie prawdopodobieñstwa transmisji" << endl;
-      double p = this->losujPT();
-      if (p <= 0.2) 
+      cout << "FAZA 5: " << endl;
+      if (fmod(sym_->PobierzStanZegara(), 1.0) == 0.0) 
       {
-        if (fmod(sym_->PobierzStanZegara(), 1.0) == 0) 
+        if (kanal_->CzyKolizja() == false) 
         {
-          if (kanal_->CzyKolizja() == false) 
-          {
-            kanal_->DodajDoKanalu(this);
-            faza_ = 6;
-          }
+          kanal_->DodajDoKanalu(this);
+          faza_ = 6;
         }
         else 
         {
-          this->aktywacja(1 - fmod(sym_->PobierzStanZegara(), 1.0));
-          aktywny_ = false;
+          cout << "Wykryta zosta³a kolizja" << endl;
+          //todo
         }
       }
       else 
       {
-        faza_ = 5;
+        this->aktywacja(1 - fmod(sym_->PobierzStanZegara(), 1.0));
+        aktywny_ = false;
       }
     }
-      break;//losowanie prawdopodobieñstwa
-      //jeœli x<=PT to czekaj do szczeliny i sprawdŸ czy kolizja
-    //============================================
-    // faza 4:
-    //============================================
-    case 4: 
-    {
-    }
       break;
+
     //============================================
-    // faza 5:
-    //============================================
-    case 5: 
-    {
-    }
-      break;
-    //============================================
-    // faza 6:
+    // faza 6: W³aœciwa transmisja pakietu
     //============================================
     case 6: 
     {
+      cout << "FAZA 6:" << endl;
+      this->aktywacja(this->losujCTP());
+      aktywny_ = false;
     }
       break;
+
       //============================================
       // faza 7:
       //============================================
     case 7: 
     {
+      cout << "FAZA 7: " << endl;
     }
       break;
+
     }
   }
 }

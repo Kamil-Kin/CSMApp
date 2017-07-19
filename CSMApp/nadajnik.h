@@ -4,7 +4,6 @@
 #include <vector>
 #include <iostream>
 
-class Siec;
 class Pakiet;
 
 class Nadajnik 
@@ -12,8 +11,6 @@ class Nadajnik
 public:
   Nadajnik(int idx);
   ~Nadajnik();
-
-  void NowyPakiet(int idx);
 
   void setCGP(double CGP) { CGP_ = CGP; }
   double getCGP() { return CGP_; }
@@ -28,7 +25,6 @@ private:
   double CGP_;
 
   Pakiet* pak_;
-  Siec* siec_;
 };
 
 #endif // !CSMA_PP_NADAJNIK_H

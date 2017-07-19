@@ -9,7 +9,7 @@ class Zdarzenie;
 class Pakiet 
 {
 public:
-  Pakiet(int idx, Nadajnik* tx, Kanal* kanal);
+  Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad);
   ~Pakiet();
   int losujCTP();
   double losujPT();

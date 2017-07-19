@@ -8,11 +8,12 @@
 using std::cout;
 using std::endl;
 
-Pakiet::Pakiet(int idx, Nadajnik* tx, Kanal* kanal) :faza_(0), skonczony_(false), id_tx_(idx) 
+Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad) :faza_(1), skonczony_(false), id_tx_(idx) 
 {
   moje_zd_ = new Zdarzenie(this);
-  nad_ = tx;
-  kanal_ = kanal;
+  sym = sym_;
+  kanal = kanal_;
+  nad = nad_;
 }
 Pakiet::~Pakiet() {}
 
@@ -37,8 +38,8 @@ void Pakiet::execute()
     case 1: 
     {
       cout << "FAZA 1: Generacja pakietu" << endl;
-      nad_->NowyPakiet(id_tx_);
-      this->aktywacja(nad_->losujCGP());
+      (new Pakiet(id_tx_, sym_, kanal_, nad_))->aktywacja(nad_->losujCGP());
+      nad_->DodajDoBufora(this);
       if (nad_->CzyPierwszy() == this) 
       {
         cout << "pakiet pierwszy w buforze, sprawdza stan kana³u" << endl;

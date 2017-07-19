@@ -3,17 +3,11 @@
 #include "pakiet.h"
 #include <iostream>
 
-using std::vector;
 using std::cout;
 using std::endl;
 
 Nadajnik::Nadajnik(int idx) :id_(idx) {}
 Nadajnik::~Nadajnik() {}
-
-void Nadajnik::NowyPakiet(int idx) 
-{
-  pak_ = new Pakiet(idx, this, siec_->getChannel());
-}
 
 double Nadajnik::losujCGP() 
 {

@@ -2,8 +2,8 @@
 
 int main() 
 {
-  Symulacja *symulacja = new Symulacja();
-  symulacja->run();
+  Symulacja symulacja;
+  symulacja.run();
 
   return 0;
 }

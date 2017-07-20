@@ -1,3 +1,4 @@
+#include "symulacja.h"
 #include "siec.h"
 #include "nadajnik.h"
 #include "kanal.h"
@@ -11,5 +12,3 @@ Siec::Siec()
   kanal_ = new Kanal();
 }
 Siec::~Siec() {}
-
-Kanal* Siec::getChannel() { return kanal_; }

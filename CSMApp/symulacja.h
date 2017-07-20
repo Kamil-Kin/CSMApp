@@ -36,11 +36,10 @@ public:
 
 private:
   double zegar_;
-
+  Kanal* kanal_;
   Symulacja* sym_;
   Siec* siec_;
   Nadajnik* nad_;
-  Kanal* kanal_;
   Pakiet* pak_;
 
   //priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)> kalendarz_;

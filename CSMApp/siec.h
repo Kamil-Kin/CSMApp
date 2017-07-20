@@ -3,6 +3,7 @@
 
 #include <vector>
 
+class Symulacja;
 class Nadajnik;
 class Kanal;
 
@@ -11,10 +12,11 @@ class Siec
 public:
   Siec();
   ~Siec();
-  Kanal* getChannel();
+
 private:
   const int kLiczbaNad_ = 4;
   std::vector<Nadajnik*> nadajniki_;
+
   Kanal* kanal_;
 };
 

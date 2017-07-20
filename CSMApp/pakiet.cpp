@@ -14,6 +14,7 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad) :faza_(1), 
   sym = sym_;
   kanal = kanal_;
   nad = nad_;
+  aktywacja(0.0);
 }
 Pakiet::~Pakiet() {}
 
@@ -38,7 +39,7 @@ void Pakiet::execute()
     case 1: 
     {
       cout << "FAZA 1: Generacja pakietu" << endl;
-      (new Pakiet(id_tx_, sym_, kanal_, nad_))->aktywacja(nad_->losujCGP());
+      this->aktywacja(nad_->losujCGP());
       nad_->DodajDoBufora(this);
       if (nad_->CzyPierwszy() == this) 
       {

@@ -6,7 +6,9 @@
 using std::cout;
 using std::endl;
 
-Nadajnik::Nadajnik(int idx) :id_(idx) {}
+Nadajnik::Nadajnik(int idx) :id_(idx) 
+{
+}
 Nadajnik::~Nadajnik() {}
 
 double Nadajnik::losujCGP() 

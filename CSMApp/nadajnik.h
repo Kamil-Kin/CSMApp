@@ -23,7 +23,7 @@ private:
   int id_;
   std::vector<Pakiet*> bufor_;
   double CGP_;
-
+  Siec* siec_;
   Pakiet* pak_;
 };
 

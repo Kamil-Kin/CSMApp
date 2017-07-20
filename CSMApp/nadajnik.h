@@ -3,13 +3,15 @@
 
 #include <vector>
 #include <iostream>
-
+//class Symulacja;
+class Siec;
+class Kanal;
 class Pakiet;
 
 class Nadajnik 
 {
 public:
-  Nadajnik(int idx);
+  Nadajnik(int idx, Siec* siec, Kanal* kanal);
   ~Nadajnik();
 
   void setCGP(double CGP) { CGP_ = CGP; }
@@ -23,7 +25,9 @@ private:
   int id_;
   std::vector<Pakiet*> bufor_;
   double CGP_;
+  //Symulacja* sym_;
   Siec* siec_;
+  Kanal* kanal_;
   Pakiet* pak_;
 };
 

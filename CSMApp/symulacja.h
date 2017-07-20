@@ -5,11 +5,7 @@
 #include <vector>
 #include <queue>
 
-class Symulacja;
 class Siec;
-class Kanal;
-class Nadajnik;
-class Pakiet;
 
 using std::vector;
 using std::priority_queue;
@@ -36,11 +32,8 @@ public:
 
 private:
   double zegar_;
-  Kanal* kanal_;
-  Symulacja* sym_;
+
   Siec* siec_;
-  Nadajnik* nad_;
-  Pakiet* pak_;
 
   //priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)> kalendarz_;
   priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer> kalendarz_;

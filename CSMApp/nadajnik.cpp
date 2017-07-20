@@ -1,4 +1,6 @@
+//#include "symulacja.h"
 #include "siec.h"
+#include "kanal.h"
 #include "nadajnik.h"
 #include "pakiet.h"
 #include <iostream>
@@ -6,8 +8,11 @@
 using std::cout;
 using std::endl;
 
-Nadajnik::Nadajnik(int idx) :id_(idx) 
+Nadajnik::Nadajnik(int idx, Siec* siec, Kanal* kanal) :id_(idx) 
 {
+  siec_ = siec;
+  kanal_ = kanal;
+  pak_ = new Pakiet(idx, siec_->getSim(), kanal, this);
 }
 Nadajnik::~Nadajnik() {}
 

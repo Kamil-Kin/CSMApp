@@ -11,9 +11,9 @@ using std::endl;
 Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad) :faza_(1), skonczony_(false), id_tx_(idx) 
 {
   moje_zd_ = new Zdarzenie(this);
-  sym = sym_;
-  kanal = kanal_;
-  nad = nad_;
+  sym_ = sym;
+  kanal_ = kanal;
+  nad_ = nad;
   aktywacja(0.0);
 }
 Pakiet::~Pakiet() {}

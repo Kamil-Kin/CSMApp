@@ -1,8 +1,5 @@
 #include "symulacja.h"
 #include "siec.h"
-#include <cstdlib>
-#include <ctime>
-#include <cstdio>
 
 bool comparer::operator()(const Zdarzenie* z1, const Zdarzenie* z2) const
 {
@@ -17,10 +14,6 @@ Symulacja::~Symulacja() {}
 
 void Symulacja::run() 
 {
-  srand(time(NULL));
-  
   siec_ = new Siec(this);
   //main loop todo
-  getchar();
-
 }

@@ -4,12 +4,15 @@
 #include "nadajnik.h"
 #include "pakiet.h"
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using std::cout;
 using std::endl;
 
 Nadajnik::Nadajnik(int idx, Siec* siec, Kanal* kanal) :id_(idx) 
 {
+ 
   siec_ = siec;
   kanal_ = kanal;
   pak_ = new Pakiet(idx, siec_->getSim(), kanal, this);
@@ -18,6 +21,7 @@ Nadajnik::~Nadajnik() {}
 
 double Nadajnik::losujCGP() 
 {
+  srand(time(NULL));
   double cgp = fmod(rand(), 10.0);
   cout << "Moment wygenerowania pakietu:" << cgp << endl;
   return cgp;

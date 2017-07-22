@@ -6,6 +6,7 @@ class Pakiet;
 class Zdarzenie 
 {
 public:
+  Zdarzenie(double czas) : czas_zdarzenia_(czas), pakiet_(nullptr) {}
   Zdarzenie(Pakiet* pak) : czas_zdarzenia_(0.0), pakiet_(pak) {}
   ~Zdarzenie() {}
   void ustaw_czas_zd(double time) { czas_zdarzenia_ = time; }

@@ -6,12 +6,7 @@
 
 bool comparer::operator()(const Zdarzenie* z1, const Zdarzenie* z2) const
 {
-  if (z1 != nullptr && z2 != nullptr) 
-  {
-    if (z1->pobierz_czas_zd() > z2->pobierz_czas_zd())
-      return true;
-  }
-  else return false;
+  return z1->pobierz_czas_zd() > z2->pobierz_czas_zd();
 }
 
 Symulacja::Symulacja() :zegar_(0.0)

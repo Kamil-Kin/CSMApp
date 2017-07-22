@@ -28,7 +28,7 @@ public:
 
   void DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }
   void UsunZKalendarza() { kalendarz_.pop(); }
-  Zdarzenie* PobierzPierwszyElement() { kalendarz_.top(); }
+  Zdarzenie* PobierzPierwszyElement() { return kalendarz_.top(); }
 
 private:
   double zegar_;
@@ -37,6 +37,7 @@ private:
 
   //priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)> kalendarz_;
   priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer> kalendarz_;
+  //priority_queue<Zdarzenie*> kalendarz_;
 };
 
 #endif // !CSMA_PP_SYMULACJA_H

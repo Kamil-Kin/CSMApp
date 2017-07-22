@@ -1,11 +1,11 @@
 #ifndef CSMA_PP_SYMULACJA_H
 #define CSMA_PP_SYMULACJA_H
 
-#include "zdarzenie.h"
 #include <vector>
 #include <queue>
 
 class Siec;
+class Zdarzenie;
 
 using std::vector;
 using std::priority_queue;
@@ -24,16 +24,17 @@ public:
   ~Symulacja();
 
   void run();
-  double PobierzStanZegara() { return zegar_; }
+  double StanZegara() { return zegar_; }
 
-  void DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }
-  void UsunZKalendarza() { kalendarz_.pop(); }
+  void DodajDoKalendarza(Zdarzenie* zd);
+  void UsunZKalendarza();
   Zdarzenie* PobierzPierwszyElement() { return kalendarz_.top(); }
 
 private:
   double zegar_;
 
   Siec* siec_;
+  Zdarzenie* zd_;
 
   //priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)> kalendarz_;
   priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer> kalendarz_;

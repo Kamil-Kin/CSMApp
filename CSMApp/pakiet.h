@@ -15,7 +15,7 @@ public:
   double losujPT();
   void aktywacja(double czas);
   void execute();
-
+  bool CzySkonczony() { return skonczony_; }
 private:
   const double kPT = 0.2;
   int faza_;

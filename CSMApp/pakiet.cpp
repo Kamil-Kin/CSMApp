@@ -14,15 +14,16 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad) :faza_(1), 
   kanal_ = kanal;
   nad_ = nad;
   moje_zd_ = new Zdarzenie(this);
-  aktywacja(nad_->losujCGP());
+  //aktywacja(nad_->losujCGP());
+  execute();//todo
 }
 Pakiet::~Pakiet() {}
 
 void Pakiet::aktywacja(double czas)
 {
-  moje_zd_->ustaw_czas_zd(/*zegar+*/czas);
+  moje_zd_->UstawCzasZd(sym_->StanZegara() + czas);
   sym_->DodajDoKalendarza(moje_zd_);
-  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zd_->pobierz_czas_zd() << endl;
+  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zd_->PobierzCzasZd() << endl;
 }
 
 void Pakiet::execute()
@@ -43,10 +44,11 @@ void Pakiet::execute()
       nad_->DodajDoBufora(this);
       if (nad_->CzyPierwszy() == this) 
       {
-        cout << "pakiet pierwszy w buforze, sprawdza stan kana³u" << endl;
+        cout << "Pakiet pierwszy w buforze, sprawdza stan kanalu" << endl;
         faza_ = 2;
       }
-      aktywny_ = false;
+      else
+        aktywny_ = false;
     }
       break;
 
@@ -55,16 +57,16 @@ void Pakiet::execute()
     //============================================
     case 2: 
     {
-      cout << "FAZA 2: Sprawdzenie kana³u" << endl;
+      cout << "FAZA 2: Sprawdzenie kanalu" << endl;
       if (kanal_->StanLacza() == false) 
       {
-        cout << "kana³ zajêty, czekaj 0.5 ms" << endl;
+        cout << "Kanal zajety, czekaj 0.5 ms" << endl;
         this->aktywacja(0.5);
         aktywny_ = false;
       }
       else 
       {
-        cout << "kana³ wolny, podejmij próbê transmisji" << endl;
+        cout << "Kanal wolny, podejmij probe transmisji" << endl;
         faza_ = 3;  //próba transmisji z p-ñstwem p
       }
     }
@@ -79,14 +81,14 @@ void Pakiet::execute()
       double p = this->losujPT();
       if (p <= kPT) 
       {
-        cout << "prawdopodobieñstwo transmisji p = " << p << " mniejsze od PT = " << kPT << endl;
-        cout << "Mo¿na podj¹æ próbê transmisji" << endl;
+        cout << "Prawdopodobienstwo transmisji p = " << p << " mniejsze od PT = " << kPT << endl;
+        cout << "Mozna podjac probe transmisji" << endl;
         faza_ = 5;
       }
       else 
       {
-        cout << "prawdopodobieñstwo transmisji p = " << p << " wiêksze od PT = " << kPT << endl;
-        this->aktywacja(1 - fmod(sym_->PobierzStanZegara(), 1.0));
+        cout << "Prawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPT << endl;
+        this->aktywacja(1 - fmod(sym_->StanZegara(), 1.0));
         faza_ = 4;
       }
     }
@@ -98,15 +100,15 @@ void Pakiet::execute()
     //============================================
     case 4: 
     {
-      cout << "FAZA 4: Ponowne sprawdzenie kana³u" << endl;
+      cout << "FAZA 4: Ponowne sprawdzenie kanalu" << endl;
       if (kanal_->StanLacza() == true) 
       {
-        cout << "kana³ wolny, ponowne losowanie prawdopodobieñstwa" << endl;
+        cout << "Kanal wolny, ponowne losowanie prawdopodobienstwa" << endl;
         faza_ = 3;
       }
       else 
       {
-        cout << "kana³ zajêty, odpytywanie co 1.0 ms" << endl;
+        cout << "Kanal zajety, odpytywanie co 1.0 ms" << endl;
         this->aktywacja(1.0);
         aktywny_ = false;
       }
@@ -118,7 +120,7 @@ void Pakiet::execute()
     case 5: 
     {
       cout << "FAZA 5: " << endl;
-      if (fmod(sym_->PobierzStanZegara(), 1.0) == 0.0) 
+      if (fmod(sym_->StanZegara(), 1.0) == 0.0) 
       {
         if (kanal_->CzyKolizja() == false) 
         {
@@ -127,13 +129,13 @@ void Pakiet::execute()
         }
         else 
         {
-          cout << "Wykryta zosta³a kolizja" << endl;
+          cout << "Wykryta zostala kolizja" << endl;
           //todo
         }
       }
       else 
       {
-        this->aktywacja(1 - fmod(sym_->PobierzStanZegara(), 1.0));
+        this->aktywacja(1 - fmod(sym_->StanZegara(), 1.0));
         aktywny_ = false;
       }
     }
@@ -171,5 +173,6 @@ int Pakiet::losujCTP()
 double Pakiet::losujPT() 
 {
   double x = (rand() % 11) / 10.0;
+  cout << "Wylosowano prawdopodobienstwo transmisji p = " << x << endl;
   return x;
 }

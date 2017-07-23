@@ -22,7 +22,7 @@ void Symulacja::run()
   //main loop todo
   Pakiet* obecny_ = nullptr;
 
-  while (StanZegara() < 100.0) //roboczo todo
+  while (StanZegara() < 2000.0) //roboczo todo
   {
     obecny_ = PobierzPierwszyElement()->PobierzPakiet();
     zegar_ = PobierzPierwszyElement()->PobierzCzasZd();
@@ -38,7 +38,8 @@ void Symulacja::DodajDoKalendarza(Zdarzenie* zd)
   cout << "Dodano do kalendarza zdarzenie o czasie " << zd_->PobierzCzasZd() << endl;
 }
 
-void Symulacja::UsunZKalendarza() 
+void Symulacja::UsunZKalendarza()
 {
   kalendarz_.pop();
   cout << "Usuniêto z kalendarza zdarzenie o czasie " << zd_->PobierzCzasZd() << endl;
+}

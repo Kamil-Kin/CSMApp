@@ -4,11 +4,12 @@
 #include "nadajnik.h"
 #include "zdarzenie.h"
 #include <iostream>
+#include <cmath>
 
 using std::cout;
 using std::endl;
 
-Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad) :faza_(1), skonczony_(false), id_tx_(idx) 
+Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad) :faza_(1), skonczony_(false), id_tx_(idx),licznik_ret_(0)
 {
   sym_ = sym;
   kanal_ = kanal;
@@ -119,7 +120,7 @@ void Pakiet::execute()
     //============================================
     case 5: 
     {
-      cout << "FAZA 5: " << endl;
+      cout << "FAZA 5: Sprawdzenie kolizji" << endl;
       if (fmod(sym_->StanZegara(), 1.0) == 0.0) 
       {
         if (kanal_->CzyKolizja() == false) 
@@ -130,6 +131,7 @@ void Pakiet::execute()
         else 
         {
           cout << "Wykryta zostala kolizja" << endl;
+          faza_ = 7;
           //todo
         }
       }
@@ -146,33 +148,44 @@ void Pakiet::execute()
     //============================================
     case 6: 
     {
-      cout << "FAZA 6:" << endl;
+      cout << "FAZA 6: Transmisja pakietu " << endl;
       this->aktywacja(this->losujCTP());
       aktywny_ = false;
     }
       break;
 
       //============================================
-      // faza 7:
+      // faza 7: Retransmisja pakietu
       //============================================
     case 7: 
     {
-      cout << "FAZA 7: " << endl;
+      cout << "FAZA 7: Retransmisja pakietu" << endl;
+      if (licznik_ret_ < kLR) 
+      {
+        czas_CRP_ = losujR()*czas_CTP_;
+        aktywacja(czas_CRP_);
+      }
+      licznik_ret_ += 1;
     }
       break;
-
     }
   }
 }
 
 int Pakiet::losujCTP() 
 {
-  int ctp = (rand() % 10) + 1;
-  return ctp;
+  czas_CTP_ = (rand() % 10) + 1;
+  return czas_CTP_;
 }
 double Pakiet::losujPT() 
 {
   double x = (rand() % 11) / 10.0;
   cout << "Wylosowano prawdopodobienstwo transmisji p = " << x << endl;
   return x;
+}
+double Pakiet::losujR() 
+{
+  double koniec = pow(2.0, licznik_ret_);
+  double R = fmod(rand(), koniec);
+  return R;
 }

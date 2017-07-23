@@ -13,15 +13,19 @@ public:
   ~Pakiet();
   int losujCTP();
   double losujPT();
+  double losujR();
   void aktywacja(double czas);
   void execute();
   bool CzySkonczony() { return skonczony_; }
 private:
+  const int kLR = 10;
   const double kPT = 0.2;
   int faza_;
   bool skonczony_;
   int id_tx_;
-  int CTP_;
+  int czas_CTP_;
+  int licznik_ret_;
+  double czas_CRP_;
 
   Zdarzenie* moje_zd_;
   Nadajnik* nad_;

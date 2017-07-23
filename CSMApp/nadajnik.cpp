@@ -5,7 +5,6 @@
 #include "pakiet.h"
 #include <iostream>
 
-
 using std::cout;
 using std::endl;
 
@@ -36,7 +35,7 @@ void Nadajnik::UsunZBufora()
   cout << "Usuniêto pakiet z bufora nadajnika nr " << id_ << endl;
 }
 
-Pakiet* Nadajnik::CzyPierwszy() 
+Pakiet* Nadajnik::PierwszyPakiet() 
 {
   return bufor_.front();
 }

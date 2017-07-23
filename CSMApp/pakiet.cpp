@@ -43,7 +43,7 @@ void Pakiet::execute()
       cout << "FAZA 1: Generacja pakietu" << endl;
       aktywacja(nad_->losujCGP());
       nad_->DodajDoBufora(this);
-      if (nad_->CzyPierwszy() == this) 
+      if (nad_->PierwszyPakiet() == this) 
       {
         cout << "Pakiet pierwszy w buforze, sprawdza stan kanalu" << endl;
         faza_ = 2;
@@ -115,6 +115,7 @@ void Pakiet::execute()
       }
     }
       break;
+
     //============================================
     // faza 5: Próba transmisji: sprawdzenie zajêtoœci kana³u
     //============================================

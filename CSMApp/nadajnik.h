@@ -19,7 +19,7 @@ public:
   double losujCGP();
   void DodajDoBufora(Pakiet* pak);
   void UsunZBufora();
-  Pakiet* CzyPierwszy();
+  Pakiet* PierwszyPakiet();
 
 private:
   int id_;

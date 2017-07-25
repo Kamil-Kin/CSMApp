@@ -35,11 +35,11 @@ void Symulacja::run()
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) 
 {
   kalendarz_.push(zd);
-  cout << "Dodano do kalendarza zdarzenie o czasie " << zd_->PobierzCzasZd() << endl;
+  //cout << "Dodano do kalendarza zdarzenie o czasie " << zd_->PobierzCzasZd() << endl;
 }
 
 void Symulacja::UsunZKalendarza()
 {
   kalendarz_.pop();
-  cout << "Usuniêto z kalendarza zdarzenie o czasie " << zd_->PobierzCzasZd() << endl;
+  //cout << "Usuniêto z kalendarza zdarzenie o czasie " << zd_->PobierzCzasZd() << endl;
 }

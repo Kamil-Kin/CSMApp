@@ -78,7 +78,7 @@ void Pakiet::execute()
     //============================================ 
     case 3: 
     {
-      cout << "FAZA 3: losowanie prawdopodobieñstwa transmisji" << endl;
+      cout << "FAZA 3: losowanie prawdopodobienstwa transmisji" << endl;
       double p = this->losujPT();
       if (p <= kPT) 
       {

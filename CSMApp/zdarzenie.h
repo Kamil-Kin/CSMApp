@@ -10,7 +10,7 @@ public:
   //Zdarzenie(double czas) : czas_zdarzenia_(czas), pakiet_(nullptr) {}
   Zdarzenie(Pakiet* pak) : czas_zdarzenia_(0.0), pakiet_(pak) {}
   ~Zdarzenie() {}
-  void UstawCzasZd(double time) { czas_zdarzenia_ = time; }
+  void UstawCzasZd(double time) { czas_zdarzenia_ += time; }
   double PobierzCzasZd() const{ return czas_zdarzenia_; }
   Pakiet* PobierzPakiet() { return pakiet_; }
 private:

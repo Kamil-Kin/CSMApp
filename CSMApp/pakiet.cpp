@@ -117,7 +117,7 @@ void Pakiet::execute()
       break;
 
     //============================================
-    // faza 5: Próba transmisji: sprawdzenie zajêtoœci kana³u
+    // faza 5: Próba transmisji: sprawdzenie kolizji w  kanale
     //============================================
     case 5: 
     {
@@ -127,13 +127,13 @@ void Pakiet::execute()
         if (kanal_->CzyKolizja() == false) 
         {
           kanal_->DodajDoKanalu(this);
+          kanal_->UstawLacze(false);
           faza_ = 6;
         }
         else 
         {
           cout << "Wykryta zostala kolizja" << endl;
           faza_ = 7;
-          //todo
         }
       }
       else 
@@ -161,12 +161,30 @@ void Pakiet::execute()
     case 7: 
     {
       cout << "FAZA 7: Retransmisja pakietu" << endl;
+      licznik_ret_++;
       if (licznik_ret_ < kLR) 
       {
+        cout << "Pakiet jest retransmitowany, numer retransmisji: " << licznik_ret_ << endl;
         czas_CRP_ = losujR()*czas_CTP_;
         aktywacja(czas_CRP_);
+        faza_ = 2;
+        aktywny_ = false;
       }
-      licznik_ret_ += 1;
+      else
+      {
+        cout << "Przekroczono liczbê dopuszczalnych retransmisji, pakiet stracony" << endl;
+        nad_->UsunZBufora();
+        skonczony_ = true;
+      }
+    }
+      break;
+
+      //============================================
+      // faza 8: Odbiór pakietu, ustawienie ACK
+      //============================================
+    case 8: 
+    {
+
     }
       break;
     }

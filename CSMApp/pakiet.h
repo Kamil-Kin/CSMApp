@@ -1,10 +1,14 @@
 #ifndef CSMA_PP_PAKIET_H
 #define CSMA_PP_PAKIET_H
 
+
+#include <string>
 class Symulacja;
 class Kanal;
 class Nadajnik;
 class Zdarzenie;
+
+using std::string;
 
 class Pakiet 
 {
@@ -17,6 +21,7 @@ public:
   void aktywacja(double czas);
   void execute();
   bool CzySkonczony() { return skonczony_; }
+  void UstawKolor(string numer);
 private:
   const int kLR = 10;
   const double kPT = 0.2;

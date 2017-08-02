@@ -9,7 +9,7 @@
 using std::cout;
 using std::endl;
 
-Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad) :faza_(1), skonczony_(false), id_tx_(idx),licznik_ret_(0)
+Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad) :faza_(1), skonczony_(false), id_tx_(idx), licznik_ret_(0), ack_(false)
 {
   sym_ = sym;
   kanal_ = kanal;
@@ -41,7 +41,7 @@ void Pakiet::execute()
     case 1: 
     {
       cout << "FAZA 1: Generacja pakietu" << endl;
-      aktywacja(nad_->losujCGP());
+      this->aktywacja(nad_->losujCGP());
       nad_->DodajDoBufora(this);
       if (nad_->PierwszyPakiet() == this) 
       {
@@ -61,7 +61,7 @@ void Pakiet::execute()
       cout << "FAZA 2: Sprawdzenie kanalu" << endl;
       if (kanal_->StanLacza() == false) 
       {
-        cout << "Kanal zajety, czekaj 0.5 ms" << endl;
+        cout << "Kanal zajety, odpytywanie co 0.5 ms" << endl;
         this->aktywacja(0.5);
         aktywny_ = false;
       }
@@ -88,7 +88,7 @@ void Pakiet::execute()
       }
       else 
       {
-        cout << "Prawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPT << endl;
+        cout << "Prawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPT << ", czekaj do nastepnej szczeliny" << endl;
         this->aktywacja(1 - fmod(sym_->StanZegara(), 1.0));
         faza_ = 4;
       }
@@ -126,6 +126,7 @@ void Pakiet::execute()
       {
         if (kanal_->CzyKolizja() == false) 
         {
+          cout << "Brak kolizji, mozna transmitowac" << endl;
           kanal_->DodajDoKanalu(this);
           kanal_->UstawLacze(false);
           faza_ = 6;
@@ -150,7 +151,10 @@ void Pakiet::execute()
     case 6: 
     {
       cout << "FAZA 6: Transmisja pakietu " << endl;
-      this->aktywacja(this->losujCTP());
+      int ctp = this->losujCTP();
+      this->aktywacja(ctp);
+      cout << "Czas transmisji pakietu wynosi: " << ctp << endl;
+      faza_ = 8;
       aktywny_ = false;
     }
       break;
@@ -166,7 +170,7 @@ void Pakiet::execute()
       {
         cout << "Pakiet jest retransmitowany, numer retransmisji: " << licznik_ret_ << endl;
         czas_CRP_ = losujR()*czas_CTP_;
-        aktywacja(czas_CRP_);
+        this->aktywacja(czas_CRP_);
         faza_ = 2;
         aktywny_ = false;
       }
@@ -184,7 +188,10 @@ void Pakiet::execute()
       //============================================
     case 8: 
     {
-
+      cout << "FAZA 8: Odbior pakietu i wyslanie ACK" << endl;
+      ack_ = true;
+      this->aktywacja(1.0);
+      aktywny_ = false;
     }
       break;
     }

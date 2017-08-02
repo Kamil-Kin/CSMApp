@@ -26,6 +26,7 @@ private:
   int czas_CTP_;
   int licznik_ret_;
   double czas_CRP_;
+  bool ack_;
 
   Zdarzenie* moje_zd_;
   Nadajnik* nad_;

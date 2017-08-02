@@ -10,10 +10,8 @@ bool comparer::operator()(const Zdarzenie* z1, const Zdarzenie* z2) const
   return z1->PobierzCzasZd() > z2->PobierzCzasZd();
 }
 
-Symulacja::Symulacja() :zegar_(0.0)
-{
-  //kalendarz_ = new priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)>;
-}
+Symulacja::Symulacja() :zegar_(0.0) {}
+
 Symulacja::~Symulacja() {}
 
 void Symulacja::run() 
@@ -22,7 +20,7 @@ void Symulacja::run()
   //main loop todo
   Pakiet* obecny_ = nullptr;
 
-  while (StanZegara() < 2000.0) //roboczo todo
+  while (StanZegara() < 20000.0) //roboczo todo
   {
     obecny_ = PobierzPierwszyElement()->PobierzPakiet();
     zegar_ = PobierzPierwszyElement()->PobierzCzasZd();
@@ -35,11 +33,9 @@ void Symulacja::run()
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) 
 {
   kalendarz_.push(zd);
-  //cout << "Dodano do kalendarza zdarzenie o czasie " << zd_->PobierzCzasZd() << endl;
 }
 
 void Symulacja::UsunZKalendarza()
 {
   kalendarz_.pop();
-  //cout << "Usuniêto z kalendarza zdarzenie o czasie " << zd_->PobierzCzasZd() << endl;
 }

@@ -19,7 +19,7 @@ Nadajnik::~Nadajnik() {}
 double Nadajnik::losujCGP() 
 {
   double cgp = fmod(rand(), 10.0) + 1;
-  cout << "Moment wygenerowania pakietu:" << cgp << endl;
+  cout << "Moment wygenerowania pakietu: " << cgp << endl;
   return cgp;
 }
 

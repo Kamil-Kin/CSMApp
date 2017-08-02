@@ -23,7 +23,7 @@ public:
   bool CzySkonczony() { return skonczony_; }
   void UstawKolor(string numer);
 private:
-  const int kLR = 10;
+  const int kLR = 5;
   const double kPT = 0.2;
   int faza_;
   bool skonczony_;

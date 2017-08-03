@@ -12,7 +12,7 @@ class Kanal
 public:
   Kanal();
   ~Kanal();
-  void UstawLacze(bool stan_lacza);   //set
+  void KanalWolny(bool stan_lacza);   //set
   bool StanLacza();                   //get
   bool CzyKolizja();
   void DodajDoKanalu(Pakiet*);

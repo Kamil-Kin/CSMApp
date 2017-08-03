@@ -6,7 +6,7 @@ Kanal::Kanal()
 }
 Kanal::~Kanal() {}
 
-void Kanal::UstawLacze(bool stan_lacza) 
+void Kanal::KanalWolny(bool stan_lacza) 
 {
   czy_wolny_ = stan_lacza;
 }

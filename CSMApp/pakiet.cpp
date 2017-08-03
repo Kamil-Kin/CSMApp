@@ -18,7 +18,7 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad) :faza_(1), 
   nad_ = nad;
   moje_zd_ = new Zdarzenie(this);
   //aktywacja(nad_->losujCGP());
-  execute();//todo
+  //execute();//todo
 }
 Pakiet::~Pakiet() {}
 
@@ -43,12 +43,13 @@ void Pakiet::execute()
     //============================================
     case 1: 
     {
-      UstawKolor("0A");
-      cout << "FAZA 1: Generacja pakietu" << endl;
+      UstawKolor("06");
+      cout << "\nFAZA 1: Generacja pakietu" << endl;
       this->aktywacja(nad_->losujCGP());
       nad_->DodajDoBufora(this);
       if (nad_->PierwszyPakiet() == this) 
       {
+        UstawKolor("0E");
         cout << "Pakiet pierwszy w buforze, sprawdza stan kanalu" << endl;
         faza_ = 2;
       }
@@ -61,17 +62,20 @@ void Pakiet::execute()
     // faza 2: sprawdzenie zajêtoœci kana³u
     //============================================
     case 2: 
-    {UstawKolor("0A");
-      cout << "FAZA 2: Sprawdzenie kanalu" << endl;
+    {
+      UstawKolor("06");
+      cout << "\nFAZA 2: Sprawdzenie kanalu" << endl;
       if (kanal_->StanLacza() == false) 
       {
+        UstawKolor("04");
         cout << "Kanal zajety, odpytywanie co 0.5 ms" << endl;
         this->aktywacja(0.5);
         aktywny_ = false;
       }
       else 
       {
-        cout << "Kanal wolny, podejmij probe transmisji" << endl;
+        UstawKolor("0A");
+        cout << "Kanal wolny, losuj prawdopodobienstwo" << endl;
         faza_ = 3;  //próba transmisji z p-ñstwem p
       }
     }
@@ -81,17 +85,19 @@ void Pakiet::execute()
     // faza 3: losowanie prawdopodobieñstwa
     //============================================ 
     case 3: 
-    {UstawKolor("0A");
-      cout << "FAZA 3: losowanie prawdopodobienstwa transmisji" << endl;
+    {UstawKolor("06");
+      cout << "\nFAZA 3: losowanie prawdopodobienstwa transmisji" << endl;
       double p = this->losujPT();
       if (p <= kPT) 
       {
-        cout << "Prawdopodobienstwo transmisji p = " << p << " mniejsze od PT = " << kPT << endl;
-        cout << "Mozna podjac probe transmisji" << endl;
+        UstawKolor("0D");
+        cout << "Prawdopodobienstwo transmisji p = " << p << " mniejsze od PT = " << kPT;
+        cout << "Podejmij probe transmisji" << endl;
         faza_ = 5;
       }
       else 
       {
+        UstawKolor("0B");
         cout << "Prawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPT << ", czekaj do nastepnej szczeliny" << endl;
         this->aktywacja(1 - fmod(sym_->StanZegara(), 1.0));
         faza_ = 4;
@@ -104,15 +110,18 @@ void Pakiet::execute()
     //         z odpytywaniem co 1ms
     //============================================
     case 4: 
-    {UstawKolor("0A");
-      cout << "FAZA 4: Ponowne sprawdzenie kanalu" << endl;
+    {
+      UstawKolor("06");
+      cout << "\nFAZA 4: Ponowne sprawdzenie kanalu" << endl;
       if (kanal_->StanLacza() == true) 
       {
+        UstawKolor("0A");
         cout << "Kanal wolny, ponowne losowanie prawdopodobienstwa" << endl;
         faza_ = 3;
       }
       else 
       {
+        UstawKolor("04");
         cout << "Kanal zajety, odpytywanie co 1.0 ms" << endl;
         this->aktywacja(1.0);
         aktywny_ = false;
@@ -124,19 +133,22 @@ void Pakiet::execute()
     // faza 5: Próba transmisji: sprawdzenie kolizji w  kanale
     //============================================
     case 5: 
-    {UstawKolor("0A");
-      cout << "FAZA 5: Sprawdzenie kolizji" << endl;
+    {
+      UstawKolor("06");
+      cout << "\nFAZA 5: Sprawdzenie kolizji" << endl;
       if (fmod(sym_->StanZegara(), 1.0) == 0.0) 
       {
         if (kanal_->CzyKolizja() == false) 
         {
+          UstawKolor("0A");
           cout << "Brak kolizji, mozna transmitowac" << endl;
           kanal_->DodajDoKanalu(this);
-          kanal_->UstawLacze(false);
+          kanal_->KanalWolny(false);
           faza_ = 6;
         }
         else 
         {
+          UstawKolor("04");
           cout << "Wykryta zostala kolizja" << endl;
           faza_ = 7;
         }
@@ -153,10 +165,12 @@ void Pakiet::execute()
     // faza 6: W³aœciwa transmisja pakietu
     //============================================
     case 6: 
-    {UstawKolor("0A");
-      cout << "FAZA 6: Transmisja pakietu " << endl;
+    {
+      UstawKolor("06");
+      cout << "\nFAZA 6: Transmisja pakietu " << endl;
       int ctp = this->losujCTP();
       this->aktywacja(ctp);
+      UstawKolor("05");
       cout << "Czas transmisji pakietu wynosi: " << ctp << endl;
       faza_ = 8;
       aktywny_ = false;
@@ -167,11 +181,13 @@ void Pakiet::execute()
       // faza 7: Retransmisja pakietu
       //============================================
     case 7: 
-    {UstawKolor("0A");
-      cout << "FAZA 7: Retransmisja pakietu" << endl;
+    {
+      UstawKolor("06");
+      cout << "\nFAZA 7: Retransmisja pakietu" << endl;
       licznik_ret_++;
       if (licznik_ret_ < kLR) 
       {
+        UstawKolor("01");
         cout << "Pakiet jest retransmitowany, numer retransmisji: " << licznik_ret_ << endl;
         czas_CRP_ = losujR()*czas_CTP_;
         this->aktywacja(czas_CRP_);
@@ -180,6 +196,7 @@ void Pakiet::execute()
       }
       else
       {
+        UstawKolor("0C");
         cout << "Przekroczono liczbê dopuszczalnych retransmisji, pakiet stracony" << endl;
         nad_->UsunZBufora();
         skonczony_ = true;
@@ -191,10 +208,14 @@ void Pakiet::execute()
       // faza 8: Odbiór pakietu, ustawienie ACK
       //============================================
     case 8: 
-    {UstawKolor("0A");
-      cout << "FAZA 8: Odbior pakietu i wyslanie ACK" << endl;
+    {
+      UstawKolor("06");
+      cout << "\nFAZA 8: Odbior pakietu i wyslanie ACK" << endl;
       ack_ = true;
       this->aktywacja(1.0);
+      kanal_->UsunZKanalu();
+      kanal_->KanalWolny(true);
+      skonczony_ = true;
       aktywny_ = false;
     }
       break;
@@ -210,6 +231,7 @@ int Pakiet::losujCTP()
 double Pakiet::losujPT() 
 {
   double x = (rand() % 11) / 10.0;
+  UstawKolor("03");
   cout << "Wylosowano prawdopodobienstwo transmisji p = " << x << endl;
   return x;
 }

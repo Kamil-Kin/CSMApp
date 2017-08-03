@@ -24,7 +24,7 @@ void Symulacja::run()
   {
     obecny_ = PobierzPierwszyElement()->PobierzPakiet();
     zegar_ = PobierzPierwszyElement()->PobierzCzasZd();
-    UsunZKalendarza();
+    this->UsunZKalendarza();
     obecny_->execute();
     if (obecny_->CzySkonczony()) delete obecny_;
   }

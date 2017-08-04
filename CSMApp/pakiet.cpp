@@ -17,17 +17,18 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad) :faza_(1), 
   kanal_ = kanal;
   nad_ = nad;
   moje_zd_ = new Zdarzenie(this);
-  //aktywacja(nad_->losujCGP());
+  aktywacja(nad_->losujCGP());
   //execute();//todo
 }
 Pakiet::~Pakiet() {}
 
 void Pakiet::aktywacja(double czas)
 {
-  moje_zd_->UstawCzasZd(sym_->StanZegara() + czas);
+  moje_zd_->czas_zdarzenia_ = sym_->zegar_ + czas;
+  //moje_zd_->UstawCzasZd(sym_->StanZegara() + czas);
   sym_->DodajDoKalendarza(moje_zd_);
   UstawKolor("09");
-  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zd_->PobierzCzasZd() << endl;
+  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zd_->czas_zdarzenia_ << endl;
 }
 
 void Pakiet::execute()
@@ -45,7 +46,7 @@ void Pakiet::execute()
     {
       UstawKolor("06");
       cout << "\nFAZA 1: Generacja pakietu" << endl;
-      this->aktywacja(nad_->losujCGP());
+      (new Pakiet(id_tx_, sym_, kanal_, nad_))->aktywacja(nad_->losujCGP());
       nad_->DodajDoBufora(this);
       if (nad_->PierwszyPakiet() == this) 
       {
@@ -92,7 +93,7 @@ void Pakiet::execute()
       {
         UstawKolor("0D");
         cout << "Prawdopodobienstwo transmisji p = " << p << " mniejsze od PT = " << kPT;
-        cout << "Podejmij probe transmisji" << endl;
+        cout << ", podejmij probe transmisji" << endl;
         faza_ = 5;
       }
       else 
@@ -169,9 +170,9 @@ void Pakiet::execute()
       UstawKolor("06");
       cout << "\nFAZA 6: Transmisja pakietu " << endl;
       int ctp = this->losujCTP();
-      this->aktywacja(ctp);
       UstawKolor("05");
       cout << "Czas transmisji pakietu wynosi: " << ctp << endl;
+      this->aktywacja(ctp);
       faza_ = 8;
       aktywny_ = false;
     }

@@ -20,22 +20,22 @@ void Symulacja::run()
   //main loop todo
   Pakiet* obecny_ = nullptr;
 
-  while (StanZegara() < 20000.0) //roboczo todo
+  while (zegar_ < 20000.0) //roboczo todo
   {
-    obecny_ = PobierzPierwszyElement()->PobierzPakiet();
+    zegar_ = 0.0;
+    /*obecny_ = PobierzPierwszyElement()->PobierzPakiet();
     zegar_ = PobierzPierwszyElement()->PobierzCzasZd();
-    this->UsunZKalendarza();
+    this->UsunZKalendarza();*/
+    obecny_ = kalendarz_.top()->pakiet_;
+    zegar_ = kalendarz_.top()->PobierzCzasZd();
+    kalendarz_.pop();
     obecny_->execute();
     if (obecny_->CzySkonczony()) delete obecny_;
   }
 }
 
-void Symulacja::DodajDoKalendarza(Zdarzenie* zd) 
-{
-  kalendarz_.push(zd);
-}
+void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }
 
-void Symulacja::UsunZKalendarza()
-{
-  kalendarz_.pop();
-}
+void Symulacja::UsunZKalendarza() { kalendarz_.pop(); }
+
+Zdarzenie* Symulacja::PobierzPierwszyElement() { return kalendarz_.top(); }

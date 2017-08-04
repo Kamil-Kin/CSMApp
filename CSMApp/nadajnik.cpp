@@ -20,7 +20,7 @@ double Nadajnik::losujCGP()
 {
   double cgp = fmod(rand(), 10.0) + 1;
   pak_->UstawKolor("02");
-  cout << "Moment wygenerowania pakietu: " << cgp << endl;
+  cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << cgp << endl;
   return cgp;
 }
 

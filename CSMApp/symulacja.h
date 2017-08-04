@@ -28,10 +28,10 @@ public:
 
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();
-  Zdarzenie* PobierzPierwszyElement() { return kalendarz_.top(); }
-
-private:
+  Zdarzenie* PobierzPierwszyElement();
   double zegar_;
+private:
+  
 
   Siec* siec_;
   Zdarzenie* zd_;

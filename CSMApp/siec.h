@@ -7,6 +7,8 @@ class Symulacja;
 class Nadajnik;
 class Kanal;
 
+using std::vector;
+
 class Siec 
 {
 public:
@@ -14,10 +16,12 @@ public:
   ~Siec();
 
   Symulacja* getSim() { return sym_; }
-
+  Kanal* getKanal() { return kanal_; }
+  Nadajnik* getNad(int id) { return nadajniki_.at(id); }
+  int LiczbaNad() { return kLiczbaNad_; }
 private:
   const int kLiczbaNad_ = 4;
-  std::vector<Nadajnik*> nadajniki_;
+  vector<Nadajnik*> nadajniki_;
 
   Symulacja* sym_;
   Kanal* kanal_;

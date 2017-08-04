@@ -12,7 +12,7 @@ Nadajnik::Nadajnik(int idx, Siec* siec, Kanal* kanal) :id_(idx)
 {
   siec_ = siec;
   kanal_ = kanal;
-  pak_ = new Pakiet(idx, siec_->getSim(), kanal, this);
+  //pak_ = new Pakiet(idx, siec_->getSim(), kanal, this);
 }
 Nadajnik::~Nadajnik() {}
 
@@ -34,10 +34,8 @@ void Nadajnik::DodajDoBufora(Pakiet* pak)
 void Nadajnik::UsunZBufora() 
 {
   bufor_.pop_back();
+  pak_->UstawKolor("08");
   cout << "Usuniêto pakiet z bufora nadajnika nr " << id_ << endl;
 }
 
-Pakiet* Nadajnik::PierwszyPakiet() 
-{
-  return bufor_.front();
-}
+Pakiet* Nadajnik::PierwszyPakiet() { return bufor_.front(); }

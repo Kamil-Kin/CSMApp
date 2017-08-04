@@ -31,10 +31,10 @@ public:
   Zdarzenie* PobierzPierwszyElement();
   double zegar_;
 private:
-  
 
   Siec* siec_;
   Zdarzenie* zd_;
+
   priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer> kalendarz_;
 
   //priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)> kalendarz_;

@@ -19,7 +19,8 @@ void Symulacja::run()
   zegar_ = 0.0;
   siec_ = new Siec(this);
   //Pakiet* obecny_ = nullptr;
-
+  for (int i = 1; i <= siec_->LiczbaNad(); i++)
+    new Pakiet(i, this, siec_->getKanal(), siec_->getNad(i));
   while (zegar_ < 20000.0) //roboczo todo
   {
     /*obecny_ = PobierzPierwszyElement()->PobierzPakiet();
@@ -28,6 +29,8 @@ void Symulacja::run()
     Pakiet* obecny_ = kalendarz_.top()->pakiet_;
     zegar_ = kalendarz_.top()->czas_zdarzenia_;
     kalendarz_.pop();
+    obecny_->UstawKolor("07");
+    cout << "Usunieto z kalendarza zdarzenie o czasie: " << zegar_ << endl;
     obecny_->execute();
     if (obecny_->CzySkonczony()) delete obecny_;
   }

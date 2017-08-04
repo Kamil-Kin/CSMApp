@@ -231,6 +231,7 @@ int Pakiet::losujCTP()
   czas_CTP_ = (rand() % 10) + 1;
   return czas_CTP_;
 }
+
 double Pakiet::losujPT() 
 {
   double x = (rand() % 11) / 10.0;
@@ -238,6 +239,7 @@ double Pakiet::losujPT()
   cout << "Wylosowano prawdopodobienstwo transmisji p = " << x << endl;
   return x;
 }
+
 double Pakiet::losujR() 
 {
   double koniec = pow(2.0, licznik_ret_);

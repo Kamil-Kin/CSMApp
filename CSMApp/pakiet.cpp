@@ -28,7 +28,7 @@ void Pakiet::aktywacja(double czas)
   //moje_zd_->UstawCzasZd(sym_->StanZegara() + czas);
   sym_->DodajDoKalendarza(moje_zd_);
   UstawKolor("09");
-  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zd_->czas_zdarzenia_ << endl;
+  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zd_->czas_zdarzenia_ << " ms" << endl;
 }
 
 void Pakiet::execute()
@@ -86,7 +86,8 @@ void Pakiet::execute()
     // faza 3: losowanie prawdopodobieñstwa
     //============================================ 
     case 3: 
-    {UstawKolor("06");
+    {
+      UstawKolor("06");
       cout << "\nFAZA 3: losowanie prawdopodobienstwa transmisji" << endl;
       double p = this->losujPT();
       if (p <= kPT) 
@@ -99,7 +100,8 @@ void Pakiet::execute()
       else 
       {
         UstawKolor("0B");
-        cout << "Prawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPT << ", czekaj do nastepnej szczeliny" << endl;
+        cout << "Prawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPT << ", czekaj do nastepnej szczeliny";
+        cout << ", dodaj " << (1 - fmod(sym_->StanZegara(), 1.0)) << " ms" << endl;
         this->aktywacja(1 - fmod(sym_->StanZegara(), 1.0));
         faza_ = 4;
       }

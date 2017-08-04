@@ -11,7 +11,7 @@ Siec::Siec(Symulacja* sym)
   srand(time(NULL));
   sym_ = sym;
   kanal_ = new Kanal();
-  for (int i = 1; i <= 8; i++) //todo
+  for (int i = 1; i <= 4; i++) //todo
   {
     nadajniki_.push_back(new Nadajnik(i, this, kanal_));
   }

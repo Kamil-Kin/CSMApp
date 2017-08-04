@@ -51,7 +51,7 @@ void Pakiet::execute()
       if (nad_->PierwszyPakiet() == this) 
       {
         UstawKolor("0E");
-        cout << "Pakiet pierwszy w buforze, sprawdza stan kanalu" << endl;
+        cout << "Pakiet id " << id_tx_ << " pierwszy w buforze, sprawdza stan kanalu" << endl;
         faza_ = 2;
       }
       else
@@ -69,14 +69,14 @@ void Pakiet::execute()
       if (kanal_->StanLacza() == false) 
       {
         UstawKolor("04");
-        cout << "Kanal zajety, odpytywanie co 0.5 ms" << endl;
+        cout << "Pakiet id " << id_tx_ << ": Kanal zajety, odpytywanie co 0.5 ms" << endl;
         this->aktywacja(0.5);
         aktywny_ = false;
       }
       else 
       {
         UstawKolor("0A");
-        cout << "Kanal wolny, losuj prawdopodobienstwo" << endl;
+        cout << "Pakiet id " << id_tx_ << ": Kanal wolny, losuj prawdopodobienstwo" << endl;
         faza_ = 3;  //próba transmisji z p-ñstwem p
       }
     }
@@ -93,14 +93,14 @@ void Pakiet::execute()
       if (p <= kPT) 
       {
         UstawKolor("0D");
-        cout << "Prawdopodobienstwo transmisji p = " << p << " mniejsze od PT = " << kPT;
+        cout << "Pakiet id " << id_tx_ << ": Prawdopodobienstwo transmisji p = " << p << " mniejsze od PT = " << kPT;
         cout << ", podejmij probe transmisji" << endl;
         faza_ = 5;
       }
       else 
       {
         UstawKolor("0B");
-        cout << "Prawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPT << ", czekaj do nastepnej szczeliny";
+        cout << "Pakiet id" << id_tx_ << ": Prawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPT << ", czekaj do nastepnej szczeliny";
         cout << ", dodaj " << (1 - fmod(sym_->StanZegara(), 1.0)) << " ms" << endl;
         this->aktywacja(1 - fmod(sym_->StanZegara(), 1.0));
         faza_ = 4;
@@ -119,13 +119,13 @@ void Pakiet::execute()
       if (kanal_->StanLacza() == true) 
       {
         UstawKolor("0A");
-        cout << "Kanal wolny, ponowne losowanie prawdopodobienstwa" << endl;
+        cout << "Pakiet id " << id_tx_ << ": Kanal wolny, ponowne losowanie prawdopodobienstwa" << endl;
         faza_ = 3;
       }
       else 
       {
         UstawKolor("04");
-        cout << "Kanal zajety, odpytywanie co 1.0 ms" << endl;
+        cout << "Pakiet id" << id_tx_ << ": Kanal zajety, odpytywanie co 1.0 ms" << endl;
         this->aktywacja(1.0);
         aktywny_ = false;
       }
@@ -144,7 +144,7 @@ void Pakiet::execute()
         if (kanal_->CzyKolizja() == false) 
         {
           UstawKolor("0A");
-          cout << "Brak kolizji, mozna transmitowac" << endl;
+          cout << "Pakiet id " << id_tx_ << ": Brak kolizji, mozna transmitowac" << endl;
           kanal_->DodajDoKanalu(this);
           kanal_->KanalWolny(false);
           faza_ = 6;
@@ -152,7 +152,7 @@ void Pakiet::execute()
         else 
         {
           UstawKolor("04");
-          cout << "Wykryta zostala kolizja" << endl;
+          cout << "Pakiet id" << id_tx_ << ": Wykryta zostala kolizja" << endl;
           faza_ = 7;
         }
       }
@@ -173,7 +173,7 @@ void Pakiet::execute()
       cout << "\nFAZA 6: Transmisja pakietu " << endl;
       int ctp = this->losujCTP();
       UstawKolor("05");
-      cout << "Czas transmisji pakietu wynosi: " << ctp << endl;
+      cout << "Pakiet id " << id_tx_ << ": Czas transmisji wynosi " << ctp << " ms" << endl;
       this->aktywacja(ctp);
       faza_ = 8;
       aktywny_ = false;
@@ -191,7 +191,7 @@ void Pakiet::execute()
       if (licznik_ret_ < kLR) 
       {
         UstawKolor("01");
-        cout << "Pakiet jest retransmitowany, numer retransmisji: " << licznik_ret_ << endl;
+        cout << "Pakiet id " << id_tx_ << " jest retransmitowany, numer retransmisji: " << licznik_ret_ << endl;
         czas_CRP_ = losujR()*czas_CTP_;
         this->aktywacja(czas_CRP_);
         faza_ = 2;
@@ -200,7 +200,7 @@ void Pakiet::execute()
       else
       {
         UstawKolor("0C");
-        cout << "Przekroczono liczbê dopuszczalnych retransmisji, pakiet stracony" << endl;
+        cout << "Pakiet id " << id_tx_ << ": Przekroczono liczbê dopuszczalnych retransmisji, pakiet stracony" << endl;
         nad_->UsunZBufora();
         skonczony_ = true;
       }
@@ -235,8 +235,6 @@ int Pakiet::losujCTP()
 double Pakiet::losujPT() 
 {
   double x = (rand() % 11) / 10.0;
-  UstawKolor("03");
-  cout << "Wylosowano prawdopodobienstwo transmisji p = " << x << endl;
   return x;
 }
 

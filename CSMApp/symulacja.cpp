@@ -19,7 +19,7 @@ void Symulacja::run()
   zegar_ = 0.0;
   siec_ = new Siec(this);
   //Pakiet* obecny_ = nullptr;
-  for (int i = 1; i <= siec_->LiczbaNad(); i++)
+  for (int i = 0; i < siec_->LiczbaNad(); i++)
     new Pakiet(i, this, siec_->getKanal(), siec_->getNad(i));
   while (zegar_ < 20000.0) //roboczo todo
   {

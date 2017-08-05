@@ -16,12 +16,13 @@ Nadajnik::Nadajnik(int idx, Siec* siec, Kanal* kanal) :id_(idx)
 }
 Nadajnik::~Nadajnik() {}
 
-double Nadajnik::losujCGP() 
+double Nadajnik::losujCGP()
 {
-  double cgp = fmod(rand(), 10.0) + 1;
+  CGP_ = (rand() % 101) / 10.0;
+  //double cgp = fmod(rand(), 10.0) + 1;
   pak_->UstawKolor("02");
-  cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << cgp << " ms" << endl;
-  return cgp;
+  cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << CGP_ << " ms" << endl;
+  return CGP_;
 }
 
 void Nadajnik::DodajDoBufora(Pakiet* pak) 

@@ -29,6 +29,7 @@ public:
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();
   Zdarzenie* PobierzPierwszyElement();
+
   double zegar_;
 private:
 
@@ -36,7 +37,6 @@ private:
   Zdarzenie* zd_;
 
   priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer> kalendarz_;
-
   //priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)> kalendarz_;
   //priority_queue<Zdarzenie*> kalendarz_;
 };

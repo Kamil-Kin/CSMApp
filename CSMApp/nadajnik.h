@@ -14,8 +14,8 @@ public:
   Nadajnik(int idx, Siec* siec, Kanal* kanal);
   ~Nadajnik();
 
-  void setCGP(double CGP) { CGP_ = CGP; }
-  double getCGP() { return CGP_; }
+  //void setCGP(double CGP) { CGP_ = CGP; }
+  //double getCGP() { return CGP_; }
   double losujCGP();
   void DodajDoBufora(Pakiet* pak);
   void UsunZBufora();

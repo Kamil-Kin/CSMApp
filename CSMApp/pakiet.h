@@ -19,7 +19,8 @@ public:
   double losujPT();
   double losujR();
   void aktywacja(double czas);
-  void execute();
+  void execute(double zegar);
+  double CzasZdarzenia() const;
   bool CzySkonczony() { return skonczony_; }
   void UstawKolor(string numer);
 private:

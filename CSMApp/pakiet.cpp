@@ -24,14 +24,15 @@ Pakiet::~Pakiet() {}
 
 void Pakiet::aktywacja(double czas)
 {
-  moje_zd_->czas_zdarzenia_ = sym_->zegar_ + czas;
+  //sym_->zegar_ += czas;
+  sym_->zegar_ = czas;
   //moje_zd_->UstawCzasZd(sym_->StanZegara() + czas);
-  sym_->DodajDoKalendarza(moje_zd_);
+  sym_->DodajDoKalendarza(this);
   UstawKolor("09");
-  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zd_->czas_zdarzenia_ << " ms" << endl;
+  cout << "Dodano do kalendarza zdarzenie o czasie: " << sym_->zegar_ << " ms" << endl;
 }
 
-void Pakiet::execute()
+void Pakiet::execute(double zegar)
 {
   bool aktywny_ = true;
   while (aktywny_)
@@ -45,9 +46,8 @@ void Pakiet::execute()
     case 1: 
     {
       UstawKolor("06");
-      cout << "\nFAZA 1: Generacja pakietu" << endl;
-      (new Pakiet(id_tx_, sym_, kanal_, nad_))->aktywacja(nad_->losujCGP());
-      nad_->DodajDoBufora(this);
+      cout << "\nFAZA " << faza_ << ":\tGeneracja pakietu" << endl;
+      (new Pakiet(id_tx_, sym_, kanal_, nad_))->aktywacja(zegar + nad_->losujCGP());
       if (nad_->PierwszyPakiet() == this) 
       {
         UstawKolor("0E");
@@ -65,19 +65,19 @@ void Pakiet::execute()
     case 2: 
     {
       UstawKolor("06");
-      cout << "\nFAZA 2: Sprawdzenie kanalu" << endl;
+      cout << "\nFAZA " << faza_ << ":\tSprawdzenie kanalu" << endl;
       if (kanal_->StanLacza() == false) 
       {
         UstawKolor("04");
         cout << "Pakiet id " << id_tx_ << ":\tKanal zajety, odpytywanie co 0.5 ms" << endl;
-        this->aktywacja(0.5);
+        this->aktywacja(zegar + 0.5);
         aktywny_ = false;
       }
       else 
       {
         UstawKolor("0A");
         cout << "Pakiet id " << id_tx_ << ":\tKanal wolny, losuj prawdopodobienstwo" << endl;
-        faza_ = 3;  //próba transmisji z p-ñstwem p
+        faza_ = 3;
       }
     }
       break;
@@ -88,7 +88,7 @@ void Pakiet::execute()
     case 3: 
     {
       UstawKolor("06");
-      cout << "\nFAZA 3: losowanie prawdopodobienstwa transmisji" << endl;
+      cout << "\nFAZA " << faza_ << ":\tlosowanie prawdopodobienstwa transmisji" << endl;
       double p = this->losujPT();
       if (p <= kPT) 
       {
@@ -101,8 +101,8 @@ void Pakiet::execute()
       {
         UstawKolor("0B");
         cout << "Pakiet id " << id_tx_ << ":\tPrawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPT << ", czekaj do nastepnej szczeliny";
-        cout << ", dodaj " << (1 - fmod(sym_->StanZegara(), 1.0)) << " ms" << endl;
-        this->aktywacja(1 - fmod(sym_->StanZegara(), 1.0));
+        cout << ", dodaj " << (1 - fmod(sym_->zegar_, 1.0)) << " ms" << endl;
+        this->aktywacja(zegar + (1 - fmod(sym_->zegar_, 1.0)));
         faza_ = 4;
       }
     }
@@ -115,7 +115,7 @@ void Pakiet::execute()
     case 4: 
     {
       UstawKolor("06");
-      cout << "\nFAZA 4: Ponowne sprawdzenie kanalu" << endl;
+      cout << "\nFAZA " << faza_ << ":\tPonowne sprawdzenie kanalu" << endl;
       if (kanal_->StanLacza() == true) 
       {
         UstawKolor("0A");
@@ -126,7 +126,7 @@ void Pakiet::execute()
       {
         UstawKolor("04");
         cout << "Pakiet id " << id_tx_ << ":\tKanal zajety, odpytywanie co 1.0 ms" << endl;
-        this->aktywacja(1.0);
+        this->aktywacja(zegar + 1.0);
         aktywny_ = false;
       }
     }
@@ -138,8 +138,8 @@ void Pakiet::execute()
     case 5: 
     {
       UstawKolor("06");
-      cout << "\nFAZA 5: Sprawdzenie kolizji" << endl;
-      if (fmod(sym_->StanZegara(), 1.0) == 0.0) 
+      cout << "\nFAZA " << faza_ << ":\tSprawdzenie kolizji" << endl;
+      if (fmod(sym_->zegar_, 1.0) == 0.0) 
       {
         if (kanal_->CzyKolizja() == false) 
         {
@@ -158,7 +158,7 @@ void Pakiet::execute()
       }
       else 
       {
-        this->aktywacja(1 - fmod(sym_->StanZegara(), 1.0));
+        this->aktywacja(zegar + (1 - fmod(sym_->zegar_, 1.0)));
         aktywny_ = false;
       }
     }
@@ -170,13 +170,13 @@ void Pakiet::execute()
     case 6: 
     {
       UstawKolor("06");
-      cout << "\nFAZA 6: Transmisja pakietu " << endl;
+      cout << "\nFAZA " << faza_ << ":\tTransmisja pakietu " << endl;
       int ctp = this->losujCTP();
       UstawKolor("05");
       cout << "Pakiet id " << id_tx_ << ":\tCzas transmisji wynosi " << ctp << " ms" << endl;
       kanal_->KanalWolny(false);
       faza_ = 8;
-      this->aktywacja(ctp);
+      this->aktywacja(zegar + ctp);
       aktywny_ = false;
     }
       break;
@@ -187,14 +187,14 @@ void Pakiet::execute()
     case 7: 
     {
       UstawKolor("06");
-      cout << "\nFAZA 7: Retransmisja pakietu" << endl;
+      cout << "\nFAZA " << faza_ << ":\tRetransmisja pakietu" << endl;
       licznik_ret_++;
       if (licznik_ret_ < kLR) 
       {
         UstawKolor("01");
         cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << licznik_ret_ << endl;
         czas_CRP_ = losujR()*czas_CTP_;
-        this->aktywacja(czas_CRP_);
+        this->aktywacja(zegar + czas_CRP_);
         faza_ = 2;
         aktywny_ = false;
       }
@@ -214,9 +214,9 @@ void Pakiet::execute()
     case 8: 
     {
       UstawKolor("06");
-      cout << "\nFAZA 8: Odbior pakietu i wyslanie ACK" << endl;
+      cout << "\nFAZA 8" << faza_ << ":\tOdbior pakietu i wyslanie ACK" << endl;
       ack_ = true;
-      this->aktywacja(1.0);
+      this->aktywacja(zegar + 1.0);
       kanal_->UsunZKanalu();
       kanal_->KanalWolny(true);
       skonczony_ = true;
@@ -245,6 +245,8 @@ double Pakiet::losujR()
   double R = fmod(rand(), koniec);
   return R;
 }
+
+double Pakiet::CzasZdarzenia() const { return sym_->zegar_; }
 
 void Pakiet::UstawKolor(string numer) {
 

@@ -1,4 +1,4 @@
-//#include "symulacja.h"
+#include "symulacja.h"
 #include "siec.h"
 #include "kanal.h"
 #include "nadajnik.h"
@@ -12,7 +12,9 @@ Nadajnik::Nadajnik(int idx, Siec* siec, Kanal* kanal) :id_(idx)
 {
   siec_ = siec;
   kanal_ = kanal;
-  //pak_ = new Pakiet(idx, siec_->getSim(), kanal, this);
+  pak_ = new Pakiet(idx, siec_->getSim(), kanal, this);
+  pak_->aktywacja(losujCGP());
+
 }
 Nadajnik::~Nadajnik() {}
 

@@ -6,6 +6,7 @@
 
 class Siec;
 class Zdarzenie;
+class Pakiet;
 
 using std::vector;
 using std::priority_queue;
@@ -14,8 +15,8 @@ using std::binary_function;
 //const auto comparer = [](Zdarzenie* z1, Zdarzenie* z2)->bool
 //{return z1->pobierz_czas_zd() > z2->pobierz_czas_zd(); };
 
-struct comparer : public binary_function<Zdarzenie*, Zdarzenie*, bool> 
-{ bool operator()(const Zdarzenie* z1, const Zdarzenie* z2) const; };
+struct comparer : public binary_function<Pakiet*, Pakiet*, bool> 
+{ bool operator()(const Pakiet* pak1, const Pakiet* pak2) const; };
 
 class Symulacja 
 {
@@ -26,9 +27,9 @@ public:
   void run();
   double StanZegara() { return zegar_; }
 
-  void DodajDoKalendarza(Zdarzenie* zd);
+  void DodajDoKalendarza(Pakiet* pak);
   void UsunZKalendarza();
-  Zdarzenie* PobierzPierwszyElement();
+  Pakiet* PobierzPierwszyElement();
 
   double zegar_;
 private:
@@ -36,7 +37,7 @@ private:
   Siec* siec_;
   Zdarzenie* zd_;
 
-  priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer> kalendarz_;
+  priority_queue<Pakiet*, vector<Pakiet*>, comparer> kalendarz_;
   //priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)> kalendarz_;
   //priority_queue<Zdarzenie*> kalendarz_;
 };

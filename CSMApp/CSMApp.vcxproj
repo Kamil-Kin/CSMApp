@@ -115,6 +115,7 @@
     <ClInclude Include="kanal.h" />
     <ClInclude Include="nadajnik.h" />
     <ClInclude Include="pakiet.h" />
+    <ClInclude Include="proces.h" />
     <ClInclude Include="siec.h" />
     <ClInclude Include="symulacja.h" />
     <ClInclude Include="zdarzenie.h" />
@@ -127,6 +128,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="nadajnik.cpp" />
     <ClCompile Include="pakiet.cpp" />
+    <ClCompile Include="proces.cpp" />
     <ClCompile Include="siec.cpp" />
     <ClCompile Include="symulacja.cpp" />
     <ClCompile Include="ziarno.cpp" />

@@ -8,11 +8,12 @@
 using std::cout;
 using std::endl;
 
-Nadajnik::Nadajnik(int idx, Siec* siec, Kanal* kanal) :id_(idx) 
+Nadajnik::Nadajnik(int idx, Symulacja* sym, Siec* siec, Kanal* kanal) :id_(idx)
 {
+  sym_ = sym;
   siec_ = siec;
   kanal_ = kanal;
-  pak_ = new Pakiet(idx, siec_->getSim(), kanal, this);
+  pak_ = new Pakiet(idx, siec_->getSim(), kanal_, this);
   pak_->aktywacja(losujCGP());
 
 }
@@ -22,7 +23,7 @@ double Nadajnik::losujCGP()
 {
   CGP_ = (rand() % 101) / 10.0;
   //double cgp = fmod(rand(), 10.0) + 1;
-  pak_->UstawKolor("02");
+  sym_->UstawKolor("02");
   cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << CGP_ << " ms" << endl;
   return CGP_;
 }
@@ -30,14 +31,14 @@ double Nadajnik::losujCGP()
 void Nadajnik::DodajDoBufora(Pakiet* pak) 
 {
   bufor_.push_back(pak);
-  pak_->UstawKolor("0F");
+  sym_->UstawKolor("0F");
   cout << "Dodano pakiet do bufora nadajnika nr " << id_ << endl;
 }
 
 void Nadajnik::UsunZBufora() 
 {
   bufor_.pop_back();
-  pak_->UstawKolor("08");
+  sym_->UstawKolor("08");
   cout << "Usuniêto pakiet z bufora nadajnika nr " << id_ << endl;
 }
 

@@ -33,6 +33,7 @@ private:
   int licznik_ret_;
   double czas_CRP_;
   bool ack_;
+  double czas_zdarzenia;
 
   Zdarzenie* moje_zd_;
   Nadajnik* nad_;

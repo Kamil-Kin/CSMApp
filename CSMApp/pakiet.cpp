@@ -17,6 +17,7 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad) :faza_(1), 
   kanal_ = kanal;
   nad_ = nad;
   moje_zd_ = new Zdarzenie(this);
+  czas_zdarzenia = sym_->zegar_;
   //this->aktywacja(nad_->losujCGP());
   //execute();//todo
 }
@@ -25,11 +26,11 @@ Pakiet::~Pakiet() {}
 void Pakiet::aktywacja(double czas)
 {
   //sym_->zegar_ += czas;
-  sym_->zegar_ = czas;
+  czas_zdarzenia = czas;
   //moje_zd_->UstawCzasZd(sym_->StanZegara() + czas);
   sym_->DodajDoKalendarza(this);
   UstawKolor("09");
-  cout << "Dodano do kalendarza zdarzenie o czasie: " << sym_->zegar_ << " ms" << endl;
+  cout << "Dodano do kalendarza zdarzenie o czasie: " << czas_zdarzenia << " ms" << endl;
 }
 
 void Pakiet::execute(double zegar)
@@ -48,6 +49,7 @@ void Pakiet::execute(double zegar)
       UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tGeneracja pakietu" << endl;
       (new Pakiet(id_tx_, sym_, kanal_, nad_))->aktywacja(zegar + nad_->losujCGP());
+      nad_->DodajDoBufora(this);
       if (nad_->PierwszyPakiet() == this) 
       {
         UstawKolor("0E");
@@ -246,7 +248,7 @@ double Pakiet::losujR()
   return R;
 }
 
-double Pakiet::CzasZdarzenia() const { return sym_->zegar_; }
+double Pakiet::CzasZdarzenia() const { return czas_zdarzenia; }
 
 void Pakiet::UstawKolor(string numer) {
 

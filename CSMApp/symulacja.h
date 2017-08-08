@@ -26,7 +26,6 @@ public:
   ~Symulacja();
 
   void run();
-  double StanZegara() { return zegar_; }
 
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();

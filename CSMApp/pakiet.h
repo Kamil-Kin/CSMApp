@@ -8,7 +8,6 @@ class Kanal;
 class Nadajnik;
 class Zdarzenie;
 
-
 class Pakiet :public Proces
 {
 public:
@@ -29,7 +28,6 @@ private:
   int licznik_ret_;
   double czas_CRP_;
   bool ack_;
-  //double czas_zdarzenia;
 
   Zdarzenie* moje_zdarzenie_;
   Nadajnik* nad_;

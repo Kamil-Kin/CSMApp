@@ -11,7 +11,7 @@ using std::endl;
 
 Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad): Proces(sym), id_tx_(idx), licznik_ret_(0), ack_(false)
 {
-  //sym_ = sym;
+  sym_ = sym;
   kanal_ = kanal;
   nad_ = nad;
 }
@@ -19,10 +19,11 @@ Pakiet::~Pakiet() {}
 
 void Proces::aktywacja(double czas)
 {
-  moje_zdarzenie_->czas_zdarzenia_ = sym_->zegar_ + czas;
+  double czas_zd = sym_->zegar_ + czas;
+  moje_zdarzenie_->czas_zdarzenia_ = czas_zd;
   sym_->DodajDoKalendarza(moje_zdarzenie_);
   sym_->UstawKolor("09");
-  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ << " ms" << endl;
+  cout << "Dodano do kalendarza zdarzenie o czasie: " << czas_zd << " ms" << endl;
 }
 
 void Pakiet::execute()
@@ -98,6 +99,7 @@ void Pakiet::execute()
         cout << ", dodaj " << (1 - fmod(sym_->zegar_, 1.0)) << " ms" << endl;
         this->aktywacja(1 - fmod(sym_->zegar_, 1.0));
         faza_ = 4;
+        aktywny_ = false;
       }
     }
       break;
@@ -152,6 +154,7 @@ void Pakiet::execute()
       }
       else 
       {
+        cout << "Pakiet id " << id_tx_ << " o czasie " << sym_->zegar_ << " ms czeka do najblizszej szczeliny" << endl;
         this->aktywacja(1 - fmod(sym_->zegar_, 1.0));
         aktywny_ = false;
       }
@@ -208,7 +211,7 @@ void Pakiet::execute()
     case 8: 
     {
       sym_->UstawKolor("06");
-      cout << "\nFAZA 8" << faza_ << ":\tOdbior pakietu i wyslanie ACK" << endl;
+      cout << "\nFAZA " << faza_ << ":\tOdbior pakietu i wyslanie ACK" << endl;
       ack_ = true;
       this->aktywacja(1.0);
       kanal_->UsunZKanalu();

@@ -42,4 +42,5 @@ void Nadajnik::UsunZBufora()
   cout << "Usunieto pakiet z bufora nadajnika nr " << id_ << endl;
 }
 
+bool Nadajnik::CzyBuforPusty() { return bufor_.empty(); }
 Pakiet* Nadajnik::PierwszyPakiet() { return bufor_.front(); }

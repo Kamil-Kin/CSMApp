@@ -207,22 +207,37 @@ void Pakiet::execute()
       break;
 
       //============================================
-      // faza 8: Odbiór pakietu, ustawienie ACK
+      // faza 8: Wys³anie ACK
       //============================================
     case 8: 
     {
       sym_->UstawKolor("06");
-      cout << "\nFAZA " << faza_ << ":\tOdbior pakietu i wyslanie ACK" << endl;
-      
+      cout << "\nFAZA " << faza_ << ":\tWyslanie ACK" << endl;
+      ack_ = true;
+      this->aktywacja(1.0);
+      faza_ = 9;
+      aktywny_ = false;
+    }
+      break;
+
+      //============================================
+      // faza 9: Odbiór pakietu i zakoñczenie transmisji
+      //============================================
+    case 9: 
+    {
+      sym_->UstawKolor("06");
+      cout << "\nFAZA " << faza_ << ":\tOdebranie pakietu i zakoñczenie transmisji" << endl;
       nad_->UsunZBufora();
       kanal_->UsunZKanalu();
       kanal_->KanalWolny(true);
-      ack_ = true;
-      this->aktywacja(1.0);
-      aktywny_ = false;
       skonczony_ = true;
+      cout << "Pakiet id " << id_tx_ << " zosta³ odebrany" << endl;
+      if (nad_->CzyBuforPusty() == false)
+        nad_->PierwszyPakiet()->aktywacja(0.0);
+      aktywny_ = false;
     }
       break;
+
     default:
       break;
     }

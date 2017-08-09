@@ -1,9 +1,6 @@
 #include "kanal.h"
 
-Kanal::Kanal()
-{
-  czy_wolny_ = true;
-}
+Kanal::Kanal() :czy_wolny_(true) {}
 Kanal::~Kanal() {}
 
 void Kanal::KanalWolny(bool stan_lacza) { czy_wolny_ = stan_lacza; }

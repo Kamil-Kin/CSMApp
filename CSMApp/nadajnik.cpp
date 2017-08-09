@@ -39,7 +39,7 @@ void Nadajnik::UsunZBufora()
 {
   bufor_.pop_back();
   sym_->UstawKolor("08");
-  cout << "Usuniêto pakiet z bufora nadajnika nr " << id_ << endl;
+  cout << "Usunieto pakiet z bufora nadajnika nr " << id_ << endl;
 }
 
 Pakiet* Nadajnik::PierwszyPakiet() { return bufor_.front(); }

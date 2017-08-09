@@ -25,7 +25,7 @@ void Symulacja::run()
   Proces* obecny_ = nullptr;
   //for (int i = 0; i < siec_->LiczbaNad(); i++)
     //(new Pakiet(i, this, siec_->getKanal(), siec_->getNad(i)))->aktywacja(siec_->getNad(i)->losujCGP());
-  while (zegar_ < 30000.0)
+  while (zegar_ < 300000.0)
   {
     /*obecny_ = PobierzPierwszyElement()->PobierzPakiet();
     zegar_ = PobierzPierwszyElement()->PobierzCzasZd();

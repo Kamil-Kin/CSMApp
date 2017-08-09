@@ -97,8 +97,8 @@ void Pakiet::execute()
         sym_->UstawKolor("0B");
         cout << "Pakiet id " << id_tx_ << ":\tPrawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPT << ", czekaj do nastepnej szczeliny";
         cout << ", dodaj " << (1 - fmod(sym_->zegar_, 1.0)) << " ms" << endl;
-        this->aktywacja(1 - fmod(sym_->zegar_, 1.0));
         faza_ = 4;
+        this->aktywacja(1 - fmod(sym_->zegar_, 1.0));
         aktywny_ = false;
       }
     }
@@ -201,6 +201,7 @@ void Pakiet::execute()
         cout << "Pakiet id " << id_tx_ << ":\tPrzekroczono liczbê dopuszczalnych retransmisji, pakiet stracony" << endl;
         nad_->UsunZBufora();
         skonczony_ = true;
+        aktywny_ = false;
       }
     }
       break;
@@ -212,13 +213,17 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tOdbior pakietu i wyslanie ACK" << endl;
-      ack_ = true;
-      this->aktywacja(1.0);
+      
+      nad_->UsunZBufora();
       kanal_->UsunZKanalu();
       kanal_->KanalWolny(true);
-      skonczony_ = true;
+      ack_ = true;
+      this->aktywacja(1.0);
       aktywny_ = false;
+      skonczony_ = true;
     }
+      break;
+    default:
       break;
     }
   }
@@ -242,7 +247,3 @@ double Pakiet::losujR()
   double R = fmod(rand(), koniec);
   return R;
 }
-
-//double Pakiet::CzasZdarzenia() const { return czas_zdarzenia; }
-
-

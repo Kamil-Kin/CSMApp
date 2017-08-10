@@ -22,7 +22,7 @@ void Symulacja::run()
 {
   zegar_ = 0.0;
   siec_ = new Siec(this);
-  Proces* obecny_ = nullptr;
+  //Proces* obecny_ = nullptr;
   //for (int i = 0; i < siec_->LiczbaNad(); i++)
     //(new Pakiet(i, this, siec_->getKanal(), siec_->getNad(i)))->aktywacja(siec_->getNad(i)->losujCGP());
   while (zegar_ < 300000.0)
@@ -30,7 +30,7 @@ void Symulacja::run()
     /*obecny_ = PobierzPierwszyElement()->PobierzPakiet();
     zegar_ = PobierzPierwszyElement()->PobierzCzasZd();
     this->UsunZKalendarza();*/
-    obecny_ = kalendarz_.top()->proces_;
+    Proces* obecny_ = kalendarz_.top()->proces_;
     zegar_ = kalendarz_.top()->czas_zdarzenia_;
     kalendarz_.pop();
     UstawKolor("07");

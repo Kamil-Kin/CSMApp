@@ -49,8 +49,7 @@ void Pakiet::execute()
         cout << "Pakiet id " << id_tx_ << "\tpierwszy w buforze, sprawdza stan kanalu" << endl;
         faza_ = 2;
       }
-      else
-        aktywny_ = false;
+      else aktywny_ = false;
     }
       break;
 
@@ -186,7 +185,7 @@ void Pakiet::execute()
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tRetransmisja pakietu" << endl;
       licznik_ret_++;
-      if (licznik_ret_ < kLR) 
+      if (licznik_ret_ <= kLR) 
       {
         sym_->UstawKolor("01");
         cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << licznik_ret_ << endl;

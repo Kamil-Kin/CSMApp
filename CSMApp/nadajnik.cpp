@@ -43,4 +43,5 @@ void Nadajnik::UsunZBufora()
 }
 
 bool Nadajnik::CzyBuforPusty() { return bufor_.empty(); }
+
 Pakiet* Nadajnik::PierwszyPakiet() { return bufor_.front(); }

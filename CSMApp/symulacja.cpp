@@ -34,7 +34,7 @@ void Symulacja::run()
     zegar_ = kalendarz_.top()->czas_zdarzenia_;
     kalendarz_.pop();
     UstawKolor("07");
-    cout << "Pobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms" << endl;
+    cout << "\nPobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms" << endl;
     obecny_->execute();
     if (obecny_->skonczony_) delete obecny_;
   }

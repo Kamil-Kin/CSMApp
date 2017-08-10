@@ -201,6 +201,8 @@ void Pakiet::execute()
         cout << "Pakiet id " << id_tx_ << ":\tPrzekroczono liczbê dopuszczalnych retransmisji, pakiet stracony" << endl;
         nad_->UsunZBufora();
         skonczony_ = true;
+        if (nad_->CzyBuforPusty() == false)
+          nad_->PierwszyPakiet()->aktywacja(0.0);
         aktywny_ = false;
       }
     }
@@ -226,12 +228,12 @@ void Pakiet::execute()
     case 9: 
     {
       sym_->UstawKolor("06");
-      cout << "\nFAZA " << faza_ << ":\tOdebranie pakietu i zakoñczenie transmisji" << endl;
+      cout << "\nFAZA " << faza_ << ":\tOdebranie pakietu i zakonczenie transmisji" << endl;
       nad_->UsunZBufora();
       kanal_->UsunZKanalu();
       kanal_->KanalWolny(true);
       skonczony_ = true;
-      cout << "Pakiet id " << id_tx_ << " zosta³ odebrany" << endl;
+      cout << "Pakiet id " << id_tx_ << " zostal odebrany" << endl;
       if (nad_->CzyBuforPusty() == false)
         nad_->PierwszyPakiet()->aktywacja(0.0);
       aktywny_ = false;

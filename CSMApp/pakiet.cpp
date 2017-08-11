@@ -82,7 +82,7 @@ void Pakiet::execute()
     case 3: 
     {
       sym_->UstawKolor("06");
-      cout << "\nFAZA " << faza_ << ":\tlosowanie prawdopodobienstwa transmisji" << endl;
+      cout << "\nFAZA " << faza_ << ":\tLosowanie prawdopodobienstwa transmisji" << endl;
       double p = this->losujPT();
       if (p <= kPT) 
       {
@@ -121,6 +121,7 @@ void Pakiet::execute()
       {
         sym_->UstawKolor("04");
         cout << "Pakiet id " << id_tx_ << ":\tKanal zajety, odpytywanie co 1.0 ms" << endl;
+        faza_ = 2;
         this->aktywacja(1.0);
         aktywny_ = false;
       }
@@ -141,8 +142,9 @@ void Pakiet::execute()
           sym_->UstawKolor("0A");
           cout << "Pakiet id " << id_tx_ << ":\tBrak kolizji, mozna transmitowac" << endl;
           kanal_->DodajDoKanalu(this);
-          //kanal_->KanalWolny(false);
           faza_ = 6;
+          this->aktywacja(0.0);
+          aktywny_ = false;
         }
         else 
         {
@@ -177,9 +179,9 @@ void Pakiet::execute()
     }
       break;
 
-      //============================================
-      // faza 7: Retransmisja pakietu
-      //============================================
+    //============================================
+    // faza 7: Retransmisja pakietu
+    //============================================
     case 7: 
     {
       sym_->UstawKolor("06");
@@ -201,15 +203,17 @@ void Pakiet::execute()
         nad_->UsunZBufora();
         skonczony_ = true;
         if (nad_->CzyBuforPusty() == false)
+        {
           nad_->PierwszyPakiet()->aktywacja(0.0);
-        aktywny_ = false;
+          aktywny_ = false;
+        }
       }
     }
       break;
 
-      //============================================
-      // faza 8: Wys³anie ACK
-      //============================================
+    //============================================
+    // faza 8: Wys³anie ACK
+    //============================================
     case 8: 
     {
       sym_->UstawKolor("06");
@@ -221,9 +225,9 @@ void Pakiet::execute()
     }
       break;
 
-      //============================================
-      // faza 9: Odbiór pakietu i zakoñczenie transmisji
-      //============================================
+    //============================================
+    // faza 9: Odbiór pakietu i zakoñczenie transmisji
+    //============================================
     case 9: 
     {
       sym_->UstawKolor("06");
@@ -233,9 +237,11 @@ void Pakiet::execute()
       kanal_->KanalWolny(true);
       skonczony_ = true;
       cout << "Pakiet id " << id_tx_ << " zostal odebrany" << endl;
-      if (nad_->CzyBuforPusty() == false)
+      if (nad_->CzyBuforPusty() == false) 
+      {
         nad_->PierwszyPakiet()->aktywacja(0.0);
-      aktywny_ = false;
+        aktywny_ = false;
+      }
     }
       break;
 

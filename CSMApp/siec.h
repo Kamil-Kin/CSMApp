@@ -20,7 +20,7 @@ public:
   Nadajnik* getNad(int id) { return nadajniki_.at(id); }
   int LiczbaNad() { return kLiczbaNad_; }
 private:
-  const int kLiczbaNad_ = 1;
+  const int kLiczbaNad_ = 2;
   vector<Nadajnik*> nadajniki_;
 
   Symulacja* sym_;

@@ -37,6 +37,7 @@ public:
   int liczba_symulacji_;
   double czas_symulacji_;
   char tryb_symulacji_;
+
 private:
 
   Siec* siec_;

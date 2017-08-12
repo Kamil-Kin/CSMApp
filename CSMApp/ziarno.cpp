@@ -3,6 +3,7 @@
 void Ziarno::GeneracjaZiaren() 
 {
   std::fstream plik;
+  int temp;
   plik.open("ziarno.txt", std::ios::in | std::ios::out);
 
   if (plik.good() == true) 
@@ -11,8 +12,10 @@ void Ziarno::GeneracjaZiaren()
     {
       for (int j = 0; j < odstep_ziaren_; ++j) 
         uniform_->Generacja01();
-      plik << uniform_->getKernel();
+      temp = uniform_->getKernel();
+      plik << temp;
       plik << std::endl;
+      ziarna[i] = temp;
     }
     plik.close();
   }

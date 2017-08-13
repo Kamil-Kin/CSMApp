@@ -9,19 +9,22 @@ using std::endl;
 
 int main() 
 {
-  Symulacja symulacja;
+  double lambda;
+  cout << "Podaj wartosc lamdba: ";
+  cin >> lambda;
+  Symulacja symulacja(lambda);
   Ziarno ziarno;
   ziarno.GeneracjaZiaren();
 
-  cout << "Podaj liczbê symulacji: ";
+  cout << "Podaj liczbe symulacji: ";
   cin >> symulacja.liczba_symulacji_;
   cout << "Podaj czas jednej symulacji [ms]: ";
   cin >> symulacja.czas_symulacji_;
   cout << "Wybierz tryb symulacji: K\k - krokowy, inny - ciagly" << endl;
   cin >> symulacja.tryb_symulacji_;
-  for (int i = 0; i < symulacja.liczba_symulacji_; ++i) 
+  for (int i = symulacja.nr_symulacji_; i < symulacja.liczba_symulacji_; ++i) 
   {
-    symulacja.run();
+    symulacja.run(symulacja.nr_symulacji_++);
 
   }
 

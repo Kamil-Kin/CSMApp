@@ -4,10 +4,12 @@
 #include "generator_rownomierny.h"
 #include <cmath>
 
+class Symulacja;
+
 class GenWykladniczy
 {
 public:
-  GenWykladniczy(double lam, int kernel): lambda_(lam)
+  GenWykladniczy(double lam, int kernel) :lambda_(lam)
   {
     uniform_ = new GenRownomierny(kernel);
   }

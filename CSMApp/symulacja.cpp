@@ -14,14 +14,17 @@ bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
   return zd1->czas_zdarzenia_ > zd2->czas_zdarzenia_;
 }
 
-Symulacja::Symulacja() :zegar_(0.0), liczba_symulacji_(10), czas_symulacji_(1000.0) {}
+Symulacja::Symulacja(double lam) :zegar_(0.0), nr_symulacji_(0), liczba_symulacji_(10), czas_symulacji_(1000.0) 
+{
+  lambda_ = lam;
+}
 
 Symulacja::~Symulacja() {}
 
-void Symulacja::run() 
+void Symulacja::run(int nr_sym) 
 {
   zegar_ = 0.0;
-  siec_ = new Siec(this);
+  siec_ = new Siec(this, nr_sym);
   Proces* obecny_ = nullptr;
   //for (int i = 0; i < siec_->LiczbaNad(); i++)
     //(new Pakiet(i, this, siec_->getKanal(), siec_->getNad(i)))->aktywacja(siec_->getNad(i)->losujCGP());

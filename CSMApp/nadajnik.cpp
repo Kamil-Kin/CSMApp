@@ -1,3 +1,4 @@
+#include "generator_wykladniczy.h"
 #include "symulacja.h"
 #include "siec.h"
 #include "kanal.h"
@@ -13,9 +14,8 @@ Nadajnik::Nadajnik(int idx, Symulacja* sym, Siec* siec, Kanal* kanal) :id_(idx)
   sym_ = sym;
   siec_ = siec;
   kanal_ = kanal;
-  pak_ = new Pakiet(idx, siec_->getSim(), kanal_, this);
-  pak_->aktywacja(losujCGP());
-
+  losCGP_ = new GenWykladniczy(sym_->lambda_, siec_->getZiarno()->PobierzZiarno(3 + id_ * 3));
+  (new Pakiet(idx, siec_->getSim(), kanal_, this))->aktywacja(losujCGP());
 }
 Nadajnik::~Nadajnik() {}
 

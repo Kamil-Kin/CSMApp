@@ -22,10 +22,10 @@ struct comparer : public binary_function<Zdarzenie*, Zdarzenie*, bool>
 class Symulacja 
 {
 public:
-  Symulacja();
+  Symulacja(double lam);
   ~Symulacja();
 
-  void run();
+  void run(int nr_sym);
 
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();
@@ -34,10 +34,11 @@ public:
   void UstawKolor(string numer);
 
   double zegar_;
+  int nr_symulacji_;
   int liczba_symulacji_;
   double czas_symulacji_;
   char tryb_symulacji_;
-
+  double lambda_;
 private:
 
   Siec* siec_;

@@ -8,11 +8,11 @@
 class Ziarno 
 {
 public:
-  Ziarno() : odstep_ziaren_(100000), liczba_ziaren_(200) { new GenRownomierny(1); }
-  ~Ziarno() {}
+  Ziarno();
+  ~Ziarno();
 
   void GeneracjaZiaren();
-
+  int PobierzZiarno(int index);
 private:
   int odstep_ziaren_;
   int liczba_ziaren_;

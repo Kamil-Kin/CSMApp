@@ -1,8 +1,12 @@
 #ifndef CSMA_PP_NADAJNIK_H
 #define CSMA_PP_NADAJNIK_H
 
+#include "ziarno.h"
 #include <vector>
 #include <iostream>
+
+
+class GenWykladniczy;
 class Symulacja;
 class Siec;
 class Kanal;
@@ -30,6 +34,7 @@ private:
   Siec* siec_;
   Kanal* kanal_;
   Pakiet* pak_;
+  GenWykladniczy* losCGP_;
 };
 
 #endif // !CSMA_PP_NADAJNIK_H

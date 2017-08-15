@@ -12,8 +12,8 @@ class Kanal
 public:
   Kanal();
   ~Kanal();
-  void KanalWolny(bool stan_lacza);   //set
-  bool StanLacza();                   //get
+  void KanalWolny(bool stan_lacza);
+  bool StanLacza();
   bool CzyKolizja();
   void DodajDoKanalu(Pakiet*);
   void UsunZKanalu();

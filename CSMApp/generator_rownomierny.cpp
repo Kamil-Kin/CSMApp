@@ -1,6 +1,6 @@
 #include "generator_rownomierny.h"
 
-int GenRownomierny::Generacja01() 
+double GenRownomierny::Generacja01() 
 {
   int h = kernel_ / Q;
   kernel_ = A*(kernel_ - Q*h) - R*h;
@@ -9,7 +9,7 @@ int GenRownomierny::Generacja01()
   return kernel_ / M;
 }
 
-int GenRownomierny::GeneracjaR(double dol, double gora) 
+double GenRownomierny::GeneracjaR(double dol, double gora) 
 {
   return Generacja01() * (gora - dol) + gora;
 }

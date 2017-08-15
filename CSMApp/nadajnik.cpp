@@ -14,15 +14,15 @@ Nadajnik::Nadajnik(int idx, Symulacja* sym, Siec* siec, Kanal* kanal) :id_(idx)
   sym_ = sym;
   siec_ = siec;
   kanal_ = kanal;
-  losCGP_ = new GenWykladniczy(sym_->lambda_, siec_->getZiarno()->PobierzZiarno(3 + id_ * 3));
-  (new Pakiet(idx, siec_->getSim(), kanal_, this))->aktywacja(losujCGP());
+  losCGP_ = new GenWykladniczy(sym_->lambda_, siec_->getZiarno()->PobierzZiarno(3 + id_ * 4));
+  (new Pakiet(idx, siec_->getSim(), siec_, kanal_, this))->aktywacja(losujCGP());
 }
 Nadajnik::~Nadajnik() {}
 
 double Nadajnik::losujCGP()
 {
-  CGP_ = (rand() % 101) / 10.0;
-  //double cgp = fmod(rand(), 10.0) + 1;
+  CGP_ = losCGP_->GeneracjaW();
+  //CGP_ = (rand() % 101) / 10.0;
   sym_->UstawKolor("02");
   cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << CGP_ << " ms" << endl;
   return CGP_;

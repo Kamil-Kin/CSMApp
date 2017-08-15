@@ -1,5 +1,6 @@
 #include "pakiet.h"
 #include "symulacja.h"
+#include "siec.h"
 #include "kanal.h"
 #include "nadajnik.h"
 #include "zdarzenie.h"
@@ -9,9 +10,10 @@
 using std::cout;
 using std::endl;
 
-Pakiet::Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad): Proces(sym), id_tx_(idx), licznik_ret_(0), ack_(false)
+Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad): Proces(sym), id_tx_(idx), licznik_ret_(0), ack_(false)
 {
   sym_ = sym;
+  siec_ = siec;
   kanal_ = kanal;
   nad_ = nad;
 }
@@ -41,7 +43,7 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tGeneracja pakietu" << endl;
-      (new Pakiet(id_tx_, sym_, kanal_, nad_))->aktywacja(nad_->losujCGP());
+      (new Pakiet(id_tx_, sym_, siec_, kanal_, nad_))->aktywacja(nad_->losujCGP());
       nad_->DodajDoBufora(this);
       if (nad_->PierwszyPakiet() == this) 
       {
@@ -83,8 +85,9 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tLosowanie prawdopodobienstwa transmisji" << endl;
-      double p = this->losujPT();
-      if (p <= kPT) 
+      //p = losujPT();
+      p = siec_->LosPT();
+      if (p <= kPT)
       {
         sym_->UstawKolor("0D");
         cout << "Pakiet id " << id_tx_ << ":\tPrawdopodobienstwo transmisji p = " << p << " mniejsze od PT = " << kPT;
@@ -169,12 +172,14 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tTransmisja pakietu " << endl;
-      int ctp = this->losujCTP();
+      czas_CTP_ = siec_->LosCTP();
+      //int ctp = this->losujCTP();
       sym_->UstawKolor("05");
-      cout << "Pakiet id " << id_tx_ << ":\tCzas transmisji wynosi " << ctp << " ms" << endl;
+      cout << "Pakiet id " << id_tx_ << ":\tCzas transmisji wynosi " << czas_CTP_/*ctp*/ << " ms" << endl;
       kanal_->KanalWolny(false);
       faza_ = 8;
-      this->aktywacja(ctp);
+      //this->aktywacja(ctp);
+      this->aktywacja(czas_CTP_);
       aktywny_ = false;
     }
       break;
@@ -191,7 +196,7 @@ void Pakiet::execute()
       {
         sym_->UstawKolor("01");
         cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << licznik_ret_ << endl;
-        czas_CRP_ = losujR()*czas_CTP_;
+        czas_CRP_ = siec_->LosR(licznik_ret_)*czas_CTP_;
         this->aktywacja(czas_CRP_);
         faza_ = 2;
         aktywny_ = false;
@@ -265,7 +270,7 @@ double Pakiet::losujPT()
 
 double Pakiet::losujR() 
 {
-  double koniec = pow(2.0, licznik_ret_);
+  double koniec = pow(2.0, licznik_ret_) - 1;
   double R = fmod(rand(), koniec);
   return R;
 }

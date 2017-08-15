@@ -5,7 +5,6 @@
 #include <vector>
 #include <iostream>
 
-
 class GenWykladniczy;
 class Symulacja;
 class Siec;
@@ -18,8 +17,6 @@ public:
   Nadajnik(int idx, Symulacja* sym, Siec* siec, Kanal* kanal);
   ~Nadajnik();
 
-  //void setCGP(double CGP) { CGP_ = CGP; }
-  //double getCGP() { return CGP_; }
   double losujCGP();
   void DodajDoBufora(Pakiet* pak);
   void UsunZBufora();

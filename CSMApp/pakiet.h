@@ -4,6 +4,7 @@
 #include "proces.h"
 
 class Symulacja;
+class Siec;
 class Kanal;
 class Nadajnik;
 class Zdarzenie;
@@ -11,7 +12,7 @@ class Zdarzenie;
 class Pakiet :public Proces
 {
 public:
-  Pakiet(int idx, Symulacja* sym, Kanal* kanal, Nadajnik* nad);
+  Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad);
   ~Pakiet();
   int losujCTP();
   double losujPT();
@@ -25,6 +26,7 @@ private:
 
   int id_tx_;
   int czas_CTP_;
+  double p;
   int licznik_ret_;
   double czas_CRP_;
   bool ack_;
@@ -32,6 +34,7 @@ private:
   Zdarzenie* moje_zdarzenie_;
   Nadajnik* nad_;
   Kanal* kanal_;
+  Siec* siec_;
   Symulacja* sym_;
 };
 

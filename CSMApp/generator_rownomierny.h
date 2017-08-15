@@ -13,8 +13,8 @@ public:
   } 
   ~GenRownomierny() {}
 
-  int Generacja01();
-  int GeneracjaR(double dol, double gora);
+  double Generacja01();
+  double GeneracjaR(double dol, double gora);
   int getKernel() { return kernel_; }
 private:
   double M;

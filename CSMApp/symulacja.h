@@ -25,7 +25,7 @@ public:
   Symulacja(double lam);
   ~Symulacja();
 
-  void run(int nr_sym);
+  void run();
 
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();
@@ -39,8 +39,8 @@ public:
   double czas_symulacji_;
   char tryb_symulacji_;
   double lambda_;
-private:
 
+private:
   Siec* siec_;
   Zdarzenie* zd_;
 

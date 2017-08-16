@@ -86,7 +86,7 @@ void Pakiet::execute()
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tLosowanie prawdopodobienstwa transmisji" << endl;
       //p = losujPT();
-      p = siec_->LosPT();
+      p = nad_->LosPT();
       if (p <= kPT)
       {
         sym_->UstawKolor("0D");
@@ -172,7 +172,7 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tTransmisja pakietu " << endl;
-      czas_CTP_ = siec_->LosCTP();
+      czas_CTP_ = nad_->LosCTP();
       //int ctp = this->losujCTP();
       sym_->UstawKolor("05");
       cout << "Pakiet id " << id_tx_ << ":\tCzas transmisji wynosi " << czas_CTP_/*ctp*/ << " ms" << endl;
@@ -196,7 +196,7 @@ void Pakiet::execute()
       {
         sym_->UstawKolor("01");
         cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << licznik_ret_ << endl;
-        czas_CRP_ = siec_->LosR(licznik_ret_)*czas_CTP_;
+        czas_CRP_ = nad_->LosR(licznik_ret_)*czas_CTP_;
         this->aktywacja(czas_CRP_);
         faza_ = 2;
         aktywny_ = false;

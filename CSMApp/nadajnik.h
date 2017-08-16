@@ -5,6 +5,7 @@
 #include <vector>
 #include <iostream>
 
+class GenRownomierny;
 class GenWykladniczy;
 class Symulacja;
 class Siec;
@@ -17,12 +18,15 @@ public:
   Nadajnik(int idx, Symulacja* sym, Siec* siec, Kanal* kanal);
   ~Nadajnik();
 
-  double losujCGP();
   void DodajDoBufora(Pakiet* pak);
   void UsunZBufora();
   bool CzyBuforPusty();
   Pakiet* PierwszyPakiet();
 
+  double LosCGP();
+  double LosCTP();
+  double LosPT();
+  double LosR(int l_ret);
 private:
   int id_;
   std::vector<Pakiet*> bufor_;
@@ -31,7 +35,11 @@ private:
   Siec* siec_;
   Kanal* kanal_;
   Pakiet* pak_;
+  Ziarno* ziarno_;
   GenWykladniczy* losCGP_;
+  GenRownomierny* losCTP_;
+  GenRownomierny* losPT_;
+  GenRownomierny* losR_;
 };
 
 #endif // !CSMA_PP_NADAJNIK_H

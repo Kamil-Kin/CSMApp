@@ -48,7 +48,7 @@ void Nadajnik::DodajDoBufora(Pakiet* pak)
 {
   bufor_.push_back(pak);
   sym_->UstawKolor("0F");
-  cout << "Dodano pakiet do bufora nadajnika nr " << id_ << endl;
+  cout << "Dodano pakiet do bufora nadajnika nr " << id_ << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
 }
 
 void Nadajnik::UsunZBufora() 

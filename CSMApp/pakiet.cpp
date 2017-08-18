@@ -16,6 +16,7 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad):
   siec_ = siec;
   kanal_ = kanal;
   nad_ = nad;
+  //nad_->DodajDoBufora(this);
 }
 Pakiet::~Pakiet() {}
 
@@ -208,10 +209,8 @@ void Pakiet::execute()
         nad_->UsunZBufora();
         skonczony_ = true;
         if (nad_->CzyBuforPusty() == false)
-        {
           nad_->PierwszyPakiet()->aktywacja(0.0);
-          aktywny_ = false;
-        }
+        aktywny_ = false;
       }
     }
       break;
@@ -243,10 +242,8 @@ void Pakiet::execute()
       skonczony_ = true;
       cout << "Pakiet id " << id_tx_ << " zostal odebrany" << endl;
       if (nad_->CzyBuforPusty() == false) 
-      {
         nad_->PierwszyPakiet()->aktywacja(0.0);
-        aktywny_ = false;
-      }
+      aktywny_ = false;
     }
       break;
 
@@ -256,21 +253,23 @@ void Pakiet::execute()
   }
 }
 
-int Pakiet::losujCTP() 
-{
-  czas_CTP_ = (rand() % 10) + 1;
-  return czas_CTP_;
-}
-
-double Pakiet::losujPT() 
-{
-  double x = (rand() % 11) / 10.0;
-  return x;
-}
-
-double Pakiet::losujR() 
-{
-  double koniec = pow(2.0, licznik_ret_) - 1;
-  double R = fmod(rand(), koniec);
-  return R;
-}
+//
+//int Pakiet::losujCTP() 
+//{
+//  czas_CTP_ = (rand() % 10) + 1;
+//  return czas_CTP_;
+//}
+//
+//double Pakiet::losujPT() 
+//{
+//  double x = (rand() % 11) / 10.0;
+//  return x;
+//}
+//
+//double Pakiet::losujR() 
+//{
+//  double koniec = pow(2.0, licznik_ret_) - 1;
+//  double R = fmod(rand(), koniec);
+//  return R;
+//}
+//

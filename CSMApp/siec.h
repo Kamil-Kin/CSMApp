@@ -3,6 +3,7 @@
 
 #include <vector>
 
+class Ziarno;
 class Symulacja;
 class Nadajnik;
 class Kanal;
@@ -13,7 +14,7 @@ using std::vector;
 class Siec 
 {
 public:
-  Siec(Symulacja* sym);
+  Siec(Symulacja* sym, Ziarno ziarno);
   ~Siec();
   int LiczbaNad() { return kLiczbaNad_; }
   //Symulacja* getSim() { return sym_; }

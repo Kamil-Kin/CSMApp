@@ -30,5 +30,6 @@ void Ziarno::GeneracjaZiaren()
 
 int Ziarno::PobierzZiarno(int index)
 {
+  std::cout << "ziarno nr: " << index << "\twartosc: " << ziarna[index] << std::endl;
   return ziarna[index];
 }

@@ -4,6 +4,7 @@
 #include <vector>
 #include <queue>
 #include <string>
+class Ziarno;
 class Siec;
 class Zdarzenie;
 //class Pakiet;
@@ -25,7 +26,7 @@ public:
   Symulacja(double lam);
   ~Symulacja();
 
-  void run();
+  void run(Ziarno ziarno);
 
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();

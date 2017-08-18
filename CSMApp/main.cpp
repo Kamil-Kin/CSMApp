@@ -24,7 +24,7 @@ int main()
   cin >> symulacja.tryb_symulacji_;*/
   for (int i = symulacja.nr_symulacji_; i < symulacja.liczba_symulacji_; ++i) 
   {
-    symulacja.run();
+    symulacja.run(ziarno);
     symulacja.nr_symulacji_++;
   }
 

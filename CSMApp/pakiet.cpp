@@ -43,7 +43,7 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tGeneracja pakietu" << endl;
-      (new Pakiet(id_tx_, sym_, siec_, kanal_, nad_))->aktywacja(nad_->losujCGP());
+      (new Pakiet(id_tx_, sym_, siec_, kanal_, nad_))->aktywacja(nad_->LosCGP());
       nad_->DodajDoBufora(this);
       if (nad_->PierwszyPakiet() == this) 
       {

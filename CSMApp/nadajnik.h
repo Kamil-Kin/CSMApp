@@ -4,7 +4,7 @@
 #include "ziarno.h"
 #include <vector>
 #include <iostream>
-
+class Ziarno;
 class GenRownomierny;
 class GenWykladniczy;
 class Symulacja;
@@ -15,7 +15,7 @@ class Pakiet;
 class Nadajnik 
 {
 public:
-  Nadajnik(int idx, Symulacja* sym, Siec* siec, Kanal* kanal);
+  Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* kanal);
   ~Nadajnik();
 
   void DodajDoBufora(Pakiet* pak);
@@ -35,7 +35,7 @@ private:
   Siec* siec_;
   Kanal* kanal_;
   Pakiet* pak_;
-  Ziarno* ziarno_;
+  Ziarno ziarno_;
   GenWykladniczy* losCGP_;
   GenRownomierny* losCTP_;
   GenRownomierny* losPT_;

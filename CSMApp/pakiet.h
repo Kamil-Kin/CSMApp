@@ -14,9 +14,9 @@ class Pakiet :public Proces
 public:
   Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad);
   ~Pakiet();
-  //int losujCTP();
-  //double losujPT();
-  //double losujR();
+  int losujCTP();
+  double losujPT();
+  double losujR();
   //void aktywacja(double czas);
   void execute();
   //double CzasZdarzenia() const;

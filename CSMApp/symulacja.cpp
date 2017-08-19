@@ -37,7 +37,7 @@ void Symulacja::run(Ziarno ziarno)
     zegar_ = kalendarz_.top()->czas_zdarzenia_;
     kalendarz_.pop();
     UstawKolor("07");
-    cout << "\nPobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms" << endl;
+    cout << "\nPobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
     obecny_->execute();
     if (obecny_->skonczony_) delete obecny_;
     if (tryb_symulacji_ == 'K' || tryb_symulacji_ == 'k') getchar();

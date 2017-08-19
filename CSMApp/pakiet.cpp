@@ -16,7 +16,6 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad):
   siec_ = siec;
   kanal_ = kanal;
   nad_ = nad;
-  //nad_->DodajDoBufora(this);
 }
 Pakiet::~Pakiet() {}
 
@@ -86,8 +85,8 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tLosowanie prawdopodobienstwa transmisji" << endl;
-      //p = losujPT();
-      p = nad_->LosPT();
+      p = losujPT();
+      //p = nad_->LosPT();
       if (p <= kPT)
       {
         sym_->UstawKolor("0D");
@@ -159,6 +158,7 @@ void Pakiet::execute()
       }
       else 
       {
+        sym_->UstawKolor("03");
         cout << "Pakiet id " << id_tx_ << " o czasie " << sym_->zegar_ << " ms czeka do najblizszej szczeliny" << endl;
         this->aktywacja(1 - fmod(sym_->zegar_, 1.0));
         aktywny_ = false;
@@ -173,13 +173,12 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tTransmisja pakietu " << endl;
-      czas_CTP_ = nad_->LosCTP();
-      //int ctp = this->losujCTP();
+      //czas_CTP_ = nad_->LosCTP();
+      czas_CTP_ = this->losujCTP();
       sym_->UstawKolor("05");
       cout << "Pakiet id " << id_tx_ << ":\tCzas transmisji wynosi " << czas_CTP_/*ctp*/ << " ms" << endl;
       kanal_->KanalWolny(false);
       faza_ = 8;
-      //this->aktywacja(ctp);
       this->aktywacja(czas_CTP_);
       aktywny_ = false;
     }
@@ -197,7 +196,8 @@ void Pakiet::execute()
       {
         sym_->UstawKolor("01");
         cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << licznik_ret_ << endl;
-        czas_CRP_ = nad_->LosR(licznik_ret_)*czas_CTP_;
+        czas_CRP_ = losujR()*czas_CTP_;
+        //czas_CRP_ = nad_->LosR(licznik_ret_)*czas_CTP_;
         this->aktywacja(czas_CRP_);
         faza_ = 2;
         aktywny_ = false;
@@ -253,23 +253,22 @@ void Pakiet::execute()
   }
 }
 
-//
-//int Pakiet::losujCTP() 
-//{
-//  czas_CTP_ = (rand() % 10) + 1;
-//  return czas_CTP_;
-//}
-//
-//double Pakiet::losujPT() 
-//{
-//  double x = (rand() % 11) / 10.0;
-//  return x;
-//}
-//
-//double Pakiet::losujR() 
-//{
-//  double koniec = pow(2.0, licznik_ret_) - 1;
-//  double R = fmod(rand(), koniec);
-//  return R;
-//}
-//
+
+int Pakiet::losujCTP() 
+{
+  czas_CTP_ = (rand() % 10) + 1;
+  return czas_CTP_;
+}
+
+double Pakiet::losujPT() 
+{
+  double x = (rand() % 11) / 10.0;
+  return x;
+}
+
+double Pakiet::losujR() 
+{
+  double koniec = pow(2.0, licznik_ret_) - 1;
+  double R = fmod(rand(), koniec);
+  return R;
+}

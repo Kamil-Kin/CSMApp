@@ -27,8 +27,8 @@ Nadajnik::~Nadajnik() {}
 
 double Nadajnik::LosCGP()
 {
-  //CGP_ = (rand() % 101) / 10.0;
-  CGP_ = losCGP_->GeneracjaW();
+  CGP_ = (rand() % 101) / 10.0;
+  //CGP_ = losCGP_->GeneracjaW();
   sym_->UstawKolor("02");
   cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << CGP_ << " ms" << endl;
   return CGP_;

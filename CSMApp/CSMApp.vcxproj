@@ -117,6 +117,7 @@
     <ClInclude Include="pakiet.h" />
     <ClInclude Include="proces.h" />
     <ClInclude Include="siec.h" />
+    <ClInclude Include="staty.h" />
     <ClInclude Include="statystyka.h" />
     <ClInclude Include="symulacja.h" />
     <ClInclude Include="zdarzenie.h" />

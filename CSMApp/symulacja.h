@@ -23,7 +23,7 @@ struct comparer : public binary_function<Zdarzenie*, Zdarzenie*, bool>
 class Symulacja 
 {
 public:
-  Symulacja(double lam);
+  Symulacja(double lam, double faza);
   ~Symulacja();
 
   void run(Ziarno ziarno);

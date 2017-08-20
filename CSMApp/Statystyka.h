@@ -9,6 +9,12 @@ struct Statystyka
   int pakiety_odebrane_;
   int licznik_retransmisji_;
 
+  double sr_stopa_bledow_;
+  double max_stopa_bledow_;
+  double sr_l_ret_;
+  double przeplywnosc_;   //  [pakiety/sek]
+  double sr_opoznienie_;  //  [ms]
+  double sr_czas_oczekiwania_;  //  [ms]
 };
 
 #endif // !CSMA_PP_STATYSTYKA_H

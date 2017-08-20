@@ -10,7 +10,7 @@
 using std::cout;
 using std::endl;
 
-Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad): Proces(sym), id_tx_(idx), licznik_ret_(0), ack_(false)
+Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad): Proces(sym), id_tx_(idx), nr_ret_(0), ack_(false)
 {
   sym_ = sym;
   siec_ = siec;
@@ -21,11 +21,11 @@ Pakiet::~Pakiet() {}
 
 void Proces::aktywacja(double czas)
 {
-  double czas_zd = sym_->zegar_ + czas;
-  moje_zdarzenie_->czas_zdarzenia_ = czas_zd;
+  //double czas_zd = sym_->zegar_ + czas;
+  moje_zdarzenie_->czas_zdarzenia_ = sym_->zegar_ + czas;
   sym_->DodajDoKalendarza(moje_zdarzenie_);
   sym_->UstawKolor("09");
-  cout << "Dodano do kalendarza zdarzenie o czasie: " << czas_zd << " ms" << endl;
+  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ << " ms" << endl;
 }
 
 void Pakiet::execute()
@@ -191,13 +191,13 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tRetransmisja pakietu" << endl;
-      licznik_ret_++;
-      if (licznik_ret_ <= kLR) 
+      nr_ret_++;
+      if (nr_ret_ <= kLR) 
       {
         sym_->UstawKolor("01");
-        cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << licznik_ret_ << endl;
+        cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << nr_ret_ << endl;
         czas_CRP_ = losujR()*czas_CTP_;
-        //czas_CRP_ = nad_->LosR(licznik_ret_)*czas_CTP_;
+        //czas_CRP_ = nad_->LosR(nr_ret_)*czas_CTP_;
         this->aktywacja(czas_CRP_);
         faza_ = 2;
         aktywny_ = false;
@@ -268,7 +268,7 @@ double Pakiet::losujPT()
 
 double Pakiet::losujR() 
 {
-  double koniec = pow(2.0, licznik_ret_) - 1;
+  double koniec = pow(2.0, nr_ret_) - 1;
   double R = fmod(rand(), koniec);
   return R;
 }

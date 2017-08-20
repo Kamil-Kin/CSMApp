@@ -55,7 +55,7 @@ void Nadajnik::UsunZBufora()
 {
   bufor_.pop_back();
   sym_->UstawKolor("08");
-  cout << "Usunieto pakiet z bufora nadajnika nr " << id_ << endl;
+  cout << "Usunieto pakiet z bufora nadajnika nr " << id_;
 }
 
 bool Nadajnik::CzyBuforPusty() { return bufor_.empty(); }

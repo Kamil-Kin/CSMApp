@@ -69,7 +69,7 @@
     <ClInclude Include="proces.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Statystyka.h">
+    <ClInclude Include="statystyka.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

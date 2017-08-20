@@ -27,9 +27,15 @@ private:
   int id_tx_;
   int czas_CTP_;
   double p;
-  int licznik_ret_;
+  int nr_ret_;
   double czas_CRP_;
   bool ack_;
+  //statystyki
+  double czas_narodzin_;
+  double czas_nadania_;
+  double czas_odebrania_;
+  double czas_w_buforze_;
+  double opoznienie_pakietu_;
 
   Zdarzenie* moje_zdarzenie_;
   Nadajnik* nad_;

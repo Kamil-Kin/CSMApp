@@ -37,6 +37,7 @@ public:
   double zegar_;
   int nr_symulacji_;
   int liczba_symulacji_;
+  double faza_poczatkowa_;
   double czas_symulacji_;
   char tryb_symulacji_;
   double lambda_;

@@ -11,10 +11,10 @@ using std::endl;
 
 bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
 {
-  return zd1->czas_zdarzenia_ > zd2->czas_zdarzenia_;//>= todo
+  return zd1->czas_zdarzenia_ >= zd2->czas_zdarzenia_;// >= or > todo
 }
 
-Symulacja::Symulacja(double lam) :zegar_(0.0), nr_symulacji_(0), liczba_symulacji_(5), czas_symulacji_(500.0), tryb_symulacji_('c')
+Symulacja::Symulacja(double lam) :zegar_(0.0), nr_symulacji_(0), liczba_symulacji_(5),faza_poczatkowa_(), czas_symulacji_(500.0), tryb_symulacji_('c')
 {
   lambda_ = lam;
 }
@@ -25,21 +25,20 @@ void Symulacja::run(Ziarno ziarno)
   cout << "Numer symulacji: " << nr_symulacji_ << endl;
   zegar_ = 0.0;
   siec_ = new Siec(this, ziarno);
-  Proces* obecny_ = nullptr;
-  //for (int i = 0; i < siec_->LiczbaNad(); i++)
-    //(new Pakiet(i, this, siec_->getKanal(), siec_->getNad(i)))->aktywacja(siec_->getNad(i)->losujCGP());
+  //Proces* obecny_ = nullptr;
+  //for (int i = 0; i < siec_->LiczbaNad(); i++) (new Pakiet(i, this, siec_->getKanal(), siec_->getNad(i)))->aktywacja(siec_->getNad(i)->losujCGP());
   while (zegar_ < czas_symulacji_)
   {
     /*obecny_ = PobierzPierwszyElement()->PobierzPakiet();
     zegar_ = PobierzPierwszyElement()->PobierzCzasZd();
     this->UsunZKalendarza();*/
-    obecny_ = kalendarz_.top()->proces_;
+    Proces* obecny_ = kalendarz_.top()->proces_;
     zegar_ = kalendarz_.top()->czas_zdarzenia_;
     kalendarz_.pop();
     UstawKolor("07");
     cout << "\nPobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
     obecny_->execute();
-    if (obecny_->skonczony_) delete obecny_;
+    if (obecny_->skonczony_ == true) delete obecny_;
     if (tryb_symulacji_ == 'K' || tryb_symulacji_ == 'k') getchar();
   }
 }

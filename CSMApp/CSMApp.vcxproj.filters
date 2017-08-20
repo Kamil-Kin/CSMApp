@@ -69,12 +69,6 @@
     <ClInclude Include="proces.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="statystyka.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="staty.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="generator_rownomierny.cpp">

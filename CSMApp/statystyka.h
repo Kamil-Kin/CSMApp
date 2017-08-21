@@ -18,4 +18,3 @@ struct Statystyka
 };
 
 #endif // !CSMA_PP_STATYSTYKA_H
-

@@ -36,7 +36,7 @@ private:
   double czas_odebrania_;
   double czas_w_buforze_;
   double opoznienie_pakietu_;
-
+  //
   Zdarzenie* moje_zdarzenie_;
   Nadajnik* nad_;
   Kanal* kanal_;

@@ -16,6 +16,11 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad):
   siec_ = siec;
   kanal_ = kanal;
   nad_ = nad;
+
+  czas_narodzin_ = sym_->zegar_;
+  czas_nadania_ = 0;
+  czas_odebrania_ = 0;
+  opoznienie_pakietu_ = 0;
 }
 Pakiet::~Pakiet() {}
 
@@ -85,8 +90,7 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tLosowanie prawdopodobienstwa transmisji" << endl;
-      p = losujPT();
-      //p = nad_->LosPT();
+      p = losujPT();//p = nad_->LosPT();
       if (p <= kPT)
       {
         sym_->UstawKolor("0D");
@@ -173,8 +177,9 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tTransmisja pakietu " << endl;
-      //czas_CTP_ = nad_->LosCTP();
-      czas_CTP_ = this->losujCTP();
+      czas_nadania_ = sym_->zegar_;
+      czas_w_buforze_ = czas_nadania_ - czas_narodzin_;
+      czas_CTP_ = this->losujCTP();//czas_CTP_ = nad_->LosCTP();
       sym_->UstawKolor("05");
       cout << "Pakiet id " << id_tx_ << ":\tCzas transmisji wynosi " << czas_CTP_/*ctp*/ << " ms" << endl;
       kanal_->KanalWolny(false);
@@ -196,8 +201,7 @@ void Pakiet::execute()
       {
         sym_->UstawKolor("01");
         cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << nr_ret_ << endl;
-        czas_CRP_ = losujR()*czas_CTP_;
-        //czas_CRP_ = nad_->LosR(nr_ret_)*czas_CTP_;
+        czas_CRP_ = losujR()*czas_CTP_;//czas_CRP_ = nad_->LosR(nr_ret_)*czas_CTP_;
         this->aktywacja(czas_CRP_);
         faza_ = 2;
         aktywny_ = false;
@@ -236,6 +240,8 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tOdebranie pakietu i zakonczenie transmisji" << endl;
+      czas_odebrania_ = sym_->zegar_;
+      opoznienie_pakietu_ = czas_odebrania_ - czas_narodzin_;
       nad_->UsunZBufora();
       kanal_->UsunZKanalu();
       kanal_->KanalWolny(true);

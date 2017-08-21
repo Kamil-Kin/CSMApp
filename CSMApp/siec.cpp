@@ -6,9 +6,11 @@
 #include <cstdlib>
 #include <ctime>
 
-Siec::Siec(Symulacja* sym, Ziarno ziarno) 
+
+Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) 
 {
   srand(time(NULL));
+  stat_ = stat;
   sym_ = sym;
   kanal_ = new Kanal();
   for (int i = 0; i < kLiczbaNad_; i++)
@@ -17,3 +19,19 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno)
   }
 }
 Siec::~Siec() {}
+
+void Siec::Statystyki() 
+{
+  for (int i = 0; i < kLiczbaNad_; i++) 
+  {
+    stat_->pakiety_wygenerowane_ += nadajniki_.at(i)->licznik_pakietow_;
+    stat_->pakiety_nadane_ += nadajniki_.at(i)->licznik_nadanych_;
+    stat_->pakiety_stracone_ += nadajniki_.at(i)->licznik_straconych_;
+    stat_->pakiety_odebrane_ += nadajniki_.at(i)->licznik_odebranych_;
+    stat_->licznik_retransmisji_ += nadajniki_.at(i)->licznik_ret_;
+
+    cout << "Nadajnik nr " << i << ": wygenerowane pakiety: " << stat_->pakiety_wygenerowane_
+      << ";\npakiety transmitowane: " << stat_->pakiety_nadane_ << "; pakiety stracone: " << stat_->pakiety_stracone_
+      << "; pakiety odebrane: " << stat_->pakiety_odebrane_ << ";\nliczba retransmisji: " << stat_->licznik_retransmisji_ << endl;
+  }
+}

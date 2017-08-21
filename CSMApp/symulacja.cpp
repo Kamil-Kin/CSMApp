@@ -21,11 +21,11 @@ Symulacja::Symulacja(double lam, double faza) :zegar_(0.0), nr_symulacji_(0), li
 }
 Symulacja::~Symulacja() {}
 
-void Symulacja::run(Ziarno ziarno)
+void Symulacja::run(Ziarno ziarno, Statystyka* stat)
 {
   cout << "Numer symulacji: " << nr_symulacji_ << endl;
   zegar_ = 0.0;
-  siec_ = new Siec(this, ziarno);
+  siec_ = new Siec(this, ziarno, stat);
   //Proces* obecny_ = nullptr;
   //for (int i = 0; i < siec_->LiczbaNad(); i++) (new Pakiet(i, this, siec_->getKanal(), siec_->getNad(i)))->aktywacja(siec_->getNad(i)->losujCGP());
   while (zegar_ < czas_symulacji_)

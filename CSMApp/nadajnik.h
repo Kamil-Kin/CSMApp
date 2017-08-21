@@ -27,6 +27,13 @@ public:
   double LosCTP();
   double LosPT();
   double LosR(int l_ret);
+  //statystyki
+  int licznik_pakietow_;
+  int licznik_nadanych_;
+  int licznik_straconych_;
+  int licznik_odebranych_;
+  int licznik_ret_;
+
 private:
   int id_;
   std::vector<Pakiet*> bufor_;

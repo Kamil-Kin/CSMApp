@@ -11,7 +11,7 @@
 using std::cout;
 using std::endl;
 
-Nadajnik::Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* kanal) :id_(idx)
+Nadajnik::Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* kanal) :id_(idx), licznik_ret_(0)
 {
   sym_ = sym;
   siec_ = siec;

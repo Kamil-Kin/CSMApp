@@ -1,4 +1,5 @@
 #include "pakiet.h"
+
 #include "symulacja.h"
 #include "siec.h"
 #include "kanal.h"
@@ -10,7 +11,7 @@
 using std::cout;
 using std::endl;
 
-Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad): Proces(sym), id_tx_(idx), nr_ret_(0), ack_(false)
+Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad): Proces(sym), id_tx_(idx), ack_(false), nr_ret_(0)
 {
   sym_ = sym;
   siec_ = siec;
@@ -196,6 +197,7 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tRetransmisja pakietu" << endl;
+      nad_->licznik_ret_++;
       nr_ret_++;
       if (nr_ret_ <= kLR) 
       {
@@ -258,7 +260,6 @@ void Pakiet::execute()
     }
   }
 }
-
 
 int Pakiet::losujCTP() 
 {

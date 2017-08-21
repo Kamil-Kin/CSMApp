@@ -4,6 +4,8 @@
 #include <vector>
 #include <queue>
 #include <string>
+#include "statystyka.h"
+
 class Ziarno;
 class Siec;
 class Zdarzenie;
@@ -26,7 +28,7 @@ public:
   Symulacja(double lam, double faza);
   ~Symulacja();
 
-  void run(Ziarno ziarno);
+  void run(Ziarno ziarno, Statystyka* stat);
 
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();

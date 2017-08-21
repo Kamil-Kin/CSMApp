@@ -1,3 +1,4 @@
+#include "statystyka.h"
 #include "symulacja.h"
 #include "zdarzenie.h"
 #include "ziarno.h"
@@ -16,7 +17,7 @@ int main()
   //cout << "Podaj d³ugoœæ fazy pocz¹tkowej: ";
   //cin >> faza;
   //Symulacja symulacja(lambda, faza);
-
+  Statystyka* statystyka;
   Symulacja symulacja(0.0067, 100000);
   Ziarno ziarno;
   ziarno.GeneracjaZiaren();
@@ -31,7 +32,7 @@ int main()
 
   for (int i = symulacja.nr_symulacji_; i < symulacja.liczba_symulacji_; ++i) 
   {
-    symulacja.run(ziarno);
+    symulacja.run(ziarno, statystyka);
     symulacja.nr_symulacji_++;
   }
 

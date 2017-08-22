@@ -8,7 +8,6 @@ struct Statystyka
   int pakiety_stracone_;
   int pakiety_odebrane_;
   int licznik_retransmisji_;
-
   double sr_stopa_bledow_;
   double max_stopa_bledow_;
   double sr_l_ret_;

@@ -10,14 +10,14 @@ using std::endl;
 
 int main() 
 { 
-  double lambda;
-  double faza;
+  double lambda = 0;
+  double faza = 0;
   //cout << "Podaj wartosc lamdba: ";
   //cin >> lambda;
   //cout << "Podaj d³ugoœæ fazy pocz¹tkowej: ";
   //cin >> faza;
   //Symulacja symulacja(lambda, faza);
-  Statystyka* statystyka;
+  Statystyka* statystyka = new Statystyka();
   Symulacja symulacja(0.0067, 100000);
   Ziarno ziarno;
   ziarno.GeneracjaZiaren();

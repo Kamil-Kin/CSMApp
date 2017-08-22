@@ -23,6 +23,7 @@ Nadajnik::Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* ka
   losCGP_ = new GenWykladniczy(sym_->lambda_, ziarno_.PobierzZiarno(3 + 4 * (id_ + sym_->nr_symulacji_ * siec_->LiczbaNad())));
   (new Pakiet(id_, sym_, siec_, kanal_, this))->aktywacja(LosCGP());
 }
+
 Nadajnik::~Nadajnik() {}
 
 double Nadajnik::LosCGP()
@@ -61,3 +62,9 @@ void Nadajnik::UsunZBufora()
 bool Nadajnik::CzyBuforPusty() { return bufor_.empty(); }
 
 Pakiet* Nadajnik::PierwszyPakiet() { return bufor_.front(); }
+
+double Nadajnik::StopaBledow() 
+{
+  stopa_bledow_ = licznik_straconych_ / static_cast<double>(licznik_pakietow_);
+  return stopa_bledow_;
+}

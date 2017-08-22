@@ -28,6 +28,8 @@ public:
   double LosPT();
   double LosR(int l_ret);
   //statystyki
+  double StopaBledow();
+  double stopa_bledow_;
   int licznik_pakietow_;
   int licznik_nadanych_;
   int licznik_straconych_;

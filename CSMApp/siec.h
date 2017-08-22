@@ -1,7 +1,6 @@
 #ifndef CSMA_PP_SIEC_H
 #define CSMA_PP_SIEC_H
 
-#include <list>
 #include <vector>
 #include <iostream>
 #include "statystyka.h"
@@ -12,7 +11,6 @@ class Nadajnik;
 class Kanal;
 class Pakiet;
 
-using std::list;
 using std::vector;
 using std::cout;
 using std::endl;

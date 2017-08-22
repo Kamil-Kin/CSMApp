@@ -22,7 +22,10 @@ Siec::~Siec() {}
 
 void Siec::Statystyki() 
 {
-  list<double> stopa_bledow_;
+  vector<double> stopa_bledow_;
+  double suma = 0;
+  int l_elem = 0;
+  int indeks = 0;
   for (int i = 0; i < kLiczbaNad_; i++) 
   {
     stat_->pakiety_wygenerowane_ += nadajniki_.at(i)->licznik_pakietow_;
@@ -30,17 +33,26 @@ void Siec::Statystyki()
     stat_->pakiety_stracone_ += nadajniki_.at(i)->licznik_straconych_;
     stat_->pakiety_odebrane_ += nadajniki_.at(i)->licznik_odebranych_;
     stat_->licznik_retransmisji_ += nadajniki_.at(i)->licznik_ret_;
-    
-    stopa_bledow_.push_front(nadajniki_.at(i)->StopaBledow());
+
+    stopa_bledow_.push_back(nadajniki_.at(i)->StopaBledow());
+    suma += stopa_bledow_[i];
+    stat_->max_stopa_bledow_ = stopa_bledow_[i];
+    if (stopa_bledow_[i] > stat_->max_stopa_bledow_) 
+    {
+      stat_->max_stopa_bledow_ = stopa_bledow_[i];
+      indeks++;
+    }
+
+    //if (stopa_bledow_[i] > stat_->max_stopa_bledow_)
+    //  stat_->max_stopa_bledow_ = stopa_bledow_[i];
+
     cout << "Nadajnik nr " << i << ": wygenerowane pakiety: " << stat_->pakiety_wygenerowane_
       << ";\npakiety transmitowane: " << stat_->pakiety_nadane_ << "; pakiety stracone: " << stat_->pakiety_stracone_
-      << "; pakiety odebrane: " << stat_->pakiety_odebrane_ << ";\nliczba retransmisji: " << stat_->licznik_retransmisji_ << endl;
+      << "; pakiety odebrane: " << stat_->pakiety_odebrane_ << ";\nliczba retransmisji: " << stat_->licznik_retransmisji_
+      << "; pakietowa stopa bledow: " << nadajniki_.at(i)->StopaBledow() << endl;
   }
-  //double suma;
-  //for (int i = 0; i < kLiczbaNad_; i++) 
-  //{
-  //  suma += stopa_bledow_.front();
-  //  stopa_bledow_.pop_front();
-  //}
-
+  l_elem = stopa_bledow_.size();
+  stat_->sr_stopa_bledow_ = suma / l_elem;
+  cout << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
+  cout << "Maksymalna pakietowa stopa bledow: " << stat_->max_stopa_bledow_ << "; nadajnik nr: " << indeks << endl;
 }

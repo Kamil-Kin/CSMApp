@@ -17,14 +17,18 @@ public:
   double losujR();
   void aktywacja(double czas);
   void execute();
-
+  
+  int id_tx_;
   int faza_;
   bool skonczony_;
+
+  double czas_w_buforze_;
+  double opoznienie_pakietu_;
 
 private:
   const int kLR = 5;
   const double kPT = 0.2;
-  int id_tx_;
+
   int czas_CTP_;
   double p;
   int nr_ret_;
@@ -34,9 +38,7 @@ private:
   double czas_narodzin_;
   double czas_nadania_;
   double czas_odebrania_;
-  double czas_w_buforze_;
-  double opoznienie_pakietu_;
-  //
+
   Zdarzenie* moje_zdarzenie_;
   Nadajnik* nad_;
   Kanal* kanal_;

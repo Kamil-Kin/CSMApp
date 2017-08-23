@@ -40,8 +40,9 @@ void Symulacja::run(Ziarno ziarno, Statystyka* stat)
     UstawKolor("07");
     cout << "\nPobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
     obecny_->execute();
-    if (obecny_->skonczony_ == true) 
+    if ((obecny_->skonczony_) == true) 
     {
+      cout << "Pakiet id " << obecny_->id_tx_ << " usuniety z systemu" << endl;
       //siec_->StatystykiPakietu(obecny_);
       delete obecny_;
     }

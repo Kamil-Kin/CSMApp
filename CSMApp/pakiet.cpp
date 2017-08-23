@@ -201,6 +201,8 @@ void Pakiet::execute()
       cout << "\nFAZA " << faza_ << ":\tRetransmisja pakietu" << endl;
       nad_->licznik_ret_++;
       nr_ret_++;
+      kanal_->UsunZKanalu();
+      kanal_->KanalWolny(true);
       if (nr_ret_ <= kLR) 
       {
         sym_->UstawKolor("01");

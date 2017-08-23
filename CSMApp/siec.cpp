@@ -22,7 +22,8 @@ Siec::~Siec() {}
 
 void Siec::StatystykiPakietu(Pakiet* pak)
 {
-
+  opoznienie_ += pak->opoznienie_pakietu_;
+  czas_oczekiwania_ += pak->czas_w_buforze_;
 }
 
 void Siec::Statystyki() 
@@ -46,11 +47,15 @@ void Siec::Statystyki()
       stat_->max_stopa_bledow_ = stopa_bledow_[i];
       indeks++;
     }
-    cout << "Nadajnik nr " << i << ": wygenerowane pakiety: " << stat_->pakiety_wygenerowane_
-      << ";\npakiety transmitowane: " << stat_->pakiety_nadane_ << "; pakiety stracone: " << stat_->pakiety_stracone_
-      << "; pakiety odebrane: " << stat_->pakiety_odebrane_ << ";\nliczba retransmisji: " << stat_->licznik_retransmisji_
+    cout << "Nadajnik nr " << i << ": wygenerowane pakiety: " << nadajniki_.at(i)->licznik_pakietow_
+      << ";\npakiety transmitowane: " << nadajniki_.at(i)->licznik_nadanych_ << "; pakiety stracone: " << nadajniki_.at(i)->licznik_straconych_
+      << "; pakiety odebrane: " << nadajniki_.at(i)->licznik_odebranych_ << ";\nliczba retransmisji: " << nadajniki_.at(i)->licznik_ret_
       << "; pakietowa stopa bledow: " << nadajniki_.at(i)->StopaBledow() << endl;
   }
+  cout << "Laczna liczba wygenerowanych pakietow: " << stat_->pakiety_wygenerowane_ << endl;
+  cout << "Laczna liczba nadanych pakietow: " << stat_->pakiety_nadane_ << endl;
+  cout << "Laczna liczba straconych pakietow: " << stat_->pakiety_stracone_ << endl;
+  cout << "Laczna liczba odebranych pakietow: " << stat_->pakiety_odebrane_ << endl;
   l_elem = stopa_bledow_.size();
   stat_->sr_stopa_bledow_ = suma / l_elem;
   cout << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
@@ -59,5 +64,6 @@ void Siec::Statystyki()
   cout << "Srednia liczba retransmisji pakietow (poprawnie odebranych)" << stat_->sr_l_ret_ << endl;
   stat_->przeplywnosc_ = stat_->pakiety_odebrane_ / (sym_->czas_symulacji_ / 1000);
   cout << "Przeplywnosc systemu w jednostce czasu (na sekunde): " << stat_->przeplywnosc_ << endl;
-
+  cout << "Srednie opoznienie pakietu: " << opoznienie_ << endl;
+  cout << "Sredni czas oczekiwania: " << czas_oczekiwania_ << endl;
 }

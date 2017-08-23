@@ -29,11 +29,14 @@ public:
   void Statystyki();
 
 private:
-  const int kLiczbaNad_ = 1;
+  const int kLiczbaNad_ = 2;
   vector<Nadajnik*> nadajniki_;
   Symulacja* sym_;
   Kanal* kanal_;
   Statystyka* stat_;
+  //statystyki
+  double opoznienie_;
+  double czas_oczekiwania_;
 };
 
 #endif // !CSMA_PP_SIEC_H

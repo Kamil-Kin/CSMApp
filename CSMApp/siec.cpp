@@ -20,6 +20,11 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat)
 }
 Siec::~Siec() {}
 
+void Siec::StatystykiPakietu() 
+{
+
+}
+
 void Siec::Statystyki() 
 {
   vector<double> stopa_bledow_;

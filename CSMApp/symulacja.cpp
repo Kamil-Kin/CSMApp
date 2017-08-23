@@ -19,6 +19,7 @@ Symulacja::Symulacja(double lam, double faza) :zegar_(0.0), nr_symulacji_(0), li
   lambda_ = lam;
   faza_poczatkowa_ = faza;
 }
+
 Symulacja::~Symulacja() {}
 
 void Symulacja::run(Ziarno ziarno, Statystyka* stat)
@@ -42,6 +43,7 @@ void Symulacja::run(Ziarno ziarno, Statystyka* stat)
     if (obecny_->skonczony_ == true) delete obecny_;
     if (tryb_symulacji_ == 'K' || tryb_symulacji_ == 'k') getchar();
   }
+  siec_->Statystyki();
 }
 
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }

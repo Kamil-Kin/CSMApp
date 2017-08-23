@@ -18,6 +18,7 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad):
   kanal_ = kanal;
   nad_ = nad;
 
+  nad_->licznik_pakietow_++;
   czas_narodzin_ = sym_->zegar_;
   czas_nadania_ = 0;
   czas_odebrania_ = 0;
@@ -178,6 +179,7 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tTransmisja pakietu " << endl;
+      nad_->licznik_nadanych_++;
       czas_nadania_ = sym_->zegar_;
       czas_w_buforze_ = czas_nadania_ - czas_narodzin_;
       czas_CTP_ = this->losujCTP();//czas_CTP_ = nad_->LosCTP();
@@ -212,6 +214,7 @@ void Pakiet::execute()
       {
         sym_->UstawKolor("0C");
         cout << "Pakiet id " << id_tx_ << ":\tPrzekroczono liczbê dopuszczalnych retransmisji, pakiet stracony" << endl;
+        nad_->licznik_straconych_++;
         nad_->UsunZBufora();
         skonczony_ = true;
         if (nad_->CzyBuforPusty() == false)
@@ -242,6 +245,7 @@ void Pakiet::execute()
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tOdebranie pakietu i zakonczenie transmisji" << endl;
+      nad_->licznik_odebranych_++;
       czas_odebrania_ = sym_->zegar_;
       opoznienie_pakietu_ = czas_odebrania_ - czas_narodzin_;
       nad_->UsunZBufora();

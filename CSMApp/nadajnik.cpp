@@ -21,8 +21,7 @@ Nadajnik::Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* ka
   losPT_ = new GenRownomierny(ziarno_.PobierzZiarno(1 + 4 * (id_ + sym_->nr_symulacji_ * siec_->LiczbaNad())));
   losR_ = new GenRownomierny(ziarno_.PobierzZiarno(2 + 4 * (id_ + sym_->nr_symulacji_ * siec_->LiczbaNad())));
   losCGP_ = new GenWykladniczy(sym_->lambda_, ziarno_.PobierzZiarno(3 + 4 * (id_ + sym_->nr_symulacji_ * siec_->LiczbaNad())));
-  pak_ = new Pakiet(id_, sym_, siec_, kanal_, this);
-  pak_->aktywacja(LosCGP());
+  (new Pakiet(id_, sym_, siec_, kanal_, this))->aktywacja(LosCGP());
 }
 
 Nadajnik::~Nadajnik() {}
@@ -50,14 +49,14 @@ void Nadajnik::DodajDoBufora(Pakiet* pak)
 {
   bufor_.push_back(pak);
   sym_->UstawKolor("0F");
-  cout << "Dodano pakiet do bufora nadajnika nr " << id_ << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
+  cout << "Dodano pakiet o czasie generacji " << sym_->zegar_ << " do bufora nadajnika nr " << id_ << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
 }
 
 void Nadajnik::UsunZBufora() 
 {
   bufor_.pop_back();
   sym_->UstawKolor("08");
-  cout << "Usunieto pakiet z bufora nadajnika nr " << id_;
+  cout << "Usunieto pakiet o czasie odbioru " << sym_->zegar_ << " z bufora nadajnika nr " << id_ << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
 }
 
 bool Nadajnik::CzyBuforPusty() { return bufor_.empty(); }

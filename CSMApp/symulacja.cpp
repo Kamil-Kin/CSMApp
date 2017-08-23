@@ -42,12 +42,12 @@ void Symulacja::run(Ziarno ziarno, Statystyka* stat)
     obecny_->execute();
     if (obecny_->skonczony_ == true) 
     {
-      siec_->StatystykiPakietu(obecny_);
+      //siec_->StatystykiPakietu(obecny_);
       delete obecny_;
     }
     if (tryb_symulacji_ == 'K' || tryb_symulacji_ == 'k') getchar();
   }
-  siec_->Statystyki();
+  //siec_->Statystyki();
 }
 
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }

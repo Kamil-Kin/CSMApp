@@ -1,4 +1,5 @@
 #include "statystyka.h"
+#include "histogram.h"
 #include "symulacja.h"
 #include "zdarzenie.h"
 #include "ziarno.h"
@@ -18,6 +19,9 @@ int main()
   //cin >> faza;
   //Symulacja symulacja(lambda, faza);
   Statystyka* statystyka = new Statystyka();
+  Histogram histogram;
+  histogram.Rownomierny();
+  histogram.Wykladniczy();
   Symulacja symulacja(0.0067, 100000);
   Ziarno ziarno;
   ziarno.GeneracjaZiaren();

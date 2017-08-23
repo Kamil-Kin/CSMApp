@@ -34,6 +34,9 @@
     <Filter Include="Source Files\Sieć">
       <UniqueIdentifier>{000ffd33-ac1a-4154-98b7-33e721b25252}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Histogram">
+      <UniqueIdentifier>{801f365f-a2e6-4ff2-891d-eebb467c7d74}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="nadajnik.h">
@@ -66,6 +69,9 @@
     <ClInclude Include="statystyka.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="histogram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="generator_rownomierny.cpp">
@@ -94,6 +100,9 @@
     </ClCompile>
     <ClCompile Include="siec.cpp">
       <Filter>Source Files\Sieć</Filter>
+    </ClCompile>
+    <ClCompile Include="histogram.cpp">
+      <Filter>Source Files\Histogram</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

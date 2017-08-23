@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClInclude Include="generator_rownomierny.h" />
     <ClInclude Include="generator_wykladniczy.h" />
+    <ClInclude Include="histogram.h" />
     <ClInclude Include="kanal.h" />
     <ClInclude Include="nadajnik.h" />
     <ClInclude Include="pakiet.h" />
@@ -124,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="generator_rownomierny.cpp" />
     <ClCompile Include="generator_wykladniczy.cpp" />
+    <ClCompile Include="histogram.cpp" />
     <ClCompile Include="kanal.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="nadajnik.cpp" />

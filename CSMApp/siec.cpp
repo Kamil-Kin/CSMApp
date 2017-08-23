@@ -20,12 +20,6 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat)
 }
 Siec::~Siec() {}
 
-void Siec::StatystykiPakietu(Pakiet* pak)
-{
-  opoznienie_ += pak->opoznienie_pakietu_;
-  czas_oczekiwania_ += pak->czas_w_buforze_;
-}
-
 void Siec::Statystyki() 
 {
   vector<double> stopa_bledow_;
@@ -66,4 +60,10 @@ void Siec::Statystyki()
   cout << "Przeplywnosc systemu w jednostce czasu (na sekunde): " << stat_->przeplywnosc_ << endl;
   cout << "Srednie opoznienie pakietu: " << opoznienie_ << endl;
   cout << "Sredni czas oczekiwania: " << czas_oczekiwania_ << endl;
+}
+
+void Siec::StatystykiPakietu(Pakiet* pak)
+{
+  opoznienie_ += pak->opoznienie_pakietu_;
+  czas_oczekiwania_ += pak->czas_w_buforze_;
 }

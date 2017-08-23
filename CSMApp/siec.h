@@ -25,8 +25,8 @@ public:
   //Kanal* getKanal() { return kanal_; }
   //Nadajnik* getNad(int id) { return nadajniki_.at(id); } 
 
-  void StatystykiPakietu(Pakiet* pak);
   void Statystyki();
+  void StatystykiPakietu(Pakiet* pak);
 
 private:
   const int kLiczbaNad_ = 2;

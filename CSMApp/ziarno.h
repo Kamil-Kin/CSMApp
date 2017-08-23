@@ -5,6 +5,12 @@
 #include <fstream>
 #include <iostream>
 
+using std::fstream;
+using std::cout;
+using std::endl;
+using std::ios;
+
+
 class Ziarno 
 {
 public:

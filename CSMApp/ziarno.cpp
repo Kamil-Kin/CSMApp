@@ -8,9 +8,9 @@ Ziarno::~Ziarno() {}
 
 void Ziarno::GeneracjaZiaren() 
 {
-  std::fstream plik;
+  fstream plik;
   int temp;
-  plik.open("ziarno.txt", std::ios::in | std::ios::out);
+  plik.open("ziarno.txt", ios::in | ios::out);
 
   if (plik.good() == true) 
   {
@@ -19,17 +19,17 @@ void Ziarno::GeneracjaZiaren()
       for (int j = 0; j < odstep_ziaren_; ++j) 
         uniform_->Generacja01();
       temp = uniform_->getKernel();
-      plik << temp << std::endl;
-      //plik << std::endl;
+      plik << temp << endl;
+      //plik << endl;
       ziarna[i] = temp;
     }
     plik.close();
   }
-  else std::cout << "Nie uzyskano dostepu do pliku" << std::endl;
+  else cout << "Nie uzyskano dostepu do pliku" << endl;
 }
 
 int Ziarno::PobierzZiarno(int index)
 {
-  std::cout << "ziarno nr: " << index << "\twartosc: " << ziarna[index] << std::endl;
+  cout << "ziarno nr: " << index << "\twartosc: " << ziarna[index] << endl;
   return ziarna[index];
 }

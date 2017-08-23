@@ -21,7 +21,8 @@ Nadajnik::Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* ka
   losPT_ = new GenRownomierny(ziarno_.PobierzZiarno(1 + 4 * (id_ + sym_->nr_symulacji_ * siec_->LiczbaNad())));
   losR_ = new GenRownomierny(ziarno_.PobierzZiarno(2 + 4 * (id_ + sym_->nr_symulacji_ * siec_->LiczbaNad())));
   losCGP_ = new GenWykladniczy(sym_->lambda_, ziarno_.PobierzZiarno(3 + 4 * (id_ + sym_->nr_symulacji_ * siec_->LiczbaNad())));
-  (new Pakiet(id_, sym_, siec_, kanal_, this))->aktywacja(LosCGP());
+  pak_ = new Pakiet(id_, sym_, siec_, kanal_, this);
+  pak_->aktywacja(LosCGP());
 }
 
 Nadajnik::~Nadajnik() {}

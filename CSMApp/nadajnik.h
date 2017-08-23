@@ -35,7 +35,7 @@ public:
   int licznik_straconych_;
   int licznik_odebranych_;
   int licznik_ret_;
-
+  Pakiet* GetPakiet() { return pak_; }
 private:
   int id_;
   std::vector<Pakiet*> bufor_;

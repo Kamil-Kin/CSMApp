@@ -1,11 +1,11 @@
 #include "ziarno.h"
 #include "symulacja.h"
+#include "pakiet.h"
 #include "siec.h"
 #include "nadajnik.h"
 #include "kanal.h"
 #include <cstdlib>
 #include <ctime>
-
 
 Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) 
 {
@@ -20,7 +20,7 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat)
 }
 Siec::~Siec() {}
 
-void Siec::StatystykiPakietu() 
+void Siec::StatystykiPakietu(Pakiet* pak)
 {
 
 }

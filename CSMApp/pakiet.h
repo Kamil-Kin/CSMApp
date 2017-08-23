@@ -1,15 +1,13 @@
 #ifndef CSMA_PP_PAKIET_H
 #define CSMA_PP_PAKIET_H
 
-#include "proces.h"
-
 class Symulacja;
 class Siec;
 class Kanal;
 class Nadajnik;
 class Zdarzenie;
 
-class Pakiet :public Proces
+class Pakiet
 {
 public:
   Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad);
@@ -17,13 +15,15 @@ public:
   int losujCTP();
   double losujPT();
   double losujR();
-  //void aktywacja(double czas);
+  void aktywacja(double czas);
   void execute();
-  //double CzasZdarzenia() const;
+
+  int faza_;
+  bool skonczony_;
+
 private:
   const int kLR = 5;
   const double kPT = 0.2;
-
   int id_tx_;
   int czas_CTP_;
   double p;

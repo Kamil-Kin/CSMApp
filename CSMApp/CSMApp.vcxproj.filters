@@ -34,9 +34,6 @@
     <Filter Include="Source Files\Sieć">
       <UniqueIdentifier>{000ffd33-ac1a-4154-98b7-33e721b25252}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Proces">
-      <UniqueIdentifier>{f9201522-c75a-42d9-9fa1-20afea7b2327}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="nadajnik.h">
@@ -64,9 +61,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ziarno.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="proces.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="statystyka.h">
@@ -100,9 +94,6 @@
     </ClCompile>
     <ClCompile Include="siec.cpp">
       <Filter>Source Files\Sieć</Filter>
-    </ClCompile>
-    <ClCompile Include="proces.cpp">
-      <Filter>Source Files\Proces</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

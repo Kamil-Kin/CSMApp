@@ -9,7 +9,7 @@
 class Ziarno;
 class Siec;
 class Zdarzenie;
-//class Pakiet;
+class Pakiet;
 
 using std::vector;
 using std::priority_queue;

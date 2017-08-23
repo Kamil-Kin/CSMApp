@@ -1,5 +1,4 @@
 #include "pakiet.h"
-
 #include "symulacja.h"
 #include "siec.h"
 #include "kanal.h"
@@ -11,12 +10,13 @@
 using std::cout;
 using std::endl;
 
-Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad): Proces(sym), id_tx_(idx), ack_(false), nr_ret_(0)
+Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad): id_tx_(idx), faza_(1), skonczony_(false), ack_(false), nr_ret_(0)
 {
   sym_ = sym;
   siec_ = siec;
   kanal_ = kanal;
   nad_ = nad;
+  moje_zdarzenie_ = new Zdarzenie(this);
 
   nad_->licznik_pakietow_++;
   czas_narodzin_ = sym_->zegar_;
@@ -26,7 +26,7 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad):
 }
 Pakiet::~Pakiet() {}
 
-void Proces::aktywacja(double czas)
+void Pakiet::aktywacja(double czas)
 {
   //double czas_zd = sym_->zegar_ + czas;
   moje_zdarzenie_->czas_zdarzenia_ = sym_->zegar_ + czas;

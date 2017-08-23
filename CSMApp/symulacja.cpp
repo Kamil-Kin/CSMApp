@@ -1,7 +1,7 @@
 #include "symulacja.h"
 #include "siec.h"
 #include "nadajnik.h"
-#include "proces.h"
+#include "pakiet.h"
 #include "zdarzenie.h"
 #include <iostream>
 #include <windows.h>
@@ -34,13 +34,17 @@ void Symulacja::run(Ziarno ziarno, Statystyka* stat)
     /*obecny_ = PobierzPierwszyElement()->PobierzPakiet();
     zegar_ = PobierzPierwszyElement()->PobierzCzasZd();
     this->UsunZKalendarza();*/
-    Proces* obecny_ = kalendarz_.top()->proces_;
+    Pakiet* obecny_ = kalendarz_.top()->pakiet_;
     zegar_ = kalendarz_.top()->czas_zdarzenia_;
     kalendarz_.pop();
     UstawKolor("07");
     cout << "\nPobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
     obecny_->execute();
-    if (obecny_->skonczony_ == true) delete obecny_;
+    if (obecny_->skonczony_ == true) 
+    {
+      siec_->StatystykiPakietu(obecny_);
+      delete obecny_;
+    }
     if (tryb_symulacji_ == 'K' || tryb_symulacji_ == 'k') getchar();
   }
   siec_->Statystyki();

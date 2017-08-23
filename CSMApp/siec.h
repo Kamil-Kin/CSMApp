@@ -25,7 +25,7 @@ public:
   //Kanal* getKanal() { return kanal_; }
   //Nadajnik* getNad(int id) { return nadajniki_.at(id); } 
 
-  void StatystykiPakietu();
+  void StatystykiPakietu(Pakiet* pak);
   void Statystyki();
 
 private:

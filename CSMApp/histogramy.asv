@@ -1,4 +1,0 @@
-fileID = fopen('hist_rownomierny.txt', 'r');
-[R,size] = fscanf(fileID,'%f');
-
-histogram(R,10);

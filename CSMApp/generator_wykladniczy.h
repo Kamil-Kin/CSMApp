@@ -15,7 +15,7 @@ public:
   }
   ~GenWykladniczy() {}
   
-  int GeneracjaW();
+  double GeneracjaW();
 
 private:
   double lambda_;

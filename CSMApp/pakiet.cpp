@@ -10,7 +10,7 @@
 using std::cout;
 using std::endl;
 
-Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad): id_tx_(idx), faza_(1), skonczony_(false), ack_(false), nr_ret_(0)
+Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad): id_tx_(idx), faza_(1), skonczony_(false), kolizja_(false), ack_(false), nr_ret_(0)
 {
   sym_ = sym;
   siec_ = siec;
@@ -30,9 +30,21 @@ void Pakiet::aktywacja(double czas)
 {
   //double czas_zd = sym_->zegar_ + czas;
   moje_zdarzenie_->czas_zdarzenia_ = sym_->zegar_ + czas;
+  moje_zdarzenie_->priorytet_ = 0;
   sym_->DodajDoKalendarza(moje_zdarzenie_);
   sym_->UstawKolor("09");
   cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ << " ms" << endl;
+}
+
+void Pakiet::aktywacja(double czas, int priorytet) 
+{
+  //double czas_zd = sym_->zegar_ + czas;
+  moje_zdarzenie_->czas_zdarzenia_ = sym_->zegar_ + czas;
+  moje_zdarzenie_->priorytet_ = priorytet;
+  sym_->DodajDoKalendarza(moje_zdarzenie_);
+  sym_->UstawKolor("09");
+  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ <<
+  " ms i priorytecie: " << moje_zdarzenie_->priorytet_ << endl;
 }
 
 void Pakiet::execute()
@@ -114,7 +126,6 @@ void Pakiet::execute()
 
     //============================================
     // faza 4: ponowne sprawdzanie kana³u
-    //         z odpytywaniem co 1ms
     //============================================
     case 4: 
     {
@@ -129,7 +140,7 @@ void Pakiet::execute()
       else 
       {
         sym_->UstawKolor("04");
-        cout << "Pakiet id " << id_tx_ << ":\tKanal zajety, odpytywanie co 1.0 ms" << endl;
+        cout << "Pakiet id " << id_tx_ << ":\tKanal zajety, odczekanie 1 ms i powrot do odpytywania co 0.5 ms" << endl;
         faza_ = 2;
         this->aktywacja(1.0);
         aktywny_ = false;
@@ -151,16 +162,18 @@ void Pakiet::execute()
           sym_->UstawKolor("0A");
           cout << "Pakiet id " << id_tx_ << ":\tBrak kolizji, mozna transmitowac" << endl;
           kanal_->DodajDoKanalu(this);
-          faza_ = 6;
-          this->aktywacja(0.0);
-          aktywny_ = false;
         }
         else 
         {
           sym_->UstawKolor("04");
           cout << "Pakiet id " << id_tx_ << ":\tWykryta zostala kolizja" << endl;
-          faza_ = 7;
+          for each (Pakiet* pak in kanal_->lacze_) { pak->kolizja_ = true; }
+          this->kolizja_ = true;
+          //faza_ = 7;
         }
+        faza_ = 6;
+        this->aktywacja(0.0, 1);
+        aktywny_ = false;
       }
       else 
       {
@@ -208,6 +221,7 @@ void Pakiet::execute()
         sym_->UstawKolor("01");
         cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << nr_ret_ << endl;
         czas_CRP_ = losujR()*czas_CTP_;//czas_CRP_ = nad_->LosR(nr_ret_)*czas_CTP_;
+        this->kolizja_ = false;
         this->aktywacja(czas_CRP_);
         faza_ = 2;
         aktywny_ = false;
@@ -226,16 +240,32 @@ void Pakiet::execute()
     }
       break;
 
+    case 8: 
+    {
+      if (this->kolizja_ == true) 
+      {
+        kanal_->UsunZKanalu();
+        if (kanal_->CzyKolizja() == false)
+          kanal_->KanalWolny(true);
+        faza_ = 7;
+      }
+      else 
+      {
+        faza_ = 9;
+      }
+    }
+      break;
+
     //============================================
     // faza 8: Wys³anie ACK
     //============================================
-    case 8: 
+    case 9: 
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tWyslanie ACK" << endl;
       ack_ = true;
+      faza_ = 10;
       this->aktywacja(1.0);
-      faza_ = 9;
       aktywny_ = false;
     }
       break;
@@ -243,13 +273,14 @@ void Pakiet::execute()
     //============================================
     // faza 9: Odbiór pakietu i zakoñczenie transmisji
     //============================================
-    case 9: 
+    case 10: 
     {
       sym_->UstawKolor("06");
       cout << "\nFAZA " << faza_ << ":\tOdebranie pakietu i zakonczenie transmisji" << endl;
       nad_->licznik_odebranych_++;
       czas_odebrania_ = sym_->zegar_;
       opoznienie_pakietu_ = czas_odebrania_ - czas_narodzin_;
+
       nad_->UsunZBufora();
       kanal_->UsunZKanalu();
       kanal_->KanalWolny(true);

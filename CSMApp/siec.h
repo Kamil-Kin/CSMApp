@@ -27,6 +27,7 @@ public:
 
   void Statystyki();
   void StatystykiPakietu(Pakiet* pak);
+  void CzyszczenieStatystyk();
 
 private:
   const int kLiczbaNad_ = 2;

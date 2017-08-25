@@ -1,15 +1,15 @@
 #include "kanal.h"
 
-Kanal::Kanal() :czy_wolny_(true) {}
+Kanal::Kanal() :wolny_(true), liczba_pakietow_(0) {}
 Kanal::~Kanal() {}
 
-void Kanal::KanalWolny(bool stan_lacza) { czy_wolny_ = stan_lacza; }
+void Kanal::KanalWolny(bool stan_lacza) { wolny_ = stan_lacza; }
 
-bool Kanal::StanLacza() { return czy_wolny_; }
+bool Kanal::StanLacza() { return wolny_; }
 
 bool Kanal::CzyKolizja() 
 {
-  if (lacze_.empty()) return false;
+  if (lacze_.size() == 0) return false;
   return true;
 }
 

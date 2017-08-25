@@ -36,6 +36,7 @@ public:
   int licznik_odebranych_;
   int licznik_ret_;
   Pakiet* GetPakiet() { return pak_; }
+  void CzyszczenieStatystykNad();//todo
 private:
   int id_;
   std::vector<Pakiet*> bufor_;

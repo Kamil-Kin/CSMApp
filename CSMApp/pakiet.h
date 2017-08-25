@@ -16,6 +16,7 @@ public:
   double losujPT();
   double losujR();
   void aktywacja(double czas);
+  void aktywacja(double czas, int priorytet);
   void execute();
   
   int id_tx_;
@@ -28,7 +29,7 @@ public:
 private:
   const int kLR = 5;
   const double kPT = 0.2;
-
+  bool kolizja_;
   int czas_CTP_;
   double p;
   int nr_ret_;

@@ -6,12 +6,14 @@
 #include <iostream>
 #include <windows.h>
 #include <stdlib.h>
+
 using std::cout;
 using std::endl;
 
 bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
 {
-  return zd1->czas_zdarzenia_ >= zd2->czas_zdarzenia_;// >= or > todo
+  return (zd1->czas_zdarzenia_ >= zd2->czas_zdarzenia_) && 
+    (zd1->priorytet_ > zd2->priorytet_);// >= or > todo
 }
 
 Symulacja::Symulacja(double lam, double faza) :zegar_(0.0), nr_symulacji_(0), liczba_symulacji_(5), faza_poczatkowa_(10000.0), czas_symulacji_(500000.0), tryb_symulacji_('c')
@@ -48,7 +50,8 @@ void Symulacja::run(Ziarno ziarno, Statystyka* stat)
     }
     if (tryb_symulacji_ == 'K' || tryb_symulacji_ == 'k') getchar();
   }
-  //siec_->Statystyki();
+  //siec_->Statystyki();todo
+  //delete siec_;todo (uncomment)
 }
 
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }

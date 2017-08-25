@@ -7,7 +7,7 @@
 #include <cstdlib>
 #include <ctime>
 
-Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) 
+Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), czas_oczekiwania_(0.0)
 {
   srand(time(NULL));
   stat_ = stat;
@@ -18,7 +18,24 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat)
     nadajniki_.push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));
   }
 }
-Siec::~Siec() {}
+Siec::~Siec() 
+{
+  //CzyszczenieStatystyk(); todo
+}
+
+void Siec::CzyszczenieStatystyk() 
+{
+  stat_->pakiety_wygenerowane_ = 0;
+  stat_->pakiety_nadane_ = 0;
+  stat_->pakiety_stracone_ = 0;
+  stat_->pakiety_odebrane_ = 0;
+  stat_->licznik_retransmisji_ = 0;
+  stat_->sr_stopa_bledow_ = 0.0;
+  stat_->max_stopa_bledow_ = 0.0;
+  stat_->sr_l_ret_ = 0.0;
+  stat_->sr_opoznienie_ = 0.0;
+  stat_->sr_czas_oczekiwania_ = 0.0;
+}
 
 void Siec::Statystyki() 
 {

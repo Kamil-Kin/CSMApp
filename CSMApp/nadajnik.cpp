@@ -11,7 +11,8 @@
 using std::cout;
 using std::endl;
 
-Nadajnik::Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* kanal) :id_(idx), licznik_ret_(0)
+Nadajnik::Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* kanal) :id_(idx), stopa_bledow_(0.0), licznik_pakietow_(0), licznik_nadanych_(0),
+licznik_straconych_(0), licznik_odebranych_(0), licznik_ret_(0)
 {
   sym_ = sym;
   siec_ = siec;
@@ -31,7 +32,7 @@ double Nadajnik::LosCGP()
   CGP_ = (rand() % 101) / 10.0;
   //CGP_ = losCGP_->GeneracjaW();
   sym_->UstawKolor("02");
-  cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << CGP_ << " ms" << endl;
+  cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << sym_->zegar_ + CGP_ << " ms" << endl;
   return CGP_;
 }
 
@@ -49,14 +50,16 @@ void Nadajnik::DodajDoBufora(Pakiet* pak)
 {
   bufor_.push_back(pak);
   sym_->UstawKolor("0F");
-  cout << "Dodano pakiet o czasie generacji " << sym_->zegar_ << "ms do bufora nadajnika nr " << id_ << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
+  cout << "Dodano pakiet o czasie generacji " << sym_->zegar_ << " ms do bufora nadajnika nr " << id_
+    << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
 }
 
 void Nadajnik::UsunZBufora() 
 {
   bufor_.pop_back();
   sym_->UstawKolor("08");
-  cout << "Usunieto pakiet o czasie odbioru " << sym_->zegar_ << "ms z bufora nadajnika nr " << id_ << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
+  cout << "Usunieto pakiet o czasie odbioru " << sym_->zegar_ << " ms z bufora nadajnika nr " << id_
+    << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
 }
 
 bool Nadajnik::CzyBuforPusty() { return bufor_.empty(); }

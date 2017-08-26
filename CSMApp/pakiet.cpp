@@ -316,3 +316,4 @@ double Pakiet::losujR()
   double R = fmod(rand(), koniec);
   return R;
 }
+

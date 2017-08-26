@@ -28,14 +28,13 @@ public:
   double LosPT();
   double LosR(int l_ret);
   //statystyki
-  double StopaBledow();
   double stopa_bledow_;
   int licznik_pakietow_;
   int licznik_nadanych_;
   int licznik_straconych_;
   int licznik_odebranych_;
   int licznik_ret_;
-  Pakiet* GetPakiet() { return pak_; }
+  double StopaBledow();
   void CzyszczenieStatystykNad();//todo
 private:
   int id_;

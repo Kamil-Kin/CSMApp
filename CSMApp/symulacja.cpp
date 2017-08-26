@@ -50,8 +50,8 @@ void Symulacja::run(Ziarno ziarno, Statystyka* stat)
     }
     if (tryb_symulacji_ == 'K' || tryb_symulacji_ == 'k') getchar();
   }
-  //siec_->Statystyki();todo
-  //delete siec_;todo (uncomment)
+  //siec_->Statystyki(); todo
+  //delete siec_; todo (uncomment)
 }
 
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }

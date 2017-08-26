@@ -21,10 +21,6 @@ public:
   ~Siec();
   int LiczbaNad() { return kLiczbaNad_; }
 
-  //Symulacja* getSim() { return sym_; }
-  //Kanal* getKanal() { return kanal_; }
-  //Nadajnik* getNad(int id) { return nadajniki_.at(id); } 
-
   void Statystyki();
   void StatystykiPakietu(Pakiet* pak);
   void CzyszczenieStatystyk();

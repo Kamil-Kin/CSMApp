@@ -14,6 +14,7 @@ class Pakiet;
 using std::vector;
 using std::cout;
 using std::endl;
+
 class Siec 
 {
 public:
@@ -26,7 +27,7 @@ public:
   void CzyszczenieStatystyk();
 
 private:
-  const int kLiczbaNad_ = 2;
+  const int kLiczbaNad_ = 8;
   vector<Nadajnik*> nadajniki_;
   Symulacja* sym_;
   Kanal* kanal_;

@@ -13,7 +13,7 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
   stat_ = stat;
   sym_ = sym;
   kanal_ = new Kanal();
-  for (int i = 0; i < kLiczbaNad_; i++)
+  for (int i = 0; i < 1/*kLiczbaNad_*/; i++)
   {
     nadajniki_.push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));
   }
@@ -21,6 +21,7 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
 Siec::~Siec() 
 {
   //CzyszczenieStatystyk(); todo
+  delete kanal_;
 }
 
 void Siec::CzyszczenieStatystyk() 

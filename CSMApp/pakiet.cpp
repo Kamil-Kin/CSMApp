@@ -157,6 +157,20 @@ void Pakiet::execute()
       cout << "\nFAZA " << faza_ << ":\tSprawdzenie kolizji" << endl;
       if (fmod(sym_->zegar_, 1.0) == 0.0) 
       {
+
+        if (kanal_->CzyKolizja()) 
+        {
+          sym_->UstawKolor("04");
+          cout << "Pakiet id " << id_tx_ << ":\tWykryta zostala kolizja" << endl;
+          for each (Pakiet* pak in kanal_->lacze_) { pak->kolizja_ = true; }
+          this->kolizja_ = true;
+        }
+        kanal_->DodajDoKanalu(this);
+        faza_ = 6;
+        this->aktywacja(0.0, 1);
+        aktywny_ = false;
+
+        /*
         if (kanal_->CzyKolizja() == false) 
         {
           sym_->UstawKolor("0A");
@@ -173,7 +187,7 @@ void Pakiet::execute()
         }
         faza_ = 6;
         this->aktywacja(0.0, 1);
-        aktywny_ = false;
+        aktywny_ = false;*/
       }
       else 
       {

@@ -25,10 +25,7 @@ licznik_straconych_(0), licznik_odebranych_(0), licznik_ret_(0)
   (new Pakiet(id_, sym_, siec_, kanal_, this))->aktywacja(LosCGP());
 }
 
-Nadajnik::~Nadajnik() 
-{
-  //CzyszczenieStatystykNad();
-}
+Nadajnik::~Nadajnik() {/*CzyszczenieStatystykNad();*/ }
 
 double Nadajnik::LosCGP()
 {

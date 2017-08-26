@@ -157,20 +157,18 @@ void Pakiet::execute()
       cout << "\nFAZA " << faza_ << ":\tSprawdzenie kolizji" << endl;
       if (fmod(sym_->zegar_, 1.0) == 0.0) 
       {
+//        if (kanal_->CzyKolizja()) 
+//        {
+//          sym_->UstawKolor("04");
+//          cout << "Pakiet id " << id_tx_ << ":\tWykryta zostala kolizja" << endl;
+//          for each (Pakiet* pak in kanal_->lacze_) { pak->kolizja_ = true; }
+//          this->kolizja_ = true;
+//        }
+//        kanal_->DodajDoKanalu(this);
+//        faza_ = 6;
+//        this->aktywacja(0.0);
+//        aktywny_ = false;
 
-        if (kanal_->CzyKolizja()) 
-        {
-          sym_->UstawKolor("04");
-          cout << "Pakiet id " << id_tx_ << ":\tWykryta zostala kolizja" << endl;
-          for each (Pakiet* pak in kanal_->lacze_) { pak->kolizja_ = true; }
-          this->kolizja_ = true;
-        }
-        kanal_->DodajDoKanalu(this);
-        faza_ = 6;
-        this->aktywacja(0.0);
-        aktywny_ = false;
-
-        /*
         if (kanal_->CzyKolizja() == false) 
         {
           sym_->UstawKolor("0A");
@@ -186,8 +184,8 @@ void Pakiet::execute()
           //faza_ = 7;
         }
         faza_ = 6;
-        this->aktywacja(0.0, 1);
-        aktywny_ = false;*/
+        this->aktywacja(0.0);
+        aktywny_ = false;
       }
       else 
       {
@@ -209,10 +207,11 @@ void Pakiet::execute()
       nad_->licznik_nadanych_++;
       czas_nadania_ = sym_->zegar_;
       czas_w_buforze_ = czas_nadania_ - czas_narodzin_;
+      
+      kanal_->KanalWolny(false);
       czas_CTP_ = this->losujCTP();//czas_CTP_ = nad_->LosCTP();
       sym_->UstawKolor("05");
       cout << "Pakiet id " << id_tx_ << ":\tCzas transmisji wynosi " << czas_CTP_/*ctp*/ << " ms" << endl;
-      kanal_->KanalWolny(false);
       faza_ = 8;
       this->aktywacja(czas_CTP_);
       aktywny_ = false;
@@ -228,8 +227,6 @@ void Pakiet::execute()
       cout << "\nFAZA " << faza_ << ":\tRetransmisja pakietu" << endl;
       nad_->licznik_ret_++;
       nr_ret_++;
-      kanal_->UsunZKanalu();
-      kanal_->KanalWolny(true);
       if (nr_ret_ <= kLR) 
       {
         sym_->UstawKolor("01");

@@ -2,7 +2,7 @@
 #define CSMA_PP_NADAJNIK_H
 
 #include "ziarno.h"
-#include <vector>
+#include <queue>
 #include <iostream>
 class Ziarno;
 class GenRownomierny;
@@ -11,6 +11,8 @@ class Symulacja;
 class Siec;
 class Kanal;
 class Pakiet;
+
+using std::queue;
 
 class Nadajnik 
 {
@@ -38,7 +40,7 @@ public:
   void CzyszczenieStatystykNad();//todo
 private:
   int id_;
-  std::vector<Pakiet*> bufor_;
+  queue<Pakiet*> bufor_;
   double CGP_;
   Symulacja* sym_;
   Siec* siec_;

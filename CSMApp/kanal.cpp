@@ -13,6 +13,6 @@ bool Kanal::CzyKolizja()
   return true;
 }
 
-void Kanal::DodajDoKanalu(Pakiet* pakiet) { lacze_.push_back(pakiet); }
+void Kanal::DodajDoKanalu(Pakiet* pakiet) { lacze_.push_front(pakiet); }
 
 void Kanal::UsunZKanalu() { lacze_.pop_back(); }

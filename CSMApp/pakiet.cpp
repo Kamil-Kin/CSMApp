@@ -36,16 +36,16 @@ void Pakiet::aktywacja(double czas)
   cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ << " ms" << endl;
 }
 
-void Pakiet::aktywacja(double czas, int priorytet) 
-{
-  //double czas_zd = sym_->zegar_ + czas;
-  moje_zdarzenie_->czas_zdarzenia_ = sym_->zegar_ + czas;
-  moje_zdarzenie_->priorytet_ = priorytet;
-  sym_->DodajDoKalendarza(moje_zdarzenie_);
-  sym_->UstawKolor("09");
-  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ <<
-  " ms i priorytecie: " << moje_zdarzenie_->priorytet_ << endl;
-}
+//void Pakiet::aktywacja(double czas, int priorytet) 
+//{
+//  //double czas_zd = sym_->zegar_ + czas;
+//  moje_zdarzenie_->czas_zdarzenia_ = sym_->zegar_ + czas;
+//  moje_zdarzenie_->priorytet_ = priorytet;
+//  sym_->DodajDoKalendarza(moje_zdarzenie_);
+//  sym_->UstawKolor("09");
+//  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ <<
+//  " ms i priorytecie: " << moje_zdarzenie_->priorytet_ << endl;
+//}
 
 void Pakiet::execute()
 {
@@ -167,7 +167,7 @@ void Pakiet::execute()
         }
         kanal_->DodajDoKanalu(this);
         faza_ = 6;
-        this->aktywacja(0.0, 1);
+        this->aktywacja(0.0);
         aktywny_ = false;
 
         /*

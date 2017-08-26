@@ -48,7 +48,7 @@ double Nadajnik::LosR(int l_ret_)
 
 void Nadajnik::DodajDoBufora(Pakiet* pak) 
 {
-  bufor_.push_back(pak);
+  bufor_.push(pak);
   sym_->UstawKolor("0F");
   cout << "Dodano pakiet o czasie generacji " << sym_->zegar_ << " ms do bufora nadajnika nr " << id_
     << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
@@ -56,7 +56,7 @@ void Nadajnik::DodajDoBufora(Pakiet* pak)
 
 void Nadajnik::UsunZBufora() 
 {
-  bufor_.pop_back();
+  bufor_.pop();
   sym_->UstawKolor("08");
   cout << "Usunieto pakiet o czasie odbioru " << sym_->zegar_ << " ms z bufora nadajnika nr " << id_
     << "; ilosc pakietow w buforze: " << bufor_.size() << endl;

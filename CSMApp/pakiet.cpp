@@ -33,7 +33,7 @@ void Pakiet::aktywacja(double czas)
   moje_zdarzenie_->priorytet_ = 0;
   sym_->DodajDoKalendarza(moje_zdarzenie_);
   sym_->UstawKolor("09");
-  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ << " ms" << endl;
+  if (sym_->logi == true) cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ << " ms" << endl;
 }
 
 //void Pakiet::aktywacja(double czas, int priorytet) 

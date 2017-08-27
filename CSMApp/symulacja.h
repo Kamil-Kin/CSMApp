@@ -43,7 +43,7 @@ public:
   double czas_symulacji_;
   char tryb_symulacji_;
   double lambda_;
-
+  bool logi;
 private:
   Siec* siec_;
   Zdarzenie* zd_;

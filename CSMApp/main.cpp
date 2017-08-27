@@ -28,6 +28,8 @@ int main()
   cout << "Wybierz tryb symulacji: K,k - krokowy, inny - ciagly" << endl;
   cin >> symulacja.tryb_symulacji_;
 
+
+
   if (param == 'T' || param == 't') 
   {
     cout << "Podaj liczbe symulacji: ";
@@ -46,6 +48,13 @@ int main()
   {
     cout << "Program uruchomiony dla parametrow domyslnych" << endl;
   }
+
+  char log;
+  cout << "Wyswietlanie komentarzy o przebiegu transmisji pakietu[T,t - tak/inny - nie]: " << endl;
+  cin >> log;
+  if (log == 'T' || log == 't')
+    symulacja.logi = true;
+  else symulacja.logi = false;
 
   for (int i = symulacja.nr_symulacji_; i < symulacja.liczba_symulacji_; ++i) 
   {

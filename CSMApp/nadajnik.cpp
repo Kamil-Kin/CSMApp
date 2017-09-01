@@ -8,6 +8,7 @@
 #include "pakiet.h"
 #include <iostream>
 #include <math.h>
+
 using std::cout;
 using std::endl;
 
@@ -39,7 +40,7 @@ double Nadajnik::LosCGP()
    return CGP_;
 }
 
-double Nadajnik::LosCTP() { return losCTP_->GeneracjaR(1, 10); }
+double Nadajnik::LosCTP() { return floor(losCTP_->GeneracjaR(1, 10)); }
 
 double Nadajnik::LosPT() 
 {

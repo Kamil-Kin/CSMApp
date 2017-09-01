@@ -10,7 +10,7 @@ bool Kanal::StanLacza() { return wolny_; }
 bool Kanal::CzyKolizja() 
 {
   if (lacze_.size() == 0) return false;
-  return true;
+  else return true;
 }
 
 void Kanal::DodajDoKanalu(Pakiet* pakiet) { lacze_.push_front(pakiet); }

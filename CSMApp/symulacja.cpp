@@ -12,11 +12,11 @@ using std::endl;
 
 bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
 {
-  return (zd1->czas_zdarzenia_ > zd2->czas_zdarzenia_); //>= todo
+  return (zd1->czas_zdarzenia_ >= zd2->czas_zdarzenia_); //>= todo
 }
 
 Symulacja::Symulacja(double lam, double faza) :zegar_(0.0), nr_symulacji_(0), liczba_symulacji_(5), faza_poczatkowa_(10000.0), 
-                                                czas_symulacji_(5000000.0), tryb_symulacji_('c'), logi(true)
+                                                czas_symulacji_(500000.0), tryb_symulacji_('c'), logi(true)
 {
   lambda_ = lam;
   faza_poczatkowa_ = faza;

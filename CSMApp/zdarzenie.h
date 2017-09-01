@@ -6,7 +6,7 @@ class Pakiet;
 class Zdarzenie 
 {
 public:
-  //Zdarzenie(double czas) : czas_zdarzenia_(czas), pakiet_(nullptr) {}
+  Zdarzenie(double czas) : czas_zdarzenia_(czas), pakiet_(nullptr) {}
   Zdarzenie(Pakiet* pak) : czas_zdarzenia_(-1.0), pakiet_(pak), priorytet_(0) {}
   ~Zdarzenie() {}
 

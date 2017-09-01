@@ -131,7 +131,8 @@ void Pakiet::execute()
         cout << "\nFAZA " << faza_ << ":\tLosowanie prawdopodobienstwa transmisji" << endl;
       }
       
-      p = losujPT();//p = nad_->LosPT();
+      //p = losujPT();//
+      p = nad_->LosPT();
       if (p <= kPT)
       {
         if (sym_->logi == true) 
@@ -259,7 +260,8 @@ void Pakiet::execute()
       czas_nadania_ = sym_->zegar_;
       czas_w_buforze_ = czas_nadania_ - czas_narodzin_;
       kanal_->KanalWolny(false);
-      czas_CTP_ = this->losujCTP();//czas_CTP_ = nad_->LosCTP();
+      //czas_CTP_ = this->losujCTP();//
+      czas_CTP_ = nad_->LosCTP();
       
       if (sym_->logi == true) 
       {
@@ -294,7 +296,8 @@ void Pakiet::execute()
           cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << nr_ret_ << endl;
         }
 
-        czas_CRP_ = losujR()*czas_CTP_;//czas_CRP_ = nad_->LosR(nr_ret_)*czas_CTP_;
+        //czas_CRP_ = losujR()*czas_CTP_;//
+        czas_CRP_ = nad_->LosR(nr_ret_)*czas_CTP_;
         this->kolizja_ = false;
         faza_ = 2;
         this->aktywacja(czas_CRP_);

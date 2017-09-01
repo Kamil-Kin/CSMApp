@@ -11,6 +11,7 @@ using std::endl;
 
 int main() 
 {
+  
   Statystyka* statystyka = new Statystyka();
   Histogram histogram;
   histogram.Rownomierny();
@@ -18,7 +19,7 @@ int main()
   Symulacja symulacja(0.0068, 900000);
   Ziarno ziarno;
   ziarno.GeneracjaZiaren();
-
+  
   char param;
   cout << "Ustalone parametry programu: " << "\nliczba symulacji: " << symulacja.liczba_symulacji_
     << "; czas jednej symulacji: " << symulacja.czas_symulacji_ << " ms; " << "faza poczatkowa: " << symulacja.faza_poczatkowa_ << " ms; "
@@ -27,9 +28,9 @@ int main()
   cin >> param;
   cout << "Wybierz tryb symulacji: K,k - krokowy, inny - ciagly" << endl;
   cin >> symulacja.tryb_symulacji_;
-
-
-
+  
+  
+  
   if (param == 'T' || param == 't') 
   {
     cout << "Podaj liczbe symulacji: ";
@@ -48,29 +49,29 @@ int main()
   {
     cout << "Program uruchomiony dla parametrow domyslnych" << endl;
   }
-
+  
   char log;
   cout << "Wyswietlanie komentarzy o przebiegu transmisji pakietu[T,t - tak/inny - nie]: " << endl;
   cin >> log;
   if (log == 'T' || log == 't')
     symulacja.logi = true;
   else symulacja.logi = false;
-
+  
   for (int i = symulacja.nr_symulacji_; i < symulacja.liczba_symulacji_; ++i) 
   {
     symulacja.run(ziarno, statystyka);
     symulacja.nr_symulacji_++;
   }
-
+  
   system("pause");
-
-  //Zdarzenie *T = new Zdarzenie(21.0);
+  
+  //Zdarzenie *T = new Zdarzenie(11.0);
   //symulacja.DodajDoKalendarza(T);
   //Zdarzenie *T1 = new Zdarzenie(11.0);
   //symulacja.DodajDoKalendarza(T1);
-  //std::cout << (symulacja.PobierzPierwszyElement())->PobierzCzasZd() << std::endl;
+  //std::cout << (symulacja.PobierzPierwszyElement())->czas_zdarzenia_ << std::endl;
   //symulacja.UsunZKalendarza();
-  //std::cout << (symulacja.PobierzPierwszyElement())->PobierzCzasZd() << std::endl; //testowanie
+  //std::cout << (symulacja.PobierzPierwszyElement())->czas_zdarzenia_ << std::endl; //testowanie
   //system("pause");
   return 0;
 }

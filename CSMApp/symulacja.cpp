@@ -6,16 +6,18 @@
 #include <iostream>
 #include <windows.h>
 #include <stdlib.h>
+#include <assert.h>
 
 using std::cout;
 using std::endl;
 
 bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
 {
+  assert(zd1->czas_zdarzenia_ != zd2->czas_zdarzenia_);
   return (zd1->czas_zdarzenia_ >= zd2->czas_zdarzenia_); //>= todo
 }
 
-Symulacja::Symulacja(double lam, double faza) :zegar_(0.0), nr_symulacji_(0), liczba_symulacji_(5), faza_poczatkowa_(10000.0), 
+Symulacja::Symulacja(double lam, double faza) :zegar_(0.0), nr_symulacji_(0), liczba_symulacji_(5),
                                                 czas_symulacji_(500000.0), tryb_symulacji_('c'), logi(true)
 {
   lambda_ = lam;
@@ -38,7 +40,8 @@ void Symulacja::run(Ziarno ziarno, Statystyka* stat)
     this->UsunZKalendarza();*/
     Pakiet* obecny_ = kalendarz_.top()->pakiet_;
     zegar_ = kalendarz_.top()->czas_zdarzenia_;
-    kalendarz_.pop();
+    UsunZKalendarza();
+    //kalendarz_.pop();
     if (logi == true) 
     {
       UstawKolor("07");
@@ -60,7 +63,7 @@ void Symulacja::run(Ziarno ziarno, Statystyka* stat)
 
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }
 
-void Symulacja::UsunZKalendarza() { kalendarz_.pop(); }
+void Symulacja::UsunZKalendarza() { assert(!kalendarz_.empty()); kalendarz_.pop(); }
 
 Zdarzenie* Symulacja::PobierzPierwszyElement() { return kalendarz_.top(); }
 

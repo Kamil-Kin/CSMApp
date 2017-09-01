@@ -11,5 +11,5 @@ double GenRownomierny::Generacja01()
 
 double GenRownomierny::GeneracjaR(double dol, double gora) 
 {
-  return Generacja01() * (gora - dol) + gora;
+  return Generacja01() * (gora - dol) + dol;
 }

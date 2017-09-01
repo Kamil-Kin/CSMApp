@@ -7,7 +7,7 @@
 #include "nadajnik.h"
 #include "pakiet.h"
 #include <iostream>
-
+#include <math.h>
 using std::cout;
 using std::endl;
 
@@ -29,8 +29,8 @@ Nadajnik::~Nadajnik() {/*CzyszczenieStatystykNad();*/ }
 
 double Nadajnik::LosCGP()
 {
-  CGP_ = (rand() % 101) / 10.0;
-  //CGP_ = losCGP_->GeneracjaW();
+  //CGP_ = (rand() % 101) / 10.0;
+  CGP_ = losCGP_->GeneracjaW();
   if (sym_->logi == true) 
   {
     sym_->UstawKolor("02");
@@ -41,7 +41,14 @@ double Nadajnik::LosCGP()
 
 double Nadajnik::LosCTP() { return losCTP_->GeneracjaR(1, 10); }
 
-double Nadajnik::LosPT() { return losPT_->Generacja01(); }
+double Nadajnik::LosPT() 
+{
+  double p = losPT_->Generacja01();
+  p *= 100;
+  p = round(p);
+  p /= 100;
+  return p;
+}
 
 double Nadajnik::LosR(int l_ret_)
 {

@@ -39,12 +39,16 @@ void Symulacja::run(Ziarno ziarno, Statystyka* stat)
     Pakiet* obecny_ = kalendarz_.top()->pakiet_;
     zegar_ = kalendarz_.top()->czas_zdarzenia_;
     kalendarz_.pop();
-    UstawKolor("07");
-    cout << "\nPobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
+    if (logi == true) 
+    {
+      UstawKolor("07");
+      cout << "\nPobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
+    }
     obecny_->execute();
     if ((obecny_->skonczony_) == true) 
     {
-      cout << "Pakiet id " << obecny_->id_tx_ << " usuniety z systemu" << endl;
+      if (logi == true)
+        cout << "Pakiet id " << obecny_->id_tx_ << " usuniety z systemu" << endl;
       //siec_->StatystykiPakietu(obecny_);
       delete obecny_;
     }

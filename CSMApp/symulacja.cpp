@@ -13,8 +13,16 @@ using std::endl;
 
 bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
 {
-  assert(zd1->czas_zdarzenia_ != zd2->czas_zdarzenia_);
-  return (zd1->czas_zdarzenia_ >= zd2->czas_zdarzenia_); //> or >= todo
+  //assert(zd1->czas_zdarzenia_ != zd2->czas_zdarzenia_);
+  if (zd1->czas_zdarzenia_ > zd2->czas_zdarzenia_) return true;
+  else if (zd1->czas_zdarzenia_ == zd2->czas_zdarzenia_) 
+    if (zd1->pakiet_->faza_ < zd2->pakiet_->faza_) return true; // or > todo
+    //else if(zd1->pakiet_->faza_ == zd2->pakiet_->faza_)
+    //co w przypadku tych samych faz?
+    else return false;
+  else if(zd1->czas_zdarzenia_ < zd2->czas_zdarzenia_) return false;
+
+  //return (zd1->czas_zdarzenia_ >= zd2->czas_zdarzenia_);
 }
 
 Symulacja::Symulacja(double lam, double faza) :zegar_(0.0), nr_symulacji_(0), liczba_symulacji_(5),
@@ -45,20 +53,20 @@ void Symulacja::run(Ziarno ziarno, Statystyka* stat)
     if (logi == true) 
     {
       UstawKolor("07");
-      cout << "\nPobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
+      cout << "\nPakiet id " << obecny_->id_tx_ << ": Pobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
     }
     obecny_->execute();
     if ((obecny_->skonczony_) == true) 
     {
       if (logi == true)
-        cout << "Pakiet id " << obecny_->id_tx_ << " usuniety z systemu" << endl;
-      //siec_->StatystykiPakietu(obecny_);
+        cout << "Pakiet id " << obecny_->id_tx_ << ":\tUsuniety z systemu" << endl;
+      //siec_->StatystykiPakietu(obecny_); todo
       delete obecny_;
     }
     if (tryb_symulacji_ == 'K' || tryb_symulacji_ == 'k') getchar();
   }
   //siec_->Statystyki(); todo
-  //delete siec_; todo (uncomment)
+  //delete siec_; todo
 }
 
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }

@@ -36,7 +36,8 @@ void Pakiet::aktywacja(double czas)
   if (sym_->logi == true) 
   {
     sym_->UstawKolor("09");
-    cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ << " ms" << endl;
+    cout << "Pakiet id " << id_tx_ << ": Dodano do kalendarza zdarzenie o czasie: "
+      << moje_zdarzenie_->czas_zdarzenia_ << " ms" << endl;
   }
 }
 
@@ -283,7 +284,7 @@ void Pakiet::execute()
     //============================================
     case 7:
     {
-      if (sym_->logi == true) 
+      if (sym_->logi == true)
       {
         sym_->UstawKolor("06");
         cout << "\nFAZA " << faza_ << ":\tRetransmisja pakietu" << endl;
@@ -351,7 +352,7 @@ void Pakiet::execute()
     //============================================
     case 9:
     {
-      if (sym_->logi == true) 
+      if (sym_->logi == true)
       {
         sym_->UstawKolor("06");
         cout << "\nFAZA " << faza_ << ":\tWyslanie ACK" << endl;
@@ -369,10 +370,10 @@ void Pakiet::execute()
     //============================================
     case 10:
     {
-      if (sym_->logi == true) 
+      if (sym_->logi == true)
       {
         sym_->UstawKolor("06");
-        cout << "\nFAZA " << faza_ << ":\tOdebranie pakietu i zakonczenie transmisji" << endl;
+        cout << "\nFAZA " << faza_ << ":  Odebranie pakietu i zakonczenie transmisji" << endl;
       }
       
       czas_odebrania_ = sym_->zegar_;
@@ -388,7 +389,7 @@ void Pakiet::execute()
       skonczony_ = true;
 
       if (sym_->logi == true)
-        cout << "Pakiet id " << id_tx_ << " zostal odebrany" << endl;
+        cout << "Pakiet id " << id_tx_ << ":\tZostal odebrany" << endl;
 
       if (nad_->CzyBuforPusty() == false)
         nad_->PierwszyPakiet()->aktywacja(0.0);

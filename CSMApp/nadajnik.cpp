@@ -66,7 +66,7 @@ void Nadajnik::DodajDoBufora(Pakiet* pak)
   if (sym_->logi == true) 
   {
     sym_->UstawKolor("0F");
-    cout << "Dodano pakiet o czasie generacji " << sym_->zegar_ << " ms do bufora nadajnika nr " << id_
+    cout << "Pakiet id " << id_ << ":\to czasie generacji " << sym_->zegar_ << " ms dodany do bufora nadajnika nr " << id_
       << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
   }
 }
@@ -77,7 +77,7 @@ void Nadajnik::UsunZBufora()
   if (sym_->logi == true) 
   {
     sym_->UstawKolor("08");
-    cout << "Usunieto pakiet o czasie odbioru " << sym_->zegar_ << " ms z bufora nadajnika nr " << id_
+    cout << "Pakiet id " << id_ << ":\to czasie odbioru " << sym_->zegar_ << " ms usuniety z bufora nadajnika nr " << id_
       << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
   }
 }

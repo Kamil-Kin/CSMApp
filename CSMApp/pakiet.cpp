@@ -19,7 +19,8 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad):
   moje_zdarzenie_ = new Zdarzenie(this);
 
   czas_narodzin_ = sym_->zegar_;
-  if (czas_narodzin_ >= sym_->faza_poczatkowa_) nad_->licznik_pakietow_++;
+  //if (czas_narodzin_ >= sym_->faza_poczatkowa_) //todo
+    nad_->licznik_pakietow_++;
   czas_nadania_ = 0;
   czas_odebrania_ = 0;
   opoznienie_pakietu_ = 0;
@@ -30,7 +31,7 @@ void Pakiet::aktywacja(double czas)
 {
   //double czas_zd = sym_->zegar_ + czas;
   moje_zdarzenie_->czas_zdarzenia_ = sym_->zegar_ + czas;
-  moje_zdarzenie_->priorytet_ = 0;
+  //moje_zdarzenie_->priorytet_ = 0;
   sym_->DodajDoKalendarza(moje_zdarzenie_);
   if (sym_->logi == true) 
   {
@@ -256,11 +257,11 @@ void Pakiet::execute()
       }
 
       czas_nadania_ = sym_->zegar_;
-      if (czas_narodzin_ >= sym_->faza_poczatkowa_) 
-      {
+      //if (czas_narodzin_ >= sym_->faza_poczatkowa_) //todo
+      //{
         nad_->licznik_nadanych_++;
         czas_w_buforze_ = czas_nadania_ - czas_narodzin_;
-      }
+      //}
 
       kanal_->KanalWolny(false);
       czas_CTP_ = nad_->LosCTP();
@@ -288,7 +289,8 @@ void Pakiet::execute()
         cout << "\nFAZA " << faza_ << ":\tRetransmisja pakietu" << endl;
       }
 
-      if (czas_narodzin_ >= sym_->faza_poczatkowa_) nad_->licznik_ret_++;
+      //if (czas_narodzin_ >= sym_->faza_poczatkowa_) //todo
+        nad_->licznik_ret_++;
 
       nr_ret_++;
       if (nr_ret_ <= kLR)
@@ -313,7 +315,8 @@ void Pakiet::execute()
           cout << "Pakiet id " << id_tx_ << ":\tPrzekroczono liczbê dopuszczalnych retransmisji, pakiet stracony" << endl;
         }
 
-        if (czas_narodzin_ >= sym_->zegar_) nad_->licznik_straconych_++;
+        //if (czas_narodzin_ >= sym_->zegar_) //todo
+          nad_->licznik_straconych_++;
 
         nad_->UsunZBufora();
         skonczony_ = true;
@@ -373,11 +376,11 @@ void Pakiet::execute()
       }
       
       czas_odebrania_ = sym_->zegar_;
-      if (czas_narodzin_ >= sym_->faza_poczatkowa_) 
-      {
+      //if (czas_narodzin_ >= sym_->faza_poczatkowa_) //todo
+      //{
         nad_->licznik_odebranych_++;
         opoznienie_pakietu_ = czas_odebrania_ - czas_narodzin_;
-      }
+      //}
 
       nad_->UsunZBufora();
       kanal_->UsunZKanalu();

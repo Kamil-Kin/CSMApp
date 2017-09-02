@@ -63,7 +63,11 @@ void Symulacja::run(Ziarno ziarno, Statystyka* stat)
 
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }
 
-void Symulacja::UsunZKalendarza() { assert(!kalendarz_.empty()); kalendarz_.pop(); }
+void Symulacja::UsunZKalendarza() 
+{
+  assert(!kalendarz_.empty());
+  kalendarz_.pop();
+}
 
 Zdarzenie* Symulacja::PobierzPierwszyElement() { return kalendarz_.top(); }
 

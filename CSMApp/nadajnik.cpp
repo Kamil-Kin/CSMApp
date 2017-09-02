@@ -30,17 +30,20 @@ Nadajnik::~Nadajnik() {/*CzyszczenieStatystykNad();*/ }
 
 double Nadajnik::LosCGP()
 {
-  //CGP_ = (rand() % 101) / 10.0;
-  CGP_ = losCGP_->GeneracjaW();
+  CGP_ = (rand() % 101) / 10.0;
+  //CGP_ = losCGP_->GeneracjaW();
+  //CGP_ *= 100;
+  //CGP_ = round(CGP_);
+  //CGP_ /= 100;
   if (sym_->logi == true) 
   {
     sym_->UstawKolor("02");
     cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << sym_->zegar_ + CGP_ << " ms" << endl;
   }
-   return CGP_;
+  return CGP_;
 }
 
-double Nadajnik::LosCTP() { return floor(losCTP_->GeneracjaR(1, 10)); }
+double Nadajnik::LosCTP() { return round(losCTP_->GeneracjaR(1, 10)); }
 
 double Nadajnik::LosPT() 
 {

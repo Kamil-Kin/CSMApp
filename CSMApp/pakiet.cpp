@@ -18,8 +18,9 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad):
   nad_ = nad;
   moje_zdarzenie_ = new Zdarzenie(this);
 
-  nad_->licznik_pakietow_++;
   czas_narodzin_ = sym_->zegar_;
+  if(czas_narodzin_>=sym_->faza_poczatkowa_)
+    nad_->licznik_pakietow_++;
   czas_nadania_ = 0;
   czas_odebrania_ = 0;
   opoznienie_pakietu_ = 0;
@@ -130,8 +131,7 @@ void Pakiet::execute()
         sym_->UstawKolor("06");
         cout << "\nFAZA " << faza_ << ":\tLosowanie prawdopodobienstwa transmisji" << endl;
       }
-      
-      //p = losujPT();//
+
       p = nad_->LosPT();
       if (p <= kPT)
       {
@@ -256,13 +256,15 @@ void Pakiet::execute()
         cout << "\nFAZA " << faza_ << ":\tTransmisja pakietu " << endl;
       }
 
-      nad_->licznik_nadanych_++;
       czas_nadania_ = sym_->zegar_;
-      czas_w_buforze_ = czas_nadania_ - czas_narodzin_;
+      if (czas_narodzin_ >= sym_->faza_poczatkowa_) 
+      {
+        nad_->licznik_nadanych_++;
+        czas_w_buforze_ = czas_nadania_ - czas_narodzin_;
+      }
       kanal_->KanalWolny(false);
-      //czas_CTP_ = this->losujCTP();//
       czas_CTP_ = nad_->LosCTP();
-      
+
       if (sym_->logi == true) 
       {
         sym_->UstawKolor("05");
@@ -286,7 +288,8 @@ void Pakiet::execute()
         cout << "\nFAZA " << faza_ << ":\tRetransmisja pakietu" << endl;
       }
 
-      nad_->licznik_ret_++;
+      if(czas_narodzin_>=sym_->faza_poczatkowa_)
+        nad_->licznik_ret_++;
       nr_ret_++;
       if (nr_ret_ <= kLR)
       {
@@ -296,7 +299,6 @@ void Pakiet::execute()
           cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << nr_ret_ << endl;
         }
 
-        //czas_CRP_ = losujR()*czas_CTP_;//
         czas_CRP_ = nad_->LosR(nr_ret_)*czas_CTP_;
         this->kolizja_ = false;
         faza_ = 2;
@@ -311,7 +313,8 @@ void Pakiet::execute()
           cout << "Pakiet id " << id_tx_ << ":\tPrzekroczono liczbê dopuszczalnych retransmisji, pakiet stracony" << endl;
         }
 
-        nad_->licznik_straconych_++;
+        if(czas_narodzin_>=sym_->zegar_)
+          nad_->licznik_straconych_++;
         nad_->UsunZBufora();
         skonczony_ = true;
         if (nad_->CzyBuforPusty() == false)
@@ -368,10 +371,13 @@ void Pakiet::execute()
         sym_->UstawKolor("06");
         cout << "\nFAZA " << faza_ << ":\tOdebranie pakietu i zakonczenie transmisji" << endl;
       }
-
-      nad_->licznik_odebranych_++;
+      
       czas_odebrania_ = sym_->zegar_;
-      opoznienie_pakietu_ = czas_odebrania_ - czas_narodzin_;
+      if (czas_narodzin_ >= sym_->faza_poczatkowa_) 
+      {
+        nad_->licznik_odebranych_++;
+        opoznienie_pakietu_ = czas_odebrania_ - czas_narodzin_;
+      }
       nad_->UsunZBufora();
       kanal_->UsunZKanalu();
       kanal_->KanalWolny(true);
@@ -392,21 +398,19 @@ void Pakiet::execute()
   }
 }
 
-int Pakiet::losujCTP() 
-{
-  czas_CTP_ = (rand() % 10) + 1;
-  return czas_CTP_;
-}
-
-double Pakiet::losujPT() 
-{
-  double x = (rand() % 11) / 10.0;
-  return x;
-}
-
-double Pakiet::losujR() 
-{
-  double koniec = pow(2.0, nr_ret_) - 1;
-  double R = fmod(rand(), koniec);
-  return R;
-}
+//int Pakiet::losujCTP() 
+//{
+//  czas_CTP_ = (rand() % 10) + 1;
+//  return czas_CTP_;
+//}
+//double Pakiet::losujPT() 
+//{
+//  double x = (rand() % 11) / 10.0;
+//  return x;
+//}
+//double Pakiet::losujR() 
+//{
+//  double koniec = pow(2.0, nr_ret_) - 1;
+//  double R = fmod(rand(), koniec);
+//  return R;
+//}

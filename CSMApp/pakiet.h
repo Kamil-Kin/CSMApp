@@ -30,7 +30,7 @@ private:
   const int kLR = 5;
   const double kPT = 0.2;
   bool kolizja_;
-  int czas_CTP_;
+  double czas_CTP_;
   double p;
   int nr_ret_;
   double czas_CRP_;

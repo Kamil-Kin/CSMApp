@@ -37,7 +37,8 @@ public:
   int licznik_odebranych_;
   int licznik_ret_;
   double StopaBledow();
-  void CzyszczenieStatystykNad();//todo
+  void CzyszczenieStatystykNad();
+
 private:
   int id_;
   queue<Pakiet*> bufor_;

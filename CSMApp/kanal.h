@@ -19,6 +19,7 @@ public:
   void UsunZKanalu();
   int liczba_pakietow_;
   list<Pakiet*> lacze_;
+
 private:
   bool wolny_;
   

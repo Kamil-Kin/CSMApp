@@ -44,11 +44,13 @@ public:
   char tryb_symulacji_;
   double lambda_;
   bool logi;
+
 private:
   Siec* siec_;
   Zdarzenie* zd_;
 
   priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer> kalendarz_;
+
   //priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)> kalendarz_;
   //priority_queue<Zdarzenie*> kalendarz_;
 };

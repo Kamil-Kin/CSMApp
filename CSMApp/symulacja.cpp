@@ -16,7 +16,7 @@ bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
   //assert(zd1->czas_zdarzenia_ != zd2->czas_zdarzenia_);
   if (zd1->czas_zdarzenia_ > zd2->czas_zdarzenia_) return true;
   else if (zd1->czas_zdarzenia_ == zd2->czas_zdarzenia_) 
-    if (zd1->pakiet_->faza_ < zd2->pakiet_->faza_) return true; // or > todo
+    if (zd1->pakiet_->faza_ < zd2->pakiet_->faza_) return true;
     //else if(zd1->pakiet_->faza_ == zd2->pakiet_->faza_)
     //co w przypadku tych samych faz?
     else return false;

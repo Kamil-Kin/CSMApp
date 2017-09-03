@@ -29,11 +29,9 @@ public:
   ~Symulacja();
 
   void run(Ziarno ziarno, Statystyka* stat);
-
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();
   Zdarzenie* PobierzPierwszyElement();
-
   void UstawKolor(string numer);
 
   double zegar_;
@@ -42,8 +40,8 @@ public:
   double faza_poczatkowa_;
   double czas_symulacji_;
   char tryb_symulacji_;
-  double lambda_;
   bool logi;
+  double lambda_;
 
 private:
   Siec* siec_;

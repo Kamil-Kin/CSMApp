@@ -48,8 +48,7 @@ void Symulacja::run(Ziarno ziarno, Statystyka* stat)
     this->UsunZKalendarza();*/
     Pakiet* obecny_ = kalendarz_.top()->pakiet_;
     zegar_ = kalendarz_.top()->czas_zdarzenia_;
-    UsunZKalendarza();
-    //kalendarz_.pop();
+    UsunZKalendarza(); //kalendarz_.pop();
     if (logi == true) 
     {
       UstawKolor("07");

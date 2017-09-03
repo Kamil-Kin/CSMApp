@@ -1,6 +1,6 @@
 #include "kanal.h"
 
-Kanal::Kanal() :wolny_(true), liczba_pakietow_(0) {}
+Kanal::Kanal() :wolny_(true) {}
 Kanal::~Kanal() {}
 
 void Kanal::KanalWolny(bool stan_lacza) { wolny_ = stan_lacza; }

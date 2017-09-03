@@ -60,7 +60,7 @@ void Pakiet::execute()
     switch (faza_)
     {
     //============================================
-    // faza 1: generacja pakietu, 
+    // faza 1: generacja pakietu, dodanie do bufora
     //         sprawdzenie czy jest pierwszy w buforze
     //============================================
     case 1:
@@ -360,7 +360,7 @@ void Pakiet::execute()
 
       ack_ = true;
       faza_ = 10;
-      this->aktywacja(1.0);
+      this->aktywacja(kCTIZ);
       aktywny_ = false;
     }
       break;

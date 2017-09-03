@@ -43,6 +43,7 @@ private:
   int id_;
   queue<Pakiet*> bufor_;
   double CGP_;
+
   Symulacja* sym_;
   Siec* siec_;
   Kanal* kanal_;

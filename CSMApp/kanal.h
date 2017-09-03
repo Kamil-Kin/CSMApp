@@ -17,12 +17,10 @@ public:
   bool CzyKolizja();
   void DodajDoKanalu(Pakiet*);
   void UsunZKanalu();
-  int liczba_pakietow_;
-  list<Pakiet*> lacze_;
 
 private:
   bool wolny_;
-  
+    list<Pakiet*> lacze_;
 };
 
 #endif // !CSMA_PP_KANAL_H

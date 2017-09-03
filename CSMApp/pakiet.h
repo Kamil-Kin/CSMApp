@@ -29,6 +29,7 @@ public:
 private:
   const int kLR = 5;
   const double kPT = 0.2;
+  const double kCTIZ = 1.0;
   bool kolizja_;
   double czas_CTP_;
   double p;

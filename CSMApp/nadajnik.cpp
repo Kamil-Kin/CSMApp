@@ -35,7 +35,7 @@ double Nadajnik::LosCGP()
   //CGP_ *= 100;
   //CGP_ = round(CGP_);
   //CGP_ /= 100;
-  if (sym_->logi == true) 
+  if (sym_->logi == true)
   {
     sym_->UstawKolor("02");
     cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << sym_->zegar_ + CGP_ << " ms" << endl;
@@ -60,10 +60,10 @@ double Nadajnik::LosR(int l_ret_)
   return losR_->GeneracjaR(0, koniec);
 }
 
-void Nadajnik::DodajDoBufora(Pakiet* pak) 
+void Nadajnik::DodajDoBufora(Pakiet* pak)
 {
   bufor_.push(pak);
-  if (sym_->logi == true) 
+  if (sym_->logi == true)
   {
     sym_->UstawKolor("0F");
     cout << "Pakiet id " << id_ << ":\to czasie generacji " << sym_->zegar_ << " ms dodany do bufora nadajnika nr " << id_
@@ -71,7 +71,7 @@ void Nadajnik::DodajDoBufora(Pakiet* pak)
   }
 }
 
-void Nadajnik::UsunZBufora() 
+void Nadajnik::UsunZBufora()
 {
   bufor_.pop();
   if (sym_->logi == true) 

@@ -4,8 +4,8 @@
 #include "ziarno.h"
 #include <queue>
 #include <iostream>
+
 class Ziarno;
-class GenRownomierny;
 class GenWykladniczy;
 class Symulacja;
 class Siec;
@@ -24,11 +24,7 @@ public:
   void UsunZBufora();
   bool CzyBuforPusty();
   Pakiet* PierwszyPakiet();
-
   double LosCGP();
-  double LosCTP();
-  double LosPT();
-  double LosR(int l_ret);
   //statystyki
   double stopa_bledow_;
   int licznik_pakietow_;
@@ -50,9 +46,6 @@ private:
   Pakiet* pak_;
   Ziarno ziarno_;
   GenWykladniczy* losCGP_;
-  GenRownomierny* losCTP_;
-  GenRownomierny* losPT_;
-  GenRownomierny* losR_;
 };
 
 #endif // !CSMA_PP_NADAJNIK_H

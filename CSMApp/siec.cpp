@@ -12,6 +12,9 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
   srand(time(NULL));
   stat_ = stat;
   sym_ = sym;
+  losCTP_ = new GenRownomierny(ziarno.PobierzZiarno(0 + sym_->nr_symulacji_*(3 + LiczbaNad())));
+  losPT_ = new GenRownomierny(ziarno.PobierzZiarno(1 + sym_->nr_symulacji_*(3 + LiczbaNad())));
+  losR_ = new GenRownomierny(ziarno.PobierzZiarno(2 + sym_->nr_symulacji_*(3 + LiczbaNad())));
   kanal_ = new Kanal();
   for (int i = 0; i < 2/*kLiczbaNad_*/; i++)
   {
@@ -22,6 +25,23 @@ Siec::~Siec()
 {
   //CzyszczenieStatystyk(); todo
   delete kanal_;
+}
+
+double Siec::LosCTP() { return round(losCTP_->GeneracjaR(1, 10)); }
+
+double Siec::LosPT()
+{
+  double p = losPT_->Generacja01();
+  p *= 100;
+  p = round(p);
+  p /= 100;
+  return p;
+}
+
+double Siec::LosR(int l_ret_)
+{
+  double koniec = pow(2.0, l_ret_) - 1;
+  return losR_->GeneracjaR(0, koniec);
 }
 
 void Siec::CzyszczenieStatystyk() 

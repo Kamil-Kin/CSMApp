@@ -19,10 +19,7 @@ licznik_straconych_(0), licznik_odebranych_(0), licznik_ret_(0)
   siec_ = siec;
   kanal_ = kanal;
   ziarno_ = ziarno;
-  losCTP_ = new GenRownomierny(ziarno_.PobierzZiarno(0 + 4 * (id_ + sym_->nr_symulacji_ * siec_->LiczbaNad())));
-  losPT_ = new GenRownomierny(ziarno_.PobierzZiarno(1 + 4 * (id_ + sym_->nr_symulacji_ * siec_->LiczbaNad())));
-  losR_ = new GenRownomierny(ziarno_.PobierzZiarno(2 + 4 * (id_ + sym_->nr_symulacji_ * siec_->LiczbaNad())));
-  losCGP_ = new GenWykladniczy(sym_->lambda_, ziarno_.PobierzZiarno(3 + 4 * (id_ + sym_->nr_symulacji_ * siec_->LiczbaNad())));
+  losCGP_ = new GenWykladniczy(sym_->lambda_, ziarno_.PobierzZiarno(3 + sym_->nr_symulacji_*(3 + siec_->LiczbaNad())));
   (new Pakiet(id_, sym_, siec_, kanal_, this))->aktywacja(LosCGP());
 }
 
@@ -41,23 +38,6 @@ double Nadajnik::LosCGP()
     cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << sym_->zegar_ + CGP_ << " ms" << endl;
   }
   return CGP_;
-}
-
-double Nadajnik::LosCTP() { return round(losCTP_->GeneracjaR(1, 10)); }
-
-double Nadajnik::LosPT() 
-{
-  double p = losPT_->Generacja01();
-  p *= 100;
-  p = round(p);
-  p /= 100;
-  return p;
-}
-
-double Nadajnik::LosR(int l_ret_)
-{
-  double koniec = pow(2.0, l_ret_) - 1;
-  return losR_->GeneracjaR(0, koniec);
 }
 
 void Nadajnik::DodajDoBufora(Pakiet* pak)

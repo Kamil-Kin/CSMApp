@@ -5,7 +5,7 @@
 #include <iostream>
 #include "statystyka.h"
 
-class Ziarno;
+class GenRownomierny;
 class Symulacja;
 class Nadajnik;
 class Kanal;
@@ -21,6 +21,9 @@ public:
   Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat);
   ~Siec();
   int LiczbaNad() { return kLiczbaNad_; }
+  double LosCTP();
+  double LosPT();
+  double LosR(int l_ret);
 
   void Statystyki();
   void StatystykiPakietu(Pakiet* pak);
@@ -35,6 +38,10 @@ private:
   //statystyki
   double opoznienie_;
   double czas_oczekiwania_;
+
+  GenRownomierny* losCTP_;
+  GenRownomierny* losPT_;
+  GenRownomierny* losR_;
 };
 
 #endif // !CSMA_PP_SIEC_H

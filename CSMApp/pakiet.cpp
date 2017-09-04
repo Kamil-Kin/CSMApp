@@ -133,7 +133,7 @@ void Pakiet::execute()
         cout << "\nFAZA " << faza_ << ":\tLosowanie prawdopodobienstwa transmisji" << endl;
       }
 
-      p = nad_->LosPT();
+      p = siec_->LosPT();
       if (p <= kPT)
       {
         if (sym_->logi == true) 
@@ -265,7 +265,7 @@ void Pakiet::execute()
       //}
 
       kanal_->KanalWolny(false);
-      czas_CTP_ = nad_->LosCTP();
+      czas_CTP_ = siec_->LosCTP();
 
       if (sym_->logi == true) 
       {
@@ -302,7 +302,7 @@ void Pakiet::execute()
           cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << nr_ret_ << endl;
         }
 
-        czas_CRP_ = nad_->LosR(nr_ret_)*czas_CTP_;
+        czas_CRP_ = siec_->LosR(nr_ret_)*czas_CTP_;
         this->kolizja_ = false;
         faza_ = 2;
         this->aktywacja(czas_CRP_);

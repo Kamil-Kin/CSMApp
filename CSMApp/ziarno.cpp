@@ -1,12 +1,12 @@
 #include "ziarno.h"
 
-Ziarno::Ziarno() :odstep_ziaren_(100000), liczba_ziaren_(200) 
+Ziarno::Ziarno() :odstep_ziaren_(100000), liczba_ziaren_(400)
 {
   uniform_ = new GenRownomierny(1);
 }
 Ziarno::~Ziarno() {}
 
-void Ziarno::GeneracjaZiaren() 
+void Ziarno::GeneracjaZiaren()
 {
   fstream plik;
   int temp;

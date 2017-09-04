@@ -22,7 +22,7 @@ public:
 private:
   int odstep_ziaren_;
   int liczba_ziaren_;
-  int ziarna[200];
+  int ziarna[400];
   GenRownomierny* uniform_;
 };
 

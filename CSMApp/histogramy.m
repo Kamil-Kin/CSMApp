@@ -1,5 +1,5 @@
 fileIDr = fopen('hist_rownomierny.txt','r');
-[R,size] = fscanf(fileIDr,'%f');
+R = fscanf(fileIDr,'%f');
 nbins = 100;
 
 figure(1)
@@ -12,7 +12,7 @@ ylabel('Iloœæ wylosowanych liczb');
 fclose(fileIDr);
 
 fileIDw = fopen('hist_wykladniczy.txt','r');
-[W,size] = fscanf(fileIDw,'%f');
+W = fscanf(fileIDw,'%f');
 nbins = 100;
 
 figure(2)

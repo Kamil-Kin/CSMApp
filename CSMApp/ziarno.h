@@ -10,7 +10,6 @@ using std::cout;
 using std::endl;
 using std::ios;
 
-
 class Ziarno 
 {
 public:
@@ -22,7 +21,7 @@ public:
 private:
   int odstep_ziaren_;
   int liczba_ziaren_;
-  int ziarna[400];
+  int ziarna[150];
   GenRownomierny* uniform_;
 };
 

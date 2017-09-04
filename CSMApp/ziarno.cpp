@@ -1,6 +1,6 @@
 #include "ziarno.h"
 
-Ziarno::Ziarno() :odstep_ziaren_(100000), liczba_ziaren_(400)
+Ziarno::Ziarno() :odstep_ziaren_(100000), liczba_ziaren_(150)
 {
   uniform_ = new GenRownomierny(1);
 }

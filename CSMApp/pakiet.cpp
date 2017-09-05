@@ -386,7 +386,7 @@ void Pakiet::execute(bool logi)
         cout << "Pakiet id " << id_tx_ << ":\tZostal odebrany" << endl;
 
       if (nad_->CzyBuforPusty() == false)
-        nad_->PierwszyPakiet()->aktywacja(1.0);
+        nad_->PierwszyPakiet()->aktywacja(0.0);
       aktywny_ = false;
     }
       break;

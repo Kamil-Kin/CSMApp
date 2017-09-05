@@ -1,6 +1,7 @@
 #ifndef CSMA_PP_PAKIET_H
 #define CSMA_PP_PAKIET_H
 
+class Logi;
 class Symulacja;
 class Siec;
 class Kanal;
@@ -12,9 +13,7 @@ class Pakiet
 public:
   Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad);
   ~Pakiet();
-  //int losujCTP();
-  //double losujPT();
-  //double losujR();
+
   void aktywacja(double czas);
   void aktywacja(double czas, int priorytet);
   void execute(bool logi);
@@ -25,16 +24,19 @@ public:
 
   double czas_w_buforze_;
   double opoznienie_pakietu_;
+  friend bool operator==(const Pakiet& lhs, const Pakiet& rhs);
 
 private:
-  const int kLR = 5;
-  const double kPT = 0.2;
-  const double kCTIZ = 1.0;
+  static __int64 licznik_;
+  const int kMaxLiczbaRetransmisji = 5;
+  const double kPrawdopodobienstwo = 0.2;
+  const double kCzasPotwierdzenia = 1.0;
+  __int64 id_;
   bool kolizja_;
-  double czas_CTP_;
+  double czas_transmisji_;
   double p;
-  int nr_ret_;
-  double czas_CRP_;
+  int nr_retransmisji_;
+  double czas_retransmisji_;
   bool ack_;
   //statystyki
   double czas_narodzin_;

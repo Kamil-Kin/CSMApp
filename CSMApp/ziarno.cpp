@@ -20,7 +20,6 @@ void Ziarno::GeneracjaZiaren()
         uniform_->Generacja01();
       temp = uniform_->getKernel();
       plik << temp << endl;
-      //plik << endl;
       ziarna[i] = temp;
     }
     plik.close();

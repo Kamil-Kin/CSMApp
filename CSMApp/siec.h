@@ -20,10 +20,10 @@ class Siec
 public:
   Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat);
   ~Siec();
-  int LiczbaNad() { return kLiczbaNad_; }
-  double LosCTP();
-  double LosPT();
-  double LosR(int l_ret);
+  int LiczbaNad() { return kLiczbaNadajnikow_; }
+  double LosCzasTransmisji();
+  double LosPrawdopodobienstwo();
+  double LosRetransmisja(int l_ret);
 
   void Statystyki();
   void StatystykiPakietu(Pakiet* pak);
@@ -31,7 +31,7 @@ public:
   Nadajnik* Nad(int index);
   Kanal* Kan();
 private:
-  const int kLiczbaNad_ = 10;
+  const int kLiczbaNadajnikow_ = 10;
   vector<Nadajnik*> nadajniki_;
   Symulacja* sym_;
   Kanal* kanal_;
@@ -40,9 +40,9 @@ private:
   double opoznienie_;
   double czas_oczekiwania_;
 
-  GenRownomierny* losCTP_;
-  GenRownomierny* losPT_;
-  GenRownomierny* losR_;
+  GenRownomierny* los_czas_transmisji_;
+  GenRownomierny* los_prawdopodobienstwo_;
+  GenRownomierny* los_retransmisja_;
 };
 
 #endif // !CSMA_PP_SIEC_H

@@ -24,21 +24,21 @@ public:
   void UsunZBufora();
   bool CzyBuforPusty();
   Pakiet* PierwszyPakiet();
-  double LosCGP();
+  double LosCzasGeneracji();
   //statystyki
   double stopa_bledow_;
   int licznik_pakietow_;
   int licznik_nadanych_;
   int licznik_straconych_;
   int licznik_odebranych_;
-  int licznik_ret_;
+  int licznik_retransmisji_;
   double StopaBledow();
-  void CzyszczenieStatystykNad();
+  void CzyszczenieStatystykNadajnika();
 
 private:
   int id_;
   queue<Pakiet*> bufor_;
-  double CGP_;
+  double czas_generacji_;
 
   Symulacja* sym_;
   Siec* siec_;

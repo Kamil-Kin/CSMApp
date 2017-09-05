@@ -114,6 +114,7 @@
     <ClInclude Include="generator_wykladniczy.h" />
     <ClInclude Include="histogram.h" />
     <ClInclude Include="kanal.h" />
+    <ClInclude Include="logi.h" />
     <ClInclude Include="nadajnik.h" />
     <ClInclude Include="pakiet.h" />
     <ClInclude Include="siec.h" />
@@ -127,6 +128,7 @@
     <ClCompile Include="generator_wykladniczy.cpp" />
     <ClCompile Include="histogram.cpp" />
     <ClCompile Include="kanal.cpp" />
+    <ClCompile Include="logi.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="nadajnik.cpp" />
     <ClCompile Include="pakiet.cpp" />

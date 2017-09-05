@@ -12,11 +12,11 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
   srand(time(NULL));
   stat_ = stat;
   sym_ = sym;
-  losCTP_ = new GenRownomierny(ziarno.PobierzZiarno(0 + sym_->nr_symulacji_*(3 + LiczbaNad())));
-  losPT_ = new GenRownomierny(ziarno.PobierzZiarno(1 + sym_->nr_symulacji_*(3 + LiczbaNad())));
-  losR_ = new GenRownomierny(ziarno.PobierzZiarno(2 + sym_->nr_symulacji_*(3 + LiczbaNad())));
+  los_czas_transmisji_ = new GenRownomierny(ziarno.PobierzZiarno(0 + sym_->nr_symulacji_*(3 + LiczbaNad())));
+  los_prawdopodobienstwo_ = new GenRownomierny(ziarno.PobierzZiarno(1 + sym_->nr_symulacji_*(3 + LiczbaNad())));
+  los_retransmisja_ = new GenRownomierny(ziarno.PobierzZiarno(2 + sym_->nr_symulacji_*(3 + LiczbaNad())));
   kanal_ = new Kanal();
-  for (int i = 0; i < 4/*kLiczbaNad_*/; i++)
+  for (int i = 0; i < 4/*kLiczbaNadajnikow_*/; i++)
   {
     nadajniki_.push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));
   }
@@ -27,21 +27,21 @@ Siec::~Siec()
   delete kanal_;
 }
 
-double Siec::LosCTP() { return round(losCTP_->GeneracjaR(1, 10)); }
+double Siec::LosCzasTransmisji() { return round(los_czas_transmisji_->GeneracjaR(1, 10)); }
 
-double Siec::LosPT()
+double Siec::LosPrawdopodobienstwo()
 {
-  double p = losPT_->Generacja01();
+  double p = los_prawdopodobienstwo_->Generacja01();
   p *= 100;
   p = round(p);
   p /= 100;
   return p;
 }
 
-double Siec::LosR(int l_ret_)
+double Siec::LosRetransmisja(int l_ret_)
 {
   double koniec = pow(2.0, l_ret_) - 1;
-  double R = losR_->GeneracjaR(0, koniec);
+  double R = los_retransmisja_->GeneracjaR(0, koniec);
   R *= 10;
   R = round(R);
   R /= 10;
@@ -71,13 +71,13 @@ void Siec::Statystyki()
   double suma = 0;
   int l_elem = 0;
   int indeks = 0;
-  for (int i = 0; i < kLiczbaNad_; i++) 
+  for (int i = 0; i < kLiczbaNadajnikow_; i++) 
   {
     stat_->pakiety_wygenerowane_ += nadajniki_.at(i)->licznik_pakietow_;
     stat_->pakiety_nadane_ += nadajniki_.at(i)->licznik_nadanych_;
     stat_->pakiety_stracone_ += nadajniki_.at(i)->licznik_straconych_;
     stat_->pakiety_odebrane_ += nadajniki_.at(i)->licznik_odebranych_;
-    stat_->licznik_retransmisji_ += nadajniki_.at(i)->licznik_ret_;
+    stat_->licznik_retransmisji_ += nadajniki_.at(i)->licznik_retransmisji_;
     stopa_bledow_.push_back(nadajniki_.at(i)->StopaBledow());
     suma += stopa_bledow_[i];
     stat_->max_stopa_bledow_ = stopa_bledow_[i];
@@ -88,7 +88,7 @@ void Siec::Statystyki()
     }
     cout << "Nadajnik nr " << i << ": wygenerowane pakiety: " << nadajniki_.at(i)->licznik_pakietow_
       << ";\npakiety transmitowane: " << nadajniki_.at(i)->licznik_nadanych_ << "; pakiety stracone: " << nadajniki_.at(i)->licznik_straconych_
-      << "; pakiety odebrane: " << nadajniki_.at(i)->licznik_odebranych_ << ";\nliczba retransmisji: " << nadajniki_.at(i)->licznik_ret_
+      << "; pakiety odebrane: " << nadajniki_.at(i)->licznik_odebranych_ << ";\nliczba retransmisji: " << nadajniki_.at(i)->licznik_retransmisji_
       << "; pakietowa stopa bledow: " << nadajniki_.at(i)->StopaBledow() << endl;
   }
   cout << "Laczna liczba wygenerowanych pakietow: " << stat_->pakiety_wygenerowane_ << endl;
@@ -99,7 +99,7 @@ void Siec::Statystyki()
   stat_->sr_stopa_bledow_ = suma / l_elem;
   cout << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
   cout << "Maksymalna pakietowa stopa bledow: " << stat_->max_stopa_bledow_ << "; nadajnik nr: " << indeks << endl;
-  stat_->sr_l_ret_ = stat_->licznik_retransmisji_ / kLiczbaNad_;
+  stat_->sr_l_ret_ = stat_->licznik_retransmisji_ / kLiczbaNadajnikow_;
   cout << "Srednia liczba retransmisji pakietow (poprawnie odebranych)" << stat_->sr_l_ret_ << endl;
   stat_->przeplywnosc_ = stat_->pakiety_odebrane_ / (sym_->czas_symulacji_ / 1000);
   cout << "Przeplywnosc systemu w jednostce czasu (na sekunde): " << stat_->przeplywnosc_ << endl;

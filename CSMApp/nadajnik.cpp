@@ -1,6 +1,7 @@
 #include "ziarno.h"
 #include "generator_rownomierny.h"
 #include "generator_wykladniczy.h"
+#include "logi.h"
 #include "symulacja.h"
 #include "siec.h"
 #include "kanal.h"
@@ -13,31 +14,31 @@ using std::cout;
 using std::endl;
 
 Nadajnik::Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* kanal) :id_(idx), stopa_bledow_(0.0), licznik_pakietow_(0), licznik_nadanych_(0),
-licznik_straconych_(0), licznik_odebranych_(0), licznik_ret_(0)
+licznik_straconych_(0), licznik_odebranych_(0), licznik_retransmisji_(0)
 {
   sym_ = sym;
   siec_ = siec;
   kanal_ = kanal;
   ziarno_ = ziarno;
   losCGP_ = new GenWykladniczy(sym_->lambda_, ziarno_.PobierzZiarno(3 + sym_->nr_symulacji_*(3 + siec_->LiczbaNad())));
-  (new Pakiet(id_, sym_, siec_, kanal_, this))->aktywacja(LosCGP());
+  (new Pakiet(id_, sym_, siec_, kanal_, this))->aktywacja(LosCzasGeneracji());
 }
 
-Nadajnik::~Nadajnik() {/*CzyszczenieStatystykNad();*/ }
+Nadajnik::~Nadajnik() {/*CzyszczenieStatystykNadajnika();*/ }
 
-double Nadajnik::LosCGP()
+double Nadajnik::LosCzasGeneracji()
 {
-  CGP_ = (rand() % 101) / 10.0;
-  //CGP_ = losCGP_->GeneracjaW();
-  //CGP_ *= 10;
-  //CGP_ = round(CGP_);
-  //CGP_ /= 10;
+  czas_generacji_ = (rand() % 101) / 10.0;
+  //czas_generacji_ = losCGP_->GeneracjaW();
+  //czas_generacji_ *= 10;
+  //czas_generacji_ = round(CGP_);
+  //czas_generacji_ /= 10;
   if (sym_->logi_ == true)
   {
     sym_->UstawKolor("02");
-    cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << sym_->zegar_ + CGP_ << " ms" << endl;
+    cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << sym_->zegar_ + czas_generacji_ << " ms" << endl;
   }
-  return CGP_;
+  return czas_generacji_;
 }
 
 void Nadajnik::DodajDoBufora(Pakiet* pak)
@@ -72,7 +73,7 @@ double Nadajnik::StopaBledow()
   return stopa_bledow_;
 }
 
-void Nadajnik::CzyszczenieStatystykNad() 
+void Nadajnik::CzyszczenieStatystykNadajnika() 
 {
   stopa_bledow_ = 0.0;
   licznik_pakietow_ = 0;

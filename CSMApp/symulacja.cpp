@@ -14,7 +14,6 @@ using std::endl;
 bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
 {
   return (zd1->czas_zdarzenia_ > zd2->czas_zdarzenia_);
-
 }
 
 Symulacja::Symulacja(double lam, double faza, double czas, bool logi, Ziarno ziarno, Statystyka* stat) :zegar_(0.0), nr_symulacji_(0)

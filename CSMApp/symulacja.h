@@ -23,7 +23,7 @@ using std::string;
 struct comparer : public binary_function<Zdarzenie*, Zdarzenie*, bool>
 { bool operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const; };
 
-class Symulacja 
+class Symulacja
 {
 public:
   Symulacja(double lam, double faza, double czas_sym, bool logi, Ziarno ziarno, Statystyka* stat);

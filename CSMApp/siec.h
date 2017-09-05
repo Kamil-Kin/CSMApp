@@ -15,7 +15,7 @@ using std::vector;
 using std::cout;
 using std::endl;
 
-class Siec 
+class Siec
 {
 public:
   Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat);
@@ -28,7 +28,8 @@ public:
   void Statystyki();
   void StatystykiPakietu(Pakiet* pak);
   void CzyszczenieStatystyk();
-
+  Nadajnik* Nad(int index);
+  Kanal* Kan();
 private:
   const int kLiczbaNad_ = 10;
   vector<Nadajnik*> nadajniki_;

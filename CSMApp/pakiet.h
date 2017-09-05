@@ -16,7 +16,7 @@ public:
   //double losujPT();
   //double losujR();
   void aktywacja(double czas);
-  //void aktywacja(double czas, int priorytet);
+  void aktywacja(double czas, int priorytet);
   void execute(bool logi);
   
   int id_tx_;

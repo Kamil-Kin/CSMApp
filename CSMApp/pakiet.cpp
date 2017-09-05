@@ -10,7 +10,7 @@
 using std::cout;
 using std::endl;
 
-Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec,Kanal* kanal, Nadajnik* nad): id_tx_(idx), faza_(1), skonczony_(false), kolizja_(false), ack_(false), nr_ret_(0)
+Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad): id_tx_(idx), faza_(1), skonczony_(false), kolizja_(false), ack_(false), nr_ret_(0)
 {
   sym_ = sym;
   siec_ = siec;
@@ -41,16 +41,16 @@ void Pakiet::aktywacja(double czas)
   }
 }
 
-//void Pakiet::aktywacja(double czas, int priorytet) 
-//{
-//  //double czas_zd = sym_->zegar_ + czas;
-//  moje_zdarzenie_->czas_zdarzenia_ = sym_->zegar_ + czas;
-//  moje_zdarzenie_->priorytet_ = priorytet;
-//  sym_->DodajDoKalendarza(moje_zdarzenie_);
-//  sym_->UstawKolor("09");
-//  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ <<
-//  " ms i priorytecie: " << moje_zdarzenie_->priorytet_ << endl;
-//}
+void Pakiet::aktywacja(double czas, int priorytet) 
+{
+  //double czas_zd = sym_->zegar_ + czas;
+  moje_zdarzenie_->czas_zdarzenia_ = sym_->zegar_ + czas;
+  moje_zdarzenie_->priorytet_ = priorytet;
+  sym_->DodajDoKalendarza(moje_zdarzenie_);
+  sym_->UstawKolor("09");
+  cout << "Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ <<
+  " ms i priorytecie: " << moje_zdarzenie_->priorytet_ << endl;
+}
 
 void Pakiet::execute(bool logi)
 {
@@ -139,8 +139,8 @@ void Pakiet::execute(bool logi)
         if (logi == true) 
         {
           sym_->UstawKolor("0D");
-          cout << "Pakiet id " << id_tx_ << ":\tPrawdopodobienstwo transmisji p = " << p << " mniejsze od PT = " << kPT;
-          cout << ", podejmij probe transmisji" << endl;
+          cout << "Pakiet id " << id_tx_ << ":\tPrawdopodobienstwo transmisji p = " << p << " mniejsze od PT = " << kPT
+            << ", podejmij probe transmisji" << endl;
         }
 
         faza_ = 5;
@@ -150,8 +150,8 @@ void Pakiet::execute(bool logi)
         if (logi == true) 
         {
           sym_->UstawKolor("0B");
-          cout << "Pakiet id " << id_tx_ << ":\tPrawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPT << ", czekaj do nastepnej szczeliny";
-          cout << ", dodaj " << (1 - fmod(sym_->zegar_, 1.0)) << " ms" << endl;
+          cout << "Pakiet id " << id_tx_ << ":\tPrawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPT << ", czekaj do nastepnej szczeliny"
+            << ", dodaj " << (1 - fmod(sym_->zegar_, 1.0)) << " ms" << endl;
         }
 
         faza_ = 4;
@@ -342,7 +342,7 @@ void Pakiet::execute(bool logi)
       break;
 
     //============================================
-    // faza 8: Wys³anie ACK
+    // faza 9: Wys³anie ACK
     //============================================
     case 9:
     {
@@ -360,7 +360,7 @@ void Pakiet::execute(bool logi)
       break;
 
     //============================================
-    // faza 9: Odbiór pakietu i zakoñczenie transmisji
+    // faza 10: Odbiór pakietu i zakoñczenie transmisji
     //============================================
     case 10:
     {
@@ -369,7 +369,7 @@ void Pakiet::execute(bool logi)
         sym_->UstawKolor("06");
         cout << "\nFAZA " << faza_ << ":  Odebranie pakietu i zakonczenie transmisji" << endl;
       }
-      
+
       czas_odebrania_ = sym_->zegar_;
       //if (czas_narodzin_ >= sym_->faza_poczatkowa_) //todo
       //{
@@ -386,7 +386,7 @@ void Pakiet::execute(bool logi)
         cout << "Pakiet id " << id_tx_ << ":\tZostal odebrany" << endl;
 
       if (nad_->CzyBuforPusty() == false)
-        nad_->PierwszyPakiet()->aktywacja(0.0);
+        nad_->PierwszyPakiet()->aktywacja(1.0);
       aktywny_ = false;
     }
       break;

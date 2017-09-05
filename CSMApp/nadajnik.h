@@ -14,7 +14,7 @@ class Pakiet;
 
 using std::queue;
 
-class Nadajnik 
+class Nadajnik
 {
 public:
   Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* kanal);

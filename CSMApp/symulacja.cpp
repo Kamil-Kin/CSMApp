@@ -12,7 +12,11 @@ using std::cout;
 using std::endl;
 
 bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
-{ return (zd1->czas_zdarzenia_ > zd2->czas_zdarzenia_); }
+{
+  if (zd1->czas_zdarzenia_ != zd2->czas_zdarzenia_)
+    return (zd1->czas_zdarzenia_ > zd2->czas_zdarzenia_);
+  return (zd1->priorytet_ > zd2->priorytet_);
+}
 
 Symulacja::Symulacja(double lam, double faza, double czas, bool logi, Ziarno ziarno, Statystyka* stat) :zegar_(0.0), nr_symulacji_(0)
 {
@@ -30,8 +34,8 @@ void Symulacja::run(char tryb_symulacji)
   cout << "\nNumer symulacji: " << nr_symulacji_ << endl;
   zegar_ = 0.0;
 
-  //Proces* obecny_ = nullptr;
-  //for (int i = 0; i < siec_->LiczbaNad(); i++) (new Pakiet(i, this, siec_->getKanal(), siec_->getNad(i)))->aktywacja(siec_->getNad(i)->losujCGP());
+  //for (int i = 0; i < 4/*siec_->LiczbaNad()*/; i++) 
+  //  (new Pakiet(i, this, siec_, siec_->Kan(), siec_->Nad(i)))->aktywacja(siec_->Nad(i)->LosCGP());
   while (zegar_ < czas_symulacji_)
   {
     Pakiet* obecny_ = kalendarz_.top()->pakiet_;
@@ -45,7 +49,7 @@ void Symulacja::run(char tryb_symulacji)
     }
 
     obecny_->execute(logi_);
-    if ((obecny_->skonczony_) == true) 
+    if ((obecny_->skonczony_) == true)
     {
       if (logi_ == true)
         cout << "Pakiet id " << obecny_->id_tx_ << ":\tUsuniety z systemu" << endl;
@@ -60,7 +64,7 @@ void Symulacja::run(char tryb_symulacji)
 
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }
 
-void Symulacja::UsunZKalendarza() 
+void Symulacja::UsunZKalendarza()
 {
   assert(!kalendarz_.empty());
   kalendarz_.pop();
@@ -68,8 +72,8 @@ void Symulacja::UsunZKalendarza()
 
 Zdarzenie* Symulacja::PobierzPierwszyElement() { return kalendarz_.top(); }
 
-void Symulacja::UstawKolor(string numer) {
-
+void Symulacja::UstawKolor(string numer)
+{
   // Wybierz kolor wed³ug poni¿szego kodu:
   // Pierwszy znak odpowiada za kolor t³a pod tekstem, drugi za kolor tekstu
   //

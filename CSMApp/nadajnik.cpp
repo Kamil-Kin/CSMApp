@@ -29,9 +29,9 @@ double Nadajnik::LosCGP()
 {
   CGP_ = (rand() % 101) / 10.0;
   //CGP_ = losCGP_->GeneracjaW();
-  //CGP_ *= 100;
+  //CGP_ *= 10;
   //CGP_ = round(CGP_);
-  //CGP_ /= 100;
+  //CGP_ /= 10;
   if (sym_->logi_ == true)
   {
     sym_->UstawKolor("02");

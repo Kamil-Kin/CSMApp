@@ -16,7 +16,7 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
   losPT_ = new GenRownomierny(ziarno.PobierzZiarno(1 + sym_->nr_symulacji_*(3 + LiczbaNad())));
   losR_ = new GenRownomierny(ziarno.PobierzZiarno(2 + sym_->nr_symulacji_*(3 + LiczbaNad())));
   kanal_ = new Kanal();
-  for (int i = 0; i < 2/*kLiczbaNad_*/; i++)
+  for (int i = 0; i < 4/*kLiczbaNad_*/; i++)
   {
     nadajniki_.push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));
   }
@@ -41,8 +41,15 @@ double Siec::LosPT()
 double Siec::LosR(int l_ret_)
 {
   double koniec = pow(2.0, l_ret_) - 1;
-  return losR_->GeneracjaR(0, koniec);
+  double R = losR_->GeneracjaR(0, koniec);
+  R *= 10;
+  R = round(R);
+  R /= 10;
+  return R;
 }
+
+Nadajnik* Siec::Nad(int id) { return nadajniki_.at(id); }
+Kanal* Siec::Kan() { return kanal_; }
 
 void Siec::CzyszczenieStatystyk() 
 {

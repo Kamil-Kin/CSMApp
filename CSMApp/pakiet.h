@@ -17,7 +17,7 @@ public:
   //double losujR();
   void aktywacja(double czas);
   //void aktywacja(double czas, int priorytet);
-  void execute();
+  void execute(bool logi);
   
   int id_tx_;
   int faza_;

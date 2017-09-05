@@ -11,53 +11,58 @@ using std::endl;
 
 int main() 
 {
+  double liczba_symulacji_ = 10;
+  double czas_symulacji_ = 500000;
+  double faza_poczatkowa_ = 900000;
+  double lambda_ = 0.0067;
+  char tryb_symulacji_ = 't';
+  bool logi_ = true;
+
   Statystyka* statystyka = new Statystyka();
-  //Histogram histogram;
-  //histogram.Rownomierny();
-  //histogram.Wykladniczy();
-  Symulacja symulacja(0.0068, 900000);
   Ziarno ziarno;
   ziarno.GeneracjaZiaren();
 
-  //char param;
-  //cout << "Ustalone parametry programu: " << "\nliczba symulacji: " << symulacja.liczba_symulacji_
-  //  << "; czas jednej symulacji: " << symulacja.czas_symulacji_ << " ms; " << "faza poczatkowa: " << symulacja.faza_poczatkowa_ << " ms; "
-  //  << "lambda: " << symulacja.lambda_ << endl;
-  //cout << "Czy uruchomic program dla nowych parametrow[T,t - tak/inny - nie]? " << endl;
-  //cin >> param;
-  //cout << "Wybierz tryb symulacji: K,k - krokowy, inny - ciagly" << endl;
-  //cin >> symulacja.tryb_symulacji_;
-  //
-  //if (param == 'T' || param == 't') 
-  //{
-  //  cout << "Podaj liczbe symulacji: ";
-  //  cin >> symulacja.liczba_symulacji_;
-  //  cout << "Podaj czas jednej symulacji [ms]: ";
-  //  cin >> symulacja.czas_symulacji_;
-  //  double lambda = 0;
-  //  cout << "Podaj wartosc lamdba: ";
-  //  cin >> lambda;
-  //  double faza = 0;
-  //  cout << "Podaj dlugosc fazy poczatkowej: ";
-  //  cin >> faza;
-  //  Symulacja symulacja(lambda, faza);
-  //}
-  //else
-  //{
-  //  cout << "Program uruchomiony dla parametrow domyslnych" << endl;
-  //}
-  //
-  //char log;
-  //cout << "Wyswietlanie komentarzy o przebiegu transmisji pakietu[T,t - tak/inny - nie]: " << endl;
-  //cin >> log;
-  //if (log == 'T' || log == 't')
-  //  symulacja.logi = true;
-  //else symulacja.logi = false;
+  //Histogram histogram;
+  //histogram.Rownomierny();
+  //histogram.Wykladniczy();
 
-  for (int i = symulacja.nr_symulacji_; i < symulacja.liczba_symulacji_; ++i) 
+  cout << "Ustalone parametry programu: " 
+    << "\nliczba symulacji: " << liczba_symulacji_
+    << "; czas jednej symulacji: " << czas_symulacji_ << " ms; " 
+    << "faza poczatkowa: " << faza_poczatkowa_ << " ms; "
+    << "lambda: " << lambda_ << endl;
+
+  char param;
+  cout << "Czy uruchomic program dla nowych parametrow[T,t - tak/inny - nie]? " << endl;
+  cin >> param;
+
+  if (param == 'T' || param == 't') 
   {
-    symulacja.run(ziarno, statystyka);
-    symulacja.nr_symulacji_++;
+    cout << "Podaj liczbe symulacji: ";
+    cin >> liczba_symulacji_;
+    cout << "Podaj czas jednej symulacji [ms]: ";
+    cin >> czas_symulacji_;
+    cout << "Podaj dlugosc fazy poczatkowej: ";
+    cin >> faza_poczatkowa_;
+    cout << "Podaj wartosc lamdba: ";
+    cin >> lambda_;
+  }
+  else
+    cout << "Program uruchomiony dla parametrow domyslnych" << endl;
+
+  cout << "Wybierz tryb symulacji: K,k - krokowy, inny - ciagly" << endl;
+  cin >> tryb_symulacji_;
+
+  char log;
+  cout << "Wyswietlanie komentarzy o przebiegu transmisji pakietu[T,t - tak/inny - nie]: " << endl;
+  cin >> log;
+  if (log == 'T' || log == 't') logi_ = true;
+  else logi_ = false;
+
+  for (int i = 0; i < liczba_symulacji_; ++i) 
+  {
+    Symulacja* symulacja = new Symulacja(lambda_, faza_poczatkowa_, czas_symulacji_, logi_, ziarno, statystyka);
+    symulacja->run(tryb_symulacji_);
   }
 
   system("pause");

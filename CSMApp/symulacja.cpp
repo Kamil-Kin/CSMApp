@@ -12,56 +12,47 @@ using std::cout;
 using std::endl;
 
 bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
-{
-  assert(zd1->czas_zdarzenia_ != zd2->czas_zdarzenia_);
-  //if (zd1->czas_zdarzenia_ > zd2->czas_zdarzenia_) return true;
-  //else if (zd1->czas_zdarzenia_ == zd2->czas_zdarzenia_) 
-  //  if (zd1->pakiet_->faza_ < zd2->pakiet_->faza_) return true;
-  //  //else if(zd1->pakiet_->faza_ == zd2->pakiet_->faza_) //co w przypadku tych samych faz?
-  //  else return false;
-  //else if(zd1->czas_zdarzenia_ < zd2->czas_zdarzenia_) return false;
+{ return (zd1->czas_zdarzenia_ > zd2->czas_zdarzenia_); }
 
-  return (zd1->czas_zdarzenia_ >= zd2->czas_zdarzenia_);
-}
-
-Symulacja::Symulacja(double lam, double faza) :zegar_(0.0), nr_symulacji_(0), liczba_symulacji_(10),
-                                                czas_symulacji_(500000.0), tryb_symulacji_('c'), logi(true)
+Symulacja::Symulacja(double lam, double faza, double czas, bool logi, Ziarno ziarno, Statystyka* stat) :zegar_(0.0), nr_symulacji_(0)
 {
   lambda_ = lam;
   faza_poczatkowa_ = faza;
+  czas_symulacji_ = czas;
+  logi_ = logi;
+  siec_ = new Siec(this, ziarno, stat);
 }
 
-Symulacja::~Symulacja() {}
+Symulacja::~Symulacja() { delete siec_; }
 
-void Symulacja::run(Ziarno ziarno, Statystyka* stat)
+void Symulacja::run(char tryb_symulacji)
 {
   cout << "\nNumer symulacji: " << nr_symulacji_ << endl;
   zegar_ = 0.0;
-  siec_ = new Siec(this, ziarno, stat);
+
   //Proces* obecny_ = nullptr;
   //for (int i = 0; i < siec_->LiczbaNad(); i++) (new Pakiet(i, this, siec_->getKanal(), siec_->getNad(i)))->aktywacja(siec_->getNad(i)->losujCGP());
   while (zegar_ < czas_symulacji_)
   {
-    /*obecny_ = PobierzPierwszyElement()->PobierzPakiet();
-    zegar_ = PobierzPierwszyElement()->PobierzCzasZd();
-    this->UsunZKalendarza();*/
     Pakiet* obecny_ = kalendarz_.top()->pakiet_;
     zegar_ = kalendarz_.top()->czas_zdarzenia_;
     UsunZKalendarza(); //kalendarz_.pop();
-    if (logi == true) 
+
+    if (logi_ == true) 
     {
       UstawKolor("07");
       cout << "\nPakiet id " << obecny_->id_tx_ << ": Pobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
     }
-    obecny_->execute();
+
+    obecny_->execute(logi_);
     if ((obecny_->skonczony_) == true) 
     {
-      if (logi == true)
+      if (logi_ == true)
         cout << "Pakiet id " << obecny_->id_tx_ << ":\tUsuniety z systemu" << endl;
       //siec_->StatystykiPakietu(obecny_); todo
       delete obecny_;
     }
-    if (tryb_symulacji_ == 'K' || tryb_symulacji_ == 'k') getchar();
+    if (tryb_symulacji == 'K' || tryb_symulacji == 'k') getchar();
   }
   //siec_->Statystyki(); todo
   //delete siec_; todo

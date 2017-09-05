@@ -5,6 +5,7 @@
 #include <queue>
 #include <string>
 #include "statystyka.h"
+#include "zdarzenie.h"
 
 class Ziarno;
 class Siec;
@@ -17,7 +18,7 @@ using std::binary_function;
 using std::string;
 
 //const auto comparer = [](Zdarzenie* z1, Zdarzenie* z2)->bool
-//{return z1->pobierz_czas_zd() > z2->pobierz_czas_zd(); };
+//{ return z1->czas_zdarzenia_ > z2->czas_zdarzenia_; };
 
 struct comparer : public binary_function<Zdarzenie*, Zdarzenie*, bool>
 { bool operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const; };
@@ -25,10 +26,10 @@ struct comparer : public binary_function<Zdarzenie*, Zdarzenie*, bool>
 class Symulacja 
 {
 public:
-  Symulacja(double lam, double faza);
+  Symulacja(double lam, double faza, double czas_sym, bool logi, Ziarno ziarno, Statystyka* stat);
   ~Symulacja();
 
-  void run(Ziarno ziarno, Statystyka* stat);
+  void run(char tryb);
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();
   Zdarzenie* PobierzPierwszyElement();
@@ -36,13 +37,10 @@ public:
 
   double zegar_;
   int nr_symulacji_;
-  int liczba_symulacji_;
+  double lambda_;
   double faza_poczatkowa_;
   double czas_symulacji_;
-  char tryb_symulacji_;
-  bool logi;
-  double lambda_;
-
+  bool logi_;
 private:
   Siec* siec_;
   Zdarzenie* zd_;
@@ -50,7 +48,6 @@ private:
   priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer> kalendarz_;
 
   //priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)> kalendarz_;
-  //priority_queue<Zdarzenie*> kalendarz_;
 };
 
 #endif // !CSMA_PP_SYMULACJA_H

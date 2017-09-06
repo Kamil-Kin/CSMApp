@@ -16,7 +16,7 @@ public:
   bool StanLacza();
   bool CzyKolizja();
   void DodajDoKanalu(Pakiet*);
-  void UsunZKanalu();
+  void UsunZKanalu(Pakiet*);
   list<Pakiet*> lacze_;
 private:
   //bool wolny_;

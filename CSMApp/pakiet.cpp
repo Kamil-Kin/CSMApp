@@ -7,6 +7,7 @@
 #include "zdarzenie.h"
 #include <iostream>
 #include <cmath>
+#include <cassert>
 
 using std::cout;
 using std::endl;
@@ -333,7 +334,7 @@ void Pakiet::execute(bool logi)
     {
       if (kolizja_ == true)
       {
-        kanal_->UsunZKanalu();
+        kanal_->UsunZKanalu(this);
         if (kanal_->CzyKolizja() == false) // nie ma zwiazku todo
           //kanal_->KanalWolny(true); // no chyba niekoniecznie ... moze byc sytuacja gdzie sa jeszcze jakies inne pakiety w kanale 
         faza_ = 7;
@@ -382,7 +383,7 @@ void Pakiet::execute(bool logi)
       //}
 
       nad_->UsunZBufora();
-      kanal_->UsunZKanalu();
+      kanal_->UsunZKanalu(this);
       //kanal_->KanalWolny(true);
       skonczony_ = true;
 
@@ -396,6 +397,7 @@ void Pakiet::execute(bool logi)
       break;
 
     default:
+      assert(true);
       break;
     }
   }

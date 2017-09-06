@@ -65,7 +65,8 @@ void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }
 void Symulacja::UsunZKalendarza()
 {
   assert(!kalendarz_.empty());
-  kalendarz_.pop();
+  if (kalendarz_.empty() == false)
+    kalendarz_.pop();
 }
 
 Zdarzenie* Symulacja::PobierzPierwszyElement() { return kalendarz_.top(); }

@@ -28,8 +28,7 @@ public:
   void Statystyki();
   void StatystykiPakietu(Pakiet* pak);
   void CzyszczenieStatystyk();
-  Nadajnik* Nad(int index);
-  Kanal* Kan();
+
 private:
   const int kLiczbaNadajnikow_ = 10;
   vector<Nadajnik*> nadajniki_;

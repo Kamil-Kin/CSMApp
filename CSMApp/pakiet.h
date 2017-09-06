@@ -17,10 +17,11 @@ public:
   void aktywacja(double czas);
   void aktywacja(double czas, int priorytet);
   void execute(bool logi);
-  
+
   int id_tx_;
   int faza_;
   bool skonczony_;
+  bool kolizja_;
 
   double czas_w_buforze_;
   double opoznienie_pakietu_;
@@ -32,7 +33,7 @@ private:
   const double kPrawdopodobienstwo = 0.2;
   const double kCzasPotwierdzenia = 1.0;
   __int64 id_;
-  bool kolizja_;
+  
   double czas_transmisji_;
   double p;
   int nr_retransmisji_;

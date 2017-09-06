@@ -15,7 +15,7 @@ public:
   Logi() {}
   ~Logi() {}
 
-  void WypiszLogi();
+  void WypiszLogi(int faza, int id, double czas);
 };
 
 #endif // !CSMA_PP_LOGI_H

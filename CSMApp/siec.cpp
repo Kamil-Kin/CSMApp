@@ -48,9 +48,6 @@ double Siec::LosRetransmisja(int l_ret_)
   return R;
 }
 
-Nadajnik* Siec::Nad(int id) { return nadajniki_.at(id); }
-Kanal* Siec::Kan() { return kanal_; }
-
 void Siec::CzyszczenieStatystyk() 
 {
   stat_->pakiety_wygenerowane_ = 0;

@@ -33,7 +33,7 @@ void Symulacja::run(char tryb_symulacji)
   zegar_ = 0.0;
 
   //for (int i = 0; i < 4/*siec_->LiczbaNad()*/; i++) 
-  //  (new Pakiet(i, this, siec_, siec_->Kan(), siec_->Nad(i)))->aktywacja(siec_->Nad(i)->LosCGP());
+  //  (new Pakiet(i, this, siec_, siec_->getKanal(), siec_->Nad(i)))->aktywacja(siec_->getNadajnik(i)->LosCGP()); // na razie niepotrzebne
   while (zegar_ < czas_symulacji_)
   {
     Pakiet* obecny_ = kalendarz_.top()->pakiet_;

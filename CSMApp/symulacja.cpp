@@ -4,8 +4,6 @@
 #include "pakiet.h"
 #include "zdarzenie.h"
 #include <iostream>
-#include <windows.h>
-#include <stdlib.h>
 #include <assert.h>
 
 using std::cout;
@@ -16,7 +14,7 @@ bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
   return (zd1->czas_zdarzenia_ > zd2->czas_zdarzenia_);
 }
 
-Symulacja::Symulacja(double lam, double faza, double czas, bool logi, Ziarno ziarno, Statystyka* stat) :zegar_(0.0), nr_symulacji_(0)
+Symulacja::Symulacja(double lam, double faza, double czas, bool logi, Ziarno ziarno, Statystyka* stat) :zegar_(0.0), nr_symulacji_(1)
 {
   lambda_ = lam;
   faza_poczatkowa_ = faza;
@@ -31,9 +29,6 @@ void Symulacja::run(char tryb_symulacji)
 {
   cout << "\nNumer symulacji: " << nr_symulacji_ << endl;
   zegar_ = 0.0;
-
-  //for (int i = 0; i < 4/*siec_->LiczbaNad()*/; i++) 
-  //  (new Pakiet(i, this, siec_, siec_->getKanal(), siec_->Nad(i)))->aktywacja(siec_->getNadajnik(i)->LosCGP()); // na razie niepotrzebne
   while (zegar_ < czas_symulacji_)
   {
     Pakiet* obecny_ = kalendarz_.top()->pakiet_;

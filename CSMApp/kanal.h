@@ -14,7 +14,6 @@ public:
   ~Kanal();
   void KanalWolny(bool stan_lacza);
   bool StanLacza();
-  //bool CzyKolizja();
   void DodajDoKanalu(Pakiet*);
   void UsunZKanalu(Pakiet*);
   list<Pakiet*> lacze_;

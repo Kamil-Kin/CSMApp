@@ -3,9 +3,11 @@
 
 #include <vector>
 #include <queue>
-#include <string>
 #include "statystyka.h"
 #include "zdarzenie.h"
+#include <string>
+#include <windows.h>
+#include <stdlib.h>
 
 class Ziarno;
 class Siec;
@@ -16,7 +18,6 @@ using std::vector;
 using std::priority_queue;
 using std::binary_function;
 using std::string;
-
 //const auto comparer = [](Zdarzenie* z1, Zdarzenie* z2)->bool
 //{ return z1->czas_zdarzenia_ > z2->czas_zdarzenia_; };
 
@@ -44,7 +45,6 @@ public:
 private:
   Siec* siec_;
   Zdarzenie* zd_;
-
   priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer> kalendarz_;
 
   //priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)> kalendarz_;

@@ -18,6 +18,8 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad)
 {
   id_ = Pakiet::licznik_;
   Pakiet::licznik_++;
+
+  logi_ = new Logi();
   sym_ = sym;
   siec_ = siec;
   kanal_ = kanal;
@@ -69,22 +71,13 @@ void Pakiet::execute(bool logi)
     //============================================
     case 1:
     {
-      if (logi == true)
-      { // takie rzeczy jak logi powinny byc wyniesione poza ta metode
-        sym_->UstawKolor("06");
-        cout << "\nFAZA " << faza_ << ":\tGeneracja pakietu" << endl;
-      }
+      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
 
       (new Pakiet(id_tx_, sym_, siec_, kanal_, nad_))->aktywacja(nad_->LosCzasGeneracji());
       nad_->DodajDoBufora(this);
       if (*nad_->PierwszyPakiet() == *this)  // teraz porownujemy id a nie wskazniki - to zawsze robi problem - done
       {
-        if (logi == true) 
-        {
-          sym_->UstawKolor("0E");
-          cout << "Pakiet id " << id_tx_ << "\tpierwszy w buforze, sprawdza stan kanalu" << endl;
-        }
-
+        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 2);
         faza_ = 2;
       }
       else aktywny_ = false;
@@ -96,30 +89,16 @@ void Pakiet::execute(bool logi)
     //============================================
     case 2:
     {
-      if (logi == true) 
-      {
-        sym_->UstawKolor("06");
-        cout << "\nFAZA " << faza_ << ":\tSprawdzenie kanalu" << endl;
-      }
+      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
 
       if (kanal_->StanLacza() == true)  // niepotrzebnie odwrocona logika ... - done
       {
-        if (logi == true)
-        {
-          sym_->UstawKolor("0A");
-          cout << "Pakiet id " << id_tx_ << ":\tKanal wolny, losuj prawdopodobienstwo" << endl;
-        }
-
+        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 2);
         faza_ = 3;
       }
       else
       {
-        if (logi == true)
-        {
-          sym_->UstawKolor("04");
-          cout << "Pakiet id " << id_tx_ << ":\tKanal zajety, odpytywanie co 0.5 ms" << endl;
-        }
-
+        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 3);
         aktywacja(0.5);
         aktywny_ = false;
       }
@@ -131,32 +110,20 @@ void Pakiet::execute(bool logi)
     //============================================ 
     case 3:
     {
-      if (logi == true) 
-      {
-        sym_->UstawKolor("06");
-        cout << "\nFAZA " << faza_ << ":\tLosowanie prawdopodobienstwa transmisji" << endl;
-      }
+      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
 
-      p = siec_->LosPrawdopodobienstwo(); // Nieczytelne :P Ogolnie ja nie uzywalbym skrotow nigdzie -> network_->getTransmittionProbability() - done
-      if (p <= kPrawdopodobienstwo) 
+      prawdopodobienstwo = siec_->LosPrawdopodobienstwo(); // Nieczytelne :P Ogolnie ja nie uzywalbym skrotow nigdzie -> network_->getTransmittionProbability() - done
+      if (prawdopodobienstwo <= kPrawdopodobienstwo) 
       {
-        if (logi == true) 
-        {
-          sym_->UstawKolor("0D");
-          cout << "Pakiet id " << id_tx_ << ":\tPrawdopodobienstwo transmisji p = " << p << " mniejsze od PT = " << kPrawdopodobienstwo
-            << ", podejmij probe transmisji" << endl;
+        if (logi == true) {
+          logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 2);
+          cout << "Wylosowane prawdopodobienstwo: " << prawdopodobienstwo << endl;
         }
-
         faza_ = 5;
       }
       else 
       {
-        if (logi == true) 
-        {
-          sym_->UstawKolor("0B");
-          cout << "Pakiet id " << id_tx_ << ":\tPrawdopodobienstwo transmisji p = " << p << " wieksze od PT = " << kPrawdopodobienstwo << ", czekaj do nastepnej szczeliny"
-            << ", dodaj " << (1 - fmod(sym_->zegar_, 1.0)) << " ms" << endl;
-        }
+        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 3);
 
         faza_ = 4;
         aktywacja(1 - fmod(sym_->zegar_, 1.0)); //!!!!!!! co to jest :D - ten kod napewno do zmiany todo
@@ -170,29 +137,16 @@ void Pakiet::execute(bool logi)
     //============================================
     case 4:
     {
-      if (logi == true) 
-      {
-        sym_->UstawKolor("06");
-        cout << "\nFAZA " << faza_ << ":\tPonowne sprawdzenie kanalu" << endl;
-      }
+      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
 
       if (kanal_->StanLacza() == true)
       {
-        if (logi == true) 
-        {
-          sym_->UstawKolor("0A");
-          cout << "Pakiet id " << id_tx_ << ":\tKanal wolny, ponowne losowanie prawdopodobienstwa" << endl;
-        }
-
+        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 2);
         faza_ = 3;
       }
       else 
       {
-        if (logi == true) 
-        {
-          sym_->UstawKolor("04");
-          cout << "Pakiet id " << id_tx_ << ":\tKanal zajety, odczekanie 1 ms i powrot do odpytywania co 0.5 ms" << endl;
-        }
+        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 3);
 
         faza_ = 2;
         aktywacja(1.0);
@@ -206,35 +160,18 @@ void Pakiet::execute(bool logi)
     //============================================
     case 5:
     {
-      if (logi == true) 
-      {
-        sym_->UstawKolor("06");
-        cout << "\nFAZA " << faza_ << ":\tSprawdzenie kolizji" << endl;
-      }
+      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
 
       if (fmod(sym_->zegar_, 1.0) == 0.0)
       {
-        //if (kanal_->CzyKolizja() == true)
-        //{
-          if (logi == true) 
-          {
-            sym_->UstawKolor("04");
-            cout << "Pakiet id " << id_tx_ << ":\tWykryta zostala kolizja" << endl;
-          }
-        //}
-        //kanal_->DodajDoKanalu(this);
+        kanal_->DodajDoKanalu(this);
         faza_ = 6;
-        aktywacja(0.0);
-        aktywny_ = false;
+        //aktywacja(0.0);
+        //aktywny_ = false;
       }
       else
       {
-        if (logi == true) 
-        {
-          sym_->UstawKolor("03");
-          cout << "Pakiet id " << id_tx_ << " o czasie " << sym_->zegar_ << " ms czeka do najblizszej szczeliny" << endl;
-        }
-
+        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 2);
         aktywacja(1 - fmod(sym_->zegar_, 1.0));
         aktywny_ = false;
       }
@@ -246,11 +183,8 @@ void Pakiet::execute(bool logi)
     //============================================
     case 6:
     {
-      if (logi == true) 
-      {
-        sym_->UstawKolor("06");
-        cout << "\nFAZA " << faza_ << ":\tTransmisja pakietu " << endl;
-      }
+      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
+
       czas_nadania_ = sym_->zegar_;
       //if (czas_narodzin_ >= sym_->faza_poczatkowa_) {todo
         nad_->licznik_nadanych_++;
@@ -261,11 +195,7 @@ void Pakiet::execute(bool logi)
       faza_ = 8;
       aktywacja(czas_transmisji_);
       aktywny_ = false;
-      if (logi == true) 
-      {
-        sym_->UstawKolor("05");
-        cout << "Pakiet id " << id_tx_ << ":\tCzas transmisji wynosi " << czas_transmisji_ << " ms" << endl;
-      }
+      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, czas_transmisji_, 2);
     }
       break;
 
@@ -274,24 +204,17 @@ void Pakiet::execute(bool logi)
     //============================================
     case 7:
     {
-      if (logi == true)
-      {
-        sym_->UstawKolor("06");
-        cout << "\nFAZA " << faza_ << ":\tRetransmisja pakietu" << endl;
-      }
+      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
 
       //if (czas_narodzin_ >= sym_->faza_poczatkowa_) //todo
         nad_->licznik_retransmisji_++;
-
       nr_retransmisji_++;
       if (nr_retransmisji_ <= kMaxLiczbaRetransmisji) // nieczytelne max - done
       {
-        if (logi == true) 
-        {
-          sym_->UstawKolor("01");
-          cout << "Pakiet id " << id_tx_ << "\tjest retransmitowany, numer retransmisji: " << nr_retransmisji_ << endl;
+        if (logi == true) {
+          logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 2);
+          cout << " numer retransmisji: " << nr_retransmisji_ << endl;
         }
-
         czas_retransmisji_ = siec_->LosRetransmisja(nr_retransmisji_)*czas_transmisji_;
         kolizja_ = false;
         faza_ = 2;
@@ -300,16 +223,10 @@ void Pakiet::execute(bool logi)
       }
       else
       {
-        if (logi == true) 
-        {
-          sym_->UstawKolor("0C");
-          cout << "Pakiet id " << id_tx_ << ":\tPrzekroczono liczbê dopuszczalnych retransmisji, pakiet stracony" << endl;
-        }
-
+        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 3);
         //if (czas_narodzin_ >= sym_->zegar_) //todo
           nad_->licznik_straconych_++;
-
-        nad_->UsunZBufora();
+        nad_->UsunZBufora(this);
         skonczony_ = true;
         if (nad_->CzyBuforPusty() == false)
           nad_->PierwszyPakiet()->aktywacja(0.0);
@@ -326,7 +243,7 @@ void Pakiet::execute(bool logi)
       if (kolizja_ == true)
       {
         kanal_->UsunZKanalu(this);
-        //if (kanal_->CzyKolizja() == false) // nie ma zwiazku todo
+        //if (kanal_->CzyKolizja() == false) // nie ma zwiazku
         //  //kanal_->KanalWolny(true); // no chyba niekoniecznie ... moze byc sytuacja gdzie sa jeszcze jakies inne pakiety w kanale 
         faza_ = 7;
       }
@@ -342,11 +259,7 @@ void Pakiet::execute(bool logi)
     //============================================
     case 9:
     {
-      if (logi == true)
-      {
-        sym_->UstawKolor("06");
-        cout << "\nFAZA " << faza_ << ":\tWyslanie ACK" << endl;
-      }
+      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
 
       ack_ = true; // chyba nie tutaj - zrobilbym to w nastepnej fazie - bo w czasie wysylania ACK tez moze dojsc do kolizji
       faza_ = 10;
@@ -360,24 +273,19 @@ void Pakiet::execute(bool logi)
     //============================================
     case 10: // troche duzo tych faz - chyba za duzo ... 
     {
-      if (logi == true)
-      {
-        sym_->UstawKolor("06");
-        cout << "\nFAZA " << faza_ << ":  Odebranie pakietu i zakonczenie transmisji" << endl;
-      }
+      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
 
       czas_odebrania_ = sym_->zegar_;
-      //if (czas_narodzin_ >= sym_->faza_poczatkowa_) {todo
+      //if (czas_narodzin_ >= sym_->faza_poczatkowa_) { todo
         nad_->licznik_odebranych_++;
         opoznienie_pakietu_ = czas_odebrania_ - czas_narodzin_;//}
 
-      nad_->UsunZBufora();
+      nad_->UsunZBufora(this);
       kanal_->UsunZKanalu(this);
-      kanal_->KanalWolny(true);
+      //kanal_->KanalWolny(true);
       skonczony_ = true;
 
-      if (logi == true)
-        cout << "Pakiet id " << id_tx_ << ":\tZostal odebrany" << endl;
+      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 2);
 
       if (nad_->CzyBuforPusty() == false)
         nad_->PierwszyPakiet()->aktywacja(0.0);

@@ -2,7 +2,7 @@
 #define CSMA_PP_NADAJNIK_H
 
 #include "ziarno.h"
-#include <queue>
+#include <list>
 #include <iostream>
 
 class Ziarno;
@@ -12,7 +12,7 @@ class Siec;
 class Kanal;
 class Pakiet;
 
-using std::queue;
+using std::list;
 
 class Nadajnik
 {
@@ -21,7 +21,7 @@ public:
   ~Nadajnik();
 
   void DodajDoBufora(Pakiet* pak);
-  void UsunZBufora();
+  void UsunZBufora(Pakiet* pak);
   bool CzyBuforPusty();
   Pakiet* PierwszyPakiet();
   double LosCzasGeneracji();
@@ -37,7 +37,7 @@ public:
 
 private:
   int id_;
-  queue<Pakiet*> bufor_;
+  list<Pakiet*> bufor_;
   double czas_generacji_;
 
   Symulacja* sym_;

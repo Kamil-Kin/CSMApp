@@ -35,7 +35,7 @@ private:
   __int64 id_;
   
   double czas_transmisji_;
-  double p;
+  double prawdopodobienstwo;
   int nr_retransmisji_;
   double czas_retransmisji_;
   bool ack_;
@@ -49,6 +49,7 @@ private:
   Kanal* kanal_;
   Siec* siec_;
   Symulacja* sym_;
+  Logi* logi_;
 };
 
 #endif // !CSMA_PP_PAKIET_H

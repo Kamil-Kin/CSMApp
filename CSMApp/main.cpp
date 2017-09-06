@@ -63,17 +63,10 @@ int main()
   {
     Symulacja* symulacja = new Symulacja(lambda_, faza_poczatkowa_, czas_symulacji_, logi_, ziarno, statystyka);
     symulacja->run(tryb_symulacji_);
+
   }
 
   system("pause");
 
-  //Zdarzenie *T = new Zdarzenie(11.0);
-  //symulacja.DodajDoKalendarza(T);
-  //Zdarzenie *T1 = new Zdarzenie(11.0);
-  //symulacja.DodajDoKalendarza(T1);
-  //std::cout << (symulacja.PobierzPierwszyElement())->czas_zdarzenia_ << std::endl;
-  //symulacja.UsunZKalendarza();
-  //std::cout << (symulacja.PobierzPierwszyElement())->czas_zdarzenia_ << std::endl; //testowanie
-  //system("pause");
   return 0;
 }

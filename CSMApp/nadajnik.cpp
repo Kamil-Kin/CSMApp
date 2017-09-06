@@ -41,9 +41,9 @@ double Nadajnik::LosCzasGeneracji()
   return czas_generacji_;
 }
 
-void Nadajnik::DodajDoBufora(Pakiet* pak)
+void Nadajnik::DodajDoBufora(Pakiet* pakiet)
 {
-  bufor_.push(pak);
+  bufor_.push_back(pakiet);
   if (sym_->logi_ == true)
   {
     sym_->UstawKolor("0F");
@@ -52,9 +52,9 @@ void Nadajnik::DodajDoBufora(Pakiet* pak)
   }
 }
 
-void Nadajnik::UsunZBufora()
+void Nadajnik::UsunZBufora(Pakiet* pakiet)
 {
-  bufor_.pop();
+  bufor_.remove(pakiet);
   if (sym_->logi_ == true) 
   {
     sym_->UstawKolor("08");

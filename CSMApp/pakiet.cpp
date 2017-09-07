@@ -14,7 +14,7 @@ using std::endl;
 
 __int64 Pakiet::licznik_ = 0;
 
-Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad): id_tx_(idx), faza_(1), skonczony_(false), kolizja_(false), ack_(false), nr_retransmisji_(0)
+Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad): id_tx_(idx), faza_(1), skonczony_(false), ack_(false), nr_retransmisji_(0)
 {
   id_ = Pakiet::licznik_;
   Pakiet::licznik_++;
@@ -156,7 +156,7 @@ void Pakiet::execute(bool logi)
       break;
 
     //============================================
-    // faza 5: Próba transmisji: sprawdzenie kolizji w  kanale
+    // faza 5: Próba transmisji: dodanie do kana³u
     //============================================
     case 5:
     {
@@ -164,14 +164,15 @@ void Pakiet::execute(bool logi)
 
       if (fmod(sym_->zegar_, 1.0) == 0.0)
       {
+        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 2);
         kanal_->DodajDoKanalu(this);
         faza_ = 6;
-        //aktywacja(0.0);
-        //aktywny_ = false;
+        aktywacja(0.0, 1);
+        aktywny_ = false;
       }
       else
       {
-        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 2);
+        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 3);
         aktywacja(1 - fmod(sym_->zegar_, 1.0));
         aktywny_ = false;
       }
@@ -190,7 +191,6 @@ void Pakiet::execute(bool logi)
         nad_->licznik_nadanych_++;
         czas_w_buforze_ = czas_nadania_ - czas_narodzin_;//}
 
-      //kanal_->KanalWolny(false);
       czas_transmisji_ = siec_->LosCzasTransmisji();
       faza_ = 8;
       aktywacja(czas_transmisji_);
@@ -206,17 +206,15 @@ void Pakiet::execute(bool logi)
     {
       if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
 
-      //if (czas_narodzin_ >= sym_->faza_poczatkowa_) //todo
-        nad_->licznik_retransmisji_++;
+      //if (czas_narodzin_ >= sym_->faza_poczatkowa_) nad_->licznik_retransmisji_++;
       nr_retransmisji_++;
-      if (nr_retransmisji_ <= kMaxLiczbaRetransmisji) // nieczytelne max - done
+      if (nr_retransmisji_ <= kMaxLiczbaRetransmisji)
       {
         if (logi == true) {
           logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 2);
           cout << " numer retransmisji: " << nr_retransmisji_ << endl;
         }
         czas_retransmisji_ = siec_->LosRetransmisja(nr_retransmisji_)*czas_transmisji_;
-        kolizja_ = false;
         faza_ = 2;
         aktywacja(czas_retransmisji_);
         aktywny_ = false;
@@ -236,42 +234,32 @@ void Pakiet::execute(bool logi)
       break;
 
     //============================================
-    // faza sprawdzenie czy nast¹pi³a kolizja
+    // faza 8: Sprawdzenie, czy nast¹pi³a kolizja
     //============================================
     case 8:
     {
-      if (kolizja_ == true)
+      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
+
+      if (ack_ == true)
       {
-        kanal_->UsunZKanalu(this);
-        //if (kanal_->CzyKolizja() == false) // nie ma zwiazku
-        //  //kanal_->KanalWolny(true); // no chyba niekoniecznie ... moze byc sytuacja gdzie sa jeszcze jakies inne pakiety w kanale 
-        faza_ = 7;
+        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 2);
+        faza_ = 9;
+        aktywacja(kCzasPotwierdzenia);
+        aktywny_ = false;
       }
       else
       {
-        faza_ = 9;
+        if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 3);
+        kanal_->UsunZKanalu(this);
+        faza_ = 7;
       }
     }
       break;
 
     //============================================
-    // faza 9: Wys³anie ACK
+    // faza 9: Odbiór pakietu i zakoñczenie transmisji
     //============================================
-    case 9:
-    {
-      if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
-
-      ack_ = true; // chyba nie tutaj - zrobilbym to w nastepnej fazie - bo w czasie wysylania ACK tez moze dojsc do kolizji
-      faza_ = 10;
-      aktywacja(kCzasPotwierdzenia);
-      aktywny_ = false;
-    }
-      break;
-
-    //============================================
-    // faza 10: Odbiór pakietu i zakoñczenie transmisji
-    //============================================
-    case 10: // troche duzo tych faz - chyba za duzo ... 
+    case 9: // troche duzo tych faz - chyba za duzo ... 
     {
       if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 1);
 
@@ -282,7 +270,6 @@ void Pakiet::execute(bool logi)
 
       nad_->UsunZBufora(this);
       kanal_->UsunZKanalu(this);
-      //kanal_->KanalWolny(true);
       skonczony_ = true;
 
       if (logi == true) logi_->WypiszLogi(faza_, id_tx_, sym_->zegar_, 2);

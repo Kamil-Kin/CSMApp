@@ -21,7 +21,7 @@ public:
   int id_tx_;
   int faza_;
   bool skonczony_;
-  bool kolizja_;
+  bool ack_;
 
   double czas_w_buforze_;
   double opoznienie_pakietu_;
@@ -38,7 +38,7 @@ private:
   double prawdopodobienstwo;
   int nr_retransmisji_;
   double czas_retransmisji_;
-  bool ack_;
+
   //statystyki
   double czas_narodzin_;
   double czas_nadania_;

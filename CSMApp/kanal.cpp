@@ -17,9 +17,11 @@ bool Kanal::StanLacza() { return lacze_.empty(); }
 void Kanal::DodajDoKanalu(Pakiet* pakiet)
 {
   lacze_.push_front(pakiet);
+  if (lacze_.size() == 1)
+    pakiet->ack_ = true;
   if (lacze_.size() > 1) 
     for each (Pakiet* pak in lacze_)
-      pak->kolizja_ = true;
+      pak->ack_ = false;
 }
 
 void Kanal::UsunZKanalu(Pakiet* pakiet) { lacze_.remove(pakiet); }

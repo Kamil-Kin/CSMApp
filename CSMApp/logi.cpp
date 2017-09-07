@@ -74,9 +74,13 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
     case 5: {
       if (nr == 1) {
         UstawKolor("06");
-        cout << "\nFAZA " << faza << ":\tSprawdzenie kolizji" << endl;
+        cout << "\nFAZA " << faza << ":\tDodanie do kanalu" << endl;
       }
-      if (nr == 2) {
+      if (nr == 1) {
+        UstawKolor("03");
+        cout << "Pakiet id " << id << ":\tdodany do kanalu" << endl;
+      }
+      if (nr == 3) {
         UstawKolor("03");
         cout << "Pakiet id " << id << " o czasie " << zegar << " ms czeka do najblizszej szczeliny" << endl;
       }
@@ -112,17 +116,21 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
       break;
 
     case 8: {
-
+      if (nr == 1) {
+        UstawKolor("06");
+        cout << "\nFAZA " << faza << ":\tSprawdzenie kolizji" << endl;
+      }
+      if (nr == 2) {
+        UstawKolor("0F");
+        cout << "Pakiet id " << id << ":\tBrak kolizji, wyslano ACK" << endl;
+      }
+      if (nr == 3) {
+        cout << "Pakiet id " << id << ":\tWystapila kolizja, retransmisja pakietu" << endl;
+      }
     }
       break;
 
     case 9: {
-      UstawKolor("06");
-      cout << "\nFAZA " << faza << ":\tWyslanie ACK" << endl;
-    }
-      break;
-
-    case 10: {
       if (nr == 1) {
         UstawKolor("06");
         cout << "\nFAZA " << faza << ":  Odebranie pakietu i zakonczenie transmisji" << endl;

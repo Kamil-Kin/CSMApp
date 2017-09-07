@@ -16,7 +16,7 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
   los_prawdopodobienstwo_ = new GenRownomierny(ziarno.PobierzZiarno(1 + sym_->nr_symulacji_*(3 + LiczbaNad())));
   los_retransmisja_ = new GenRownomierny(ziarno.PobierzZiarno(2 + sym_->nr_symulacji_*(3 + LiczbaNad())));
   kanal_ = new Kanal();
-  for (int i = 0; i < 4/*kLiczbaNadajnikow_*/; i++)
+  for (int i = 0; i < kLiczbaNadajnikow_; i++)
   {
     nadajniki_.push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));
   }
@@ -64,6 +64,7 @@ void Siec::CzyszczenieStatystyk()
 
 void Siec::Statystyki() 
 {
+  sym_->UstawKolor("07");
   vector<double> stopa_bledow_;
   double suma = 0;
   int l_elem = 0;
@@ -97,11 +98,13 @@ void Siec::Statystyki()
   cout << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
   cout << "Maksymalna pakietowa stopa bledow: " << stat_->max_stopa_bledow_ << "; nadajnik nr: " << indeks << endl;
   stat_->sr_l_ret_ = stat_->licznik_retransmisji_ / kLiczbaNadajnikow_;
-  cout << "Srednia liczba retransmisji pakietow (poprawnie odebranych)" << stat_->sr_l_ret_ << endl;
+  cout << "Srednia liczba retransmisji pakietow (poprawnie odebranych): " << stat_->sr_l_ret_ << endl;
   stat_->przeplywnosc_ = stat_->pakiety_odebrane_ / (sym_->czas_symulacji_ / 1000);
-  cout << "Przeplywnosc systemu w jednostce czasu (na sekunde): " << stat_->przeplywnosc_ << endl;
-  cout << "Srednie opoznienie pakietu: " << opoznienie_ << endl;
-  cout << "Sredni czas oczekiwania: " << czas_oczekiwania_ << endl;
+  cout << "Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): " << stat_->przeplywnosc_ << endl;
+  stat_->sr_opoznienie_ = opoznienie_ / stat_->pakiety_odebrane_;
+  cout << "Srednie opoznienie pakietu: " << stat_->sr_opoznienie_ << endl;
+  stat_->sr_czas_oczekiwania_ = czas_oczekiwania_ / stat_->pakiety_nadane_;
+  cout << "Sredni czas oczekiwania: " << stat_->sr_czas_oczekiwania_ << endl;
 }
 
 void Siec::StatystykiPakietu(Pakiet* pak)

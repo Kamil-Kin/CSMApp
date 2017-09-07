@@ -122,7 +122,7 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
       }
       if (nr == 2) {
         UstawKolor("0F");
-        cout << "Pakiet id " << id << ":\tBrak kolizji, wyslano ACK" << endl;
+        cout << "Pakiet id " << id << ":\tBrak kolizji, wyslanie ACK" << endl;
       }
       if (nr == 3) {
         cout << "Pakiet id " << id << ":\tWystapila kolizja, retransmisja pakietu" << endl;

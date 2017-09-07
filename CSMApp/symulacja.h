@@ -27,20 +27,20 @@ struct comparer : public binary_function<Zdarzenie*, Zdarzenie*, bool>
 class Symulacja
 {
 public:
-  Symulacja(double lam, double faza, double czas_sym, bool logi, Ziarno ziarno, Statystyka* stat);
+  Symulacja(double lam, double faza, double czas_sym, int nr_sym, bool logi, Ziarno ziarno, Statystyka* stat);
   ~Symulacja();
 
-  void run(char tryb);
+  void run(char tryb, int nr);
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();
   Zdarzenie* PobierzPierwszyElement();
   void UstawKolor(string numer);
 
   double zegar_;
-  int nr_symulacji_;
   double lambda_;
   double faza_poczatkowa_;
   double czas_symulacji_;
+  int nr_symulacji_;
   bool logi_;
 private:
   Siec* siec_;

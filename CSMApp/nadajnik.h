@@ -45,7 +45,7 @@ private:
   Kanal* kanal_;
   Pakiet* pak_;
   Ziarno ziarno_;
-  GenWykladniczy* losCGP_;
+  GenWykladniczy* los_czas_generacji_;
 };
 
 #endif // !CSMA_PP_NADAJNIK_H

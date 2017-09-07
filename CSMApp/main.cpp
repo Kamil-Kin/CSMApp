@@ -11,8 +11,8 @@ using std::endl;
 
 int main() 
 {
-  int liczba_symulacji_ = 10;
-  double czas_symulacji_ = 500000;
+  int liczba_symulacji_ = 2;
+  double czas_symulacji_ = 50;
   double faza_poczatkowa_ = 900000;
   double lambda_ = 0.0067;
   char tryb_symulacji_ = 't';
@@ -59,11 +59,11 @@ int main()
   //if (log == 'T' || log == 't') logi_ = true;
   //else logi_ = false;
 
-  for (int i = 0; i < liczba_symulacji_; ++i) 
+  for (int nr_symulacji = 1; nr_symulacji <= liczba_symulacji_; ++nr_symulacji) 
   {
-    Symulacja* symulacja = new Symulacja(lambda_, faza_poczatkowa_, czas_symulacji_, logi_, ziarno, statystyka);
-    symulacja->run(tryb_symulacji_);
-
+    Symulacja* symulacja = new Symulacja(lambda_, faza_poczatkowa_, czas_symulacji_, nr_symulacji, logi_, ziarno, statystyka);
+    symulacja->run(tryb_symulacji_, nr_symulacji);
+    delete symulacja;
   }
 
   system("pause");

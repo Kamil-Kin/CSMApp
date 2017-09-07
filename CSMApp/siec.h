@@ -30,7 +30,7 @@ public:
   void CzyszczenieStatystyk();
 
 private:
-  const int kLiczbaNadajnikow_ = 10;
+  const int kLiczbaNadajnikow_ = 4;//todo
   vector<Nadajnik*> nadajniki_;
   Symulacja* sym_;
   Kanal* kanal_;

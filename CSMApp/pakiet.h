@@ -26,14 +26,14 @@ public:
   double czas_w_buforze_;
   double opoznienie_pakietu_;
   friend bool operator==(const Pakiet& lhs, const Pakiet& rhs);
-
+  __int64 id_;
 private:
   static __int64 licznik_;
   const int kMaxLiczbaRetransmisji = 5;
   const double kPrawdopodobienstwo = 0.2;
   const double kCzasPotwierdzenia = 1.0;
-  __int64 id_;
-  
+
+
   double czas_transmisji_;
   double prawdopodobienstwo;
   int nr_retransmisji_;

@@ -23,11 +23,8 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
 }
 Siec::~Siec() 
 {
-  //CzyszczenieStatystyk(); //todo
+  CzyszczenieStatystyk();
   delete kanal_;
-  delete los_czas_transmisji_;
-  delete los_prawdopodobienstwo_;
-  delete los_retransmisja_;
 }
 
 double Siec::LosCzasTransmisji() { return round(los_czas_transmisji_->GeneracjaR(1, 10)); }
@@ -71,6 +68,7 @@ void Siec::Statystyki()
   plik.open("statystyki.txt", ios::out);
 
   sym_->UstawKolor("07");
+  cout << "Statystyki symulacji nr: " << sym_->nr_symulacji_ << endl;
   vector<double> stopa_bledow_;
   double suma = 0;
   int l_elem = 0;
@@ -97,9 +95,9 @@ void Siec::Statystyki()
         << ";\npakiety transmitowane: " << nadajniki_.at(i)->licznik_nadanych_ << "; pakiety stracone: " << nadajniki_.at(i)->licznik_straconych_
         << "; pakiety odebrane: " << nadajniki_.at(i)->licznik_odebranych_ << ";\nliczba retransmisji: " << nadajniki_.at(i)->licznik_retransmisji_
         << "; pakietowa stopa bledow: " << nadajniki_.at(i)->StopaBledow() << endl;
-      plik << "Nadajnik nr " << i << ": wygenerowane pakiety: " << nadajniki_.at(i)->licznik_pakietow_
-        << ";\npakiety transmitowane: " << nadajniki_.at(i)->licznik_nadanych_ << "; pakiety stracone: " << nadajniki_.at(i)->licznik_straconych_
-        << "; pakiety odebrane: " << nadajniki_.at(i)->licznik_odebranych_ << ";\nliczba retransmisji: " << nadajniki_.at(i)->licznik_retransmisji_
+      plik << "Nadajnik nr " << i << ": wygenerowane: " << nadajniki_.at(i)->licznik_pakietow_
+        << "; transmitowane: " << nadajniki_.at(i)->licznik_nadanych_ << "; stracone: " << nadajniki_.at(i)->licznik_straconych_
+        << "; odebrane: " << nadajniki_.at(i)->licznik_odebranych_ << ";\nliczba retransmisji: " << nadajniki_.at(i)->licznik_retransmisji_
         << "; pakietowa stopa bledow: " << nadajniki_.at(i)->StopaBledow() << endl;
     }
     cout << "Laczna liczba wygenerowanych pakietow: " << stat_->pakiety_wygenerowane_ << endl;
@@ -141,6 +139,20 @@ void Siec::Statystyki()
 
 void Siec::StatystykiPakietu(Pakiet* pak)
 {
+  fstream plik;
+  fstream plik2;
+  string opoznienie;
+  opoznienie = "opoznienie" + to_string(sym_->nr_symulacji_) + ".txt";
+  plik.open(opoznienie.c_str(), ios::out | ios::app);
+  plik2.open("opoznienia.txt", ios::out | ios::app);
+  if (plik.good() == true && plik2.good()) 
+  {
+    plik << pak->opoznienie_pakietu_ << " ";
+    plik2 << pak->opoznienie_pakietu_ << " ";
+    plik2.close();
+    plik.close();
+  }
+  else cout << "Nie uzyskano dostepu do pliku " << endl;
   opoznienie_ += pak->opoznienie_pakietu_;
   czas_oczekiwania_ += pak->czas_w_buforze_;
 }

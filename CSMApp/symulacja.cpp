@@ -47,13 +47,13 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
     obecny_->execute(logi_);
     if ((obecny_->skonczony_) == true)
     {
-      if (logi_ == true) cout << ":\tusuniety z systemu" << endl;
-      //siec_->StatystykiPakietu(obecny_);// todo
+      if (logi_ == true) cout << "Pakiet id " << obecny_->id_ << ":\tusuniety z systemu" << endl;
+      siec_->StatystykiPakietu(obecny_);
       delete obecny_;
     }
     if (tryb_symulacji == 'K' || tryb_symulacji == 'k') getchar();
   }
-  //siec_->Statystyki();// todo
+  siec_->Statystyki();
 }
 
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }

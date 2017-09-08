@@ -10,7 +10,7 @@ void Ziarno::GeneracjaZiaren()
 {
   fstream plik;
   int temp;
-  plik.open("ziarno.txt", ios::in | ios::out);
+  plik.open("ziarno.txt", ios::in | ios::out | ios::trunc);
 
   if (plik.good() == true) 
   {

@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "statystyka.h"
 
 class GenRownomierny;
@@ -17,6 +18,8 @@ using std::cout;
 using std::endl;
 using std::fstream;
 using std::ios;
+using std::string;
+using std::to_string;
 
 class Siec
 {
@@ -31,7 +34,6 @@ public:
   void Statystyki();
   void StatystykiPakietu(Pakiet* pak);
   void CzyszczenieStatystyk();
-
 private:
   const int kLiczbaNadajnikow_ = 3;//todo
   vector<Nadajnik*> nadajniki_;
@@ -41,7 +43,6 @@ private:
   //statystyki
   double opoznienie_;
   double czas_oczekiwania_;
-
   GenRownomierny* los_czas_transmisji_;
   GenRownomierny* los_prawdopodobienstwo_;
   GenRownomierny* los_retransmisja_;

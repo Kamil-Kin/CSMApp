@@ -136,7 +136,7 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
         cout << "\nFAZA " << faza << ":  Odebranie pakietu i zakonczenie transmisji" << endl;
       }
       if (nr == 2) {
-        cout << "Pakiet id " << id << ":\tZostal odebrany; ";
+        cout << "Pakiet id " << id << ":\tZostal odebrany; " << endl;
       }
     }
       break;

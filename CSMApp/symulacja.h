@@ -18,6 +18,7 @@ using std::vector;
 using std::priority_queue;
 using std::binary_function;
 using std::string;
+
 //const auto comparer = [](Zdarzenie* z1, Zdarzenie* z2)->bool
 //{ return z1->czas_zdarzenia_ > z2->czas_zdarzenia_; };
 

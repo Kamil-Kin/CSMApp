@@ -24,7 +24,10 @@ licznik_straconych_(0), licznik_odebranych_(0), licznik_retransmisji_(0)
   (new Pakiet(id_, sym_, siec_, kanal_, this))->aktywacja(LosCzasGeneracji());
 }
 
-Nadajnik::~Nadajnik() { CzyszczenieStatystykNadajnika(); }
+Nadajnik::~Nadajnik() 
+{
+  CzyszczenieStatystykNadajnika();
+}
 
 double Nadajnik::LosCzasGeneracji()
 {

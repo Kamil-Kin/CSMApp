@@ -13,6 +13,7 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
       if (nr == 1) {
         UstawKolor("06");
         cout << "\nFAZA " << faza << ":\tGeneracja pakietu" << endl;
+        plik << "\nFAZA " << faza << ":\tGeneracja pakietu" << endl;
       }
       if (nr == 2) {
         UstawKolor("0E");

@@ -1,0 +1,19 @@
+Nadajnik nr 0: wygenerowane pakiety: 29;
+pakiety transmitowane: 3; pakiety stracone: 0; pakiety odebrane: 3;
+liczba retransmisji: 0; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane pakiety: 14;
+pakiety transmitowane: 1; pakiety stracone: 0; pakiety odebrane: 1;
+liczba retransmisji: 0; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane pakiety: 20;
+pakiety transmitowane: 3; pakiety stracone: 0; pakiety odebrane: 2;
+liczba retransmisji: 0; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 63
+Laczna liczba nadanych pakietow: 7
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 6
+Srednia pakietowa stopa bledow: 0
+Maksymalna pakietowa stopa bledow: 0; nadajnik nr: 0
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 120
+Srednie opoznienie pakietu: 25.3667
+Sredni czas oczekiwania: 16.7429

@@ -14,7 +14,8 @@ using std::endl;
 
 __int64 Pakiet::licznik_ = 0;
 
-Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad): id_tx_(idx), faza_(1), skonczony_(false), ack_(false), nr_retransmisji_(0)
+Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad): id_tx_(idx), faza_(1), skonczony_(false), ack_(false), nr_retransmisji_(0),
+czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0), id_(0)
 {
   id_ = Pakiet::licznik_;
   Pakiet::licznik_++;
@@ -29,9 +30,9 @@ Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad)
   czas_narodzin_ = sym_->zegar_;
   //if (czas_narodzin_ >= sym_->faza_poczatkowa_) //todo
     nad_->licznik_pakietow_++;
-  czas_nadania_ = 0;
-  czas_odebrania_ = 0;
-  opoznienie_pakietu_ = 0;
+  czas_nadania_ = 0.0;
+  czas_odebrania_ = 0.0;
+  opoznienie_pakietu_ = 0.0;
 }
 Pakiet::~Pakiet() {}
 

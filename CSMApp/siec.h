@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <iostream>
+#include <fstream>
 #include "statystyka.h"
 
 class GenRownomierny;
@@ -14,6 +15,8 @@ class Pakiet;
 using std::vector;
 using std::cout;
 using std::endl;
+using std::fstream;
+using std::ios;
 
 class Siec
 {
@@ -30,7 +33,7 @@ public:
   void CzyszczenieStatystyk();
 
 private:
-  const int kLiczbaNadajnikow_ = 4;//todo
+  const int kLiczbaNadajnikow_ = 3;//todo
   vector<Nadajnik*> nadajniki_;
   Symulacja* sym_;
   Kanal* kanal_;

@@ -39,8 +39,7 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
     zegar_ = kalendarz_.top()->czas_zdarzenia_;
     UsunZKalendarza();
 
-    if (logi_ == true) 
-    {
+    if (logi_ == true) {
       UstawKolor("07");
       cout << "\nPakiet id " << obecny_->id_ << ": Pobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
     }
@@ -48,14 +47,13 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
     obecny_->execute(logi_);
     if ((obecny_->skonczony_) == true)
     {
-      if (logi_ == true)
-        cout << "Pakiet id " << obecny_->id_ << ":\tUsuniety z systemu" << endl;
-      siec_->StatystykiPakietu(obecny_);// todo
+      if (logi_ == true) cout << ":\tusuniety z systemu" << endl;
+      //siec_->StatystykiPakietu(obecny_);// todo
       delete obecny_;
     }
     if (tryb_symulacji == 'K' || tryb_symulacji == 'k') getchar();
   }
-  siec_->Statystyki();// todo
+  //siec_->Statystyki();// todo
 }
 
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }

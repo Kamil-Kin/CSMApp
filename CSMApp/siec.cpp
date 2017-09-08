@@ -23,7 +23,7 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
 }
 Siec::~Siec() 
 {
-  CzyszczenieStatystyk(); //todo
+  //CzyszczenieStatystyk(); //todo
   delete kanal_;
   delete los_czas_transmisji_;
   delete los_prawdopodobienstwo_;

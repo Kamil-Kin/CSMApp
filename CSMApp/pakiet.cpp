@@ -127,8 +127,10 @@ void Pakiet::execute(bool logi)
       }
       else 
       {
-        if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
-
+        if (logi == true) {
+          logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
+          cout << "Wylosowane prawdopodobienstwo: " << prawdopodobienstwo << endl;
+        }
         faza_ = 4;
         aktywacja(1 - fmod(sym_->zegar_, 1.0)); //!!!!!!! co to jest :D - ten kod napewno do zmiany todo
         aktywny_ = false;
@@ -151,7 +153,6 @@ void Pakiet::execute(bool logi)
       else 
       {
         if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
-
         faza_ = 2;
         aktywacja(1.0);
         aktywny_ = false;
@@ -196,10 +197,10 @@ void Pakiet::execute(bool logi)
         czas_w_buforze_ = czas_nadania_ - czas_narodzin_;//}
 
       czas_transmisji_ = siec_->LosCzasTransmisji();
+      if (logi == true) logi_->WypiszLogi(faza_, id_, czas_transmisji_, 2);
       faza_ = 8;
       aktywacja(czas_transmisji_);
       aktywny_ = false;
-      if (logi == true) logi_->WypiszLogi(faza_, id_, czas_transmisji_, 2);
     }
       break;
 

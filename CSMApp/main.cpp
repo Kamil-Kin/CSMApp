@@ -9,7 +9,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-int main() 
+int main()
 {
   int liczba_symulacji_ = 2;
   double czas_symulacji_ = 50;

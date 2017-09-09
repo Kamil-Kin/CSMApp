@@ -211,7 +211,8 @@ void Pakiet::execute(bool logi)
     {
       if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
-      //if (czas_narodzin_ >= sym_->faza_poczatkowa_) nad_->licznik_retransmisji_++;//todo
+      //if (czas_narodzin_ >= sym_->faza_poczatkowa_) 
+      nad_->licznik_retransmisji_++;//todo
       nr_retransmisji_++;
       if (nr_retransmisji_ <= kMaxLiczbaRetransmisji)
       {

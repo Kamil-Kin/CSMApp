@@ -6,6 +6,7 @@
 #include "kanal.h"
 #include <cstdlib>
 #include <ctime>
+#include <cmath>
 
 Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), czas_oczekiwania_(0.0)
 {

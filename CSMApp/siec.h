@@ -29,7 +29,7 @@ public:
   void StatystykiPakietu(Pakiet* pak);
   void CzyszczenieStatystyk();
 private:
-  const int kLiczbaNadajnikow_ = 3;//todo
+  const int kLiczbaNadajnikow_ = 4;//todo
   vector<Nadajnik*> nadajniki_;
   Symulacja* sym_;
   Kanal* kanal_;

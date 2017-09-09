@@ -12,9 +12,9 @@ using std::endl;
 int main()
 {
   int liczba_symulacji_ = 2;
-  double czas_symulacji_ = 50;
-  double faza_poczatkowa_ = 900000;
-  double lambda_ = 0.0067;
+  double czas_symulacji_ = 100000;
+  double faza_poczatkowa_ = 10000;
+  double lambda_ = 0.006;
   char tryb_symulacji_ = 't';
   bool logi_ = true;
 

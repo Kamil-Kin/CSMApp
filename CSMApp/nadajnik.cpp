@@ -20,7 +20,7 @@ licznik_straconych_(0), licznik_odebranych_(0), licznik_retransmisji_(0)
   siec_ = siec;
   kanal_ = kanal;
   ziarno_ = ziarno;
-  los_czas_generacji_ = new GenWykladniczy(sym_->lambda_, ziarno_.PobierzZiarno(3 + sym_->nr_symulacji_*(3 + siec_->LiczbaNad())));
+  los_czas_generacji_ = new GenWykladniczy(sym_->lambda_, ziarno_.PobierzZiarno(3 + id_ + sym_->nr_symulacji_*(3 + siec_->LiczbaNad())));
   (new Pakiet(id_, sym_, siec_, kanal_, this))->aktywacja(LosCzasGeneracji());
 }
 
@@ -31,11 +31,11 @@ Nadajnik::~Nadajnik()
 
 double Nadajnik::LosCzasGeneracji()
 {
-  czas_generacji_ = (rand() % 101) / 10.0;
-  //czas_generacji_ = los_czas_generacji_->GeneracjaW();
-  //czas_generacji_ *= 10;
-  //czas_generacji_ = round(czas_generacji_);
-  //czas_generacji_ /= 10;
+  //czas_generacji_ = (rand() % 101) / 10.0;
+  czas_generacji_ = los_czas_generacji_->GeneracjaW();
+  czas_generacji_ *= 10;
+  czas_generacji_ = round(czas_generacji_);
+  czas_generacji_ /= 10;
   if (sym_->logi_ == true)
   {
     sym_->UstawKolor("02");

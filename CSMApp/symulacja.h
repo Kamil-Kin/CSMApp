@@ -54,7 +54,7 @@ public:
 
   fstream plik;
   string opoznienie; 
-  double tab[100] = { 0.0 };
+  double tab[10000] = { 0.0 };
 private:
   Siec* siec_;
   Zdarzenie* zd_;

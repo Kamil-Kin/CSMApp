@@ -14,7 +14,7 @@ public:
     uniform_ = new GenRownomierny(kernel);
   }
   ~GenWykladniczy() {}
-  
+
   double GeneracjaW();
 
 private:

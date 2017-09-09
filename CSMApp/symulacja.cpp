@@ -2,12 +2,6 @@
 #include "siec.h"
 #include "nadajnik.h"
 #include "pakiet.h"
-#include "zdarzenie.h"
-#include <iostream>
-#include <assert.h>
-
-using std::cout;
-using std::endl;
 
 bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
 {
@@ -20,15 +14,22 @@ bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
 
 Symulacja::Symulacja(double lam, double faza, double czas, int nr, bool logi, Ziarno ziarno, Statystyka* stat) :zegar_(0.0)
 {
+  Pakiet::licznik_ = 0;
   lambda_ = lam;
   faza_poczatkowa_ = faza;
   czas_symulacji_ = czas;
   nr_symulacji_ = nr;
   logi_ = logi;
   siec_ = new Siec(this, ziarno, stat);
+  opoznienie = "opoznienie" + to_string(nr) + ".txt";
+  plik.open(opoznienie.c_str(), ios::out | ios::trunc);
 }
 
-Symulacja::~Symulacja() { delete siec_; }
+Symulacja::~Symulacja()
+{
+  delete siec_;
+  plik.close();
+}
 
 void Symulacja::run(char tryb_symulacji, int nr_symulacji)
 {
@@ -53,6 +54,12 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
     }
     if (tryb_symulacji == 'K' || tryb_symulacji == 'k') getchar();
   }
+  fstream plik(opoznienie.c_str(), ios::out | ios::app);
+  if (plik.good() == true)
+    for (int i = 0; i < 100; i++)
+    plik << tab[i] << " ";
+  else cout << "Nie uzyskano dostepu do pliku " << endl;
+
   siec_->Statystyki();
 }
 

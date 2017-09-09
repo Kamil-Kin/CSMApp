@@ -3,8 +3,6 @@
 
 #include <vector>
 #include <iostream>
-#include <fstream>
-#include <string>
 #include "statystyka.h"
 
 class GenRownomierny;
@@ -16,10 +14,6 @@ class Pakiet;
 using std::vector;
 using std::cout;
 using std::endl;
-using std::fstream;
-using std::ios;
-using std::string;
-using std::to_string;
 
 class Siec
 {
@@ -43,6 +37,8 @@ private:
   //statystyki
   double opoznienie_;
   double czas_oczekiwania_;
+  fstream plik;
+
   GenRownomierny* los_czas_transmisji_;
   GenRownomierny* los_prawdopodobienstwo_;
   GenRownomierny* los_retransmisja_;

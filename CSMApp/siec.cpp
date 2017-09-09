@@ -21,7 +21,7 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
     nadajniki_.push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));
   }
 }
-Siec::~Siec() 
+Siec::~Siec()
 {
   CzyszczenieStatystyk();
   delete kanal_;
@@ -64,11 +64,10 @@ void Siec::CzyszczenieStatystyk()
 
 void Siec::Statystyki() 
 {
-  fstream plik;
-  plik.open("statystyki.txt", ios::out);
-
+  plik.open("statystyki.txt", ios::out | ios::app);
   sym_->UstawKolor("07");
   cout << "Statystyki symulacji nr: " << sym_->nr_symulacji_ << endl;
+  plik << "Statystyki symulacji nr: " << sym_->nr_symulacji_ << endl;
   vector<double> stopa_bledow_;
   double suma = 0;
   int l_elem = 0;
@@ -139,20 +138,7 @@ void Siec::Statystyki()
 
 void Siec::StatystykiPakietu(Pakiet* pak)
 {
-  fstream plik;
-  fstream plik2;
-  string opoznienie;
-  opoznienie = "opoznienie" + to_string(sym_->nr_symulacji_) + ".txt";
-  plik.open(opoznienie.c_str(), ios::out | ios::app);
-  plik2.open("opoznienia.txt", ios::out | ios::app);
-  if (plik.good() == true && plik2.good()) 
-  {
-    plik << pak->opoznienie_pakietu_ << " ";
-    plik2 << pak->opoznienie_pakietu_ << " ";
-    plik2.close();
-    plik.close();
-  }
-  else cout << "Nie uzyskano dostepu do pliku " << endl;
+  sym_->tab[pak->id_] = pak->opoznienie_pakietu_;
   opoznienie_ += pak->opoznienie_pakietu_;
   czas_oczekiwania_ += pak->czas_w_buforze_;
 }

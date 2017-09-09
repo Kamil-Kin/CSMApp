@@ -8,16 +8,24 @@
 #include <string>
 #include <windows.h>
 #include <stdlib.h>
+#include <fstream>
+#include <iostream>
+#include <assert.h>
 
 class Ziarno;
 class Siec;
 class Zdarzenie;
 class Pakiet;
 
+using std::cout;
+using std::endl;
 using std::vector;
 using std::priority_queue;
-using std::binary_function;
+using std::binary_function; 
+using std::fstream;
+using std::ios;
 using std::string;
+using std::to_string;
 
 //const auto comparer = [](Zdarzenie* z1, Zdarzenie* z2)->bool
 //{ return z1->czas_zdarzenia_ > z2->czas_zdarzenia_; };
@@ -43,6 +51,10 @@ public:
   double czas_symulacji_;
   int nr_symulacji_;
   bool logi_;
+
+  fstream plik;
+  string opoznienie; 
+  double tab[100] = { 0.0 };
 private:
   Siec* siec_;
   Zdarzenie* zd_;

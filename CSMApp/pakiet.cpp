@@ -15,7 +15,7 @@ using std::endl;
 __int64 Pakiet::licznik_ = 0;
 
 Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad): id_tx_(idx), faza_(1), skonczony_(false), ack_(false), nr_retransmisji_(0),
-czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0), id_(0)
+czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0)
 {
   id_ = Pakiet::licznik_;
   Pakiet::licznik_++;

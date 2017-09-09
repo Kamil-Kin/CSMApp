@@ -34,7 +34,6 @@ private:
   const double kPrawdopodobienstwo = 0.2;
   const double kCzasPotwierdzenia = 1.0;
 
-
   double czas_transmisji_;
   double prawdopodobienstwo;
   int nr_retransmisji_;

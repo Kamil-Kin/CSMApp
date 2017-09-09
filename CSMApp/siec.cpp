@@ -26,6 +26,9 @@ Siec::~Siec()
 {
   CzyszczenieStatystyk();
   delete kanal_;
+  delete los_czas_transmisji_;
+  delete los_prawdopodobienstwo_;
+  delete los_retransmisja_;
 }
 
 double Siec::LosCzasTransmisji() { return round(los_czas_transmisji_->GeneracjaR(1, 10)); }

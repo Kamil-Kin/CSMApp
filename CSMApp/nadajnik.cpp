@@ -27,6 +27,7 @@ licznik_straconych_(0), licznik_odebranych_(0), licznik_retransmisji_(0)
 Nadajnik::~Nadajnik() 
 {
   CzyszczenieStatystykNadajnika();
+  delete los_czas_generacji_;
 }
 
 double Nadajnik::LosCzasGeneracji()

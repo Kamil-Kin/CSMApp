@@ -23,6 +23,7 @@ Symulacja::Symulacja(double lam, double faza, double czas, int nr, bool logi, Zi
   siec_ = new Siec(this, ziarno, stat);
   opoznienie = "opoznienie" + to_string(nr) + ".txt";
   plik.open(opoznienie.c_str(), ios::out | ios::app);
+  //plik.open(opoznienie.c_str(), ios::out | ios::trunc);
 }
 
 Symulacja::~Symulacja()
@@ -57,8 +58,9 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
   //fstream plik(opoznienie.c_str(), ios::out | ios::app);
   if (plik.good() == true) 
   {
-    for (int i = 0; i < 1000; i++)
+    for (int i = 0; i < 100; i++)
       plik << tab[i] << " ";
+    //plik << endl;
   }
   else cout << "Nie uzyskano dostepu do pliku " << endl;
 

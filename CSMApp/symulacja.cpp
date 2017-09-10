@@ -58,7 +58,7 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
   //fstream plik(opoznienie.c_str(), ios::out | ios::app);
   if (plik.good() == true) 
   {
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < 1000; i++)
       plik << tab[i] << " ";
     //plik << endl;
   }

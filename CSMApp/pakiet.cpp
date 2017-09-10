@@ -28,8 +28,7 @@ czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0)
   moje_zdarzenie_ = new Zdarzenie(this);
 
   czas_narodzin_ = sym_->zegar_;
-  if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_)
-    nad_->licznik_pakietow_++;
+  if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) nad_->licznik_pakietow_++;
   czas_nadania_ = 0.0;
   czas_odebrania_ = 0.0;
   opoznienie_pakietu_ = 0.0;
@@ -37,6 +36,7 @@ czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0)
 Pakiet::~Pakiet() 
 {
   delete logi_;
+  delete moje_zdarzenie_;
 }
 
 void Pakiet::aktywacja(double czas)
@@ -135,7 +135,7 @@ void Pakiet::execute(bool logi)
           cout << "Wylosowane prawdopodobienstwo: " << prawdopodobienstwo << endl;
         }
         faza_ = 4;
-        aktywacja(1 - fmod(sym_->zegar_, 1.0)); //!!!!!!! co to jest :D - ten kod napewno do zmiany todo
+        aktywacja(1 - fmod(sym_->zegar_, 1.0));
         aktywny_ = false;
       }
     }
@@ -215,8 +215,7 @@ void Pakiet::execute(bool logi)
     {
       if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
-      if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_)
-        nad_->licznik_retransmisji_++;
+      if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) nad_->licznik_retransmisji_++;
       nr_retransmisji_++;
       if (nr_retransmisji_ <= kMaxLiczbaRetransmisji)
       {
@@ -232,8 +231,7 @@ void Pakiet::execute(bool logi)
       else
       {
         if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
-        if (sym_->nr_odbioru_ > sym_->zegar_)
-          nad_->licznik_straconych_++;
+        if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) nad_->licznik_straconych_++;
         nad_->UsunZBufora(this);
         skonczony_ = true;
         if (nad_->CzyBuforPusty() == false)

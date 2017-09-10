@@ -30,8 +30,8 @@ public:
   static __int64 licznik_;
 
 private:
-  const int kMaxLiczbaRetransmisji = 5;
-  const double kPrawdopodobienstwo = 0.6; //todo
+  const int kMaxLiczbaRetransmisji = 5; //todo
+  const double kPrawdopodobienstwo = 0.2; //todo
   const double kCzasPotwierdzenia = 1.0;
 
   double czas_transmisji_;

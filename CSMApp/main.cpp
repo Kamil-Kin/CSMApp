@@ -11,10 +11,10 @@ using std::endl;
 
 int main()
 {
-  int liczba_symulacji_ = 10;
+  int liczba_symulacji_ = 1;
   double czas_symulacji_ = 50000;  //docelowo 100 000 todo
   int faza_poczatkowa_ = 50;  //mierzone w iloœci pakietów
-  double lambda_ = 0.0066; //do ustalenia todo
+  double lambda_ = 0.004; //do ustalenia todo
   char tryb_symulacji_ = 't';
   bool logi_ = false;
 

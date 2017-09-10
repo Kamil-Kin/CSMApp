@@ -12,7 +12,7 @@ bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
   return zd1->priorytet_ > zd2->priorytet_;
 }
 
-Symulacja::Symulacja(double lam, double faza, double czas, int nr, bool logi, Ziarno ziarno, Statystyka* stat) :zegar_(0.0)
+Symulacja::Symulacja(double lam, int faza, double czas, int nr, bool logi, Ziarno ziarno, Statystyka* stat) :zegar_(0.0), nr_odbioru_(0)
 {
   Pakiet::licznik_ = 0;
   lambda_ = lam;
@@ -21,15 +21,15 @@ Symulacja::Symulacja(double lam, double faza, double czas, int nr, bool logi, Zi
   nr_symulacji_ = nr;
   logi_ = logi;
   siec_ = new Siec(this, ziarno, stat);
-  opoznienie = "opoznienie" + to_string(nr) + ".txt";
-  plik.open(opoznienie.c_str(), ios::out | ios::app);
+  //opoznienie = "opoznienie" + to_string(nr) + ".txt"; //do wyznaczenia fazy pocz¹tkowej
+  //plik.open(opoznienie.c_str(), ios::out | ios::app);
   //plik.open(opoznienie.c_str(), ios::out | ios::trunc);
 }
 
 Symulacja::~Symulacja()
 {
   delete siec_;
-  plik.close();
+  //plik.close(); //do wyznaczenia fazy pocz¹tkowej
 }
 
 void Symulacja::run(char tryb_symulacji, int nr_symulacji)
@@ -55,14 +55,12 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
     }
     if (tryb_symulacji == 'K' || tryb_symulacji == 'k') getchar();
   }
-  //fstream plik(opoznienie.c_str(), ios::out | ios::app);
-  if (plik.good() == true) 
-  {
-    for (int i = 0; i < 1000; i++)
-      plik << tab[i] << " ";
-    //plik << endl;
-  }
-  else cout << "Nie uzyskano dostepu do pliku " << endl;
+  //if (plik.good() == true) //do wyznaczenia fazy pocz¹tkowej
+  //{
+  //  for (int i = 0; i < 1000; i++)
+  //    plik << tab[i] << " ";
+  //}
+  //else cout << "Nie uzyskano dostepu do pliku " << endl;
 
   siec_->Statystyki();
 }

@@ -5,12 +5,10 @@
 #include "nadajnik.h"
 #include "kanal.h"
 #include <cstdlib>
-#include <ctime>
 #include <cmath>
 
 Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), czas_oczekiwania_(0.0)
 {
-  srand(time(NULL));
   stat_ = stat;
   sym_ = sym;
   los_czas_transmisji_ = new GenRownomierny(ziarno.PobierzZiarno(0 + sym_->nr_symulacji_*(3 + LiczbaNad())));
@@ -114,12 +112,18 @@ void Siec::Statystyki()
 
     l_elem = stopa_bledow_.size();
     stat_->sr_stopa_bledow_ = suma / l_elem;
+    plik2.open("sr_stopy_bledow.txt", ios::out | ios::app);
+    if (plik2.good() == true) {
+      plik2 << stat_->sr_stopa_bledow_ << " ";
+      plik.close();
+    }
+    else cout << "Nie uzyskano dostepu do pliku" << endl;
     cout << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
     plik << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
     cout << "Maksymalna pakietowa stopa bledow: " << stat_->max_stopa_bledow_ << "; nadajnik nr: " << indeks << endl;
     plik << "Maksymalna pakietowa stopa bledow: " << stat_->max_stopa_bledow_ << "; nadajnik nr: " << indeks << endl;
 
-    stat_->sr_l_ret_ = stat_->licznik_retransmisji_ / kLiczbaNadajnikow_;
+    stat_->sr_l_ret_ = stat_->licznik_retransmisji_ / stat_->pakiety_odebrane_;
     cout << "Srednia liczba retransmisji pakietow (poprawnie odebranych): " << stat_->sr_l_ret_ << endl;
     plik << "Srednia liczba retransmisji pakietow (poprawnie odebranych): " << stat_->sr_l_ret_ << endl;
 
@@ -142,7 +146,7 @@ void Siec::Statystyki()
 
 void Siec::StatystykiPakietu(Pakiet* pak)
 {
-  sym_->tab[pak->id_] = pak->opoznienie_pakietu_;
+  //sym_->tab[pak->id_] = pak->opoznienie_pakietu_;
   opoznienie_ += pak->opoznienie_pakietu_;
   czas_oczekiwania_ += pak->czas_w_buforze_;
 }

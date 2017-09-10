@@ -31,14 +31,13 @@ public:
 
 private:
   const int kMaxLiczbaRetransmisji = 5;
-  const double kPrawdopodobienstwo = 0.2;
+  const double kPrawdopodobienstwo = 0.6; //todo
   const double kCzasPotwierdzenia = 1.0;
 
   double czas_transmisji_;
   double prawdopodobienstwo;
   int nr_retransmisji_;
   double czas_retransmisji_;
-
   //statystyki
   double czas_narodzin_;
   double czas_nadania_;

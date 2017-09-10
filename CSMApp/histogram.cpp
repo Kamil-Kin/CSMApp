@@ -19,7 +19,7 @@ void Histogram::Rownomierny()
 void Histogram::Wykladniczy() 
 {
   fstream plik;
-  GenWykladniczy* wykladniczy = new GenWykladniczy(0.006/*todo*/, 1);
+  GenWykladniczy* wykladniczy = new GenWykladniczy(0.006, 1);
 
   plik.open("hist_wykladniczy.txt", ios::out | ios::trunc);
 

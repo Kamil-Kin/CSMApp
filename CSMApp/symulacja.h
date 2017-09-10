@@ -29,14 +29,13 @@ using std::to_string;
 
 //const auto comparer = [](Zdarzenie* z1, Zdarzenie* z2)->bool
 //{ return z1->czas_zdarzenia_ > z2->czas_zdarzenia_; };
-
 struct comparer : public binary_function<Zdarzenie*, Zdarzenie*, bool>
 { bool operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const; };
 
 class Symulacja
 {
 public:
-  Symulacja(double lam, double faza, double czas_sym, int nr_sym, bool logi, Ziarno ziarno, Statystyka* stat);
+  Symulacja(double lam, int faza, double czas_sym, int nr_sym, bool logi, Ziarno ziarno, Statystyka* stat);
   ~Symulacja();
 
   void run(char tryb, int nr);
@@ -47,19 +46,19 @@ public:
 
   double zegar_;
   double lambda_;
-  double faza_poczatkowa_;
+  int faza_poczatkowa_;
   double czas_symulacji_;
   int nr_symulacji_;
   bool logi_;
+  int nr_odbioru_;
 
-  fstream plik;
-  string opoznienie; 
-  double tab[10000] = { 0.0 };
+  //fstream plik; //do wyznaczenia fazy pocz¹tkowej
+  //string opoznienie; 
+  //double tab[10000] = { 0.0 };
 private:
   Siec* siec_;
   Zdarzenie* zd_;
   priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer> kalendarz_;
-
   //priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)> kalendarz_;
 };
 

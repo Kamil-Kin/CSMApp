@@ -14,7 +14,7 @@ using std::endl;
 
 __int64 Pakiet::licznik_ = 0;
 
-Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad): id_tx_(idx), faza_(1), skonczony_(false), ack_(false), nr_retransmisji_(0),
+Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad) : id_tx_(idx), faza_(1), skonczony_(false), ack_(false), nr_retransmisji_(0),
 czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0)
 {
   id_ = Pakiet::licznik_;
@@ -28,7 +28,7 @@ czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0)
   moje_zdarzenie_ = new Zdarzenie(this);
 
   czas_narodzin_ = sym_->zegar_;
-  //if (czas_narodzin_ >= sym_->faza_poczatkowa_) //todo
+  if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_)
     nad_->licznik_pakietow_++;
   czas_nadania_ = 0.0;
   czas_odebrania_ = 0.0;
@@ -195,9 +195,10 @@ void Pakiet::execute(bool logi)
       if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
       czas_nadania_ = sym_->zegar_;
-      //if (czas_narodzin_ >= sym_->faza_poczatkowa_) {todo
+      if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) {
         nad_->licznik_nadanych_++;
-        czas_w_buforze_ = czas_nadania_ - czas_narodzin_;//}
+        czas_w_buforze_ = czas_nadania_ - czas_narodzin_;
+      }
 
       czas_transmisji_ = siec_->LosCzasTransmisji();
       if (logi == true) logi_->WypiszLogi(faza_, id_, czas_transmisji_, 2);
@@ -214,8 +215,8 @@ void Pakiet::execute(bool logi)
     {
       if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
-      //if (czas_narodzin_ >= sym_->faza_poczatkowa_) 
-      nad_->licznik_retransmisji_++;//todo
+      if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_)
+        nad_->licznik_retransmisji_++;
       nr_retransmisji_++;
       if (nr_retransmisji_ <= kMaxLiczbaRetransmisji)
       {
@@ -231,7 +232,7 @@ void Pakiet::execute(bool logi)
       else
       {
         if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
-        //if (czas_narodzin_ >= sym_->zegar_) //todo
+        if (sym_->nr_odbioru_ > sym_->zegar_)
           nad_->licznik_straconych_++;
         nad_->UsunZBufora(this);
         skonczony_ = true;
@@ -271,11 +272,12 @@ void Pakiet::execute(bool logi)
     case 9:
     {
       if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
-
+      sym_->nr_odbioru_++;
       czas_odebrania_ = sym_->zegar_;
-      //if (czas_narodzin_ >= sym_->faza_poczatkowa_) { todo
+      if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) {
         nad_->licznik_odebranych_++;
-        opoznienie_pakietu_ = czas_odebrania_ - czas_narodzin_;//}
+        opoznienie_pakietu_ = czas_odebrania_ - czas_narodzin_;
+      }
 
       nad_->UsunZBufora(this);
       kanal_->UsunZKanalu(this);

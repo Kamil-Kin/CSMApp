@@ -12,9 +12,9 @@ using std::endl;
 int main()
 {
   int liczba_symulacji_ = 10;
-  double czas_symulacji_ = 10000;  //docelowo 100 000
-  double faza_poczatkowa_ = 1000;  //do ustalenia todo
-  double lambda_ = 0.009; //do ustalenia todo
+  double czas_symulacji_ = 50000;  //docelowo 100 000 todo
+  int faza_poczatkowa_ = 50;  //mierzone w iloœci pakietów
+  double lambda_ = 0.0066; //do ustalenia todo
   char tryb_symulacji_ = 't';
   bool logi_ = false;
 
@@ -29,7 +29,7 @@ int main()
   //cout << "Ustalone parametry programu: " 
   //  << "\nliczba symulacji: " << liczba_symulacji_
   //  << "; czas jednej symulacji: " << czas_symulacji_ << " ms; " 
-  //  << "faza poczatkowa: " << faza_poczatkowa_ << " ms; "
+  //  << "faza poczatkowa: " << faza_poczatkowa_ << " pakietow; "
   //  << "lambda: " << lambda_ << endl;
   //
   //char param;
@@ -42,7 +42,7 @@ int main()
   //  cin >> liczba_symulacji_;
   //  cout << "Podaj czas jednej symulacji [ms]: ";
   //  cin >> czas_symulacji_;
-  //  cout << "Podaj dlugosc fazy poczatkowej: ";
+  //  cout << "Podaj dlugosc fazy poczatkowej(ilosc pakietow): ";
   //  cin >> faza_poczatkowa_;
   //  cout << "Podaj wartosc lamdba: ";
   //  cin >> lambda_;

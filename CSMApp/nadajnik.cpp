@@ -7,11 +7,6 @@
 #include "kanal.h"
 #include "nadajnik.h"
 #include "pakiet.h"
-#include <iostream>
-#include <math.h>
-
-using std::cout;
-using std::endl;
 
 Nadajnik::Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* kanal) :id_(idx), stopa_bledow_(0.0), licznik_pakietow_(0), licznik_nadanych_(0),
 licznik_straconych_(0), licznik_odebranych_(0), licznik_retransmisji_(0)
@@ -32,7 +27,6 @@ Nadajnik::~Nadajnik()
 
 double Nadajnik::LosCzasGeneracji()
 {
-  //czas_generacji_ = (rand() % 101) / 10.0;
   czas_generacji_ = los_czas_generacji_->GeneracjaW();
   czas_generacji_ *= 10;
   czas_generacji_ = round(czas_generacji_);

@@ -1,5 +1,4 @@
 #include "pakiet.h"
-#include "logi.h"
 #include "symulacja.h"
 #include "siec.h"
 #include "kanal.h"
@@ -19,8 +18,6 @@ czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0)
 {
   id_ = Pakiet::licznik_;
   Pakiet::licznik_++;
-
-  logi_ = new Logi();
   sym_ = sym;
   siec_ = siec;
   kanal_ = kanal;
@@ -31,18 +28,14 @@ czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0)
   czas_odebrania_ = 0.0;
   opoznienie_pakietu_ = 0.0;
 }
-Pakiet::~Pakiet() 
-{
-  delete logi_;
-  delete moje_zdarzenie_;
-}
+Pakiet::~Pakiet() {}
 
 void Pakiet::aktywacja(double czas)
 {
   moje_zdarzenie_->czas_zdarzenia_ = sym_->zegar_ + czas;
   moje_zdarzenie_->priorytet_ = 0;
   sym_->DodajDoKalendarza(moje_zdarzenie_);
-  if (sym_->logi_ == true) 
+  if (sym_->log == true) 
   {
     sym_->UstawKolor("09");
     cout << "Pakiet id " << id_ << ": Dodano do kalendarza zdarzenie o czasie: "
@@ -55,7 +48,7 @@ void Pakiet::aktywacja(double czas, int priorytet)
   moje_zdarzenie_->czas_zdarzenia_ = sym_->zegar_ + czas;
   moje_zdarzenie_->priorytet_ = priorytet;
   sym_->DodajDoKalendarza(moje_zdarzenie_);
-  if (sym_->logi_ == true) 
+  if (sym_->log == true) 
   {
   sym_->UstawKolor("09");
   cout << "Pakiet id " << id_ << ": Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ <<
@@ -76,14 +69,14 @@ void Pakiet::execute(bool logi)
     //============================================
     case 1:
     {
-      if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
+      if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
       (new Pakiet(id_tx_, sym_, siec_, kanal_, nad_))->aktywacja(nad_->LosCzasGeneracji());
       nad_->DodajDoBufora(this);
       czas_pojawienia_ = sym_->zegar_;
       if (*nad_->PierwszyPakiet() == *this)
       {
-        if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
+        if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
         faza_ = 2;
       }
       else aktywny_ = false;
@@ -95,16 +88,16 @@ void Pakiet::execute(bool logi)
     //============================================
     case 2:
     {
-      if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
+      if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
       if (kanal_->StanLacza() == true)
       {
-        if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
+        if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
         faza_ = 3;
       }
       else
       {
-        if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
+        if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
         aktywacja(0.5);
         aktywny_ = false;
       }
@@ -116,13 +109,13 @@ void Pakiet::execute(bool logi)
     //============================================ 
     case 3:
     {
-      if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
+      if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
       prawdopodobienstwo = siec_->LosPrawdopodobienstwo();
       if (prawdopodobienstwo <= kPrawdopodobienstwo) 
       {
         if (logi == true) {
-          logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
+          sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
           cout << "Wylosowane prawdopodobienstwo: " << prawdopodobienstwo << endl;
         }
         faza_ = 5;
@@ -130,7 +123,7 @@ void Pakiet::execute(bool logi)
       else 
       {
         if (logi == true) {
-          logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
+          sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
           cout << "Wylosowane prawdopodobienstwo: " << prawdopodobienstwo << endl;
         }
         faza_ = 4;
@@ -145,16 +138,16 @@ void Pakiet::execute(bool logi)
     //============================================
     case 4:
     {
-      if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
+      if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
       if (kanal_->StanLacza() == true)
       {
-        if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
+        if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
         faza_ = 3;
       }
       else 
       {
-        if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
+        if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
         faza_ = 2;
         aktywacja(1.0);
         aktywny_ = false;
@@ -167,11 +160,11 @@ void Pakiet::execute(bool logi)
     //============================================
     case 5:
     {
-      if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
+      if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
       if (fmod(sym_->zegar_, 1.0) == 0.0)
       {
-        if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
+        if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
         kanal_->DodajDoKanalu(this);
         faza_ = 6;
         aktywacja(0.0, 1);
@@ -179,7 +172,7 @@ void Pakiet::execute(bool logi)
       }
       else
       {
-        if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
+        if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
         aktywacja(1 - fmod(sym_->zegar_, 1.0));
         aktywny_ = false;
       }
@@ -191,16 +184,18 @@ void Pakiet::execute(bool logi)
     //============================================
     case 6:
     {
-      if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
-
-      czas_nadania_ = sym_->zegar_;
-      if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) {
-        nad_->licznik_nadanych_++;
-        czas_w_buforze_ = czas_nadania_ - czas_pojawienia_;
+      if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
+      if (nr_retransmisji_ == 0)
+      {
+        czas_nadania_ = sym_->zegar_;
+        if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) 
+        {
+          nad_->licznik_nadanych_++;
+          czas_w_buforze_ = czas_nadania_ - czas_pojawienia_;
+        }
       }
-
       czas_transmisji_ = siec_->LosCzasTransmisji();
-      if (logi == true) logi_->WypiszLogi(faza_, id_, czas_transmisji_, 2);
+      if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, czas_transmisji_, 2);
       faza_ = 8;
       aktywacja(czas_transmisji_);
       aktywny_ = false;
@@ -212,14 +207,14 @@ void Pakiet::execute(bool logi)
     //============================================
     case 7:
     {
-      if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
+      if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
       if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) nad_->licznik_retransmisji_++;
       nr_retransmisji_++;
       if (nr_retransmisji_ <= kMaxLiczbaRetransmisji)
       {
         if (logi == true) {
-          logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
+          sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
           cout << " numer retransmisji: " << nr_retransmisji_ << endl;
         }
         czas_retransmisji_ = siec_->LosRetransmisja(nr_retransmisji_)*czas_transmisji_;
@@ -229,7 +224,7 @@ void Pakiet::execute(bool logi)
       }
       else
       {
-        if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
+        if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
         if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) nad_->licznik_straconych_++;
         nad_->UsunZBufora(this);
         skonczony_ = true;
@@ -245,18 +240,18 @@ void Pakiet::execute(bool logi)
     //============================================
     case 8:
     {
-      if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
+      if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
       if (ack_ == true)
       {
-        if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
+        if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
         faza_ = 9;
         aktywacja(kCzasPotwierdzenia);
         aktywny_ = false;
       }
       else
       {
-        if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
+        if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 3);
         kanal_->UsunZKanalu(this);
         faza_ = 7;
       }
@@ -268,7 +263,7 @@ void Pakiet::execute(bool logi)
     //============================================
     case 9:
     {
-      if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
+      if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
       sym_->nr_odbioru_++;
       czas_odebrania_ = sym_->zegar_;
       if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) {
@@ -280,7 +275,7 @@ void Pakiet::execute(bool logi)
       kanal_->UsunZKanalu(this);
       skonczony_ = true;
 
-      if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
+      if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
 
       if (nad_->CzyBuforPusty() == false)
         nad_->PierwszyPakiet()->aktywacja(0.0);

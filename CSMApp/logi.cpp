@@ -2,11 +2,6 @@
 
 void Logi::WypiszLogi(int faza, int id, double zegar, int nr) 
 {
-  fstream plik;
-  plik.open("logi.txt", ios::out);
-
-  if (plik.good() == true) 
-  {
     switch (faza) 
     {
     case 1: {
@@ -141,9 +136,6 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
     }
       break;
     }
-    plik.close();
-  }
-  else cout << "Nie uzyskano dostepu do pliku" << endl;
 }
 
 void Logi::UstawKolor(string numer)

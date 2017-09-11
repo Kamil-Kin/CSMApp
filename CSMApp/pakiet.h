@@ -1,7 +1,6 @@
 #ifndef CSMA_PP_PAKIET_H
 #define CSMA_PP_PAKIET_H
 
-class Logi;
 class Symulacja;
 class Siec;
 class Kanal;
@@ -30,8 +29,8 @@ public:
   static __int64 licznik_;
 
 private:
-  const int kMaxLiczbaRetransmisji = 5; //todo
-  const double kPrawdopodobienstwo = 0.2; //todo
+  const int kMaxLiczbaRetransmisji = 3; //todo
+  const double kPrawdopodobienstwo = 0.2;
   const double kCzasPotwierdzenia = 1.0;
 
   double czas_transmisji_;
@@ -48,7 +47,6 @@ private:
   Kanal* kanal_;
   Siec* siec_;
   Symulacja* sym_;
-  Logi* logi_;
 };
 
 #endif // !CSMA_PP_PAKIET_H

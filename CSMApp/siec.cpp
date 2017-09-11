@@ -15,19 +15,12 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
   los_prawdopodobienstwo_ = new GenRownomierny(ziarno.PobierzZiarno(1 + sym_->nr_symulacji_*(3 + LiczbaNad())));
   los_retransmisja_ = new GenRownomierny(ziarno.PobierzZiarno(2 + sym_->nr_symulacji_*(3 + LiczbaNad())));
   kanal_ = new Kanal();
-  for (int i = 0; i < kLiczbaNadajnikow_; i++)
+  for (int i = 0; i < kLiczbaNadajnikow; i++)
   {
     nadajniki_.push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));
   }
 }
-Siec::~Siec()
-{
-  CzyszczenieStatystyk();
-  delete kanal_;
-  delete los_czas_transmisji_;
-  delete los_prawdopodobienstwo_;
-  delete los_retransmisja_;
-}
+Siec::~Siec() {}
 
 double Siec::LosCzasTransmisji() { return round(los_czas_transmisji_->GeneracjaR(1, 10)); }
 
@@ -50,7 +43,7 @@ double Siec::LosRetransmisja(int l_ret_)
   return R;
 }
 
-void Siec::CzyszczenieStatystyk() 
+void Siec::CzyszczenieStatystyk()
 {
   stat_->pakiety_wygenerowane_ = 0;
   stat_->pakiety_nadane_ = 0;
@@ -77,7 +70,7 @@ void Siec::Statystyki()
 
   //if (plik.good() == true) 
   //{
-    for (int i = 0; i < kLiczbaNadajnikow_; i++)
+    for (int i = 0; i < kLiczbaNadajnikow; i++)
     {
       stat_->pakiety_wygenerowane_ += nadajniki_.at(i)->licznik_pakietow_;
       stat_->pakiety_nadane_ += nadajniki_.at(i)->licznik_nadanych_;
@@ -87,17 +80,17 @@ void Siec::Statystyki()
       stopa_bledow_.push_back(nadajniki_.at(i)->StopaBledow());
       suma += nadajniki_.at(i)->StopaBledow();
       cout << "Nadajnik nr " << i << ": wygenerowane: " << nadajniki_.at(i)->licznik_pakietow_
-        << "; transmitowane: " << nadajniki_.at(i)->licznik_nadanych_ << "; stracone: " << nadajniki_.at(i)->licznik_straconych_
+        << "; nadane: " << nadajniki_.at(i)->licznik_nadanych_ << "; stracone: " << nadajniki_.at(i)->licznik_straconych_
         << "; odebrane: " << nadajniki_.at(i)->licznik_odebranych_ << "; retransmisje: " << nadajniki_.at(i)->licznik_retransmisji_
         << "; stopa bledow: " << nadajniki_.at(i)->StopaBledow()
         << "; srednia liczba retransmisji: " << (nadajniki_.at(i)->licznik_retransmisji_) / static_cast<double>(nadajniki_.at(i)->licznik_odebranych_) << endl;
       //plik << "Nadajnik nr " << i << ": wygenerowane: " << nadajniki_.at(i)->licznik_pakietow_
-      //  << "; transmitowane: " << nadajniki_.at(i)->licznik_nadanych_ << "; stracone: " << nadajniki_.at(i)->licznik_straconych_
+      //  << "; nadane: " << nadajniki_.at(i)->licznik_nadanych_ << "; stracone: " << nadajniki_.at(i)->licznik_straconych_
       //  << "; odebrane: " << nadajniki_.at(i)->licznik_odebranych_ << "; retransmisje: " << nadajniki_.at(i)->licznik_retransmisji_
       //  << "; stopa bledow: " << nadajniki_.at(i)->StopaBledow()
       //  << "; srednia liczba retransmisji: " << (nadajniki_.at(i)->licznik_retransmisji_) / static_cast<double>(nadajniki_.at(i)->licznik_odebranych_) << endl;
     }
-    for (int i = 0; i < kLiczbaNadajnikow_; i++) 
+    for (int i = 0; i < kLiczbaNadajnikow; i++) 
     {
       if (stopa_bledow_[i] > stat_->max_stopa_bledow_) 
       {
@@ -116,12 +109,12 @@ void Siec::Statystyki()
 
     l_elem = stopa_bledow_.size();
     stat_->sr_stopa_bledow_ = suma / l_elem;
-    //plik2.open("sr_stopy_bledow.txt", ios::out | ios::app); //todo
-    //if (plik2.good() == true) {
-    //  plik2 << stat_->sr_stopa_bledow_ << " ";
-    //  plik.close();
-    //}
-    //else cout << "Nie uzyskano dostepu do pliku" << endl;
+    plik2.open("sr_stopy_bledow.txt", ios::out | ios::app); //todo
+    if (plik2.good() == true) {
+      plik2 << stat_->sr_stopa_bledow_ << " ";
+      plik.close();
+    }
+    else cout << "Nie uzyskano dostepu do pliku" << endl;
     cout << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
     //plik << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
     cout << "Maksymalna pakietowa stopa bledow: " << stat_->max_stopa_bledow_ << "; nadajnik nr: " << indeks << endl;
@@ -135,12 +128,10 @@ void Siec::Statystyki()
     cout << "Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): " << stat_->przeplywnosc_ << endl;
     //plik << "Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): " << stat_->przeplywnosc_ << endl;
     
-    cout << "Suma opoznien pakietow: " << opoznienie_ << endl;
     stat_->sr_opoznienie_ = opoznienie_ / static_cast<double>(stat_->pakiety_odebrane_);  //todo
     cout << "Srednie opoznienie pakietu: " << stat_->sr_opoznienie_ << endl;
     //plik << "Srednie opoznienie pakietu: " << stat_->sr_opoznienie_ << endl;
 
-    cout << "Suma czasow oczekiwania: " << czas_oczekiwania_ << endl;
     stat_->sr_czas_oczekiwania_ = czas_oczekiwania_ / static_cast<double>(stat_->pakiety_nadane_);  //todo
     cout << "Sredni czas oczekiwania: " << stat_->sr_czas_oczekiwania_ << endl;
     //plik << "Sredni czas oczekiwania: " << stat_->sr_czas_oczekiwania_ << endl;

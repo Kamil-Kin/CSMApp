@@ -8,12 +8,6 @@ void Kanal::KanalWolny(bool stan_lacza) { wolny_ = stan_lacza; }
 
 bool Kanal::StanLacza() { return lacze_.empty(); }
 
- // to powinno dzialac chyba troche inaczej - 
- // jesli dodajesz do kanalu i lacze_.size() > 1, 
-  //to wszystkie pakiety w kanale powinny miec ustawiana 
- // jakas flage `kolizja` na true
- // Nie da sie tego wyciagnac poprzez metode 
-
 void Kanal::DodajDoKanalu(Pakiet* pakiet)
 {
   lacze_.push_front(pakiet);

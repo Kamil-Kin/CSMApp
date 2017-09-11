@@ -36,7 +36,6 @@ public:
   int licznik_odebranych_;
   int licznik_retransmisji_;
   double StopaBledow();
-  void CzyszczenieStatystykNadajnika();
 
 private:
   int id_;

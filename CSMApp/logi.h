@@ -2,14 +2,12 @@
 #define CSMA_PP_LOGI_H
 
 #include <iostream>
-#include <fstream>
 #include <string>
 #include <windows.h>
 #include <stdlib.h>
 
 using std::cout;
 using std::endl;
-using std::fstream;
 using std::ios;
 using std::string;
 

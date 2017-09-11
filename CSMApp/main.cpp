@@ -2,6 +2,7 @@
 #include "histogram.h"
 #include "symulacja.h"
 #include "zdarzenie.h"
+#include "logi.h"
 #include "ziarno.h"
 #include  <iostream>
 
@@ -12,13 +13,14 @@ using std::endl;
 int main()
 {
   int liczba_symulacji_ = 10;
-  double czas_symulacji_ = 100000;  //docelowo 100 000 todo
+  double czas_symulacji_ = 80000;  //docelowo 100 000 todo
   int faza_poczatkowa_ = 25;  //mierzone w iloœci pakietów
-  double lambda_ = 0.005; //do ustalenia todo
+  double lambda_ = 0.004; //do ustalenia todo
   char tryb_symulacji_ = 't';
   bool logi_ = false;
 
   Statystyka* statystyka = new Statystyka();
+  Logi* ptr_logi = new Logi();
   Ziarno ziarno;
   ziarno.GeneracjaZiaren();
 
@@ -61,9 +63,8 @@ int main()
 
   for (int nr_symulacji = 1; nr_symulacji <= liczba_symulacji_; ++nr_symulacji) 
   {
-    Symulacja* symulacja = new Symulacja(lambda_, faza_poczatkowa_, czas_symulacji_, nr_symulacji, logi_, ziarno, statystyka);
+    Symulacja* symulacja = new Symulacja(lambda_, faza_poczatkowa_, czas_symulacji_, nr_symulacji, logi_, ptr_logi, ziarno, statystyka);
     symulacja->run(tryb_symulacji_, nr_symulacji);
-    delete symulacja;
   }
 
   system("pause");

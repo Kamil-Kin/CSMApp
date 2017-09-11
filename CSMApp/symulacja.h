@@ -3,13 +3,14 @@
 
 #include <vector>
 #include <queue>
-#include "statystyka.h"
-#include "zdarzenie.h"
 #include <string>
 #include <windows.h>
 #include <stdlib.h>
 #include <iostream>
 #include <assert.h>
+#include "zdarzenie.h"
+#include "statystyka.h"
+#include "logi.h"
 //#include <fstream>
 
 class Ziarno;
@@ -30,18 +31,19 @@ using std::string;
 //const auto comparer = [](Zdarzenie* z1, Zdarzenie* z2)->bool
 //{ return z1->czas_zdarzenia_ > z2->czas_zdarzenia_; };
 struct comparer : public binary_function<Zdarzenie*, Zdarzenie*, bool>
-{ bool operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const; };
+{
+  bool operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const;
+};
 
 class Symulacja
 {
 public:
-  Symulacja(double lam, int faza, double czas_sym, int nr_sym, bool logi, Ziarno ziarno, Statystyka* stat);
+  Symulacja(double lam, int faza, double czas_sym, int nr_sym, bool logi, Logi* ptr_logi, Ziarno ziarno, Statystyka* stat);
   ~Symulacja();
 
   void run(char tryb, int nr);
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();
-  Zdarzenie* PobierzPierwszyElement();
   void UstawKolor(string numer);
 
   double zegar_;
@@ -49,8 +51,9 @@ public:
   int faza_poczatkowa_;
   double czas_symulacji_;
   int nr_symulacji_;
-  bool logi_;
-  int nr_odbioru_;
+  bool log;
+  int nr_odbioru_; 
+  Logi* ptr_logi_;
   //do wyznaczenia fazy pocz¹tkowej
   //fstream plik; 
   //string opoznienie; 

@@ -18,9 +18,10 @@ nbins = 100;
 figure(2)
 hist(W,nbins);
 grid on;
-title('Histogram rozk³adu wyk³adniczego');
+title('Histogram rozk³adu wyk³adniczego; lambda = 0.006');
 xlabel('Losowane liczby');
 ylabel('Iloœæ wylosowanych liczb');
+
 fclose(fileIDw);
 
 

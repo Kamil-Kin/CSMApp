@@ -4,6 +4,7 @@
 #include "ziarno.h"
 #include <list>
 #include <iostream>
+#include <math.h>
 
 class Ziarno;
 class GenWykladniczy;
@@ -12,6 +13,8 @@ class Siec;
 class Kanal;
 class Pakiet;
 
+using std::cout;
+using std::endl;
 using std::list;
 
 class Nadajnik
@@ -45,7 +48,7 @@ private:
   Kanal* kanal_;
   Pakiet* pak_;
   Ziarno ziarno_;
-  GenWykladniczy* losCGP_;
+  GenWykladniczy* los_czas_generacji_;
 };
 
 #endif // !CSMA_PP_NADAJNIK_H

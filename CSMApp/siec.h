@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include "statystyka.h"
+#include <fstream>
 
 class GenRownomierny;
 class Symulacja;
@@ -11,6 +12,8 @@ class Nadajnik;
 class Kanal;
 class Pakiet;
 
+using std::fstream;
+using std::ios;
 using std::vector;
 using std::cout;
 using std::endl;
@@ -28,7 +31,6 @@ public:
   void Statystyki();
   void StatystykiPakietu(Pakiet* pak);
   void CzyszczenieStatystyk();
-
 private:
   const int kLiczbaNadajnikow_ = 10;
   vector<Nadajnik*> nadajniki_;
@@ -38,7 +40,8 @@ private:
   //statystyki
   double opoznienie_;
   double czas_oczekiwania_;
-
+  fstream plik; //do wyznaczenia fazy pocz¹tkowej i zapisywania statystyk
+  fstream plik2;  //do œredniej stopy b³êdów i wyznaczenia lambdy
   GenRownomierny* los_czas_transmisji_;
   GenRownomierny* los_prawdopodobienstwo_;
   GenRownomierny* los_retransmisja_;

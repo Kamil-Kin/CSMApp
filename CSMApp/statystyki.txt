@@ -1,0 +1,650 @@
+Statystyki symulacji nr: 1
+Nadajnik nr 0: wygenerowane: 395107; transmitowane: 2313; stracone: 0; odebrane: 1169;
+liczba retransmisji: 1144; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 385435; transmitowane: 2248; stracone: 0; odebrane: 1146;
+liczba retransmisji: 1103; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 404367; transmitowane: 2261; stracone: 0; odebrane: 1183;
+liczba retransmisji: 1077; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 378505; transmitowane: 2180; stracone: 0; odebrane: 1111;
+liczba retransmisji: 1069; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 413871; transmitowane: 2248; stracone: 0; odebrane: 1160;
+liczba retransmisji: 1088; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 359071; transmitowane: 2093; stracone: 0; odebrane: 1005;
+liczba retransmisji: 1088; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 452865; transmitowane: 2329; stracone: 0; odebrane: 1257;
+liczba retransmisji: 1072; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 402309; transmitowane: 2219; stracone: 0; odebrane: 1111;
+liczba retransmisji: 1108; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 382332; transmitowane: 2233; stracone: 0; odebrane: 1130;
+liczba retransmisji: 1103; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 453675; transmitowane: 2386; stracone: 0; odebrane: 1296;
+liczba retransmisji: 1089; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 4027537
+Laczna liczba nadanych pakietow: 22510
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 11568
+Statystyki symulacji nr: 2
+Nadajnik nr 0: wygenerowane: 406687; transmitowane: 2276; stracone: 0; odebrane: 1186;
+liczba retransmisji: 1090; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 387791; transmitowane: 2224; stracone: 0; odebrane: 1114;
+liczba retransmisji: 1110; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 446095; transmitowane: 2368; stracone: 0; odebrane: 1268;
+liczba retransmisji: 1101; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 411570; transmitowane: 2296; stracone: 0; odebrane: 1196;
+liczba retransmisji: 1100; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 412364; transmitowane: 2274; stracone: 0; odebrane: 1177;
+liczba retransmisji: 1097; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 416933; transmitowane: 2304; stracone: 0; odebrane: 1198;
+liczba retransmisji: 1106; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 373832; transmitowane: 2185; stracone: 0; odebrane: 1092;
+liczba retransmisji: 1093; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 390110; transmitowane: 2257; stracone: 0; odebrane: 1140;
+liczba retransmisji: 1117; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 393827; transmitowane: 2275; stracone: 0; odebrane: 1140;
+liczba retransmisji: 1135; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 363230; transmitowane: 2203; stracone: 0; odebrane: 1073;
+liczba retransmisji: 1130; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 4002439
+Laczna liczba nadanych pakietow: 22662
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 11584
+Statystyki symulacji nr: 1
+Nadajnik nr 0: wygenerowane: 99086; transmitowane: 1241; stracone: 0; odebrane: 474;
+liczba retransmisji: 767; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 105638; transmitowane: 1281; stracone: 0; odebrane: 514;
+liczba retransmisji: 768; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 101897; transmitowane: 1301; stracone: 0; odebrane: 487;
+liczba retransmisji: 813; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 111604; transmitowane: 1332; stracone: 0; odebrane: 544;
+liczba retransmisji: 788; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 112266; transmitowane: 1303; stracone: 0; odebrane: 556;
+liczba retransmisji: 747; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 117233; transmitowane: 1311; stracone: 0; odebrane: 553;
+liczba retransmisji: 758; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 107445; transmitowane: 1326; stracone: 0; odebrane: 509;
+liczba retransmisji: 817; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 117203; transmitowane: 1385; stracone: 0; odebrane: 588;
+liczba retransmisji: 797; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 103102; transmitowane: 1320; stracone: 0; odebrane: 518;
+liczba retransmisji: 802; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 98854; transmitowane: 1276; stracone: 0; odebrane: 489;
+liczba retransmisji: 787; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1074328
+Laczna liczba nadanych pakietow: 13076
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5232
+Statystyki symulacji nr: 2
+Nadajnik nr 0: wygenerowane: 105952; transmitowane: 1275; stracone: 0; odebrane: 524;
+liczba retransmisji: 751; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 110026; transmitowane: 1299; stracone: 0; odebrane: 558;
+liczba retransmisji: 740; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 105881; transmitowane: 1256; stracone: 0; odebrane: 486;
+liczba retransmisji: 770; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 120873; transmitowane: 1357; stracone: 0; odebrane: 621;
+liczba retransmisji: 736; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 101863; transmitowane: 1242; stracone: 0; odebrane: 475;
+liczba retransmisji: 767; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 105739; transmitowane: 1317; stracone: 0; odebrane: 535;
+liczba retransmisji: 782; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 91785; transmitowane: 1248; stracone: 0; odebrane: 516;
+liczba retransmisji: 731; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 106431; transmitowane: 1309; stracone: 0; odebrane: 567;
+liczba retransmisji: 741; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 109960; transmitowane: 1286; stracone: 0; odebrane: 539;
+liczba retransmisji: 746; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 108878; transmitowane: 1277; stracone: 0; odebrane: 524;
+liczba retransmisji: 753; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1067388
+Laczna liczba nadanych pakietow: 12866
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5345
+Statystyki symulacji nr: 3
+Nadajnik nr 0: wygenerowane: 99056; transmitowane: 1251; stracone: 0; odebrane: 516;
+liczba retransmisji: 735; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 96859; transmitowane: 1244; stracone: 0; odebrane: 481;
+liczba retransmisji: 762; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 101452; transmitowane: 1254; stracone: 0; odebrane: 531;
+liczba retransmisji: 723; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 119404; transmitowane: 1347; stracone: 0; odebrane: 590;
+liczba retransmisji: 758; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 98744; transmitowane: 1220; stracone: 0; odebrane: 471;
+liczba retransmisji: 748; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 104412; transmitowane: 1288; stracone: 0; odebrane: 559;
+liczba retransmisji: 729; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 106472; transmitowane: 1274; stracone: 0; odebrane: 531;
+liczba retransmisji: 743; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 100749; transmitowane: 1222; stracone: 0; odebrane: 489;
+liczba retransmisji: 733; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 117803; transmitowane: 1318; stracone: 0; odebrane: 589;
+liczba retransmisji: 729; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 114453; transmitowane: 1310; stracone: 0; odebrane: 576;
+liczba retransmisji: 734; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1059404
+Laczna liczba nadanych pakietow: 12728
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5333
+Statystyki symulacji nr: 1
+Nadajnik nr 0: wygenerowane: 108999; transmitowane: 1319; stracone: 0; odebrane: 452;
+liczba retransmisji: 866; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 123810; transmitowane: 1363; stracone: 0; odebrane: 510;
+liczba retransmisji: 853; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 126060; transmitowane: 1410; stracone: 0; odebrane: 552;
+liczba retransmisji: 858; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 124354; transmitowane: 1380; stracone: 0; odebrane: 515;
+liczba retransmisji: 865; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 114275; transmitowane: 1334; stracone: 0; odebrane: 484;
+liczba retransmisji: 850; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 122801; transmitowane: 1385; stracone: 0; odebrane: 502;
+liczba retransmisji: 883; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 132253; transmitowane: 1443; stracone: 0; odebrane: 560;
+liczba retransmisji: 883; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 117369; transmitowane: 1391; stracone: 0; odebrane: 516;
+liczba retransmisji: 875; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 127137; transmitowane: 1405; stracone: 0; odebrane: 564;
+liczba retransmisji: 841; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 115861; transmitowane: 1358; stracone: 0; odebrane: 500;
+liczba retransmisji: 858; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1212919
+Laczna liczba nadanych pakietow: 13788
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5155
+Statystyki symulacji nr: 2
+Nadajnik nr 0: wygenerowane: 114348; transmitowane: 1390; stracone: 0; odebrane: 476;
+liczba retransmisji: 914; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 111886; transmitowane: 1363; stracone: 0; odebrane: 478;
+liczba retransmisji: 885; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 126046; transmitowane: 1429; stracone: 0; odebrane: 542;
+liczba retransmisji: 888; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 132713; transmitowane: 1451; stracone: 0; odebrane: 571;
+liczba retransmisji: 880; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 109942; transmitowane: 1326; stracone: 0; odebrane: 480;
+liczba retransmisji: 846; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 118673; transmitowane: 1410; stracone: 0; odebrane: 536;
+liczba retransmisji: 874; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 106254; transmitowane: 1299; stracone: 0; odebrane: 472;
+liczba retransmisji: 827; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 117827; transmitowane: 1372; stracone: 0; odebrane: 522;
+liczba retransmisji: 850; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 133939; transmitowane: 1464; stracone: 0; odebrane: 582;
+liczba retransmisji: 882; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 119880; transmitowane: 1373; stracone: 0; odebrane: 510;
+liczba retransmisji: 862; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1191508
+Laczna liczba nadanych pakietow: 13877
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5169
+Statystyki symulacji nr: 3
+Nadajnik nr 0: wygenerowane: 126239; transmitowane: 1448; stracone: 0; odebrane: 572;
+liczba retransmisji: 875; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 117040; transmitowane: 1363; stracone: 0; odebrane: 482;
+liczba retransmisji: 881; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 130184; transmitowane: 1439; stracone: 0; odebrane: 556;
+liczba retransmisji: 883; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 118104; transmitowane: 1359; stracone: 0; odebrane: 513;
+liczba retransmisji: 847; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 112218; transmitowane: 1289; stracone: 0; odebrane: 468;
+liczba retransmisji: 821; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 118613; transmitowane: 1390; stracone: 0; odebrane: 511;
+liczba retransmisji: 879; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 115426; transmitowane: 1353; stracone: 0; odebrane: 489;
+liczba retransmisji: 864; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 120024; transmitowane: 1385; stracone: 0; odebrane: 509;
+liczba retransmisji: 876; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 113929; transmitowane: 1352; stracone: 0; odebrane: 481;
+liczba retransmisji: 871; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 121798; transmitowane: 1358; stracone: 0; odebrane: 523;
+liczba retransmisji: 835; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1193575
+Laczna liczba nadanych pakietow: 13736
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5104
+Statystyki symulacji nr: 4
+Nadajnik nr 0: wygenerowane: 117912; transmitowane: 1411; stracone: 0; odebrane: 550;
+liczba retransmisji: 860; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 120737; transmitowane: 1367; stracone: 0; odebrane: 507;
+liczba retransmisji: 861; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 132748; transmitowane: 1422; stracone: 0; odebrane: 549;
+liczba retransmisji: 872; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 125044; transmitowane: 1392; stracone: 0; odebrane: 514;
+liczba retransmisji: 878; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 113322; transmitowane: 1369; stracone: 0; odebrane: 518;
+liczba retransmisji: 851; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 124395; transmitowane: 1416; stracone: 0; odebrane: 546;
+liczba retransmisji: 870; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 114099; transmitowane: 1333; stracone: 0; odebrane: 482;
+liczba retransmisji: 851; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 126132; transmitowane: 1369; stracone: 0; odebrane: 511;
+liczba retransmisji: 858; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 119331; transmitowane: 1336; stracone: 0; odebrane: 505;
+liczba retransmisji: 831; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 119622; transmitowane: 1374; stracone: 0; odebrane: 522;
+liczba retransmisji: 851; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1213342
+Laczna liczba nadanych pakietow: 13789
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5204
+Statystyki symulacji nr: 5
+Nadajnik nr 0: wygenerowane: 115203; transmitowane: 1335; stracone: 0; odebrane: 455;
+liczba retransmisji: 880; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 128690; transmitowane: 1461; stracone: 0; odebrane: 557;
+liczba retransmisji: 903; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 136684; transmitowane: 1463; stracone: 0; odebrane: 575;
+liczba retransmisji: 888; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 110915; transmitowane: 1371; stracone: 0; odebrane: 485;
+liczba retransmisji: 886; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 127060; transmitowane: 1407; stracone: 0; odebrane: 543;
+liczba retransmisji: 863; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 115354; transmitowane: 1386; stracone: 0; odebrane: 479;
+liczba retransmisji: 906; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 139705; transmitowane: 1431; stracone: 0; odebrane: 580;
+liczba retransmisji: 852; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 123056; transmitowane: 1407; stracone: 0; odebrane: 505;
+liczba retransmisji: 902; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 114705; transmitowane: 1338; stracone: 0; odebrane: 452;
+liczba retransmisji: 886; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 120314; transmitowane: 1388; stracone: 0; odebrane: 509;
+liczba retransmisji: 879; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1231686
+Laczna liczba nadanych pakietow: 13987
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5140
+Statystyki symulacji nr: 6
+Nadajnik nr 0: wygenerowane: 123507; transmitowane: 1376; stracone: 0; odebrane: 522;
+liczba retransmisji: 854; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 114813; transmitowane: 1308; stracone: 0; odebrane: 486;
+liczba retransmisji: 822; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 121652; transmitowane: 1369; stracone: 0; odebrane: 566;
+liczba retransmisji: 803; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 126422; transmitowane: 1425; stracone: 0; odebrane: 534;
+liczba retransmisji: 891; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 110201; transmitowane: 1307; stracone: 0; odebrane: 472;
+liczba retransmisji: 835; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 135237; transmitowane: 1408; stracone: 0; odebrane: 570;
+liczba retransmisji: 838; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 121534; transmitowane: 1388; stracone: 0; odebrane: 515;
+liczba retransmisji: 873; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 121056; transmitowane: 1383; stracone: 0; odebrane: 528;
+liczba retransmisji: 855; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 116367; transmitowane: 1332; stracone: 0; odebrane: 503;
+liczba retransmisji: 828; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 116532; transmitowane: 1353; stracone: 0; odebrane: 506;
+liczba retransmisji: 847; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1207321
+Laczna liczba nadanych pakietow: 13649
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5202
+Statystyki symulacji nr: 7
+Nadajnik nr 0: wygenerowane: 121443; transmitowane: 1389; stracone: 0; odebrane: 495;
+liczba retransmisji: 894; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 120328; transmitowane: 1393; stracone: 0; odebrane: 527;
+liczba retransmisji: 866; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 126263; transmitowane: 1392; stracone: 0; odebrane: 521;
+liczba retransmisji: 871; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 124635; transmitowane: 1388; stracone: 0; odebrane: 521;
+liczba retransmisji: 867; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 111469; transmitowane: 1347; stracone: 0; odebrane: 463;
+liczba retransmisji: 885; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 120272; transmitowane: 1400; stracone: 0; odebrane: 547;
+liczba retransmisji: 852; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 118127; transmitowane: 1351; stracone: 0; odebrane: 490;
+liczba retransmisji: 861; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 117389; transmitowane: 1361; stracone: 0; odebrane: 497;
+liczba retransmisji: 864; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 120937; transmitowane: 1395; stracone: 0; odebrane: 509;
+liczba retransmisji: 886; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 129168; transmitowane: 1436; stracone: 0; odebrane: 545;
+liczba retransmisji: 891; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1210031
+Laczna liczba nadanych pakietow: 13852
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5115
+Statystyki symulacji nr: 1
+Nadajnik nr 0: wygenerowane: 108999; transmitowane: 1319; stracone: 0; odebrane: 452;
+liczba retransmisji: 866; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 123810; transmitowane: 1363; stracone: 0; odebrane: 510;
+liczba retransmisji: 853; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 126060; transmitowane: 1410; stracone: 0; odebrane: 552;
+liczba retransmisji: 858; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 124354; transmitowane: 1380; stracone: 0; odebrane: 515;
+liczba retransmisji: 865; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 114275; transmitowane: 1334; stracone: 0; odebrane: 484;
+liczba retransmisji: 850; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 122801; transmitowane: 1385; stracone: 0; odebrane: 502;
+liczba retransmisji: 883; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 132253; transmitowane: 1443; stracone: 0; odebrane: 560;
+liczba retransmisji: 883; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 117369; transmitowane: 1391; stracone: 0; odebrane: 516;
+liczba retransmisji: 875; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 127137; transmitowane: 1405; stracone: 0; odebrane: 564;
+liczba retransmisji: 841; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 115861; transmitowane: 1358; stracone: 0; odebrane: 500;
+liczba retransmisji: 858; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1212919
+Laczna liczba nadanych pakietow: 13788
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5155
+Statystyki symulacji nr: 1
+Nadajnik nr 0: wygenerowane: 108999; transmitowane: 1319; stracone: 0; odebrane: 452;
+liczba retransmisji: 866; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 123810; transmitowane: 1363; stracone: 0; odebrane: 510;
+liczba retransmisji: 853; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 126060; transmitowane: 1410; stracone: 0; odebrane: 552;
+liczba retransmisji: 858; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 124354; transmitowane: 1380; stracone: 0; odebrane: 515;
+liczba retransmisji: 865; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 114275; transmitowane: 1334; stracone: 0; odebrane: 484;
+liczba retransmisji: 850; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 122801; transmitowane: 1385; stracone: 0; odebrane: 502;
+liczba retransmisji: 883; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 132253; transmitowane: 1443; stracone: 0; odebrane: 560;
+liczba retransmisji: 883; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 117369; transmitowane: 1391; stracone: 0; odebrane: 516;
+liczba retransmisji: 875; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 127137; transmitowane: 1405; stracone: 0; odebrane: 564;
+liczba retransmisji: 841; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 115861; transmitowane: 1358; stracone: 0; odebrane: 500;
+liczba retransmisji: 858; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1212919
+Laczna liczba nadanych pakietow: 13788
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5155
+Statystyki symulacji nr: 2
+Nadajnik nr 0: wygenerowane: 114348; transmitowane: 1390; stracone: 0; odebrane: 476;
+liczba retransmisji: 914; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 111886; transmitowane: 1363; stracone: 0; odebrane: 478;
+liczba retransmisji: 885; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 126046; transmitowane: 1429; stracone: 0; odebrane: 542;
+liczba retransmisji: 888; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 132713; transmitowane: 1451; stracone: 0; odebrane: 571;
+liczba retransmisji: 880; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 109942; transmitowane: 1326; stracone: 0; odebrane: 480;
+liczba retransmisji: 846; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 118673; transmitowane: 1410; stracone: 0; odebrane: 536;
+liczba retransmisji: 874; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 106254; transmitowane: 1299; stracone: 0; odebrane: 472;
+liczba retransmisji: 827; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 117827; transmitowane: 1372; stracone: 0; odebrane: 522;
+liczba retransmisji: 850; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 133939; transmitowane: 1464; stracone: 0; odebrane: 582;
+liczba retransmisji: 882; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 119880; transmitowane: 1373; stracone: 0; odebrane: 510;
+liczba retransmisji: 862; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 1191508
+Laczna liczba nadanych pakietow: 13877
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5169
+Statystyki symulacji nr: 1
+Nadajnik nr 0: wygenerowane: 42799; transmitowane: 1040; stracone: 0; odebrane: 566;
+liczba retransmisji: 474; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 43705; transmitowane: 1039; stracone: 0; odebrane: 536;
+liczba retransmisji: 503; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 40944; transmitowane: 1026; stracone: 0; odebrane: 538;
+liczba retransmisji: 488; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 49372; transmitowane: 1096; stracone: 0; odebrane: 598;
+liczba retransmisji: 498; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 47537; transmitowane: 1129; stracone: 0; odebrane: 629;
+liczba retransmisji: 500; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 41661; transmitowane: 1045; stracone: 0; odebrane: 570;
+liczba retransmisji: 475; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 46788; transmitowane: 1069; stracone: 0; odebrane: 562;
+liczba retransmisji: 507; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 34632; transmitowane: 949; stracone: 0; odebrane: 467;
+liczba retransmisji: 483; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 45102; transmitowane: 1060; stracone: 0; odebrane: 559;
+liczba retransmisji: 500; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 47478; transmitowane: 1076; stracone: 0; odebrane: 589;
+liczba retransmisji: 487; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 440018
+Laczna liczba nadanych pakietow: 10529
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5614
+Statystyki symulacji nr: 2
+Nadajnik nr 0: wygenerowane: 41545; transmitowane: 1081; stracone: 0; odebrane: 548;
+liczba retransmisji: 533; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 38439; transmitowane: 986; stracone: 0; odebrane: 484;
+liczba retransmisji: 502; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 44182; transmitowane: 1085; stracone: 0; odebrane: 551;
+liczba retransmisji: 534; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 45121; transmitowane: 1075; stracone: 0; odebrane: 564;
+liczba retransmisji: 511; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 47138; transmitowane: 1069; stracone: 0; odebrane: 574;
+liczba retransmisji: 495; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 35769; transmitowane: 973; stracone: 0; odebrane: 457;
+liczba retransmisji: 516; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 43512; transmitowane: 1046; stracone: 0; odebrane: 559;
+liczba retransmisji: 486; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 39651; transmitowane: 1009; stracone: 0; odebrane: 533;
+liczba retransmisji: 476; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 45513; transmitowane: 1122; stracone: 0; odebrane: 618;
+liczba retransmisji: 503; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 52470; transmitowane: 1200; stracone: 0; odebrane: 682;
+liczba retransmisji: 519; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 433340
+Laczna liczba nadanych pakietow: 10646
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5570
+Statystyki symulacji nr: 3
+Nadajnik nr 0: wygenerowane: 39435; transmitowane: 951; stracone: 0; odebrane: 528;
+liczba retransmisji: 423; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 39867; transmitowane: 1025; stracone: 0; odebrane: 571;
+liczba retransmisji: 454; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 53606; transmitowane: 1118; stracone: 0; odebrane: 685;
+liczba retransmisji: 432; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 43672; transmitowane: 1047; stracone: 0; odebrane: 604;
+liczba retransmisji: 444; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 37471; transmitowane: 951; stracone: 0; odebrane: 513;
+liczba retransmisji: 438; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 41175; transmitowane: 1026; stracone: 0; odebrane: 563;
+liczba retransmisji: 463; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 39601; transmitowane: 956; stracone: 0; odebrane: 528;
+liczba retransmisji: 428; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 37296; transmitowane: 981; stracone: 0; odebrane: 528;
+liczba retransmisji: 453; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 38876; transmitowane: 982; stracone: 0; odebrane: 530;
+liczba retransmisji: 452; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 35331; transmitowane: 941; stracone: 0; odebrane: 504;
+liczba retransmisji: 437; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 406330
+Laczna liczba nadanych pakietow: 9978
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5554
+Statystyki symulacji nr: 4
+Nadajnik nr 0: wygenerowane: 41540; transmitowane: 1020; stracone: 0; odebrane: 610;
+liczba retransmisji: 410; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 41418; transmitowane: 991; stracone: 0; odebrane: 552;
+liczba retransmisji: 439; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 50155; transmitowane: 1116; stracone: 0; odebrane: 683;
+liczba retransmisji: 433; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 38318; transmitowane: 918; stracone: 0; odebrane: 499;
+liczba retransmisji: 419; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 38811; transmitowane: 990; stracone: 0; odebrane: 572;
+liczba retransmisji: 418; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 38290; transmitowane: 1004; stracone: 0; odebrane: 586;
+liczba retransmisji: 419; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 22450; transmitowane: 806; stracone: 0; odebrane: 440;
+liczba retransmisji: 366; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 35634; transmitowane: 904; stracone: 0; odebrane: 489;
+liczba retransmisji: 415; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 37573; transmitowane: 925; stracone: 0; odebrane: 480;
+liczba retransmisji: 445; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 40430; transmitowane: 986; stracone: 0; odebrane: 589;
+liczba retransmisji: 397; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 384619
+Laczna liczba nadanych pakietow: 9660
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5500
+Statystyki symulacji nr: 5
+Nadajnik nr 0: wygenerowane: 45101; transmitowane: 1038; stracone: 0; odebrane: 537;
+liczba retransmisji: 501; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 43693; transmitowane: 1029; stracone: 0; odebrane: 545;
+liczba retransmisji: 484; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 41632; transmitowane: 1042; stracone: 0; odebrane: 548;
+liczba retransmisji: 494; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 46202; transmitowane: 1066; stracone: 0; odebrane: 556;
+liczba retransmisji: 510; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 30881; transmitowane: 932; stracone: 0; odebrane: 448;
+liczba retransmisji: 484; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 46814; transmitowane: 1139; stracone: 0; odebrane: 617;
+liczba retransmisji: 521; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 80079; transmitowane: 1349; stracone: 0; odebrane: 831;
+liczba retransmisji: 519; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 44185; transmitowane: 1053; stracone: 0; odebrane: 545;
+liczba retransmisji: 508; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 50467; transmitowane: 1100; stracone: 0; odebrane: 568;
+liczba retransmisji: 532; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 49511; transmitowane: 1089; stracone: 0; odebrane: 600;
+liczba retransmisji: 489; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 478565
+Laczna liczba nadanych pakietow: 10837
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5795
+Statystyki symulacji nr: 6
+Nadajnik nr 0: wygenerowane: 40032; transmitowane: 961; stracone: 0; odebrane: 463;
+liczba retransmisji: 498; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 45812; transmitowane: 1113; stracone: 0; odebrane: 607;
+liczba retransmisji: 506; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 46063; transmitowane: 1104; stracone: 0; odebrane: 601;
+liczba retransmisji: 503; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 50560; transmitowane: 1105; stracone: 0; odebrane: 626;
+liczba retransmisji: 479; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 49640; transmitowane: 1097; stracone: 0; odebrane: 600;
+liczba retransmisji: 497; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 50696; transmitowane: 1081; stracone: 0; odebrane: 610;
+liczba retransmisji: 471; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 44066; transmitowane: 1047; stracone: 0; odebrane: 585;
+liczba retransmisji: 462; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 47589; transmitowane: 1087; stracone: 0; odebrane: 579;
+liczba retransmisji: 508; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 44703; transmitowane: 1039; stracone: 0; odebrane: 545;
+liczba retransmisji: 495; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 45859; transmitowane: 1069; stracone: 0; odebrane: 541;
+liczba retransmisji: 527; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 465020
+Laczna liczba nadanych pakietow: 10703
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5757
+Statystyki symulacji nr: 7
+Nadajnik nr 0: wygenerowane: 51991; transmitowane: 1135; stracone: 0; odebrane: 662;
+liczba retransmisji: 473; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 42450; transmitowane: 1026; stracone: 0; odebrane: 551;
+liczba retransmisji: 474; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 40330; transmitowane: 1002; stracone: 0; odebrane: 535;
+liczba retransmisji: 467; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 44701; transmitowane: 1031; stracone: 0; odebrane: 577;
+liczba retransmisji: 454; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 44214; transmitowane: 1037; stracone: 0; odebrane: 557;
+liczba retransmisji: 480; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 33402; transmitowane: 938; stracone: 0; odebrane: 504;
+liczba retransmisji: 435; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 42236; transmitowane: 1009; stracone: 0; odebrane: 546;
+liczba retransmisji: 462; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 44620; transmitowane: 1031; stracone: 0; odebrane: 565;
+liczba retransmisji: 466; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 44163; transmitowane: 1011; stracone: 0; odebrane: 568;
+liczba retransmisji: 443; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 49114; transmitowane: 1079; stracone: 0; odebrane: 608;
+liczba retransmisji: 470; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 437221
+Laczna liczba nadanych pakietow: 10299
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5673
+Statystyki symulacji nr: 1
+Nadajnik nr 0: wygenerowane: 46392; transmitowane: 1043; stracone: 0; odebrane: 562;
+liczba retransmisji: 480; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 53706; transmitowane: 1065; stracone: 0; odebrane: 588;
+liczba retransmisji: 476; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 41447; transmitowane: 953; stracone: 0; odebrane: 517;
+liczba retransmisji: 436; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 56063; transmitowane: 1119; stracone: 0; odebrane: 616;
+liczba retransmisji: 502; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 49996; transmitowane: 1081; stracone: 0; odebrane: 577;
+liczba retransmisji: 504; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 47610; transmitowane: 1032; stracone: 0; odebrane: 581;
+liczba retransmisji: 451; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 52796; transmitowane: 1095; stracone: 0; odebrane: 598;
+liczba retransmisji: 497; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 39367; transmitowane: 946; stracone: 0; odebrane: 477;
+liczba retransmisji: 470; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 52304; transmitowane: 1078; stracone: 0; odebrane: 590;
+liczba retransmisji: 488; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 52050; transmitowane: 1055; stracone: 0; odebrane: 579;
+liczba retransmisji: 476; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 491731
+Laczna liczba nadanych pakietow: 10467
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5685
+Statystyki symulacji nr: 2
+Nadajnik nr 0: wygenerowane: 57108; transmitowane: 1125; stracone: 0; odebrane: 640;
+liczba retransmisji: 485; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 46967; transmitowane: 1029; stracone: 0; odebrane: 551;
+liczba retransmisji: 477; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 58235; transmitowane: 1154; stracone: 0; odebrane: 694;
+liczba retransmisji: 459; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 51566; transmitowane: 1062; stracone: 0; odebrane: 599;
+liczba retransmisji: 463; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 49008; transmitowane: 1039; stracone: 0; odebrane: 596;
+liczba retransmisji: 442; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 45190; transmitowane: 996; stracone: 0; odebrane: 516;
+liczba retransmisji: 480; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 44289; transmitowane: 937; stracone: 0; odebrane: 477;
+liczba retransmisji: 459; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 44417; transmitowane: 1015; stracone: 0; odebrane: 541;
+liczba retransmisji: 474; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 45988; transmitowane: 979; stracone: 0; odebrane: 515;
+liczba retransmisji: 463; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 54401; transmitowane: 1097; stracone: 0; odebrane: 640;
+liczba retransmisji: 457; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 497169
+Laczna liczba nadanych pakietow: 10433
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5769
+Statystyki symulacji nr: 3
+Nadajnik nr 0: wygenerowane: 44661; transmitowane: 997; stracone: 0; odebrane: 552;
+liczba retransmisji: 444; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 44202; transmitowane: 959; stracone: 0; odebrane: 525;
+liczba retransmisji: 433; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 57371; transmitowane: 1130; stracone: 0; odebrane: 681;
+liczba retransmisji: 448; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 55597; transmitowane: 1118; stracone: 0; odebrane: 683;
+liczba retransmisji: 436; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 42779; transmitowane: 993; stracone: 0; odebrane: 539;
+liczba retransmisji: 454; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 44614; transmitowane: 979; stracone: 0; odebrane: 542;
+liczba retransmisji: 437; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 45783; transmitowane: 984; stracone: 0; odebrane: 527;
+liczba retransmisji: 457; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 42572; transmitowane: 980; stracone: 0; odebrane: 522;
+liczba retransmisji: 458; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 35831; transmitowane: 900; stracone: 0; odebrane: 474;
+liczba retransmisji: 426; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 42386; transmitowane: 978; stracone: 0; odebrane: 553;
+liczba retransmisji: 424; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 455796
+Laczna liczba nadanych pakietow: 10018
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5598
+Statystyki symulacji nr: 4
+Nadajnik nr 0: wygenerowane: 38780; transmitowane: 889; stracone: 0; odebrane: 494;
+liczba retransmisji: 395; pakietowa stopa bledow: 0
+Nadajnik nr 1: wygenerowane: 46732; transmitowane: 996; stracone: 0; odebrane: 591;
+liczba retransmisji: 405; pakietowa stopa bledow: 0
+Nadajnik nr 2: wygenerowane: 52918; transmitowane: 1081; stracone: 0; odebrane: 666;
+liczba retransmisji: 415; pakietowa stopa bledow: 0
+Nadajnik nr 3: wygenerowane: 44938; transmitowane: 954; stracone: 0; odebrane: 560;
+liczba retransmisji: 394; pakietowa stopa bledow: 0
+Nadajnik nr 4: wygenerowane: 37574; transmitowane: 894; stracone: 0; odebrane: 518;
+liczba retransmisji: 376; pakietowa stopa bledow: 0
+Nadajnik nr 5: wygenerowane: 44588; transmitowane: 954; stracone: 0; odebrane: 577;
+liczba retransmisji: 378; pakietowa stopa bledow: 0
+Nadajnik nr 6: wygenerowane: 28422; transmitowane: 793; stracone: 0; odebrane: 414;
+liczba retransmisji: 379; pakietowa stopa bledow: 0
+Nadajnik nr 7: wygenerowane: 46155; transmitowane: 1005; stracone: 0; odebrane: 605;
+liczba retransmisji: 400; pakietowa stopa bledow: 0
+Nadajnik nr 8: wygenerowane: 43571; transmitowane: 953; stracone: 0; odebrane: 570;
+liczba retransmisji: 383; pakietowa stopa bledow: 0
+Nadajnik nr 9: wygenerowane: 42772; transmitowane: 962; stracone: 0; odebrane: 571;
+liczba retransmisji: 390; pakietowa stopa bledow: 0
+Laczna liczba wygenerowanych pakietow: 426450
+Laczna liczba nadanych pakietow: 9481
+Laczna liczba straconych pakietow: 0
+Laczna liczba odebranych pakietow: 5566

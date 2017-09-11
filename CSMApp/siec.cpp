@@ -134,11 +134,13 @@ void Siec::Statystyki()
     stat_->przeplywnosc_ = stat_->pakiety_odebrane_ / (sym_->czas_symulacji_ / 1000);
     cout << "Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): " << stat_->przeplywnosc_ << endl;
     //plik << "Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): " << stat_->przeplywnosc_ << endl;
-
+    
+    cout << "Suma opoznien pakietow: " << opoznienie_ << endl;
     stat_->sr_opoznienie_ = opoznienie_ / static_cast<double>(stat_->pakiety_odebrane_);  //todo
     cout << "Srednie opoznienie pakietu: " << stat_->sr_opoznienie_ << endl;
     //plik << "Srednie opoznienie pakietu: " << stat_->sr_opoznienie_ << endl;
 
+    cout << "Suma czasow oczekiwania: " << czas_oczekiwania_ << endl;
     stat_->sr_czas_oczekiwania_ = czas_oczekiwania_ / static_cast<double>(stat_->pakiety_nadane_);  //todo
     cout << "Sredni czas oczekiwania: " << stat_->sr_czas_oczekiwania_ << endl;
     //plik << "Sredni czas oczekiwania: " << stat_->sr_czas_oczekiwania_ << endl;
@@ -150,7 +152,7 @@ void Siec::Statystyki()
 
 void Siec::StatystykiPakietu(Pakiet* pak)
 {
-  //sym_->tab[pak->id_] = pak->opoznienie_pakietu_;
+  //sym_->tab[pak->id_] = pak->opoznienie_pakietu_; //do wyznaczenia fazy pocz¹tkowej
   opoznienie_ += pak->opoznienie_pakietu_;
   czas_oczekiwania_ += pak->czas_w_buforze_;
 }

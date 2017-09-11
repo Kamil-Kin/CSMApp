@@ -39,7 +39,7 @@ private:
   int nr_retransmisji_;
   double czas_retransmisji_;
   //statystyki
-  double czas_narodzin_;
+  double czas_pojawienia_;
   double czas_nadania_;
   double czas_odebrania_;
 

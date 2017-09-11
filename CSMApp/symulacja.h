@@ -8,9 +8,9 @@
 #include <string>
 #include <windows.h>
 #include <stdlib.h>
-#include <fstream>
 #include <iostream>
 #include <assert.h>
+//#include <fstream>
 
 class Ziarno;
 class Siec;
@@ -22,10 +22,10 @@ using std::endl;
 using std::vector;
 using std::priority_queue;
 using std::binary_function; 
-using std::fstream;
-using std::ios;
 using std::string;
-using std::to_string;
+//using std::fstream; //do wyznaczenia fazy pocz¹tkowej
+//using std::ios;
+//using std::to_string;
 
 //const auto comparer = [](Zdarzenie* z1, Zdarzenie* z2)->bool
 //{ return z1->czas_zdarzenia_ > z2->czas_zdarzenia_; };
@@ -51,10 +51,10 @@ public:
   int nr_symulacji_;
   bool logi_;
   int nr_odbioru_;
-
-  //fstream plik; //do wyznaczenia fazy pocz¹tkowej
+  //do wyznaczenia fazy pocz¹tkowej
+  //fstream plik; 
   //string opoznienie; 
-  //double tab[10000] = { 0.0 };
+  //double tab[20000] = { 0.0 };
 private:
   Siec* siec_;
   Zdarzenie* zd_;

@@ -26,8 +26,6 @@ czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0)
   kanal_ = kanal;
   nad_ = nad;
   moje_zdarzenie_ = new Zdarzenie(this);
-
-  czas_narodzin_ = sym_->zegar_;
   if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) nad_->licznik_pakietow_++;
   czas_nadania_ = 0.0;
   czas_odebrania_ = 0.0;
@@ -82,6 +80,7 @@ void Pakiet::execute(bool logi)
 
       (new Pakiet(id_tx_, sym_, siec_, kanal_, nad_))->aktywacja(nad_->LosCzasGeneracji());
       nad_->DodajDoBufora(this);
+      czas_pojawienia_ = sym_->zegar_;
       if (*nad_->PierwszyPakiet() == *this)
       {
         if (logi == true) logi_->WypiszLogi(faza_, id_, sym_->zegar_, 2);
@@ -197,7 +196,7 @@ void Pakiet::execute(bool logi)
       czas_nadania_ = sym_->zegar_;
       if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) {
         nad_->licznik_nadanych_++;
-        czas_w_buforze_ = czas_nadania_ - czas_narodzin_;
+        czas_w_buforze_ = czas_nadania_ - czas_pojawienia_;
       }
 
       czas_transmisji_ = siec_->LosCzasTransmisji();
@@ -274,7 +273,7 @@ void Pakiet::execute(bool logi)
       czas_odebrania_ = sym_->zegar_;
       if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) {
         nad_->licznik_odebranych_++;
-        opoznienie_pakietu_ = czas_odebrania_ - czas_narodzin_;
+        opoznienie_pakietu_ = czas_odebrania_ - czas_pojawienia_;
       }
 
       nad_->UsunZBufora(this);

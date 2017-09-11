@@ -58,7 +58,7 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
   //if (plik.good() == true) //do wyznaczenia fazy pocz¹tkowej
   //{
   //  for (int i = 0; i < 1000; i++)
-  //    plik << tab[i] << " ";
+  //    plik /*<< "id: " << i << " wartosc: "*/ << tab[i] << " ";
   //}
   //else cout << "Nie uzyskano dostepu do pliku " << endl;
 

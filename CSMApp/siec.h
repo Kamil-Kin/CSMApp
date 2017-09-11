@@ -40,7 +40,7 @@ private:
   //statystyki
   double opoznienie_;
   double czas_oczekiwania_;
-  fstream plik; //do zapisywania statystyk
+  fstream plik; //do wyznaczenia fazy pocz¹tkowej i zapisywania statystyk
   fstream plik2;  //do œredniej stopy b³êdów i wyznaczenia lambdy
   GenRownomierny* los_czas_transmisji_;
   GenRownomierny* los_prawdopodobienstwo_;

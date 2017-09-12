@@ -15,12 +15,21 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
   los_prawdopodobienstwo_ = new GenRownomierny(ziarno.PobierzZiarno(1 + sym_->nr_symulacji_*(3 + LiczbaNad())));
   los_retransmisja_ = new GenRownomierny(ziarno.PobierzZiarno(2 + sym_->nr_symulacji_*(3 + LiczbaNad())));
   kanal_ = new Kanal();
-  for (int i = 0; i < kLiczbaNadajnikow; i++)
+  nadajniki_ = new vector<Nadajnik*>;
+  for (int i = 0; i < kLiczbaNadajnikow; ++i)
   {
-    nadajniki_.push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));
+    nadajniki_->push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));
   }
 }
-Siec::~Siec() {}
+Siec::~Siec()
+{
+  delete kanal_;
+  for (int i = 0; i < kLiczbaNadajnikow; i++)
+    delete nadajniki_->at(i);
+  delete los_czas_transmisji_;
+  delete los_prawdopodobienstwo_;
+  delete los_retransmisja_;
+}
 
 double Siec::LosCzasTransmisji() { return round(los_czas_transmisji_->GeneracjaR(1, 10)); }
 
@@ -72,23 +81,23 @@ void Siec::Statystyki()
   //{
     for (int i = 0; i < kLiczbaNadajnikow; i++)
     {
-      stat_->pakiety_wygenerowane_ += nadajniki_.at(i)->licznik_pakietow_;
-      stat_->pakiety_nadane_ += nadajniki_.at(i)->licznik_nadanych_;
-      stat_->pakiety_stracone_ += nadajniki_.at(i)->licznik_straconych_;
-      stat_->pakiety_odebrane_ += nadajniki_.at(i)->licznik_odebranych_;
-      stat_->licznik_retransmisji_ += nadajniki_.at(i)->licznik_retransmisji_;
-      stopa_bledow_.push_back(nadajniki_.at(i)->StopaBledow());
-      suma += nadajniki_.at(i)->StopaBledow();
-      cout << "Nadajnik nr " << i << ": wygenerowane: " << nadajniki_.at(i)->licznik_pakietow_
-        << "; nadane: " << nadajniki_.at(i)->licznik_nadanych_ << "; stracone: " << nadajniki_.at(i)->licznik_straconych_
-        << "; odebrane: " << nadajniki_.at(i)->licznik_odebranych_ << "; retransmisje: " << nadajniki_.at(i)->licznik_retransmisji_
-        << "; stopa bledow: " << nadajniki_.at(i)->StopaBledow()
-        << "; srednia liczba retransmisji: " << (nadajniki_.at(i)->licznik_retransmisji_) / static_cast<double>(nadajniki_.at(i)->licznik_odebranych_) << endl;
-      //plik << "Nadajnik nr " << i << ": wygenerowane: " << nadajniki_.at(i)->licznik_pakietow_
-      //  << "; nadane: " << nadajniki_.at(i)->licznik_nadanych_ << "; stracone: " << nadajniki_.at(i)->licznik_straconych_
-      //  << "; odebrane: " << nadajniki_.at(i)->licznik_odebranych_ << "; retransmisje: " << nadajniki_.at(i)->licznik_retransmisji_
-      //  << "; stopa bledow: " << nadajniki_.at(i)->StopaBledow()
-      //  << "; srednia liczba retransmisji: " << (nadajniki_.at(i)->licznik_retransmisji_) / static_cast<double>(nadajniki_.at(i)->licznik_odebranych_) << endl;
+      stat_->pakiety_wygenerowane_ += nadajniki_->at(i)->licznik_pakietow_;
+      stat_->pakiety_nadane_ += nadajniki_->at(i)->licznik_nadanych_;
+      stat_->pakiety_stracone_ += nadajniki_->at(i)->licznik_straconych_;
+      stat_->pakiety_odebrane_ += nadajniki_->at(i)->licznik_odebranych_;
+      stat_->licznik_retransmisji_ += nadajniki_->at(i)->licznik_retransmisji_;
+      stopa_bledow_.push_back(nadajniki_->at(i)->StopaBledow());
+      suma += nadajniki_->at(i)->StopaBledow();
+      cout << "Nadajnik nr " << i << ": wygenerowane: " << nadajniki_->at(i)->licznik_pakietow_
+        << "; nadane: " << nadajniki_->at(i)->licznik_nadanych_ << "; stracone: " << nadajniki_->at(i)->licznik_straconych_
+        << "; odebrane: " << nadajniki_->at(i)->licznik_odebranych_ << "; retransmisje: " << nadajniki_->at(i)->licznik_retransmisji_
+        << "; stopa bledow: " << nadajniki_->at(i)->StopaBledow()
+        << "; srednia liczba retransmisji: " << (nadajniki_->at(i)->licznik_retransmisji_) / static_cast<double>(nadajniki_->at(i)->licznik_odebranych_) << endl;
+      //plik << "Nadajnik nr " << i << ": wygenerowane: " << nadajniki_->at(i)->licznik_pakietow_
+      //  << "; nadane: " << nadajniki_->at(i)->licznik_nadanych_ << "; stracone: " << nadajniki_->at(i)->licznik_straconych_
+      //  << "; odebrane: " << nadajniki_->at(i)->licznik_odebranych_ << "; retransmisje: " << nadajniki_->at(i)->licznik_retransmisji_
+      //  << "; stopa bledow: " << nadajniki_->at(i)->StopaBledow()
+      //  << "; srednia liczba retransmisji: " << (nadajniki_->at(i)->licznik_retransmisji_) / static_cast<double>(nadajniki_->at(i)->licznik_odebranych_) << endl;
     }
     for (int i = 0; i < kLiczbaNadajnikow; i++) 
     {
@@ -112,9 +121,10 @@ void Siec::Statystyki()
     plik2.open("sr_stopy_bledow.txt", ios::out | ios::app); //todo
     if (plik2.good() == true) {
       plik2 << stat_->sr_stopa_bledow_ << " ";
-      plik.close();
+      plik2.close();
     }
     else cout << "Nie uzyskano dostepu do pliku" << endl;
+
     cout << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
     //plik << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
     cout << "Maksymalna pakietowa stopa bledow: " << stat_->max_stopa_bledow_ << "; nadajnik nr: " << indeks << endl;

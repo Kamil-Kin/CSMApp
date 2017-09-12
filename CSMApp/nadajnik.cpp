@@ -15,11 +15,17 @@ licznik_straconych_(0), licznik_odebranych_(0), licznik_retransmisji_(0)
   siec_ = siec;
   kanal_ = kanal;
   ziarno_ = ziarno;
+  bufor_ = new list<Pakiet*>;
   los_czas_generacji_ = new GenWykladniczy(sym_->lambda_, ziarno_.PobierzZiarno(3 + id_ + sym_->nr_symulacji_*(3 + siec_->LiczbaNad())));
   (new Pakiet(id_, sym_, siec_, kanal_, this))->aktywacja(LosCzasGeneracji());
 }
 
-Nadajnik::~Nadajnik() {}
+Nadajnik::~Nadajnik() 
+{
+  for (int i = 0; i < bufor_->size(); i++)
+    bufor_->pop_back();
+  delete los_czas_generacji_;
+}
 
 double Nadajnik::LosCzasGeneracji()
 {
@@ -37,29 +43,29 @@ double Nadajnik::LosCzasGeneracji()
 
 void Nadajnik::DodajDoBufora(Pakiet* pakiet)
 {
-  bufor_.push_back(pakiet);
+  bufor_->push_back(pakiet);
   if (sym_->log == true)
   {
     sym_->UstawKolor("0F");
     cout << "Pakiet id " << pakiet->id_ << ":\to czasie generacji " << sym_->zegar_ << " ms dodany do bufora nadajnika nr " << id_
-      << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
+      << "; ilosc pakietow w buforze: " << bufor_->size() << endl;
   }
 }
 
 void Nadajnik::UsunZBufora(Pakiet* pakiet)
 {
-  bufor_.remove(pakiet);
+  bufor_->remove(pakiet);
   if (sym_->log == true) 
   {
     sym_->UstawKolor("08");
     cout << "Pakiet id " << pakiet->id_ << ":\to czasie odbioru " << sym_->zegar_ << " ms usuniety z bufora nadajnika nr " << id_
-      << "; ilosc pakietow w buforze: " << bufor_.size() << endl;
+      << "; ilosc pakietow w buforze: " << bufor_->size() << endl;
   }
 }
 
-bool Nadajnik::CzyBuforPusty() { return bufor_.empty(); }
+bool Nadajnik::CzyBuforPusty() { return bufor_->empty(); }
 
-Pakiet* Nadajnik::PierwszyPakiet() { return bufor_.front(); }
+Pakiet* Nadajnik::PierwszyPakiet() { return bufor_->front(); }
 
 double Nadajnik::StopaBledow() 
 {

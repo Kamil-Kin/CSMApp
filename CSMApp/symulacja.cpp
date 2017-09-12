@@ -29,6 +29,7 @@ Symulacja::Symulacja(double lam, int faza, double czas, int nr, bool logi, Logi*
 
 Symulacja::~Symulacja()
 {
+  delete siec_;
   //plik.close(); //do wyznaczenia fazy pocz¹tkowej
 }
 

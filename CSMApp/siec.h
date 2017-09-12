@@ -32,7 +32,7 @@ public:
   void StatystykiPakietu(Pakiet* pak);
 private:
   const int kLiczbaNadajnikow = 10;
-  vector<Nadajnik*> nadajniki_;
+  vector<Nadajnik*>* nadajniki_;
   Symulacja* sym_;
   Kanal* kanal_;
   Statystyka* stat_;

@@ -39,7 +39,7 @@ public:
 
 private:
   int id_;
-  list<Pakiet*> bufor_;
+  list<Pakiet*>* bufor_;
   double czas_generacji_;
 
   Symulacja* sym_;

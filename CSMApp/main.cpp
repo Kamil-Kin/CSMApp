@@ -1,3 +1,7 @@
+#define _CRTDBG_MAP_ALLOC
+#include <cstdlib>
+#include <crtdbg.h>
+
 #include "statystyka.h"
 #include "histogram.h"
 #include "symulacja.h"
@@ -5,17 +9,18 @@
 #include "logi.h"
 #include "ziarno.h"
 #include  <iostream>
-
+#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
 using std::cin;
 using std::cout;
 using std::endl;
 
 int main()
 {
-  int liczba_symulacji_ = 10;
-  double czas_symulacji_ = 80000;  //50 000 todo
+  _CrtSetBreakAlloc(2227);
+  int liczba_symulacji_ = 1;  //10
+  double czas_symulacji_ = 5000;  //40 000
   int faza_poczatkowa_ = 25;  //mierzone w iloœci pakietów
-  double lambda_ = 0.006; //do ustalenia todo
+  double lambda_ = 0.004; //do ustalenia todo
   char tryb_symulacji_ = 't';
   bool logi_ = false;
 
@@ -23,7 +28,7 @@ int main()
   Logi* ptr_logi = new Logi();
   Ziarno ziarno;
   ziarno.PobierzZiarnoZPliku();
-
+  
   //Histogram histogram;
   //histogram.Rownomierny();
   //histogram.Wykladniczy();
@@ -61,7 +66,10 @@ int main()
   //if (log == 'T' || log == 't') logi_ = true;
   //else logi_ = false;
 
+
+
   Symulacja* symulacja = nullptr;
+  
   for (int nr_symulacji = 1; nr_symulacji <= liczba_symulacji_; ++nr_symulacji) 
   {
     symulacja = new Symulacja(lambda_, faza_poczatkowa_, czas_symulacji_, nr_symulacji, logi_, ptr_logi, ziarno, statystyka);
@@ -71,6 +79,8 @@ int main()
   delete statystyka;
   delete ptr_logi;
   system("pause");
+
+  _CrtDumpMemoryLeaks();
 
   return 0;
 }

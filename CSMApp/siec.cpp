@@ -18,14 +18,15 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
   nadajniki_ = new vector<Nadajnik*>;
   for (int i = 0; i < kLiczbaNadajnikow; ++i)
   {
-    nadajniki_->push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));
+    nadajniki_->push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));//680B
   }
 }
 Siec::~Siec()
 {
   delete kanal_;
   for (int i = 0; i < kLiczbaNadajnikow; i++)
-    delete nadajniki_->at(i);
+    nadajniki_->pop_back();
+  delete nadajniki_;
   delete los_czas_transmisji_;
   delete los_prawdopodobienstwo_;
   delete los_retransmisja_;
@@ -69,7 +70,7 @@ void Siec::CzyszczenieStatystyk()
 void Siec::Statystyki() 
 {
   //plik.open("statystyki.txt", ios::out | ios::app);
-  sym_->UstawKolor("07");
+  //sym_->UstawKolor("07");
   cout << "Statystyki symulacji nr: " << sym_->nr_symulacji_ << endl;
   //plik << "Statystyki symulacji nr: " << sym_->nr_symulacji_ << endl;
   vector<double> stopa_bledow_;

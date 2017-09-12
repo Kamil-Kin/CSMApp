@@ -44,7 +44,7 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
     UsunZKalendarza();
 
     if (log == true) {
-      UstawKolor("07");
+      //UstawKolor("07");
       cout << "\nPakiet id " << obecny_->id_ << ": Pobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
     }
 
@@ -64,8 +64,8 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
   //}
   //else cout << "Nie uzyskano dostepu do pliku " << endl;
 
-  siec_->Statystyki();
-  siec_->CzyszczenieStatystyk();
+  //siec_->Statystyki();
+  //siec_->CzyszczenieStatystyk();
 }
 
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }
@@ -77,7 +77,7 @@ void Symulacja::UsunZKalendarza()
     kalendarz_.pop();
 }
 
-void Symulacja::UstawKolor(string numer)
+/*void Symulacja::UstawKolor(string numer)
 {
   // Wybierz kolor wed³ug poni¿szego kodu:
   // Pierwszy znak odpowiada za kolor t³a pod tekstem, drugi za kolor tekstu
@@ -209,3 +209,4 @@ void Symulacja::UstawKolor(string numer)
 
   SetConsoleTextAttribute(hOut, kolor);
 }
+*/

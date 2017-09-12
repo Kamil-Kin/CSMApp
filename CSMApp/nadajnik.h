@@ -45,7 +45,6 @@ private:
   Symulacja* sym_;
   Siec* siec_;
   Kanal* kanal_;
-  Pakiet* pak_;
   Ziarno ziarno_;
   GenWykladniczy* los_czas_generacji_;
 };

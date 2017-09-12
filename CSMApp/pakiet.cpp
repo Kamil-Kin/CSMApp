@@ -23,8 +23,9 @@ czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0)
   kanal_ = kanal;
   nad_ = nad;
   moje_zdarzenie_ = new Zdarzenie(this);
+czas_nadania_ = 0.0;
   if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) nad_->licznik_pakietow_++;
-  czas_nadania_ = 0.0;
+  
   czas_odebrania_ = 0.0;
   opoznienie_pakietu_ = 0.0;
 }
@@ -37,7 +38,7 @@ void Pakiet::aktywacja(double czas)
   sym_->DodajDoKalendarza(moje_zdarzenie_);
   if (sym_->log == true) 
   {
-    sym_->UstawKolor("09");
+    //sym_->UstawKolor("09");
     cout << "Pakiet id " << id_ << ": Dodano do kalendarza zdarzenie o czasie: "
       << moje_zdarzenie_->czas_zdarzenia_ << " ms" << endl;
   }
@@ -50,7 +51,7 @@ void Pakiet::aktywacja(double czas, int priorytet)
   sym_->DodajDoKalendarza(moje_zdarzenie_);
   if (sym_->log == true) 
   {
-  sym_->UstawKolor("09");
+  //sym_->UstawKolor("09");
   cout << "Pakiet id " << id_ << ": Dodano do kalendarza zdarzenie o czasie: " << moje_zdarzenie_->czas_zdarzenia_ <<
     " ms i priorytecie: " << moje_zdarzenie_->priorytet_ << endl;
   }
@@ -71,7 +72,7 @@ void Pakiet::execute(bool logi)
     {
       if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
-      (new Pakiet(id_tx_, sym_, siec_, kanal_, nad_))->aktywacja(nad_->LosCzasGeneracji());
+      (new Pakiet(id_tx_, sym_, siec_, kanal_, nad_))->aktywacja(nad_->LosCzasGeneracji()); // 144B
       nad_->DodajDoBufora(this);
       czas_pojawienia_ = sym_->zegar_;
       if (*nad_->PierwszyPakiet() == *this)

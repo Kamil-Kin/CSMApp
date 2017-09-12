@@ -22,8 +22,9 @@ licznik_straconych_(0), licznik_odebranych_(0), licznik_retransmisji_(0)
 
 Nadajnik::~Nadajnik() 
 {
-  for (int i = 0; i < bufor_->size(); i++)
+  for (int i = 0; i < bufor_->size(); ++i)
     bufor_->pop_back();
+  delete bufor_;
   delete los_czas_generacji_;
 }
 
@@ -35,8 +36,8 @@ double Nadajnik::LosCzasGeneracji()
   czas_generacji_ /= 10;
   if (sym_->log == true)
   {
-    sym_->UstawKolor("02");
-    cout << "Nadajnik nr " << id_ << "\tMoment wygenerowania pakietu: " << sym_->zegar_ + czas_generacji_ << " ms" << endl;
+    //sym_->UstawKolor("02");
+    cout << "Nadajnik nr " << id_ << " pakiet id " << Pakiet::licznik_ << "\tMoment wygenerowania pakietu: " << sym_->zegar_ + czas_generacji_ << " ms" << endl;
   }
   return czas_generacji_;
 }
@@ -46,7 +47,7 @@ void Nadajnik::DodajDoBufora(Pakiet* pakiet)
   bufor_->push_back(pakiet);
   if (sym_->log == true)
   {
-    sym_->UstawKolor("0F");
+    //sym_->UstawKolor("0F");
     cout << "Pakiet id " << pakiet->id_ << ":\to czasie generacji " << sym_->zegar_ << " ms dodany do bufora nadajnika nr " << id_
       << "; ilosc pakietow w buforze: " << bufor_->size() << endl;
   }
@@ -57,7 +58,7 @@ void Nadajnik::UsunZBufora(Pakiet* pakiet)
   bufor_->remove(pakiet);
   if (sym_->log == true) 
   {
-    sym_->UstawKolor("08");
+    //sym_->UstawKolor("08");
     cout << "Pakiet id " << pakiet->id_ << ":\to czasie odbioru " << sym_->zegar_ << " ms usuniety z bufora nadajnika nr " << id_
       << "; ilosc pakietow w buforze: " << bufor_->size() << endl;
   }

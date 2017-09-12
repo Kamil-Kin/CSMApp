@@ -3,9 +3,9 @@
 
 #include <vector>
 #include <queue>
-#include <string>
-#include <windows.h>
-#include <stdlib.h>
+//#include <string>
+//#include <windows.h>
+//#include <stdlib.h>
 #include <iostream>
 #include <assert.h>
 #include "zdarzenie.h"
@@ -44,7 +44,7 @@ public:
   void run(char tryb, int nr);
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();
-  void UstawKolor(string numer);
+  //void UstawKolor(string numer);
 
   double zegar_;
   double lambda_;

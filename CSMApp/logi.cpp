@@ -6,11 +6,11 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
     {
     case 1: {
       if (nr == 1) {
-        UstawKolor("06");
+        //UstawKolor("06");
         cout << "\nFAZA " << faza << ":\tGeneracja pakietu" << endl;
       }
       if (nr == 2) {
-        UstawKolor("0E");
+        //UstawKolor("0E");
         cout << "Pakiet id " << id << "\tpierwszy w buforze, sprawdza stan kanalu" << endl;
       }
     }
@@ -18,15 +18,15 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
 
     case 2: {
       if (nr == 1) {
-        UstawKolor("06");
+        //UstawKolor("06");
         cout << "\nFAZA " << faza << ":\tSprawdzenie kanalu" << endl;
       }
       if (nr == 2) {
-        UstawKolor("0A");
+        //UstawKolor("0A");
         cout << "Pakiet id " << id << ":\tKanal wolny, losuj prawdopodobienstwo" << endl;
       }
       if (nr == 3) {
-        UstawKolor("04");
+        //UstawKolor("04");
         cout << "Pakiet id " << id << ":\tKanal zajety, odpytywanie co 0.5 ms" << endl;
       }
     }
@@ -34,16 +34,16 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
 
     case 3: {
       if (nr == 1) {
-        UstawKolor("06");
+        //UstawKolor("06");
         cout << "\nFAZA " << faza << ":\tLosowanie prawdopodobienstwa transmisji" << endl;
       }
       if (nr == 2) {
-        UstawKolor("0D");
+        //UstawKolor("0D");
         cout << "Pakiet id " << id << ":\tPrawdopodobienstwo transmisji mniejsze od " << 0.2
           << ", podejmij probe transmisji" << endl;
       }
       if (nr == 3) {
-        UstawKolor("0B");
+        //UstawKolor("0B");
         cout << "Pakiet id " << id << ":\tPrawdopodobienstwo transmisji wieksze od " << 0.2 
           << ", czekaj do nastepnej szczeliny" << ", dodaj " << (1 - fmod(zegar, 1.0)) << " ms" << endl;
       }
@@ -52,15 +52,15 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
 
     case 4: {
       if (nr == 1) {
-        UstawKolor("06");
+        //UstawKolor("06");
         cout << "\nFAZA " << faza << ":\tPonowne sprawdzenie kanalu" << endl;
       }
       if (nr == 2) {
-        UstawKolor("0A");
+        //UstawKolor("0A");
         cout << "Pakiet id " << id << ":\tKanal wolny, ponowne losowanie prawdopodobienstwa" << endl;
       }
       if (nr == 3) {
-        UstawKolor("04");
+        //UstawKolor("04");
         cout << "Pakiet id " << id << ":\tKanal zajety, odczekanie 1 ms i powrot do odpytywania co 0.5 ms" << endl;
       }
     }
@@ -68,15 +68,15 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
 
     case 5: {
       if (nr == 1) {
-        UstawKolor("06");
+        //UstawKolor("06");
         cout << "\nFAZA " << faza << ":\tDodanie do kanalu" << endl;
       }
       if (nr == 2) {
-        UstawKolor("03");
+        //UstawKolor("03");
         cout << "Pakiet id " << id << ":\tdodany do kanalu" << endl;
       }
       if (nr == 3) {
-        UstawKolor("03");
+        //UstawKolor("03");
         cout << "Pakiet id " << id << ":\to czasie " << zegar << " ms czeka do najblizszej szczeliny" << endl;
       }
     }
@@ -84,11 +84,11 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
 
     case 6: {
       if (nr == 1) {
-        UstawKolor("06");
+        //UstawKolor("06");
         cout << "\nFAZA " << faza << ":\tTransmisja pakietu " << endl;
       }
       if (nr == 2) {
-        UstawKolor("05");
+        //UstawKolor("05");
         cout << "Pakiet id " << id << ":\tCzas transmisji wynosi " << zegar << " ms" << endl;
       }
     }
@@ -96,15 +96,15 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
 
     case 7: {
       if (nr == 1) {
-        UstawKolor("06");
+        //UstawKolor("06");
         cout << "\nFAZA " << faza << ":\tRetransmisja pakietu" << endl;
       }
       if (nr == 2) {
-        UstawKolor("01");
+        //UstawKolor("01");
         cout << "Pakiet id " << id << "\tjest retransmitowany";
       }
       if (nr == 3) {
-        UstawKolor("0C");
+        //UstawKolor("0C");
         cout << "Pakiet id " << id << ":\tPrzekroczono liczbê dopuszczalnych retransmisji, pakiet stracony" << endl;
       }
     }
@@ -112,11 +112,11 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
 
     case 8: {
       if (nr == 1) {
-        UstawKolor("06");
+        //UstawKolor("06");
         cout << "\nFAZA " << faza << ":\tSprawdzenie kolizji" << endl;
       }
       if (nr == 2) {
-        UstawKolor("0F");
+        //UstawKolor("0F");
         cout << "Pakiet id " << id << ":\tBrak kolizji, wyslanie ACK" << endl;
       }
       if (nr == 3) {
@@ -127,7 +127,7 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
 
     case 9: {
       if (nr == 1) {
-        UstawKolor("06");
+        //UstawKolor("06");
         cout << "\nFAZA " << faza << ":  Odebranie pakietu i zakonczenie transmisji" << endl;
       }
       if (nr == 2) {
@@ -138,7 +138,7 @@ void Logi::WypiszLogi(int faza, int id, double zegar, int nr)
     }
 }
 
-void Logi::UstawKolor(string numer)
+/*void Logi::UstawKolor(string numer)
 {
   // Wybierz kolor wed³ug poni¿szego kodu:
   // Pierwszy znak odpowiada za kolor t³a pod tekstem, drugi za kolor tekstu
@@ -269,4 +269,4 @@ void Logi::UstawKolor(string numer)
   }
 
   SetConsoleTextAttribute(hOut, kolor);
-}
+}*/

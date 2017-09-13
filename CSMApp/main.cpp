@@ -9,26 +9,28 @@
 #include "logi.h"
 #include "ziarno.h"
 #include  <iostream>
-#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
+
+//#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
+
 using std::cin;
 using std::cout;
 using std::endl;
 
 int main()
 {
-  _CrtSetBreakAlloc(2227);
-  int liczba_symulacji_ = 1;  //10
-  double czas_symulacji_ = 5000;  //40 000
+  //_CrtSetBreakAlloc(505);
+  int liczba_symulacji_ = 10;  //10
+  double czas_symulacji_ = 45000;  //40 000
   int faza_poczatkowa_ = 25;  //mierzone w iloœci pakietów
-  double lambda_ = 0.004; //do ustalenia todo
+  double lambda_ = 0.00; //do ustalenia todo
   char tryb_symulacji_ = 't';
   bool logi_ = false;
 
   Statystyka* statystyka = new Statystyka();
   Logi* ptr_logi = new Logi();
-  Ziarno ziarno;
-  ziarno.PobierzZiarnoZPliku();
-  
+  Ziarno* ziarno = new Ziarno();
+  ziarno->PobierzZiarnoZPliku();
+
   //Histogram histogram;
   //histogram.Rownomierny();
   //histogram.Wykladniczy();
@@ -66,10 +68,8 @@ int main()
   //if (log == 'T' || log == 't') logi_ = true;
   //else logi_ = false;
 
-
-
   Symulacja* symulacja = nullptr;
-  
+
   for (int nr_symulacji = 1; nr_symulacji <= liczba_symulacji_; ++nr_symulacji) 
   {
     symulacja = new Symulacja(lambda_, faza_poczatkowa_, czas_symulacji_, nr_symulacji, logi_, ptr_logi, ziarno, statystyka);
@@ -78,9 +78,11 @@ int main()
   delete symulacja;
   delete statystyka;
   delete ptr_logi;
+  delete ziarno;
   system("pause");
 
-  _CrtDumpMemoryLeaks();
+  //do szukania wycieków pamiêci
+  //_CrtDumpMemoryLeaks();
 
   return 0;
 }

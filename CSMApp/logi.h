@@ -17,7 +17,7 @@ public:
   Logi() {}
   ~Logi() {}
 
-  void WypiszLogi(int faza, int id, double czas, int nr);
+  void WypiszLogi(int faza, long id, double czas, int nr);
 
   //void UstawKolor(string numer);
 };

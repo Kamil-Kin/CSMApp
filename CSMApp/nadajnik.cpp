@@ -8,7 +8,7 @@
 #include "nadajnik.h"
 #include "pakiet.h"
 
-Nadajnik::Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* kanal) :id_(idx), stopa_bledow_(0.0), licznik_pakietow_(0), licznik_nadanych_(0),
+Nadajnik::Nadajnik(int idx, Ziarno* ziarno, Symulacja* sym, Siec* siec, Kanal* kanal) :id_(idx), stopa_bledow_(0.0), licznik_pakietow_(0), licznik_nadanych_(0),
 licznik_straconych_(0), licznik_odebranych_(0), licznik_retransmisji_(0)
 {
   sym_ = sym;
@@ -16,14 +16,20 @@ licznik_straconych_(0), licznik_odebranych_(0), licznik_retransmisji_(0)
   kanal_ = kanal;
   ziarno_ = ziarno;
   bufor_ = new list<Pakiet*>;
-  los_czas_generacji_ = new GenWykladniczy(sym_->lambda_, ziarno_.PobierzZiarno(3 + id_ + sym_->nr_symulacji_*(3 + siec_->LiczbaNad())));
+  los_czas_generacji_ = new GenWykladniczy(sym->lambda_, ziarno->PobierzZiarno(3 + idx + sym->nr_symulacji_*(3 + siec->LiczbaNad())));
   (new Pakiet(id_, sym_, siec_, kanal_, this))->aktywacja(LosCzasGeneracji());
 }
 
 Nadajnik::~Nadajnik() 
 {
-  for (int i = 0; i < bufor_->size(); ++i)
-    bufor_->pop_back();
+  //bufor_->erase(bufor_->begin(), bufor_->end());
+  Pakiet* pak = nullptr;
+  for (int i = 0; i < bufor_->size(); ++i) 
+  {
+    pak = bufor_->front();
+    bufor_->pop_front();
+    delete pak;
+  }
   delete bufor_;
   delete los_czas_generacji_;
 }
@@ -31,13 +37,13 @@ Nadajnik::~Nadajnik()
 double Nadajnik::LosCzasGeneracji()
 {
   czas_generacji_ = los_czas_generacji_->GeneracjaW();
-  czas_generacji_ *= 10;
+  czas_generacji_ *= 10.0;
   czas_generacji_ = round(czas_generacji_);
-  czas_generacji_ /= 10;
+  czas_generacji_ /= 10.0;
   if (sym_->log == true)
   {
     //sym_->UstawKolor("02");
-    cout << "Nadajnik nr " << id_ << " pakiet id " << Pakiet::licznik_ << "\tMoment wygenerowania pakietu: " << sym_->zegar_ + czas_generacji_ << " ms" << endl;
+    //cout << "Nadajnik nr " << id_ << " pakiet id " << sym_->licznik_ << "\tMoment wygenerowania pakietu: " << sym_->zegar_ + czas_generacji_ << " ms" << endl;
   }
   return czas_generacji_;
 }
@@ -45,6 +51,7 @@ double Nadajnik::LosCzasGeneracji()
 void Nadajnik::DodajDoBufora(Pakiet* pakiet)
 {
   bufor_->push_back(pakiet);
+
   if (sym_->log == true)
   {
     //sym_->UstawKolor("0F");

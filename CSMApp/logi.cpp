@@ -1,6 +1,6 @@
 #include "logi.h"
 
-void Logi::WypiszLogi(int faza, int id, double zegar, int nr) 
+void Logi::WypiszLogi(int faza, long id, double zegar, int nr) 
 {
     switch (faza) 
     {

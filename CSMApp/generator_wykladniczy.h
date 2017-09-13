@@ -13,7 +13,10 @@ public:
   {
     uniform_ = new GenRownomierny(kernel);
   }
-  ~GenWykladniczy() {}
+  ~GenWykladniczy() 
+  {
+    //delete uniform_; //psuje siê
+  }
 
   double GeneracjaW();
 

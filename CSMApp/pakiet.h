@@ -25,8 +25,8 @@ public:
   double czas_w_buforze_;
   double opoznienie_pakietu_;
   friend bool operator==(const Pakiet& lhs, const Pakiet& rhs);
-  __int64 id_;
-  static __int64 licznik_;
+  long id_;
+  //static long licznik_;
 
 private:
   const int kMaxLiczbaRetransmisji = 3; //todo

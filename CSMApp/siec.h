@@ -21,7 +21,7 @@ using std::endl;
 class Siec
 {
 public:
-  Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat);
+  Siec(Symulacja* sym, Ziarno* ziarno, Statystyka* stat);
   ~Siec();
   int LiczbaNad() { return kLiczbaNadajnikow; }
   double LosCzasTransmisji();

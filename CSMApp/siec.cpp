@@ -7,13 +7,13 @@
 #include <cstdlib>
 #include <cmath>
 
-Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), czas_oczekiwania_(0.0)
+Siec::Siec(Symulacja* sym, Ziarno* ziarno, Statystyka* stat) :opoznienie_(0.0), czas_oczekiwania_(0.0)
 {
   stat_ = stat;
   sym_ = sym;
-  los_czas_transmisji_ = new GenRownomierny(ziarno.PobierzZiarno(0 + sym_->nr_symulacji_*(3 + LiczbaNad())));
-  los_prawdopodobienstwo_ = new GenRownomierny(ziarno.PobierzZiarno(1 + sym_->nr_symulacji_*(3 + LiczbaNad())));
-  los_retransmisja_ = new GenRownomierny(ziarno.PobierzZiarno(2 + sym_->nr_symulacji_*(3 + LiczbaNad())));
+  los_czas_transmisji_ = new GenRownomierny(ziarno->PobierzZiarno(0 + sym_->nr_symulacji_*(3 + LiczbaNad())));
+  los_prawdopodobienstwo_ = new GenRownomierny(ziarno->PobierzZiarno(1 + sym_->nr_symulacji_*(3 + LiczbaNad())));
+  los_retransmisja_ = new GenRownomierny(ziarno->PobierzZiarno(2 + sym_->nr_symulacji_*(3 + LiczbaNad())));
   kanal_ = new Kanal();
   nadajniki_ = new vector<Nadajnik*>;
   for (int i = 0; i < kLiczbaNadajnikow; ++i)
@@ -24,8 +24,14 @@ Siec::Siec(Symulacja* sym, Ziarno ziarno, Statystyka* stat) :opoznienie_(0.0), c
 Siec::~Siec()
 {
   delete kanal_;
-  for (int i = 0; i < kLiczbaNadajnikow; i++)
+  //nadajniki_->erase(nadajniki_->begin(), nadajniki_->end());
+  Nadajnik* nad = nullptr;
+  for (int i = 0; i < kLiczbaNadajnikow; i++) 
+  {
+    nad = nadajniki_->back();
     nadajniki_->pop_back();
+    delete nad;
+  }
   delete nadajniki_;
   delete los_czas_transmisji_;
   delete los_prawdopodobienstwo_;

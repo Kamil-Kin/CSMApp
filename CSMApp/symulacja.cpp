@@ -12,9 +12,9 @@ bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
   return zd1->priorytet_ > zd2->priorytet_;
 }
 
-Symulacja::Symulacja(double lam, int faza, double czas, int nr, bool logi, Logi* ptr_logi, Ziarno ziarno, Statystyka* stat) :zegar_(0.0), nr_odbioru_(0)
+Symulacja::Symulacja(double lam, int faza, double czas, int nr, bool logi, Logi* ptr_logi, Ziarno* ziarno, Statystyka* stat) :zegar_(0.0), nr_odbioru_(0)
 {
-  Pakiet::licznik_ = 0;
+  licznik_ = 0;
   lambda_ = lam;
   faza_poczatkowa_ = faza;
   czas_symulacji_ = czas;

@@ -38,7 +38,7 @@ struct comparer : public binary_function<Zdarzenie*, Zdarzenie*, bool>
 class Symulacja
 {
 public:
-  Symulacja(double lam, int faza, double czas_sym, int nr_sym, bool logi, Logi* ptr_logi, Ziarno ziarno, Statystyka* stat);
+  Symulacja(double lam, int faza, double czas_sym, int nr_sym, bool logi, Logi* ptr_logi, Ziarno* ziarno, Statystyka* stat);
   ~Symulacja();
 
   void run(char tryb, int nr);
@@ -54,6 +54,7 @@ public:
   bool log;
   int nr_odbioru_; 
   Logi* ptr_logi_;
+  long licznik_;
   //do wyznaczenia fazy pocz¹tkowej
   //fstream plik; 
   //string opoznienie; 

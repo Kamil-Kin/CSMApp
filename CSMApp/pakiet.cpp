@@ -11,25 +11,26 @@
 using std::cout;
 using std::endl;
 
-__int64 Pakiet::licznik_ = 0;
+//long Pakiet::licznik_ = 0;
 
 Pakiet::Pakiet(int idx, Symulacja* sym, Siec* siec, Kanal* kanal, Nadajnik* nad) : id_tx_(idx), faza_(1), skonczony_(false), ack_(false), nr_retransmisji_(0),
 czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0)
 {
-  id_ = Pakiet::licznik_;
-  Pakiet::licznik_++;
+  //id_ = Pakiet::licznik_;
+  //Pakiet::licznik_++;
+  id_ = sym->licznik_;
+  sym->licznik_++;
   sym_ = sym;
   siec_ = siec;
   kanal_ = kanal;
   nad_ = nad;
-  moje_zdarzenie_ = new Zdarzenie(this);
-czas_nadania_ = 0.0;
+  moje_zdarzenie_ = new Zdarzenie(this);    //16B memory leak
   if (sym_->nr_odbioru_ > sym_->faza_poczatkowa_) nad_->licznik_pakietow_++;
-  
+  czas_nadania_ = 0.0;
   czas_odebrania_ = 0.0;
   opoznienie_pakietu_ = 0.0;
 }
-Pakiet::~Pakiet() {}
+Pakiet::~Pakiet() { delete moje_zdarzenie_; }
 
 void Pakiet::aktywacja(double czas)
 {
@@ -72,7 +73,7 @@ void Pakiet::execute(bool logi)
     {
       if (logi == true) sym_->ptr_logi_->WypiszLogi(faza_, id_, sym_->zegar_, 1);
 
-      (new Pakiet(id_tx_, sym_, siec_, kanal_, nad_))->aktywacja(nad_->LosCzasGeneracji()); // 144B
+      (new Pakiet(id_tx_, sym_, siec_, kanal_, nad_))->aktywacja(nad_->LosCzasGeneracji()); // 136B memory leak
       nad_->DodajDoBufora(this);
       czas_pojawienia_ = sym_->zegar_;
       if (*nad_->PierwszyPakiet() == *this)

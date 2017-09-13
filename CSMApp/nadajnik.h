@@ -20,7 +20,7 @@ using std::list;
 class Nadajnik
 {
 public:
-  Nadajnik(int idx, Ziarno ziarno, Symulacja* sym, Siec* siec, Kanal* kanal);
+  Nadajnik(int idx, Ziarno* ziarno, Symulacja* sym, Siec* siec, Kanal* kanal);
   ~Nadajnik();
 
   void DodajDoBufora(Pakiet* pak);
@@ -45,7 +45,7 @@ private:
   Symulacja* sym_;
   Siec* siec_;
   Kanal* kanal_;
-  Ziarno ziarno_;
+  Ziarno* ziarno_;
   GenWykladniczy* los_czas_generacji_;
 };
 

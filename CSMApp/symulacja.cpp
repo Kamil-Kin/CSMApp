@@ -29,15 +29,16 @@ Symulacja::Symulacja(double lam, int faza, double czas, int nr, bool logi, Logi*
 
 Symulacja::~Symulacja()
 {
-  //Zdarzenie* zd = nullptr;
-  //for (int i = 0; i < kalendarz_->size(); i++) 
-  //{
-  //  zd = kalendarz_->top();
-  //  kalendarz_->pop();
-  //  delete zd;
-  //}
+  Zdarzenie* zd = nullptr;
+  for (int i = 0; i < kalendarz_->size(); i++) 
+  {
+    zd = kalendarz_->top();
+    kalendarz_->pop();
+    delete zd;
+  }
   delete kalendarz_;
   delete siec_;
+  //cout << "Destruktor klasy Symulacja" << endl;
   //plik.close(); //do wyznaczenia fazy pocz¹tkowej
 }
 
@@ -49,8 +50,6 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
   {
     obecny_ = kalendarz_->top()->pakiet_;
     zegar_ = kalendarz_->top()->czas_zdarzenia_;
-    //obecny_ = kalendarz_.top()->pakiet_;
-    //zegar_ = kalendarz_.top()->czas_zdarzenia_;
     UsunZKalendarza();
 
     if (log == true) {
@@ -81,7 +80,6 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) 
 {
   kalendarz_->push(zd);
-  //kalendarz_.push(zd);
 }
 
 void Symulacja::UsunZKalendarza()
@@ -89,9 +87,6 @@ void Symulacja::UsunZKalendarza()
   assert(!kalendarz_->empty());
   if (kalendarz_->empty() == false)
     kalendarz_->pop();
-  //assert(!kalendarz_.empty());
-  //if (kalendarz_.empty() == false)
-  //  kalendarz_.pop();
 }
 
 /*void Symulacja::UstawKolor(string numer)

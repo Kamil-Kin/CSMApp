@@ -14,8 +14,8 @@ public:
   ~Kanal();
   void KanalWolny(bool stan_lacza);
   bool StanLacza();
-  void DodajDoKanalu(Pakiet*);
-  void UsunZKanalu(Pakiet*);
+  void DodajDoKanalu(Pakiet* pakiet);
+  void UsunZKanalu(Pakiet* pakiet);
   list<Pakiet*>* lacze_;
 private:
   bool wolny_;

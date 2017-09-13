@@ -30,6 +30,7 @@ public:
   void CzyszczenieStatystyk();
   void Statystyki();
   void StatystykiPakietu(Pakiet* pak);
+
 private:
   const int kLiczbaNadajnikow = 10;
   vector<Nadajnik*>* nadajniki_;
@@ -41,6 +42,8 @@ private:
   double czas_oczekiwania_;
   fstream plik; //do zapisywania statystyk
   fstream plik2;  //do œredniej stopy b³êdów i wyznaczenia lambdy
+  fstream plik3;  //do max stopy b³êdów
+  fstream plik4;  //do przep³ywnoœci
   GenRownomierny* los_czas_transmisji_;
   GenRownomierny* los_prawdopodobienstwo_;
   GenRownomierny* los_retransmisja_;

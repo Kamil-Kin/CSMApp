@@ -10,7 +10,7 @@
 #include "ziarno.h"
 #include  <iostream>
 
-//#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
 
 using std::cin;
 using std::cout;
@@ -18,9 +18,9 @@ using std::endl;
 
 int main()
 {
-  //_CrtSetBreakAlloc(2926);
-  int liczba_symulacji_ = 10;  //10
-  double czas_symulacji_ = 45000;  //40 000
+  //_CrtSetBreakAlloc(34487);
+  int liczba_symulacji_ = 3;  //10
+  double czas_symulacji_ = 50000;  //40 000
   int faza_poczatkowa_ = 25;  //mierzone w iloœci pakietów
   double lambda_ = 0.006; //do ustalenia todo
   char tryb_symulacji_ = 't';
@@ -73,9 +73,9 @@ int main()
   for (int nr_symulacji = 1; nr_symulacji <= liczba_symulacji_; ++nr_symulacji) 
   {
     symulacja = new Symulacja(lambda_, faza_poczatkowa_, czas_symulacji_, nr_symulacji, logi_, ptr_logi, ziarno, statystyka);
-    symulacja->run(tryb_symulacji_, nr_symulacji);
+    symulacja->run(tryb_symulacji_, nr_symulacji); 
+    delete symulacja;
   }
-  delete symulacja;
   delete statystyka;
   delete ptr_logi;
   delete ziarno;

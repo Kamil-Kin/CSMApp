@@ -12,12 +12,12 @@ for i = 1:10
 end
 S = sum(tab,2);
 mean = 10.\S
-figure(1)
-plot(lambda,mean,'b-*')
-grid on
-hold on
-plot(lambda,wart_szukana,'r')
-title('Wyznaczenie parametru lambda')
-xlabel('Intensywnoœæ zg³oszeñ - wartoœci lambda')
-ylabel('Œrednia pakietowa stopa b³êdów')
-legend('œrednia stopa b³êdów','wartoœæ szukana')
+% figure(1)
+% plot(lambda,mean,'b-*')
+% grid on
+% hold on
+% plot(lambda,wart_szukana,'r')
+% title('Wyznaczenie parametru lambda')
+% xlabel('Intensywnoœæ zg³oszeñ - wartoœci lambda')
+% ylabel('Œrednia pakietowa stopa b³êdów')
+% legend('œrednia stopa b³êdów','wartoœæ szukana')

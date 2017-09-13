@@ -18,7 +18,7 @@ Siec::Siec(Symulacja* sym, Ziarno* ziarno, Statystyka* stat) :opoznienie_(0.0), 
   nadajniki_ = new vector<Nadajnik*>;
   for (int i = 0; i < kLiczbaNadajnikow; ++i)
   {
-    nadajniki_->push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));//680B
+    nadajniki_->push_back(new Nadajnik(i, ziarno, sym_, this, kanal_));
   }
 }
 Siec::~Siec()
@@ -32,7 +32,6 @@ Siec::~Siec()
     delete nad;
   }
   delete nadajniki_;
-  //cout << "destruktor klasy Siec" << endl;
   delete los_czas_transmisji_;
   delete los_prawdopodobienstwo_;
   delete los_retransmisja_;
@@ -131,20 +130,20 @@ void Siec::Statystyki()
     stat_->sr_stopa_bledow_ = suma / l_elem;
     cout << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
     plik << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
-    plik2.open("sr_stopy_bledow.txt", ios::out | ios::app);
-    if (plik2.good() == true) {
-      plik2 << stat_->sr_stopa_bledow_ << endl;
-      plik2.close();
-    }
-    else cout << "Nie uzyskano dostepu do pliku" << endl;
+    //plik2.open("sr_stopy_bledow.txt", ios::out | ios::app);
+    //if (plik2.good() == true) {
+    //  plik2 << stat_->sr_stopa_bledow_ << endl;
+    //  plik2.close();
+    //}
+    //else cout << "Nie uzyskano dostepu do pliku" << endl;
 
     cout << "Maksymalna pakietowa stopa bledow: " << stat_->max_stopa_bledow_ << "; nadajnik nr: " << indeks << endl;
     plik << "Maksymalna pakietowa stopa bledow: " << stat_->max_stopa_bledow_ << "; nadajnik nr: " << indeks << endl;
-    plik3.open("max_stopa_bledow.txt", ios::out | ios::app);
-    if (plik3.good()) {
-      plik3 << stat_->max_stopa_bledow_ << endl;
-      plik3.close();
-    }
+    //plik3.open("max_stopa_bledow.txt", ios::out | ios::app);
+    //if (plik3.good()) {
+    //  plik3 << stat_->max_stopa_bledow_ << endl;
+    //  plik3.close();
+    //}
 
     stat_->sr_l_ret_ = stat_->licznik_retransmisji_ / static_cast<double>(stat_->pakiety_odebrane_);
     cout << "Srednia liczba retransmisji pakietow (poprawnie odebranych): " << stat_->sr_l_ret_ << endl;
@@ -153,11 +152,11 @@ void Siec::Statystyki()
     stat_->przeplywnosc_ = stat_->pakiety_odebrane_ / (sym_->czas_symulacji_ / 1000);
     cout << "Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): " << stat_->przeplywnosc_ << endl;
     plik << "Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): " << stat_->przeplywnosc_ << endl;
-    plik4.open("przeplywnosc.txt", ios::out | ios::app);
-    if (plik4.good()) {
-      plik4 << stat_->przeplywnosc_ << endl;
-      plik4.close();
-    }
+    //plik4.open("przeplywnosc.txt", ios::out | ios::app);
+    //if (plik4.good()) {
+    //  plik4 << stat_->przeplywnosc_ << endl;
+    //  plik4.close();
+    //}
 
     stat_->sr_opoznienie_ = opoznienie_ / static_cast<double>(stat_->pakiety_odebrane_);  //todo
     cout << "Srednie opoznienie pakietu: " << stat_->sr_opoznienie_ << endl;

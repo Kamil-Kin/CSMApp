@@ -1,18 +1,18 @@
 format long;
-lambda = [0.0055 0.006 0.0061 0.0062 0.0065 0.0067 0.007 0.0075 0.008 0.0085];
+lambda = [0.0055 0.006 0.0061 0.0062 0.0065 0.007 0.0075 0.008];
 fileID = fopen('max_stopa_bledow.txt');
 A = fscanf(fileID,'%f');
 fclose(fileID);
-tab = zeros(10,10);
-for i = 1:10
+tab = zeros(8,10);
+for i = 1:8
     for j = 1:10
         tab(i,j) = A(j+10*(i-1));
     end
 end
-S = sum(tab,2);
-mean = 10.\S;
+suma = sum(tab,2);
+srednia = 10.\suma;
 figure(1)
-plot(lambda,mean,'b-*')
+plot(lambda,srednia,'b-*')
 grid on
 title('Wykres maksymalnej stopy b³êdów w zale¿noœci od lambda')
 xlabel('lambda')

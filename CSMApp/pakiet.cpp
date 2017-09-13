@@ -32,7 +32,8 @@ czas_transmisji_(0.0), prawdopodobienstwo(0.0), czas_retransmisji_(0.0)
 }
 Pakiet::~Pakiet() 
 {
-  //cout << "Destruktor klasy Pakiet" << endl;
+  //delete moje_zdarzenie_;
+  //cout << "Destruktor klasy Pakiet\n";
 }
 
 void Pakiet::aktywacja(double czas)

@@ -10,7 +10,7 @@
 #include "ziarno.h"
 #include  <iostream>
 
-#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
+//#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
 
 using std::cin;
 using std::cout;
@@ -19,10 +19,10 @@ using std::endl;
 int main()
 {
   //_CrtSetBreakAlloc(34487);
-  int liczba_symulacji_ = 3;  //10
-  double czas_symulacji_ = 50000;  //40 000
+  int liczba_symulacji_ = 10;
+  double czas_symulacji_ = 60000; //w milisekundach; 60 sekund
   int faza_poczatkowa_ = 25;  //mierzone w iloœci pakietów
-  double lambda_ = 0.006; //do ustalenia todo
+  double lambda_ = 0.0062;
   char tryb_symulacji_ = 't';
   bool logi_ = false;
 
@@ -82,7 +82,7 @@ int main()
   system("pause");
 
   //do szukania wycieków pamiêci
-  _CrtDumpMemoryLeaks();
+  //_CrtDumpMemoryLeaks();
 
   return 0;
 }

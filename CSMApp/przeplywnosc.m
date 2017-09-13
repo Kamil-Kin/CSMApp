@@ -1,19 +1,20 @@
 format long;
-lambda = [0.0055 0.006 0.0061 0.0062 0.0065 0.0067 0.007 0.0075 0.008 0.0085];
+lambda = [0.0055 0.006 0.0061 0.0062 0.0065 0.007 0.0075 0.008];
 fileID = fopen('przeplywnosc.txt');
 A = fscanf(fileID,'%f');
 fclose(fileID);
-tab = zeros(10,10);
-for i = 1:10
+tab = zeros(8,10);
+for i = 1:8
     for j = 1:10
         tab(i,j) = A(j+10*(i-1));
     end
 end
-disp(tab)
-S = sum(tab,2)
-mean = 10.\S
+% disp(tab);
+suma = sum(tab,2)
+srednia = 10.\suma;
+% srednia = mean(tab,2);
 figure(1)
-plot(lambda,mean,'b-*')
+plot(lambda,srednia,'b-*')
 grid on
 title('Wykres przep³ywnoœci w zale¿noœci do lambda')
 xlabel('lambda')

@@ -30,7 +30,6 @@ Nadajnik::~Nadajnik()
     delete pak;
   }
   delete bufor_;
-  //cout << "Destruktor klasy Nadajnik" << endl;
   delete los_czas_generacji_;
 }
 

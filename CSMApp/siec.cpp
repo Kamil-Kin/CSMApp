@@ -25,37 +25,37 @@ Siec::~Siec()
 {
   delete kanal_;
   //nadajniki_->erase(nadajniki_->begin(), nadajniki_->end());
-  Nadajnik* nad = nullptr;
-  for (int i = 0; i < kLiczbaNadajnikow; i++) 
-  {
-    nad = nadajniki_->back();
-    nadajniki_->pop_back();
-    delete nad;
-  }
+  //Nadajnik* nad = nullptr;
+  //for (int i = 0; i < kLiczbaNadajnikow; i++) 
+  //{
+  //  nad = nadajniki_->back();
+  //  nadajniki_->pop_back();
+  //  delete nad;
+  //}
   delete nadajniki_;
-  delete los_czas_transmisji_;
-  delete los_prawdopodobienstwo_;
-  delete los_retransmisja_;
+  //delete los_czas_transmisji_;
+  //delete los_prawdopodobienstwo_;
+  //delete los_retransmisja_;
 }
 
-double Siec::LosCzasTransmisji() { return round(los_czas_transmisji_->GeneracjaR(1, 10)); }
+double Siec::LosCzasTransmisji() { return round(los_czas_transmisji_->GeneracjaR(1.0, 10.0)); }
 
 double Siec::LosPrawdopodobienstwo()
 {
   double p = los_prawdopodobienstwo_->Generacja01();
-  p *= 100;
+  p *= 100.0;
   p = round(p);
-  p /= 100;
+  p /= 100.0;
   return p;
 }
 
 double Siec::LosRetransmisja(int l_ret_)
 {
-  double koniec = pow(2.0, l_ret_) - 1;
-  double R = los_retransmisja_->GeneracjaR(0, koniec);
-  R *= 10;
+  double koniec = pow(2.0, l_ret_) - 1.0;
+  double R = los_retransmisja_->GeneracjaR(0.0, koniec);
+  R *= 10.0;
   R = round(R);
-  R /= 10;
+  R /= 10.0;
   return R;
 }
 

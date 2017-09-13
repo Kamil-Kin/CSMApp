@@ -1,6 +1,6 @@
 format long;
-lambda = [0.0055 0.006 0.0065 0.007 0.0075];
-wart_szukana = [0.1 0.1 0.1 0.1 0.1];
+lambda = [0.0055 0.006 0.0065 0.007 0.0075 0.008 0.005];
+wart_szukana = [0.1 0.1 0.1 0.1 0.1 0.1];
 fileID = fopen('sr_stopy_bledow.txt');
 A = fscanf(fileID,'%f');
 fclose(fileID);

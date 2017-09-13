@@ -20,15 +20,23 @@ Symulacja::Symulacja(double lam, int faza, double czas, int nr, bool logi, Logi*
   czas_symulacji_ = czas;
   nr_symulacji_ = nr;
   log = logi;
+  kalendarz_ = new priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer>;
   siec_ = new Siec(this, ziarno, stat);
   ptr_logi_ = ptr_logi;
   //opoznienie = "opoznienie" + to_string(nr) + ".txt"; //do wyznaczenia fazy pocz¹tkowej
   //plik.open(opoznienie.c_str(), ios::out | ios::app);
-  //plik.open(opoznienie.c_str(), ios::out | ios::trunc);
 }
 
 Symulacja::~Symulacja()
 {
+  //Zdarzenie* zd = nullptr;
+  //for (int i = 0; i < kalendarz_->size(); i++) 
+  //{
+  //  zd = kalendarz_->top();
+  //  kalendarz_->pop();
+  //  delete zd;
+  //}
+  delete kalendarz_;
   delete siec_;
   //plik.close(); //do wyznaczenia fazy pocz¹tkowej
 }
@@ -39,8 +47,10 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
   Pakiet* obecny_ = nullptr;
   while (zegar_ < czas_symulacji_)
   {
-    obecny_ = kalendarz_.top()->pakiet_;
-    zegar_ = kalendarz_.top()->czas_zdarzenia_;
+    obecny_ = kalendarz_->top()->pakiet_;
+    zegar_ = kalendarz_->top()->czas_zdarzenia_;
+    //obecny_ = kalendarz_.top()->pakiet_;
+    //zegar_ = kalendarz_.top()->czas_zdarzenia_;
     UsunZKalendarza();
 
     if (log == true) {
@@ -64,17 +74,24 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
   //}
   //else cout << "Nie uzyskano dostepu do pliku " << endl;
 
-  //siec_->Statystyki();
-  //siec_->CzyszczenieStatystyk();
+  siec_->Statystyki();
+  siec_->CzyszczenieStatystyk();
 }
 
-void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_.push(zd); }
+void Symulacja::DodajDoKalendarza(Zdarzenie* zd) 
+{
+  kalendarz_->push(zd);
+  //kalendarz_.push(zd);
+}
 
 void Symulacja::UsunZKalendarza()
 {
-  assert(!kalendarz_.empty());
-  if (kalendarz_.empty() == false)
-    kalendarz_.pop();
+  assert(!kalendarz_->empty());
+  if (kalendarz_->empty() == false)
+    kalendarz_->pop();
+  //assert(!kalendarz_.empty());
+  //if (kalendarz_.empty() == false)
+  //  kalendarz_.pop();
 }
 
 /*void Symulacja::UstawKolor(string numer)

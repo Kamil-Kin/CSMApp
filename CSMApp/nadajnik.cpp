@@ -23,15 +23,15 @@ licznik_straconych_(0), licznik_odebranych_(0), licznik_retransmisji_(0)
 Nadajnik::~Nadajnik() 
 {
   //bufor_->erase(bufor_->begin(), bufor_->end());
-  Pakiet* pak = nullptr;
-  for (int i = 0; i < bufor_->size(); ++i) 
-  {
-    pak = bufor_->front();
-    bufor_->pop_front();
-    delete pak;
-  }
+  //Pakiet* pak = nullptr;
+  //for (int i = 0; i < bufor_->size(); ++i) 
+  //{
+  //  pak = bufor_->front();
+  //  bufor_->pop_front();
+  //  delete pak;
+  //}
   delete bufor_;
-  delete los_czas_generacji_;
+  //delete los_czas_generacji_;
 }
 
 double Nadajnik::LosCzasGeneracji()
@@ -43,7 +43,7 @@ double Nadajnik::LosCzasGeneracji()
   if (sym_->log == true)
   {
     //sym_->UstawKolor("02");
-    //cout << "Nadajnik nr " << id_ << " pakiet id " << sym_->licznik_ << "\tMoment wygenerowania pakietu: " << sym_->zegar_ + czas_generacji_ << " ms" << endl;
+    cout << "Nadajnik nr " << id_ << " pakiet id " << sym_->licznik_ << "\tMoment wygenerowania pakietu: " << sym_->zegar_ + czas_generacji_ << " ms" << endl;
   }
   return czas_generacji_;
 }

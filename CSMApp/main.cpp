@@ -18,11 +18,11 @@ using std::endl;
 
 int main()
 {
-  //_CrtSetBreakAlloc(505);
+  //_CrtSetBreakAlloc(2926);
   int liczba_symulacji_ = 10;  //10
   double czas_symulacji_ = 45000;  //40 000
   int faza_poczatkowa_ = 25;  //mierzone w iloœci pakietów
-  double lambda_ = 0.00; //do ustalenia todo
+  double lambda_ = 0.0055; //do ustalenia todo
   char tryb_symulacji_ = 't';
   bool logi_ = false;
 
@@ -82,7 +82,7 @@ int main()
   system("pause");
 
   //do szukania wycieków pamiêci
-  //_CrtDumpMemoryLeaks();
+  _CrtDumpMemoryLeaks();
 
   return 0;
 }

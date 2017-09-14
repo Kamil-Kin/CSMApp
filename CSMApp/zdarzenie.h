@@ -8,7 +8,9 @@ class Zdarzenie
 {
 public:
   Zdarzenie(Pakiet* pak) : czas_zdarzenia_(-1.0), pakiet_(pak), priorytet_(0) {}
-  ~Zdarzenie() { /*cout << "Destruktor klasy Zdarzenie\n";*/ }
+  ~Zdarzenie() { 
+    //cout << "Destruktor klasy Zdarzenie\n";
+  }
 
   double czas_zdarzenia_;
   Pakiet* pakiet_;

@@ -30,7 +30,7 @@ public:
 
 private:
   const int kMaxLiczbaRetransmisji = 3; //todo
-  const double kPrawdopodobienstwo = 0.2;
+  const double kPrawdopodobienstwo = 0.4;
   const double kCzasPotwierdzenia = 1.0;
 
   double czas_transmisji_;

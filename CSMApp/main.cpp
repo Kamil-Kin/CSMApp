@@ -18,11 +18,11 @@ using std::endl;
 
 int main()
 {
-  //_CrtSetBreakAlloc(34487);
+  //_CrtSetBreakAlloc(20429);
   int liczba_symulacji_ = 10;
-  double czas_symulacji_ = 60000; //w milisekundach; 60 sekund
+  double czas_symulacji_ = 50000; //w milisekundach; 50 sekund
   int faza_poczatkowa_ = 25;  //mierzone w iloœci pakietów
-  double lambda_ = 0.0062;
+  double lambda_ = 0.0037;
   char tryb_symulacji_ = 't';
   bool logi_ = false;
 

@@ -72,8 +72,8 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
   //}
   //else cout << "Nie uzyskano dostepu do pliku " << endl;
 
-  //siec_->Statystyki();
-  //siec_->CzyszczenieStatystyk();
+  siec_->Statystyki();
+  siec_->CzyszczenieStatystyk();
 }
 
 void Symulacja::DodajDoKalendarza(Zdarzenie* zd) 

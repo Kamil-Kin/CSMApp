@@ -29,7 +29,7 @@ public:
   //static long licznik_;
 
 private:
-  const int kMaxLiczbaRetransmisji = 3; //todo
+  const int kMaxLiczbaRetransmisji = 3;
   const double kPrawdopodobienstwo = 0.4;
   const double kCzasPotwierdzenia = 1.0;
 

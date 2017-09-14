@@ -1,19 +1,19 @@
 format long;
-lambda = [0.0025 0.0028 0.003 0.0031 0.0032 0.0034 0.0037];
+lambda = [0.0025 0.0027 0.0028 0.003 0.0031 0.0032 0.0034 0.0037];
 x = [0.0024 0.0038];
 wart_szukana = [0.1 0.1];
 fileID = fopen('sr_stopy_bledow_test.txt');
 A = fscanf(fileID,'%f');
 fclose(fileID);
-tab = zeros(7,10);
-for i = 1:7
+tab = zeros(8,10);
+for i = 1:8
     for j = 1:10
         tab(i,j) = A(j+10*(i-1));
     end
 end
 suma = sum(tab,2);
 srednia = 10.\suma;
-odchyl_stand = std(tab,1,2);
+odchyl_stand = std(tab,0,2);
 t = 2.2622; M = 10;
 granica = t*(odchyl_stand/sqrt(M-1));
 lewa_granica = srednia - granica;

@@ -1,10 +1,10 @@
 format long;
-lambda = [0.0025 0.0028 0.003 0.0031 0.0032 0.0034 0.0037];
+lambda = [0.0025 0.0027 0.0028 0.003 0.0031 0.0032 0.0034 0.0037];
 fileID = fopen('max_stopa_bledow_test.txt');
 A = fscanf(fileID,'%f');
 fclose(fileID);
-tab = zeros(7,10);
-for i = 1:7
+tab = zeros(8,10);
+for i = 1:8
     for j = 1:10
         tab(i,j) = A(j+10*(i-1));
     end

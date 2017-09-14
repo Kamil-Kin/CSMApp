@@ -74,7 +74,7 @@ void Siec::CzyszczenieStatystyk()
 
 void Siec::Statystyki() 
 {
-  plik.open("statystyki_test.txt", ios::out | ios::app);
+  plik.open("statystyki_raport.txt", ios::out | ios::app);
   //sym_->UstawKolor("07");
   cout << "Statystyki symulacji nr: " << sym_->nr_symulacji_ << " dla lambdy: " << sym_->lambda_ << endl;
   plik << "Statystyki symulacji nr: " << sym_->nr_symulacji_ << " dla lambdy: " << sym_->lambda_ << endl;
@@ -138,24 +138,26 @@ void Siec::Statystyki()
     plik << "Srednia pakietowa stopa bledow: " << stat_->sr_stopa_bledow_ << endl;
 
     plik2.open("sr_stopy_bledow_test.txt", ios::out | ios::app);
-    if (plik2.good() == true) {
-      plik2 << stat_->sr_stopa_bledow_ << endl;
-      plik2.close();
-    }
-    else cout << "Nie uzyskano dostepu do pliku" << endl;
+    //if (plik2.good() == true) {
+    //  plik2 << stat_->sr_stopa_bledow_ << endl;
+    //  plik2.close();
+    //}
+    //else cout << "Nie uzyskano dostepu do pliku" << endl;
     plik << "Maksymalna pakietowa stopa bledow: " << stat_->max_stopa_bledow_ << "; nadajnik nr: " << indeks << endl;
-    plik3.open("max_stopa_bledow_test.txt", ios::out | ios::app);
-    if (plik3.good()) {
-      plik3 << stat_->max_stopa_bledow_ << endl;
-      plik3.close();
-    }
+    //plik3.open("max_stopa_bledow_test.txt", ios::out | ios::app);
+    //if (plik3.good()) {
+    //  plik3 << stat_->max_stopa_bledow_ << endl;
+    //  plik3.close();
+    //}
+    //else cout << "Nie uzyskano dostepu do pliku" << endl;
     plik << "Srednia liczba retransmisji pakietow (poprawnie odebranych): " << stat_->sr_l_ret_ << endl;
     plik << "Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): " << stat_->przeplywnosc_ << endl;
     plik4.open("przeplywnosc_test.txt", ios::out | ios::app);
-    if (plik4.good()) {
-      plik4 << stat_->przeplywnosc_ << endl;
-      plik4.close();
-    }
+    //if (plik4.good()) {
+    //  plik4 << stat_->przeplywnosc_ << endl;
+    //  plik4.close();
+    //}
+    //else cout << "Nie uzyskano dostepu do pliku" << endl;
     plik << "Srednie opoznienie pakietu: " << stat_->sr_opoznienie_ << endl;
     plik << "Sredni czas oczekiwania: " << stat_->sr_czas_oczekiwania_ << endl;
     plik.close();

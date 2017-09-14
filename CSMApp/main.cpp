@@ -22,7 +22,7 @@ int main()
   int liczba_symulacji_ = 10;
   double czas_symulacji_ = 50000; //w milisekundach; 50 sekund
   int faza_poczatkowa_ = 25;  //mierzone w iloœci pakietów
-  double lambda_ = 0.0037;
+  double lambda_ = 0.0031;
   char tryb_symulacji_ = 't';
   bool logi_ = false;
 

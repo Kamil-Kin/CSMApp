@@ -30,7 +30,7 @@ void Logi::WypiszLogi(int faza, long id, double zegar, int nr)
       if (nr == 2) cout << "Pakiet id " << id << ":\tKanal wolny, ponowne losowanie prawdopodobienstwa" << endl;
       if (nr == 3) cout << "Pakiet id " << id << ":\tKanal zajety, odczekanie 1 ms i powrot do odpytywania co 0.5 ms" << endl;
       break;
-
+    }
     case 5: {
       if (nr == 1) cout << "\nFAZA " << faza << ":\tDodanie do kanalu" << endl;
       if (nr == 2) cout << "Pakiet id " << id << ":\tdodany do kanalu" << endl;

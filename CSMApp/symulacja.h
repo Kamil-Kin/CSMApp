@@ -3,14 +3,14 @@
 
 #include <vector>
 #include <queue>
-//#include <string>
-//#include <windows.h>
-//#include <stdlib.h>
 #include <iostream>
 #include <assert.h>
 #include "zdarzenie.h"
 #include "statystyka.h"
 #include "logi.h"
+//#include <string>
+//#include <windows.h>
+//#include <stdlib.h>
 //#include <fstream>
 
 class Ziarno;
@@ -23,13 +23,11 @@ using std::endl;
 using std::vector;
 using std::priority_queue;
 using std::binary_function; 
-using std::string;
+//using std::string;
 //using std::fstream; //do wyznaczenia fazy pocz¹tkowej
 //using std::ios;
 //using std::to_string;
 
-//const auto comparer = [](Zdarzenie* z1, Zdarzenie* z2)->bool
-//{ return z1->czas_zdarzenia_ > z2->czas_zdarzenia_; };
 struct comparer : public binary_function<Zdarzenie*, Zdarzenie*, bool>
 {
   bool operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const;
@@ -42,30 +40,52 @@ public:
   ~Symulacja();
 
   void run(char tryb, int nr);
+
+  //Obs³uga kalendarza
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();
+
   //void UstawKolor(string numer);
 
-  double zegar_;
-  double lambda_;
-  int faza_poczatkowa_;
-  double czas_symulacji_;
-  int nr_symulacji_;
-  bool log;
-  int nr_odbioru_; 
-  Logi* ptr_logi_;
-  long licznik_;
+  double Zegar() { return zegar_; }
+
+  double Lambda() { return lambda_; }
+
+  int FazaPoczatkowa() { return faza_poczatkowa_; }
+
+  double CzasSymulacji() { return czas_symulacji_; }
+
+  int NrSymulacji() { return nr_symulacji_; }
+
+  bool Log() { return log_; }
+
+  void ZwiekszOdbior() { nr_odbioru_++; }
+  int NrOdbioru() { return nr_odbioru_; } 
+
+  void ZwiekszLicznikPakietow() { licznik_pakietow_++; }
+  long LicznikPakietow() { return licznik_pakietow_; }
+
+  Logi* PtrLogi() { return ptr_logi_; }
   //do wyznaczenia fazy pocz¹tkowej
   //fstream plik; 
   //string opoznienie; 
   //double tab[20000] = { 0.0 };
 
 private:
+  double zegar_;
+  Logi* ptr_logi_;
+  double lambda_;
+  int faza_poczatkowa_;
+  double czas_symulacji_;
+  int nr_symulacji_;
+  bool log_;
+  int nr_odbioru_;
+  long licznik_pakietow_;
+
   Siec* siec_;
   Zdarzenie* zd_;
+
   priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer>* kalendarz_;
-  //priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer> kalendarz_;
-  //priority_queue<Zdarzenie*, vector<Zdarzenie*>, decltype(comparer)> kalendarz_;
 };
 
 #endif // !CSMA_PP_SYMULACJA_H

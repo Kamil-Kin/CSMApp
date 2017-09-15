@@ -1,7 +1,3 @@
-#define _CRTDBG_MAP_ALLOC
-#include <cstdlib>
-#include <crtdbg.h>
-
 #include "statystyka.h"
 #include "histogram.h"
 #include "symulacja.h"
@@ -10,15 +6,12 @@
 #include "ziarno.h"
 #include  <iostream>
 
-//#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
-
 using std::cin;
 using std::cout;
 using std::endl;
 
 int main()
 {
-  //_CrtSetBreakAlloc(20429);
   int liczba_symulacji_ = 10;
   double czas_symulacji_ = 50000; //w milisekundach; 50 sekund
   int faza_poczatkowa_ = 25;  //mierzone w iloœci pakietów
@@ -31,42 +24,42 @@ int main()
   Ziarno* ziarno = new Ziarno();
   ziarno->PobierzZiarnoZPliku();
 
+  //Generacja histogramów
   //Histogram histogram;
   //histogram.Rownomierny();
   //histogram.Wykladniczy();
 
-  //cout << "Ustalone parametry programu: " 
-  //  << "\nliczba symulacji: " << liczba_symulacji_
-  //  << "; czas jednej symulacji: " << czas_symulacji_ << " ms; " 
-  //  << "faza poczatkowa: " << faza_poczatkowa_ << " pakietow; "
-  //  << "lambda: " << lambda_ << endl;
-  //
-  //char param;
-  //cout << "Czy uruchomic program dla nowych parametrow[T,t - tak/inny - nie]? " << endl;
-  //cin >> param;
+  cout << "Ustalone parametry programu: " << "\nliczba symulacji: " << liczba_symulacji_
+    << "; czas jednej symulacji: " << czas_symulacji_ << " ms; "
+    << "faza poczatkowa: " << faza_poczatkowa_ << " pakietow; " << "lambda: " << lambda_
+    << "\nWylaczone komentarze oraz ciagly tryb symulacji" << endl;
 
-  //if (param == 'T' || param == 't') 
-  //{
-  //  cout << "Podaj liczbe symulacji: ";
-  //  cin >> liczba_symulacji_;
-  //  cout << "Podaj czas jednej symulacji [ms]: ";
-  //  cin >> czas_symulacji_;
-  //  cout << "Podaj dlugosc fazy poczatkowej(ilosc pakietow): ";
-  //  cin >> faza_poczatkowa_;
-  //  cout << "Podaj wartosc lamdba: ";
-  //  cin >> lambda_;
-  //}
-  //else
-  //  cout << "Program uruchomiony dla parametrow domyslnych" << endl;
-  //
-  //cout << "Wybierz tryb symulacji: K,k - krokowy, inny - ciagly" << endl;
-  //cin >> tryb_symulacji_;
-  //
-  //char log;
-  //cout << "Wyswietlanie komentarzy o przebiegu transmisji pakietu[T,t - tak/inny - nie]: " << endl;
-  //cin >> log;
-  //if (log == 'T' || log == 't') logi_ = true;
-  //else logi_ = false;
+  char param;
+  cout << "Czy uruchomic program dla nowych parametrow[T,t - tak/inny - nie]? " << endl;
+  cin >> param;
+
+  if (param == 'T' || param == 't') 
+  {
+    cout << "Podaj liczbe symulacji: ";
+    cin >> liczba_symulacji_;
+    cout << "Podaj czas jednej symulacji [ms]: ";
+    cin >> czas_symulacji_;
+    cout << "Podaj dlugosc fazy poczatkowej(ilosc pakietow): ";
+    cin >> faza_poczatkowa_;
+    cout << "Podaj wartosc lamdba: ";
+    cin >> lambda_;
+  }
+  else
+    cout << "Program uruchomiony dla parametrow domyslnych" << endl;
+
+  char log;
+  cout << "Wyswietlanie komentarzy o przebiegu transmisji pakietu[T,t - tak/inny - nie]: " << endl;
+  cin >> log;
+  if (log == 'T' || log == 't') logi_ = true;
+  else logi_ = false;
+
+  cout << "Wybierz tryb symulacji[K,k - krokowy, inny - ciagly]: " << endl;
+  cin >> tryb_symulacji_;
 
   Symulacja* symulacja = nullptr;
 
@@ -79,10 +72,8 @@ int main()
   delete statystyka;
   delete ptr_logi;
   delete ziarno;
-  system("pause");
 
-  //do szukania wycieków pamiêci
-  //_CrtDumpMemoryLeaks();
+  system("pause");
 
   return 0;
 }

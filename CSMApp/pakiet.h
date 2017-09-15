@@ -17,22 +17,31 @@ public:
   void aktywacja(double czas, int priorytet);
   void execute(bool logi);
 
-  int id_tx_;
-  int faza_;
-  bool skonczony_;
-  bool ack_;
+  bool Skonczony() { return skonczony_; }
 
-  double czas_w_buforze_;
-  double opoznienie_pakietu_;
+  //Czas oczekiwania oraz opóŸnienie pakietu
+  double CzasWBuforze() { return czas_w_buforze_; }
+  double Opoznienie() { return opoznienie_pakietu_; }
+
+  //Potwierdzenie odbioru
+  bool PobierzACK() { return ack_; }
+  void UstawACK(bool ack) { ack_ = ack; }
+
+  //Unikatowe id pakietu
+  long IdPakietu() { return id_pakietu_; }
+  
+  //Porównywanie pakietów, nie adresów pamiêci
   friend bool operator==(const Pakiet& lhs, const Pakiet& rhs);
-  long id_;
-  //static long licznik_;
 
 private:
-  const int kMaxLiczbaRetransmisji = 3;
-  const double kPrawdopodobienstwo = 0.4;
+  const int kMaxLiczbaRetransmisji = 3;   //zmiana
+  const double kPrawdopodobienstwo = 0.4;   //zmiana
   const double kCzasPotwierdzenia = 1.0;
-
+  long id_pakietu_;
+  int id_tx_;
+  int faza_;
+  bool ack_;
+  bool skonczony_;
   double czas_transmisji_;
   double prawdopodobienstwo;
   int nr_retransmisji_;
@@ -41,7 +50,8 @@ private:
   double czas_pojawienia_;
   double czas_nadania_;
   double czas_odebrania_;
-
+  double czas_w_buforze_;
+  double opoznienie_pakietu_;
   Zdarzenie* moje_zdarzenie_;
   Nadajnik* nad_;
   Kanal* kanal_;

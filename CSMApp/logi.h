@@ -8,8 +8,7 @@
 
 using std::cout;
 using std::endl;
-using std::ios;
-using std::string;
+//using std::string;
 
 class Logi
 {

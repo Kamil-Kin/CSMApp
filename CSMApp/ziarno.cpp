@@ -4,15 +4,16 @@ Ziarno::Ziarno() :odstep_ziaren_(100000), liczba_ziaren_(150)
 {
   uniform_ = new GenRownomierny(1);
 }
-Ziarno::~Ziarno() {
+Ziarno::~Ziarno() 
+{
   delete uniform_;
 }
 
 void Ziarno::GeneracjaZiaren()
 {
+  int temp;
   //fstream plik;
   //plik.open("ziarno.txt", ios::in | ios::out | ios::trunc);
-  int temp;
   //if (plik.good() == true) {
     for (int i = 0; i < liczba_ziaren_; ++i) 
     {

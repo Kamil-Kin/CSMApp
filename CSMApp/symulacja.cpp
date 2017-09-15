@@ -14,16 +14,17 @@ bool comparer::operator()(const Zdarzenie* zd1, const Zdarzenie* zd2) const
 
 Symulacja::Symulacja(double lam, int faza, double czas, int nr, bool logi, Logi* ptr_logi, Ziarno* ziarno, Statystyka* stat) :zegar_(0.0), nr_odbioru_(0)
 {
-  licznik_ = 0;
+  licznik_pakietow_ = 0;
   lambda_ = lam;
   faza_poczatkowa_ = faza;
   czas_symulacji_ = czas;
   nr_symulacji_ = nr;
-  log = logi;
+  log_ = logi;
   kalendarz_ = new priority_queue<Zdarzenie*, vector<Zdarzenie*>, comparer>;
   siec_ = new Siec(this, ziarno, stat);
   ptr_logi_ = ptr_logi;
-  //opoznienie = "opoznienie" + to_string(nr) + ".txt"; //do wyznaczenia fazy pocz¹tkowej
+  //do wyznaczenia fazy pocz¹tkowej
+  //opoznienie = "opoznienie" + to_string(nr) + ".txt"; 
   //plik.open(opoznienie.c_str(), ios::out | ios::app);
 }
 
@@ -51,41 +52,32 @@ void Symulacja::run(char tryb_symulacji, int nr_symulacji)
     zegar_ = kalendarz_->top()->czas_zdarzenia_;
     UsunZKalendarza();
 
-    if (log == true) {
-      //UstawKolor("07");
-      cout << "\nPakiet id " << obecny_->id_ << ": Pobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
-    }
+    if (log_ == true) cout << "\nPakiet id " << obecny_->IdPakietu() << ": Pobrano z kalendarza zdarzenie o czasie: " << zegar_ << " ms";
 
-    obecny_->execute(log);
-    if ((obecny_->skonczony_) == true)
+    obecny_->execute(log_);
+    if ((obecny_->Skonczony()) == true)
     {
-      if (log == true) cout << "Pakiet id " << obecny_->id_ << ":\tusuniety z systemu" << endl;
+      if (log_ == true) cout << "Pakiet id " << obecny_->IdPakietu() << ":\tusuniety z systemu" << endl;
       siec_->StatystykiPakietu(obecny_);
       delete obecny_;
     }
-    if (tryb_symulacji == 'K' || tryb_symulacji == 'k') getchar();
+    if (tryb_symulacji == 'K' || tryb_symulacji == 'k') system("pause");
   }
-  //if (plik.good() == true) //do wyznaczenia fazy pocz¹tkowej
-  //{
+  //do wyznaczenia fazy pocz¹tkowej
+  //if (plik.good() == true) {
   //  for (int i = 0; i < 100; i++)
   //    plik << tab[i] << " ";
-  //}
-  //else cout << "Nie uzyskano dostepu do pliku " << endl;
-
+  //} else cout << "Nie uzyskano dostepu do pliku " << endl;
   siec_->Statystyki();
   siec_->CzyszczenieStatystyk();
 }
 
-void Symulacja::DodajDoKalendarza(Zdarzenie* zd) 
-{
-  kalendarz_->push(zd);
-}
+void Symulacja::DodajDoKalendarza(Zdarzenie* zd) { kalendarz_->push(zd); }
 
 void Symulacja::UsunZKalendarza()
 {
   assert(!kalendarz_->empty());
-  if (kalendarz_->empty() == false)
-    kalendarz_->pop();
+  if (kalendarz_->empty() == false) kalendarz_->pop();
 }
 
 /*void Symulacja::UstawKolor(string numer)

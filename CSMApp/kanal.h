@@ -12,13 +12,11 @@ class Kanal
 public:
   Kanal();
   ~Kanal();
-  void KanalWolny(bool stan_lacza);
-  bool StanLacza();
-  void DodajDoKanalu(Pakiet*);
-  void UsunZKanalu(Pakiet*);
-  list<Pakiet*> lacze_;
+  bool KanalWolny();
+  void DodajDoKanalu(Pakiet* pakiet);
+  void UsunZKanalu(Pakiet* pakiet);
 private:
-  bool wolny_;
+  list<Pakiet*>* lacze_;
 };
 
 #endif // !CSMA_PP_KANAL_H

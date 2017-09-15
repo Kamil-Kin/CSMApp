@@ -1,27 +1,20 @@
 #include "kanal.h"
 #include "pakiet.h"
 
-Kanal::Kanal() :wolny_(true) {}
-Kanal::~Kanal() {}
+Kanal::Kanal() { lacze_ = new list<Pakiet*>; }
 
-void Kanal::KanalWolny(bool stan_lacza) { wolny_ = stan_lacza; }
+Kanal::~Kanal() { delete lacze_; }
 
-bool Kanal::StanLacza() { return lacze_.empty(); }
-
- // to powinno dzialac chyba troche inaczej - 
- // jesli dodajesz do kanalu i lacze_.size() > 1, 
-  //to wszystkie pakiety w kanale powinny miec ustawiana 
- // jakas flage `kolizja` na true
- // Nie da sie tego wyciagnac poprzez metode 
+bool Kanal::KanalWolny() { return lacze_->empty(); }
 
 void Kanal::DodajDoKanalu(Pakiet* pakiet)
 {
-  lacze_.push_front(pakiet);
-  if (lacze_.size() == 1)
-    pakiet->ack_ = true;
-  if (lacze_.size() > 1) 
-    for each (Pakiet* pak in lacze_)
-      pak->ack_ = false;
+  lacze_->push_front(pakiet);
+  if (lacze_->size() == 1)
+    pakiet->UstawACK(true);
+  if (lacze_->size() > 1)
+    for each (Pakiet* pak in *lacze_)
+      pak->UstawACK(false);
 }
 
-void Kanal::UsunZKanalu(Pakiet* pakiet) { lacze_.remove(pakiet); }
+void Kanal::UsunZKanalu(Pakiet* pakiet) { lacze_->remove(pakiet); }

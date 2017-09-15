@@ -10,7 +10,7 @@ using std::cout;
 using std::endl;
 using std::ios;
 
-class Ziarno 
+class Ziarno
 {
 public:
   Ziarno();
@@ -18,10 +18,11 @@ public:
 
   void GeneracjaZiaren();
   int PobierzZiarno(int index);
+  void PobierzZiarnoZPliku();
 private:
   int odstep_ziaren_;
   int liczba_ziaren_;
-  int ziarna[150];
+  int ziarna[150] = { 0 };
   GenRownomierny* uniform_;
 };
 

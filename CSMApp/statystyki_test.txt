@@ -1,0 +1,1681 @@
+Statystyki symulacji nr: 1 dla lambdy: 0.0025
+Nadajnik nr 0: wygenerowane: 24784; nadane: 534; stracone: 46; odebrane: 487; retransmisje: 362; stopa bledow: 0.0861423; srednia liczba retransmisji: 0.743326
+Nadajnik nr 1: wygenerowane: 26437; nadane: 558; stracone: 42; odebrane: 515; retransmisje: 387; stopa bledow: 0.0752688; srednia liczba retransmisji: 0.751456
+Nadajnik nr 2: wygenerowane: 25632; nadane: 546; stracone: 38; odebrane: 507; retransmisje: 347; stopa bledow: 0.0695971; srednia liczba retransmisji: 0.684418
+Nadajnik nr 3: wygenerowane: 28907; nadane: 583; stracone: 44; odebrane: 539; retransmisje: 364; stopa bledow: 0.0754717; srednia liczba retransmisji: 0.675325
+Nadajnik nr 4: wygenerowane: 25981; nadane: 557; stracone: 45; odebrane: 511; retransmisje: 381; stopa bledow: 0.0807899; srednia liczba retransmisji: 0.745597
+Nadajnik nr 5: wygenerowane: 20359; nadane: 493; stracone: 56; odebrane: 437; retransmisje: 378; stopa bledow: 0.11359; srednia liczba retransmisji: 0.864989
+Nadajnik nr 6: wygenerowane: 49124; nadane: 808; stracone: 45; odebrane: 764; retransmisje: 369; stopa bledow: 0.0556931; srednia liczba retransmisji: 0.482984
+Nadajnik nr 7: wygenerowane: 19279; nadane: 461; stracone: 43; odebrane: 417; retransmisje: 333; stopa bledow: 0.0932755; srednia liczba retransmisji: 0.798561
+Nadajnik nr 8: wygenerowane: 42793; nadane: 723; stracone: 41; odebrane: 681; retransmisje: 375; stopa bledow: 0.0567082; srednia liczba retransmisji: 0.550661
+Nadajnik nr 9: wygenerowane: 26966; nadane: 565; stracone: 38; odebrane: 526; retransmisje: 357; stopa bledow: 0.0672566; srednia liczba retransmisji: 0.678707
+Laczna liczba wygenerowanych pakietow: 290262
+Laczna liczba nadanych pakietow: 5828
+Laczna liczba straconych pakietow: 438
+Laczna liczba odebranych pakietow: 5384
+Srednia pakietowa stopa bledow: 0.0773793
+Maksymalna pakietowa stopa bledow: 0.11359; nadajnik nr: 5
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.678492
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.68
+Srednie opoznienie pakietu: 58.0024
+Sredni czas oczekiwania: 32.5899
+Statystyki symulacji nr: 2 dla lambdy: 0.0025
+Nadajnik nr 0: wygenerowane: 34565; nadane: 672; stracone: 42; odebrane: 630; retransmisje: 367; stopa bledow: 0.0625; srednia liczba retransmisji: 0.58254
+Nadajnik nr 1: wygenerowane: 24466; nadane: 507; stracone: 36; odebrane: 471; retransmisje: 348; stopa bledow: 0.0710059; srednia liczba retransmisji: 0.738854
+Nadajnik nr 2: wygenerowane: 27209; nadane: 563; stracone: 52; odebrane: 511; retransmisje: 377; stopa bledow: 0.0923623; srednia liczba retransmisji: 0.737769
+Nadajnik nr 3: wygenerowane: 30228; nadane: 594; stracone: 39; odebrane: 554; retransmisje: 359; stopa bledow: 0.0656566; srednia liczba retransmisji: 0.648014
+Nadajnik nr 4: wygenerowane: 30807; nadane: 637; stracone: 53; odebrane: 584; retransmisje: 428; stopa bledow: 0.0832025; srednia liczba retransmisji: 0.732877
+Nadajnik nr 5: wygenerowane: 24364; nadane: 545; stracone: 39; odebrane: 506; retransmisje: 342; stopa bledow: 0.0715596; srednia liczba retransmisji: 0.675889
+Nadajnik nr 6: wygenerowane: 29098; nadane: 566; stracone: 43; odebrane: 523; retransmisje: 352; stopa bledow: 0.0759717; srednia liczba retransmisji: 0.67304
+Nadajnik nr 7: wygenerowane: 21957; nadane: 508; stracone: 35; odebrane: 473; retransmisje: 319; stopa bledow: 0.0688976; srednia liczba retransmisji: 0.674419
+Nadajnik nr 8: wygenerowane: 29357; nadane: 573; stracone: 46; odebrane: 526; retransmisje: 372; stopa bledow: 0.0802792; srednia liczba retransmisji: 0.707224
+Nadajnik nr 9: wygenerowane: 34700; nadane: 657; stracone: 40; odebrane: 616; retransmisje: 381; stopa bledow: 0.0608828; srednia liczba retransmisji: 0.618506
+Laczna liczba wygenerowanych pakietow: 286751
+Laczna liczba nadanych pakietow: 5822
+Laczna liczba straconych pakietow: 425
+Laczna liczba odebranych pakietow: 5394
+Srednia pakietowa stopa bledow: 0.0732318
+Maksymalna pakietowa stopa bledow: 0.0923623; nadajnik nr: 2
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.675751
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.88
+Srednie opoznienie pakietu: 61.0889
+Sredni czas oczekiwania: 34.8217
+Statystyki symulacji nr: 3 dla lambdy: 0.0025
+Nadajnik nr 0: wygenerowane: 23480; nadane: 489; stracone: 44; odebrane: 445; retransmisje: 367; stopa bledow: 0.0899796; srednia liczba retransmisji: 0.824719
+Nadajnik nr 1: wygenerowane: 29164; nadane: 584; stracone: 38; odebrane: 546; retransmisje: 358; stopa bledow: 0.0650685; srednia liczba retransmisji: 0.655678
+Nadajnik nr 2: wygenerowane: 41158; nadane: 714; stracone: 38; odebrane: 676; retransmisje: 386; stopa bledow: 0.0532213; srednia liczba retransmisji: 0.571006
+Nadajnik nr 3: wygenerowane: 31986; nadane: 642; stracone: 43; odebrane: 599; retransmisje: 370; stopa bledow: 0.0669782; srednia liczba retransmisji: 0.617696
+Nadajnik nr 4: wygenerowane: 28291; nadane: 556; stracone: 36; odebrane: 519; retransmisje: 367; stopa bledow: 0.0647482; srednia liczba retransmisji: 0.707129
+Nadajnik nr 5: wygenerowane: 24302; nadane: 512; stracone: 40; odebrane: 471; retransmisje: 371; stopa bledow: 0.078125; srednia liczba retransmisji: 0.787686
+Nadajnik nr 6: wygenerowane: 25824; nadane: 523; stracone: 43; odebrane: 479; retransmisje: 372; stopa bledow: 0.082218; srednia liczba retransmisji: 0.776618
+Nadajnik nr 7: wygenerowane: 31193; nadane: 629; stracone: 43; odebrane: 585; retransmisje: 364; stopa bledow: 0.0683625; srednia liczba retransmisji: 0.622222
+Nadajnik nr 8: wygenerowane: 23123; nadane: 512; stracone: 37; odebrane: 474; retransmisje: 345; stopa bledow: 0.0722656; srednia liczba retransmisji: 0.727848
+Nadajnik nr 9: wygenerowane: 22308; nadane: 518; stracone: 35; odebrane: 482; retransmisje: 370; stopa bledow: 0.0675676; srednia liczba retransmisji: 0.767635
+Laczna liczba wygenerowanych pakietow: 280829
+Laczna liczba nadanych pakietow: 5679
+Laczna liczba straconych pakietow: 397
+Laczna liczba odebranych pakietow: 5276
+Srednia pakietowa stopa bledow: 0.0708534
+Maksymalna pakietowa stopa bledow: 0.0899796; nadajnik nr: 0
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.695603
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.52
+Srednie opoznienie pakietu: 62.3775
+Sredni czas oczekiwania: 34.4875
+Statystyki symulacji nr: 4 dla lambdy: 0.0025
+Nadajnik nr 0: wygenerowane: 18179; nadane: 455; stracone: 42; odebrane: 412; retransmisje: 349; stopa bledow: 0.0923077; srednia liczba retransmisji: 0.847087
+Nadajnik nr 1: wygenerowane: 38339; nadane: 770; stracone: 31; odebrane: 738; retransmisje: 336; stopa bledow: 0.0402597; srednia liczba retransmisji: 0.455285
+Nadajnik nr 2: wygenerowane: 18297; nadane: 498; stracone: 43; odebrane: 455; retransmisje: 344; stopa bledow: 0.0863454; srednia liczba retransmisji: 0.756044
+Nadajnik nr 3: wygenerowane: 19289; nadane: 478; stracone: 39; odebrane: 438; retransmisje: 329; stopa bledow: 0.08159; srednia liczba retransmisji: 0.751142
+Nadajnik nr 4: wygenerowane: 16502; nadane: 470; stracone: 40; odebrane: 430; retransmisje: 333; stopa bledow: 0.0851064; srednia liczba retransmisji: 0.774419
+Nadajnik nr 5: wygenerowane: 18131; nadane: 464; stracone: 46; odebrane: 417; retransmisje: 327; stopa bledow: 0.0991379; srednia liczba retransmisji: 0.784173
+Nadajnik nr 6: wygenerowane: 20456; nadane: 511; stracone: 29; odebrane: 482; retransmisje: 323; stopa bledow: 0.0567515; srednia liczba retransmisji: 0.670124
+Nadajnik nr 7: wygenerowane: 16955; nadane: 453; stracone: 47; odebrane: 405; retransmisje: 332; stopa bledow: 0.103753; srednia liczba retransmisji: 0.819753
+Nadajnik nr 8: wygenerowane: 26776; nadane: 572; stracone: 42; odebrane: 529; retransmisje: 359; stopa bledow: 0.0734266; srednia liczba retransmisji: 0.678639
+Nadajnik nr 9: wygenerowane: 19029; nadane: 479; stracone: 43; odebrane: 436; retransmisje: 336; stopa bledow: 0.0897704; srednia liczba retransmisji: 0.770642
+Laczna liczba wygenerowanych pakietow: 211953
+Laczna liczba nadanych pakietow: 5150
+Laczna liczba straconych pakietow: 402
+Laczna liczba odebranych pakietow: 4742
+Srednia pakietowa stopa bledow: 0.0808448
+Maksymalna pakietowa stopa bledow: 0.103753; nadajnik nr: 7
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.710249
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 94.84
+Srednie opoznienie pakietu: 57.3265
+Sredni czas oczekiwania: 32.3435
+Statystyki symulacji nr: 5 dla lambdy: 0.0025
+Nadajnik nr 0: wygenerowane: 31401; nadane: 605; stracone: 46; odebrane: 559; retransmisje: 386; stopa bledow: 0.0760331; srednia liczba retransmisji: 0.690519
+Nadajnik nr 1: wygenerowane: 20942; nadane: 490; stracone: 43; odebrane: 447; retransmisje: 365; stopa bledow: 0.0877551; srednia liczba retransmisji: 0.816555
+Nadajnik nr 2: wygenerowane: 24581; nadane: 538; stracone: 49; odebrane: 488; retransmisje: 399; stopa bledow: 0.0910781; srednia liczba retransmisji: 0.817623
+Nadajnik nr 3: wygenerowane: 21515; nadane: 529; stracone: 50; odebrane: 479; retransmisje: 375; stopa bledow: 0.094518; srednia liczba retransmisji: 0.782881
+Nadajnik nr 4: wygenerowane: 21984; nadane: 501; stracone: 56; odebrane: 445; retransmisje: 396; stopa bledow: 0.111776; srednia liczba retransmisji: 0.889888
+Nadajnik nr 5: wygenerowane: 25374; nadane: 561; stracone: 51; odebrane: 509; retransmisje: 387; stopa bledow: 0.0909091; srednia liczba retransmisji: 0.760314
+Nadajnik nr 6: wygenerowane: 25777; nadane: 606; stracone: 49; odebrane: 558; retransmisje: 397; stopa bledow: 0.0808581; srednia liczba retransmisji: 0.71147
+Nadajnik nr 7: wygenerowane: 18979; nadane: 463; stracone: 44; odebrane: 418; retransmisje: 349; stopa bledow: 0.0950324; srednia liczba retransmisji: 0.834928
+Nadajnik nr 8: wygenerowane: 21469; nadane: 484; stracone: 41; odebrane: 443; retransmisje: 372; stopa bledow: 0.0847107; srednia liczba retransmisji: 0.839729
+Nadajnik nr 9: wygenerowane: 25008; nadane: 532; stracone: 56; odebrane: 475; retransmisje: 393; stopa bledow: 0.105263; srednia liczba retransmisji: 0.827368
+Laczna liczba wygenerowanych pakietow: 237030
+Laczna liczba nadanych pakietow: 5309
+Laczna liczba straconych pakietow: 485
+Laczna liczba odebranych pakietow: 4821
+Srednia pakietowa stopa bledow: 0.0917934
+Maksymalna pakietowa stopa bledow: 0.111776; nadajnik nr: 4
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.792159
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 96.42
+Srednie opoznienie pakietu: 60.4505
+Sredni czas oczekiwania: 32.5018
+Statystyki symulacji nr: 6 dla lambdy: 0.0025
+Nadajnik nr 0: wygenerowane: 31088; nadane: 580; stracone: 45; odebrane: 534; retransmisje: 409; stopa bledow: 0.0775862; srednia liczba retransmisji: 0.765918
+Nadajnik nr 1: wygenerowane: 29225; nadane: 562; stracone: 50; odebrane: 511; retransmisje: 404; stopa bledow: 0.088968; srednia liczba retransmisji: 0.790607
+Nadajnik nr 2: wygenerowane: 26297; nadane: 545; stracone: 49; odebrane: 496; retransmisje: 407; stopa bledow: 0.0899083; srednia liczba retransmisji: 0.820565
+Nadajnik nr 3: wygenerowane: 37133; nadane: 656; stracone: 49; odebrane: 606; retransmisje: 429; stopa bledow: 0.0746951; srednia liczba retransmisji: 0.707921
+Nadajnik nr 4: wygenerowane: 30780; nadane: 606; stracone: 44; odebrane: 561; retransmisje: 410; stopa bledow: 0.0726073; srednia liczba retransmisji: 0.730838
+Nadajnik nr 5: wygenerowane: 32906; nadane: 577; stracone: 49; odebrane: 527; retransmisje: 421; stopa bledow: 0.084922; srednia liczba retransmisji: 0.798861
+Nadajnik nr 6: wygenerowane: 23543; nadane: 479; stracone: 51; odebrane: 428; retransmisje: 410; stopa bledow: 0.106472; srednia liczba retransmisji: 0.957944
+Nadajnik nr 7: wygenerowane: 36443; nadane: 637; stracone: 46; odebrane: 590; retransmisje: 413; stopa bledow: 0.0722135; srednia liczba retransmisji: 0.7
+Nadajnik nr 8: wygenerowane: 34201; nadane: 627; stracone: 50; odebrane: 576; retransmisje: 410; stopa bledow: 0.0797448; srednia liczba retransmisji: 0.711806
+Nadajnik nr 9: wygenerowane: 32536; nadane: 607; stracone: 43; odebrane: 564; retransmisje: 399; stopa bledow: 0.0708402; srednia liczba retransmisji: 0.707447
+Laczna liczba wygenerowanych pakietow: 314152
+Laczna liczba nadanych pakietow: 5876
+Laczna liczba straconych pakietow: 476
+Laczna liczba odebranych pakietow: 5393
+Srednia pakietowa stopa bledow: 0.0817957
+Maksymalna pakietowa stopa bledow: 0.106472; nadajnik nr: 6
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.76247
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.86
+Srednie opoznienie pakietu: 63.7866
+Sredni czas oczekiwania: 34.9705
+Statystyki symulacji nr: 7 dla lambdy: 0.0025
+Nadajnik nr 0: wygenerowane: 34946; nadane: 695; stracone: 28; odebrane: 667; retransmisje: 327; stopa bledow: 0.0402878; srednia liczba retransmisji: 0.490255
+Nadajnik nr 1: wygenerowane: 29358; nadane: 614; stracone: 43; odebrane: 571; retransmisje: 337; stopa bledow: 0.0700326; srednia liczba retransmisji: 0.590193
+Nadajnik nr 2: wygenerowane: 33500; nadane: 632; stracone: 37; odebrane: 594; retransmisje: 344; stopa bledow: 0.0585443; srednia liczba retransmisji: 0.579125
+Nadajnik nr 3: wygenerowane: 20971; nadane: 483; stracone: 42; odebrane: 440; retransmisje: 334; stopa bledow: 0.0869565; srednia liczba retransmisji: 0.759091
+Nadajnik nr 4: wygenerowane: 29383; nadane: 585; stracone: 40; odebrane: 544; retransmisje: 348; stopa bledow: 0.0683761; srednia liczba retransmisji: 0.639706
+Nadajnik nr 5: wygenerowane: 17859; nadane: 459; stracone: 34; odebrane: 425; retransmisje: 315; stopa bledow: 0.0740741; srednia liczba retransmisji: 0.741176
+Nadajnik nr 6: wygenerowane: 25194; nadane: 559; stracone: 39; odebrane: 519; retransmisje: 329; stopa bledow: 0.0697674; srednia liczba retransmisji: 0.633911
+Nadajnik nr 7: wygenerowane: 24246; nadane: 517; stracone: 40; odebrane: 477; retransmisje: 335; stopa bledow: 0.0773694; srednia liczba retransmisji: 0.702306
+Nadajnik nr 8: wygenerowane: 18717; nadane: 476; stracone: 31; odebrane: 446; retransmisje: 296; stopa bledow: 0.0651261; srednia liczba retransmisji: 0.663677
+Nadajnik nr 9: wygenerowane: 32670; nadane: 646; stracone: 36; odebrane: 609; retransmisje: 347; stopa bledow: 0.0557276; srednia liczba retransmisji: 0.569787
+Laczna liczba wygenerowanych pakietow: 266844
+Laczna liczba nadanych pakietow: 5666
+Laczna liczba straconych pakietow: 370
+Laczna liczba odebranych pakietow: 5292
+Srednia pakietowa stopa bledow: 0.0666262
+Maksymalna pakietowa stopa bledow: 0.0869565; nadajnik nr: 3
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.62585
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.84
+Srednie opoznienie pakietu: 59.4305
+Sredni czas oczekiwania: 33.9104
+Statystyki symulacji nr: 8 dla lambdy: 0.0025
+Nadajnik nr 0: wygenerowane: 32329; nadane: 600; stracone: 39; odebrane: 560; retransmisje: 354; stopa bledow: 0.065; srednia liczba retransmisji: 0.632143
+Nadajnik nr 1: wygenerowane: 25635; nadane: 553; stracone: 42; odebrane: 510; retransmisje: 385; stopa bledow: 0.0759494; srednia liczba retransmisji: 0.754902
+Nadajnik nr 2: wygenerowane: 35529; nadane: 636; stracone: 38; odebrane: 598; retransmisje: 373; stopa bledow: 0.0597484; srednia liczba retransmisji: 0.623746
+Nadajnik nr 3: wygenerowane: 28764; nadane: 550; stracone: 46; odebrane: 503; retransmisje: 387; stopa bledow: 0.0836364; srednia liczba retransmisji: 0.769384
+Nadajnik nr 4: wygenerowane: 29495; nadane: 560; stracone: 41; odebrane: 519; retransmisje: 361; stopa bledow: 0.0732143; srednia liczba retransmisji: 0.695568
+Nadajnik nr 5: wygenerowane: 24747; nadane: 556; stracone: 40; odebrane: 516; retransmisje: 369; stopa bledow: 0.0719424; srednia liczba retransmisji: 0.715116
+Nadajnik nr 6: wygenerowane: 34800; nadane: 605; stracone: 35; odebrane: 570; retransmisje: 370; stopa bledow: 0.0578512; srednia liczba retransmisji: 0.649123
+Nadajnik nr 7: wygenerowane: 27794; nadane: 559; stracone: 48; odebrane: 510; retransmisje: 393; stopa bledow: 0.0858676; srednia liczba retransmisji: 0.770588
+Nadajnik nr 8: wygenerowane: 27831; nadane: 553; stracone: 45; odebrane: 507; retransmisje: 377; stopa bledow: 0.0813743; srednia liczba retransmisji: 0.74359
+Nadajnik nr 9: wygenerowane: 44428; nadane: 790; stracone: 36; odebrane: 754; retransmisje: 373; stopa bledow: 0.0455696; srednia liczba retransmisji: 0.494695
+Laczna liczba wygenerowanych pakietow: 311352
+Laczna liczba nadanych pakietow: 5962
+Laczna liczba straconych pakietow: 410
+Laczna liczba odebranych pakietow: 5547
+Srednia pakietowa stopa bledow: 0.0700154
+Maksymalna pakietowa stopa bledow: 0.0858676; nadajnik nr: 7
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.674599
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 110.94
+Srednie opoznienie pakietu: 63.4388
+Sredni czas oczekiwania: 36.0997
+Statystyki symulacji nr: 9 dla lambdy: 0.0025
+Nadajnik nr 0: wygenerowane: 27308; nadane: 539; stracone: 45; odebrane: 493; retransmisje: 390; stopa bledow: 0.0834879; srednia liczba retransmisji: 0.791075
+Nadajnik nr 1: wygenerowane: 26882; nadane: 523; stracone: 54; odebrane: 468; retransmisje: 406; stopa bledow: 0.10325; srednia liczba retransmisji: 0.867521
+Nadajnik nr 2: wygenerowane: 31304; nadane: 596; stracone: 38; odebrane: 558; retransmisje: 382; stopa bledow: 0.0637584; srednia liczba retransmisji: 0.684588
+Nadajnik nr 3: wygenerowane: 27557; nadane: 599; stracone: 41; odebrane: 557; retransmisje: 366; stopa bledow: 0.0684474; srednia liczba retransmisji: 0.657092
+Nadajnik nr 4: wygenerowane: 28925; nadane: 581; stracone: 46; odebrane: 534; retransmisje: 395; stopa bledow: 0.0791738; srednia liczba retransmisji: 0.7397
+Nadajnik nr 5: wygenerowane: 28796; nadane: 597; stracone: 41; odebrane: 555; retransmisje: 388; stopa bledow: 0.0686767; srednia liczba retransmisji: 0.699099
+Nadajnik nr 6: wygenerowane: 26751; nadane: 546; stracone: 38; odebrane: 507; retransmisje: 373; stopa bledow: 0.0695971; srednia liczba retransmisji: 0.7357
+Nadajnik nr 7: wygenerowane: 26623; nadane: 555; stracone: 43; odebrane: 513; retransmisje: 403; stopa bledow: 0.0774775; srednia liczba retransmisji: 0.785575
+Nadajnik nr 8: wygenerowane: 35377; nadane: 639; stracone: 47; odebrane: 591; retransmisje: 406; stopa bledow: 0.0735524; srednia liczba retransmisji: 0.686971
+Nadajnik nr 9: wygenerowane: 39041; nadane: 709; stracone: 48; odebrane: 661; retransmisje: 406; stopa bledow: 0.067701; srednia liczba retransmisji: 0.614221
+Laczna liczba wygenerowanych pakietow: 298564
+Laczna liczba nadanych pakietow: 5884
+Laczna liczba straconych pakietow: 441
+Laczna liczba odebranych pakietow: 5437
+Srednia pakietowa stopa bledow: 0.0755123
+Maksymalna pakietowa stopa bledow: 0.10325; nadajnik nr: 1
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.720066
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 108.74
+Srednie opoznienie pakietu: 62.854
+Sredni czas oczekiwania: 34.7769
+Statystyki symulacji nr: 10 dla lambdy: 0.0025
+Nadajnik nr 0: wygenerowane: 31421; nadane: 596; stracone: 41; odebrane: 554; retransmisje: 369; stopa bledow: 0.0687919; srednia liczba retransmisji: 0.666065
+Nadajnik nr 1: wygenerowane: 23934; nadane: 515; stracone: 41; odebrane: 473; retransmisje: 348; stopa bledow: 0.0796117; srednia liczba retransmisji: 0.735729
+Nadajnik nr 2: wygenerowane: 22406; nadane: 484; stracone: 45; odebrane: 438; retransmisje: 364; stopa bledow: 0.0929752; srednia liczba retransmisji: 0.83105
+Nadajnik nr 3: wygenerowane: 25255; nadane: 508; stracone: 40; odebrane: 467; retransmisje: 368; stopa bledow: 0.0787402; srednia liczba retransmisji: 0.788009
+Nadajnik nr 4: wygenerowane: 29365; nadane: 619; stracone: 37; odebrane: 581; retransmisje: 356; stopa bledow: 0.0597738; srednia liczba retransmisji: 0.612737
+Nadajnik nr 5: wygenerowane: 56219; nadane: 849; stracone: 32; odebrane: 816; retransmisje: 356; stopa bledow: 0.0376914; srednia liczba retransmisji: 0.436275
+Nadajnik nr 6: wygenerowane: 24029; nadane: 516; stracone: 43; odebrane: 473; retransmisje: 357; stopa bledow: 0.0833333; srednia liczba retransmisji: 0.754757
+Nadajnik nr 7: wygenerowane: 25304; nadane: 549; stracone: 51; odebrane: 497; retransmisje: 387; stopa bledow: 0.0928962; srednia liczba retransmisji: 0.778672
+Nadajnik nr 8: wygenerowane: 33578; nadane: 623; stracone: 42; odebrane: 580; retransmisje: 353; stopa bledow: 0.0674157; srednia liczba retransmisji: 0.608621
+Nadajnik nr 9: wygenerowane: 32250; nadane: 650; stracone: 44; odebrane: 605; retransmisje: 375; stopa bledow: 0.0676923; srednia liczba retransmisji: 0.619835
+Laczna liczba wygenerowanych pakietow: 303761
+Laczna liczba nadanych pakietow: 5909
+Laczna liczba straconych pakietow: 416
+Laczna liczba odebranych pakietow: 5484
+Srednia pakietowa stopa bledow: 0.0728922
+Maksymalna pakietowa stopa bledow: 0.0929752; nadajnik nr: 2
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.662473
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 109.68
+Srednie opoznienie pakietu: 60.8427
+Sredni czas oczekiwania: 35.1148
+Statystyki symulacji nr: 1 dla lambdy: 0.0027
+Nadajnik nr 0: wygenerowane: 34895; nadane: 615; stracone: 44; odebrane: 570; retransmisje: 380; stopa bledow: 0.0715447; srednia liczba retransmisji: 0.666667
+Nadajnik nr 1: wygenerowane: 31182; nadane: 565; stracone: 52; odebrane: 512; retransmisje: 396; stopa bledow: 0.0920354; srednia liczba retransmisji: 0.773438
+Nadajnik nr 2: wygenerowane: 25796; nadane: 531; stracone: 42; odebrane: 488; retransmisje: 350; stopa bledow: 0.079096; srednia liczba retransmisji: 0.717213
+Nadajnik nr 3: wygenerowane: 30635; nadane: 553; stracone: 39; odebrane: 513; retransmisje: 391; stopa bledow: 0.0705244; srednia liczba retransmisji: 0.762183
+Nadajnik nr 4: wygenerowane: 21377; nadane: 471; stracone: 41; odebrane: 430; retransmisje: 355; stopa bledow: 0.0870488; srednia liczba retransmisji: 0.825581
+Nadajnik nr 5: wygenerowane: 23729; nadane: 527; stracone: 44; odebrane: 482; retransmisje: 346; stopa bledow: 0.0834915; srednia liczba retransmisji: 0.717842
+Nadajnik nr 6: wygenerowane: 51589; nadane: 758; stracone: 46; odebrane: 712; retransmisje: 392; stopa bledow: 0.060686; srednia liczba retransmisji: 0.550562
+Nadajnik nr 7: wygenerowane: 24806; nadane: 521; stracone: 38; odebrane: 482; retransmisje: 345; stopa bledow: 0.0729367; srednia liczba retransmisji: 0.715768
+Nadajnik nr 8: wygenerowane: 42258; nadane: 704; stracone: 43; odebrane: 660; retransmisje: 390; stopa bledow: 0.0610795; srednia liczba retransmisji: 0.590909
+Nadajnik nr 9: wygenerowane: 32283; nadane: 591; stracone: 51; odebrane: 539; retransmisje: 388; stopa bledow: 0.0862944; srednia liczba retransmisji: 0.719852
+Laczna liczba wygenerowanych pakietow: 318550
+Laczna liczba nadanych pakietow: 5836
+Laczna liczba straconych pakietow: 440
+Laczna liczba odebranych pakietow: 5388
+Srednia pakietowa stopa bledow: 0.0764738
+Maksymalna pakietowa stopa bledow: 0.0920354; nadajnik nr: 1
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.692836
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.76
+Srednie opoznienie pakietu: 59.7833
+Sredni czas oczekiwania: 33.7456
+Statystyki symulacji nr: 2 dla lambdy: 0.0027
+Nadajnik nr 0: wygenerowane: 34288; nadane: 603; stracone: 52; odebrane: 551; retransmisje: 434; stopa bledow: 0.0862355; srednia liczba retransmisji: 0.787659
+Nadajnik nr 1: wygenerowane: 36355; nadane: 641; stracone: 44; odebrane: 597; retransmisje: 422; stopa bledow: 0.0686427; srednia liczba retransmisji: 0.706868
+Nadajnik nr 2: wygenerowane: 30020; nadane: 554; stracone: 57; odebrane: 497; retransmisje: 462; stopa bledow: 0.102888; srednia liczba retransmisji: 0.929577
+Nadajnik nr 3: wygenerowane: 33383; nadane: 592; stracone: 49; odebrane: 542; retransmisje: 439; stopa bledow: 0.0827703; srednia liczba retransmisji: 0.809963
+Nadajnik nr 4: wygenerowane: 32197; nadane: 582; stracone: 60; odebrane: 521; retransmisje: 444; stopa bledow: 0.103093; srednia liczba retransmisji: 0.852207
+Nadajnik nr 5: wygenerowane: 27537; nadane: 537; stracone: 61; odebrane: 475; retransmisje: 427; stopa bledow: 0.113594; srednia liczba retransmisji: 0.898947
+Nadajnik nr 6: wygenerowane: 33230; nadane: 578; stracone: 49; odebrane: 529; retransmisje: 427; stopa bledow: 0.0847751; srednia liczba retransmisji: 0.807183
+Nadajnik nr 7: wygenerowane: 24546; nadane: 535; stracone: 47; odebrane: 487; retransmisje: 402; stopa bledow: 0.0878505; srednia liczba retransmisji: 0.825462
+Nadajnik nr 8: wygenerowane: 30818; nadane: 573; stracone: 55; odebrane: 517; retransmisje: 444; stopa bledow: 0.095986; srednia liczba retransmisji: 0.858801
+Nadajnik nr 9: wygenerowane: 34176; nadane: 623; stracone: 59; odebrane: 563; retransmisje: 440; stopa bledow: 0.094703; srednia liczba retransmisji: 0.781528
+Laczna liczba wygenerowanych pakietow: 316550
+Laczna liczba nadanych pakietow: 5818
+Laczna liczba straconych pakietow: 533
+Laczna liczba odebranych pakietow: 5279
+Srednia pakietowa stopa bledow: 0.0920538
+Maksymalna pakietowa stopa bledow: 0.113594; nadajnik nr: 5
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.822315
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.58
+Srednie opoznienie pakietu: 62.2812
+Sredni czas oczekiwania: 34.1292
+Statystyki symulacji nr: 3 dla lambdy: 0.0027
+Nadajnik nr 0: wygenerowane: 28998; nadane: 548; stracone: 43; odebrane: 505; retransmisje: 392; stopa bledow: 0.0784672; srednia liczba retransmisji: 0.776238
+Nadajnik nr 1: wygenerowane: 32708; nadane: 569; stracone: 56; odebrane: 513; retransmisje: 409; stopa bledow: 0.0984183; srednia liczba retransmisji: 0.797271
+Nadajnik nr 2: wygenerowane: 39268; nadane: 664; stracone: 52; odebrane: 613; retransmisje: 416; stopa bledow: 0.0783133; srednia liczba retransmisji: 0.67863
+Nadajnik nr 3: wygenerowane: 34924; nadane: 623; stracone: 40; odebrane: 583; retransmisje: 388; stopa bledow: 0.0642055; srednia liczba retransmisji: 0.665523
+Nadajnik nr 4: wygenerowane: 29519; nadane: 570; stracone: 35; odebrane: 534; retransmisje: 361; stopa bledow: 0.0614035; srednia liczba retransmisji: 0.67603
+Nadajnik nr 5: wygenerowane: 31066; nadane: 559; stracone: 45; odebrane: 514; retransmisje: 403; stopa bledow: 0.0805009; srednia liczba retransmisji: 0.784047
+Nadajnik nr 6: wygenerowane: 33406; nadane: 578; stracone: 42; odebrane: 536; retransmisje: 382; stopa bledow: 0.0726644; srednia liczba retransmisji: 0.712687
+Nadajnik nr 7: wygenerowane: 28936; nadane: 550; stracone: 52; odebrane: 498; retransmisje: 397; stopa bledow: 0.0945455; srednia liczba retransmisji: 0.797189
+Nadajnik nr 8: wygenerowane: 29749; nadane: 549; stracone: 44; odebrane: 505; retransmisje: 399; stopa bledow: 0.0801457; srednia liczba retransmisji: 0.790099
+Nadajnik nr 9: wygenerowane: 29240; nadane: 555; stracone: 53; odebrane: 502; retransmisje: 415; stopa bledow: 0.0954955; srednia liczba retransmisji: 0.826693
+Laczna liczba wygenerowanych pakietow: 317814
+Laczna liczba nadanych pakietow: 5765
+Laczna liczba straconych pakietow: 462
+Laczna liczba odebranych pakietow: 5303
+Srednia pakietowa stopa bledow: 0.080416
+Maksymalna pakietowa stopa bledow: 0.0984183; nadajnik nr: 1
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.747124
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 106.06
+Srednie opoznienie pakietu: 63.3642
+Sredni czas oczekiwania: 34.971
+Statystyki symulacji nr: 4 dla lambdy: 0.0027
+Nadajnik nr 0: wygenerowane: 27911; nadane: 537; stracone: 45; odebrane: 491; retransmisje: 369; stopa bledow: 0.0837989; srednia liczba retransmisji: 0.751527
+Nadajnik nr 1: wygenerowane: 36985; nadane: 635; stracone: 52; odebrane: 583; retransmisje: 394; stopa bledow: 0.0818898; srednia liczba retransmisji: 0.675815
+Nadajnik nr 2: wygenerowane: 35946; nadane: 625; stracone: 45; odebrane: 581; retransmisje: 388; stopa bledow: 0.072; srednia liczba retransmisji: 0.667814
+Nadajnik nr 3: wygenerowane: 40052; nadane: 689; stracone: 52; odebrane: 637; retransmisje: 414; stopa bledow: 0.0754717; srednia liczba retransmisji: 0.649922
+Nadajnik nr 4: wygenerowane: 30269; nadane: 561; stracone: 39; odebrane: 521; retransmisje: 371; stopa bledow: 0.0695187; srednia liczba retransmisji: 0.712092
+Nadajnik nr 5: wygenerowane: 28981; nadane: 541; stracone: 48; odebrane: 492; retransmisje: 405; stopa bledow: 0.0887246; srednia liczba retransmisji: 0.823171
+Nadajnik nr 6: wygenerowane: 33521; nadane: 593; stracone: 40; odebrane: 552; retransmisje: 370; stopa bledow: 0.0674536; srednia liczba retransmisji: 0.67029
+Nadajnik nr 7: wygenerowane: 27836; nadane: 544; stracone: 43; odebrane: 501; retransmisje: 374; stopa bledow: 0.0790441; srednia liczba retransmisji: 0.746507
+Nadajnik nr 8: wygenerowane: 29240; nadane: 531; stracone: 45; odebrane: 485; retransmisje: 386; stopa bledow: 0.0847458; srednia liczba retransmisji: 0.795876
+Nadajnik nr 9: wygenerowane: 30466; nadane: 585; stracone: 41; odebrane: 544; retransmisje: 363; stopa bledow: 0.0700855; srednia liczba retransmisji: 0.667279
+Laczna liczba wygenerowanych pakietow: 321207
+Laczna liczba nadanych pakietow: 5841
+Laczna liczba straconych pakietow: 450
+Laczna liczba odebranych pakietow: 5387
+Srednia pakietowa stopa bledow: 0.0772733
+Maksymalna pakietowa stopa bledow: 0.0887246; nadajnik nr: 5
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.711713
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.74
+Srednie opoznienie pakietu: 62.233
+Sredni czas oczekiwania: 34.9326
+Statystyki symulacji nr: 5 dla lambdy: 0.0027
+Nadajnik nr 0: wygenerowane: 46876; nadane: 745; stracone: 49; odebrane: 695; retransmisje: 410; stopa bledow: 0.0657718; srednia liczba retransmisji: 0.589928
+Nadajnik nr 1: wygenerowane: 25174; nadane: 488; stracone: 49; odebrane: 439; retransmisje: 396; stopa bledow: 0.10041; srednia liczba retransmisji: 0.90205
+Nadajnik nr 2: wygenerowane: 26914; nadane: 541; stracone: 36; odebrane: 504; retransmisje: 361; stopa bledow: 0.0665434; srednia liczba retransmisji: 0.71627
+Nadajnik nr 3: wygenerowane: 33529; nadane: 605; stracone: 47; odebrane: 557; retransmisje: 396; stopa bledow: 0.077686; srednia liczba retransmisji: 0.710952
+Nadajnik nr 4: wygenerowane: 26183; nadane: 528; stracone: 45; odebrane: 482; retransmisje: 377; stopa bledow: 0.0852273; srednia liczba retransmisji: 0.782158
+Nadajnik nr 5: wygenerowane: 32713; nadane: 591; stracone: 54; odebrane: 537; retransmisje: 416; stopa bledow: 0.0913706; srednia liczba retransmisji: 0.774674
+Nadajnik nr 6: wygenerowane: 34352; nadane: 623; stracone: 44; odebrane: 580; retransmisje: 408; stopa bledow: 0.070626; srednia liczba retransmisji: 0.703448
+Nadajnik nr 7: wygenerowane: 27302; nadane: 526; stracone: 47; odebrane: 478; retransmisje: 387; stopa bledow: 0.0893536; srednia liczba retransmisji: 0.809623
+Nadajnik nr 8: wygenerowane: 23870; nadane: 518; stracone: 46; odebrane: 471; retransmisje: 374; stopa bledow: 0.0888031; srednia liczba retransmisji: 0.794055
+Nadajnik nr 9: wygenerowane: 32978; nadane: 615; stracone: 49; odebrane: 566; retransmisje: 413; stopa bledow: 0.0796748; srednia liczba retransmisji: 0.729682
+Laczna liczba wygenerowanych pakietow: 309891
+Laczna liczba nadanych pakietow: 5780
+Laczna liczba straconych pakietow: 466
+Laczna liczba odebranych pakietow: 5309
+Srednia pakietowa stopa bledow: 0.0815466
+Maksymalna pakietowa stopa bledow: 0.10041; nadajnik nr: 1
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.741759
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 106.18
+Srednie opoznienie pakietu: 61.3097
+Sredni czas oczekiwania: 33.9849
+Statystyki symulacji nr: 6 dla lambdy: 0.0027
+Nadajnik nr 0: wygenerowane: 36753; nadane: 598; stracone: 49; odebrane: 549; retransmisje: 423; stopa bledow: 0.0819398; srednia liczba retransmisji: 0.770492
+Nadajnik nr 1: wygenerowane: 28050; nadane: 530; stracone: 60; odebrane: 469; retransmisje: 440; stopa bledow: 0.113208; srednia liczba retransmisji: 0.938166
+Nadajnik nr 2: wygenerowane: 34648; nadane: 592; stracone: 45; odebrane: 547; retransmisje: 426; stopa bledow: 0.0760135; srednia liczba retransmisji: 0.778793
+Nadajnik nr 3: wygenerowane: 39889; nadane: 655; stracone: 56; odebrane: 598; retransmisje: 435; stopa bledow: 0.0854962; srednia liczba retransmisji: 0.727425
+Nadajnik nr 4: wygenerowane: 38556; nadane: 625; stracone: 47; odebrane: 577; retransmisje: 441; stopa bledow: 0.0752; srednia liczba retransmisji: 0.764298
+Nadajnik nr 5: wygenerowane: 41958; nadane: 690; stracone: 49; odebrane: 640; retransmisje: 412; stopa bledow: 0.0710145; srednia liczba retransmisji: 0.64375
+Nadajnik nr 6: wygenerowane: 31130; nadane: 543; stracone: 45; odebrane: 497; retransmisje: 408; stopa bledow: 0.0828729; srednia liczba retransmisji: 0.820926
+Nadajnik nr 7: wygenerowane: 36465; nadane: 600; stracone: 56; odebrane: 543; retransmisje: 442; stopa bledow: 0.0933333; srednia liczba retransmisji: 0.813996
+Nadajnik nr 8: wygenerowane: 32300; nadane: 558; stracone: 50; odebrane: 507; retransmisje: 429; stopa bledow: 0.0896057; srednia liczba retransmisji: 0.846154
+Nadajnik nr 9: wygenerowane: 33563; nadane: 574; stracone: 44; odebrane: 529; retransmisje: 410; stopa bledow: 0.0766551; srednia liczba retransmisji: 0.775047
+Laczna liczba wygenerowanych pakietow: 353312
+Laczna liczba nadanych pakietow: 5965
+Laczna liczba straconych pakietow: 501
+Laczna liczba odebranych pakietow: 5456
+Srednia pakietowa stopa bledow: 0.0845339
+Maksymalna pakietowa stopa bledow: 0.113208; nadajnik nr: 1
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.781891
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 109.12
+Srednie opoznienie pakietu: 64.6756
+Sredni czas oczekiwania: 35.4124
+Statystyki symulacji nr: 7 dla lambdy: 0.0027
+Nadajnik nr 0: wygenerowane: 35298; nadane: 614; stracone: 58; odebrane: 555; retransmisje: 437; stopa bledow: 0.0944625; srednia liczba retransmisji: 0.787387
+Nadajnik nr 1: wygenerowane: 32278; nadane: 599; stracone: 49; odebrane: 550; retransmisje: 432; stopa bledow: 0.081803; srednia liczba retransmisji: 0.785455
+Nadajnik nr 2: wygenerowane: 31143; nadane: 569; stracone: 49; odebrane: 519; retransmisje: 397; stopa bledow: 0.086116; srednia liczba retransmisji: 0.764933
+Nadajnik nr 3: wygenerowane: 34285; nadane: 603; stracone: 48; odebrane: 555; retransmisje: 428; stopa bledow: 0.079602; srednia liczba retransmisji: 0.771171
+Nadajnik nr 4: wygenerowane: 29713; nadane: 574; stracone: 62; odebrane: 512; retransmisje: 431; stopa bledow: 0.108014; srednia liczba retransmisji: 0.841797
+Nadajnik nr 5: wygenerowane: 24990; nadane: 503; stracone: 46; odebrane: 456; retransmisje: 376; stopa bledow: 0.0914513; srednia liczba retransmisji: 0.824561
+Nadajnik nr 6: wygenerowane: 33453; nadane: 582; stracone: 41; odebrane: 541; retransmisje: 397; stopa bledow: 0.0704467; srednia liczba retransmisji: 0.733826
+Nadajnik nr 7: wygenerowane: 28613; nadane: 543; stracone: 46; odebrane: 497; retransmisje: 406; stopa bledow: 0.0847145; srednia liczba retransmisji: 0.816901
+Nadajnik nr 8: wygenerowane: 31541; nadane: 565; stracone: 54; odebrane: 512; retransmisje: 420; stopa bledow: 0.0955752; srednia liczba retransmisji: 0.820313
+Nadajnik nr 9: wygenerowane: 33602; nadane: 645; stracone: 49; odebrane: 596; retransmisje: 425; stopa bledow: 0.075969; srednia liczba retransmisji: 0.713087
+Laczna liczba wygenerowanych pakietow: 314916
+Laczna liczba nadanych pakietow: 5797
+Laczna liczba straconych pakietow: 502
+Laczna liczba odebranych pakietow: 5293
+Srednia pakietowa stopa bledow: 0.0868154
+Maksymalna pakietowa stopa bledow: 0.108014; nadajnik nr: 4
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.783865
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.86
+Srednie opoznienie pakietu: 61.7933
+Sredni czas oczekiwania: 34.2776
+Statystyki symulacji nr: 8 dla lambdy: 0.0027
+Nadajnik nr 0: wygenerowane: 35139; nadane: 601; stracone: 48; odebrane: 553; retransmisje: 404; stopa bledow: 0.0798669; srednia liczba retransmisji: 0.730561
+Nadajnik nr 1: wygenerowane: 30931; nadane: 551; stracone: 39; odebrane: 512; retransmisje: 409; stopa bledow: 0.0707804; srednia liczba retransmisji: 0.798828
+Nadajnik nr 2: wygenerowane: 36282; nadane: 624; stracone: 55; odebrane: 570; retransmisje: 434; stopa bledow: 0.088141; srednia liczba retransmisji: 0.761404
+Nadajnik nr 3: wygenerowane: 32872; nadane: 592; stracone: 35; odebrane: 557; retransmisje: 391; stopa bledow: 0.0591216; srednia liczba retransmisji: 0.701975
+Nadajnik nr 4: wygenerowane: 31662; nadane: 554; stracone: 50; odebrane: 503; retransmisje: 422; stopa bledow: 0.0902527; srednia liczba retransmisji: 0.838966
+Nadajnik nr 5: wygenerowane: 27849; nadane: 548; stracone: 48; odebrane: 500; retransmisje: 405; stopa bledow: 0.0875912; srednia liczba retransmisji: 0.81
+Nadajnik nr 6: wygenerowane: 37677; nadane: 612; stracone: 56; odebrane: 556; retransmisje: 433; stopa bledow: 0.0915033; srednia liczba retransmisji: 0.778777
+Nadajnik nr 7: wygenerowane: 41754; nadane: 658; stracone: 52; odebrane: 606; retransmisje: 440; stopa bledow: 0.0790274; srednia liczba retransmisji: 0.726073
+Nadajnik nr 8: wygenerowane: 34827; nadane: 585; stracone: 32; odebrane: 553; retransmisje: 377; stopa bledow: 0.0547009; srednia liczba retransmisji: 0.681736
+Nadajnik nr 9: wygenerowane: 42611; nadane: 675; stracone: 50; odebrane: 624; retransmisje: 433; stopa bledow: 0.0740741; srednia liczba retransmisji: 0.69391
+Laczna liczba wygenerowanych pakietow: 351604
+Laczna liczba nadanych pakietow: 6000
+Laczna liczba straconych pakietow: 465
+Laczna liczba odebranych pakietow: 5534
+Srednia pakietowa stopa bledow: 0.0775059
+Maksymalna pakietowa stopa bledow: 0.0915033; nadajnik nr: 6
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.749548
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 110.68
+Srednie opoznienie pakietu: 64.3031
+Sredni czas oczekiwania: 36.1139
+Statystyki symulacji nr: 9 dla lambdy: 0.0027
+Nadajnik nr 0: wygenerowane: 31167; nadane: 545; stracone: 51; odebrane: 493; retransmisje: 420; stopa bledow: 0.093578; srednia liczba retransmisji: 0.851927
+Nadajnik nr 1: wygenerowane: 35276; nadane: 587; stracone: 52; odebrane: 534; retransmisje: 428; stopa bledow: 0.088586; srednia liczba retransmisji: 0.801498
+Nadajnik nr 2: wygenerowane: 35402; nadane: 611; stracone: 46; odebrane: 565; retransmisje: 419; stopa bledow: 0.0752864; srednia liczba retransmisji: 0.741593
+Nadajnik nr 3: wygenerowane: 37212; nadane: 649; stracone: 51; odebrane: 597; retransmisje: 442; stopa bledow: 0.0785824; srednia liczba retransmisji: 0.740369
+Nadajnik nr 4: wygenerowane: 35064; nadane: 587; stracone: 62; odebrane: 525; retransmisje: 444; stopa bledow: 0.105622; srednia liczba retransmisji: 0.845714
+Nadajnik nr 5: wygenerowane: 29997; nadane: 539; stracone: 42; odebrane: 496; retransmisje: 405; stopa bledow: 0.0779221; srednia liczba retransmisji: 0.816532
+Nadajnik nr 6: wygenerowane: 61867; nadane: 828; stracone: 55; odebrane: 772; retransmisje: 451; stopa bledow: 0.0664251; srednia liczba retransmisji: 0.584197
+Nadajnik nr 7: wygenerowane: 33149; nadane: 577; stracone: 40; odebrane: 537; retransmisje: 420; stopa bledow: 0.0693241; srednia liczba retransmisji: 0.782123
+Nadajnik nr 8: wygenerowane: 34081; nadane: 581; stracone: 53; odebrane: 527; retransmisje: 438; stopa bledow: 0.091222; srednia liczba retransmisji: 0.83112
+Nadajnik nr 9: wygenerowane: 42435; nadane: 678; stracone: 47; odebrane: 630; retransmisje: 452; stopa bledow: 0.0693215; srednia liczba retransmisji: 0.71746
+Laczna liczba wygenerowanych pakietow: 375650
+Laczna liczba nadanych pakietow: 6182
+Laczna liczba straconych pakietow: 499
+Laczna liczba odebranych pakietow: 5676
+Srednia pakietowa stopa bledow: 0.081587
+Maksymalna pakietowa stopa bledow: 0.105622; nadajnik nr: 4
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.760923
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 113.52
+Srednie opoznienie pakietu: 62.5423
+Sredni czas oczekiwania: 34.4878
+Statystyki symulacji nr: 10 dla lambdy: 0.0027
+Nadajnik nr 0: wygenerowane: 35139; nadane: 616; stracone: 42; odebrane: 573; retransmisje: 391; stopa bledow: 0.0681818; srednia liczba retransmisji: 0.682373
+Nadajnik nr 1: wygenerowane: 24186; nadane: 488; stracone: 38; odebrane: 449; retransmisje: 368; stopa bledow: 0.0778689; srednia liczba retransmisji: 0.819599
+Nadajnik nr 2: wygenerowane: 36760; nadane: 630; stracone: 53; odebrane: 576; retransmisje: 421; stopa bledow: 0.084127; srednia liczba retransmisji: 0.730903
+Nadajnik nr 3: wygenerowane: 33535; nadane: 604; stracone: 37; odebrane: 567; retransmisje: 367; stopa bledow: 0.0612583; srednia liczba retransmisji: 0.647266
+Nadajnik nr 4: wygenerowane: 24340; nadane: 509; stracone: 41; odebrane: 468; retransmisje: 380; stopa bledow: 0.0805501; srednia liczba retransmisji: 0.811966
+Nadajnik nr 5: wygenerowane: 60089; nadane: 861; stracone: 48; odebrane: 812; retransmisje: 433; stopa bledow: 0.0557491; srednia liczba retransmisji: 0.533251
+Nadajnik nr 6: wygenerowane: 25444; nadane: 515; stracone: 42; odebrane: 474; retransmisje: 366; stopa bledow: 0.0815534; srednia liczba retransmisji: 0.772152
+Nadajnik nr 7: wygenerowane: 24964; nadane: 515; stracone: 49; odebrane: 465; retransmisje: 381; stopa bledow: 0.0951456; srednia liczba retransmisji: 0.819355
+Nadajnik nr 8: wygenerowane: 26536; nadane: 525; stracone: 44; odebrane: 481; retransmisje: 372; stopa bledow: 0.0838095; srednia liczba retransmisji: 0.773389
+Nadajnik nr 9: wygenerowane: 35425; nadane: 639; stracone: 39; odebrane: 600; retransmisje: 378; stopa bledow: 0.0610329; srednia liczba retransmisji: 0.63
+Laczna liczba wygenerowanych pakietow: 326418
+Laczna liczba nadanych pakietow: 5902
+Laczna liczba straconych pakietow: 433
+Laczna liczba odebranych pakietow: 5465
+Srednia pakietowa stopa bledow: 0.0749277
+Maksymalna pakietowa stopa bledow: 0.0951456; nadajnik nr: 7
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.705764
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 109.3
+Srednie opoznienie pakietu: 59.9346
+Sredni czas oczekiwania: 33.2861
+Statystyki symulacji nr: 1 dla lambdy: 0.0028
+Nadajnik nr 0: wygenerowane: 30340; nadane: 558; stracone: 48; odebrane: 510; retransmisje: 399; stopa bledow: 0.0860215; srednia liczba retransmisji: 0.782353
+Nadajnik nr 1: wygenerowane: 32431; nadane: 571; stracone: 37; odebrane: 534; retransmisje: 370; stopa bledow: 0.0647986; srednia liczba retransmisji: 0.692884
+Nadajnik nr 2: wygenerowane: 27624; nadane: 530; stracone: 44; odebrane: 486; retransmisje: 375; stopa bledow: 0.0830189; srednia liczba retransmisji: 0.771605
+Nadajnik nr 3: wygenerowane: 41142; nadane: 659; stracone: 47; odebrane: 612; retransmisje: 399; stopa bledow: 0.0713202; srednia liczba retransmisji: 0.651961
+Nadajnik nr 4: wygenerowane: 23919; nadane: 495; stracone: 52; odebrane: 442; retransmisje: 397; stopa bledow: 0.105051; srednia liczba retransmisji: 0.89819
+Nadajnik nr 5: wygenerowane: 26377; nadane: 541; stracone: 50; odebrane: 491; retransmisje: 401; stopa bledow: 0.0924214; srednia liczba retransmisji: 0.816701
+Nadajnik nr 6: wygenerowane: 48503; nadane: 710; stracone: 43; odebrane: 667; retransmisje: 402; stopa bledow: 0.0605634; srednia liczba retransmisji: 0.602699
+Nadajnik nr 7: wygenerowane: 31465; nadane: 563; stracone: 49; odebrane: 513; retransmisje: 382; stopa bledow: 0.0870337; srednia liczba retransmisji: 0.744639
+Nadajnik nr 8: wygenerowane: 37049; nadane: 619; stracone: 49; odebrane: 570; retransmisje: 444; stopa bledow: 0.0791599; srednia liczba retransmisji: 0.778947
+Nadajnik nr 9: wygenerowane: 33590; nadane: 594; stracone: 46; odebrane: 547; retransmisje: 414; stopa bledow: 0.0774411; srednia liczba retransmisji: 0.756856
+Laczna liczba wygenerowanych pakietow: 332440
+Laczna liczba nadanych pakietow: 5840
+Laczna liczba straconych pakietow: 465
+Laczna liczba odebranych pakietow: 5372
+Srednia pakietowa stopa bledow: 0.0806829
+Maksymalna pakietowa stopa bledow: 0.105051; nadajnik nr: 4
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.741437
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.44
+Srednie opoznienie pakietu: 60.7195
+Sredni czas oczekiwania: 33.5436
+Statystyki symulacji nr: 2 dla lambdy: 0.0028
+Nadajnik nr 0: wygenerowane: 39471; nadane: 636; stracone: 48; odebrane: 587; retransmisje: 460; stopa bledow: 0.0754717; srednia liczba retransmisji: 0.783646
+Nadajnik nr 1: wygenerowane: 33007; nadane: 586; stracone: 46; odebrane: 540; retransmisje: 443; stopa bledow: 0.0784983; srednia liczba retransmisji: 0.82037
+Nadajnik nr 2: wygenerowane: 37605; nadane: 627; stracone: 58; odebrane: 569; retransmisje: 462; stopa bledow: 0.092504; srednia liczba retransmisji: 0.811951
+Nadajnik nr 3: wygenerowane: 30991; nadane: 563; stracone: 53; odebrane: 509; retransmisje: 413; stopa bledow: 0.0941385; srednia liczba retransmisji: 0.811395
+Nadajnik nr 4: wygenerowane: 36999; nadane: 608; stracone: 49; odebrane: 558; retransmisje: 437; stopa bledow: 0.0805921; srednia liczba retransmisji: 0.783154
+Nadajnik nr 5: wygenerowane: 29562; nadane: 521; stracone: 51; odebrane: 470; retransmisje: 423; stopa bledow: 0.0978887; srednia liczba retransmisji: 0.9
+Nadajnik nr 6: wygenerowane: 31154; nadane: 551; stracone: 51; odebrane: 499; retransmisje: 436; stopa bledow: 0.092559; srednia liczba retransmisji: 0.873747
+Nadajnik nr 7: wygenerowane: 25777; nadane: 489; stracone: 55; odebrane: 433; retransmisje: 466; stopa bledow: 0.112474; srednia liczba retransmisji: 1.07621
+Nadajnik nr 8: wygenerowane: 35700; nadane: 602; stracone: 54; odebrane: 547; retransmisje: 459; stopa bledow: 0.089701; srednia liczba retransmisji: 0.839122
+Nadajnik nr 9: wygenerowane: 38142; nadane: 653; stracone: 49; odebrane: 603; retransmisje: 435; stopa bledow: 0.0750383; srednia liczba retransmisji: 0.721393
+Laczna liczba wygenerowanych pakietow: 338408
+Laczna liczba nadanych pakietow: 5836
+Laczna liczba straconych pakietow: 514
+Laczna liczba odebranych pakietow: 5315
+Srednia pakietowa stopa bledow: 0.0888866
+Maksymalna pakietowa stopa bledow: 0.112474; nadajnik nr: 7
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.834243
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 106.3
+Srednie opoznienie pakietu: 63.5948
+Sredni czas oczekiwania: 33.5663
+Statystyki symulacji nr: 3 dla lambdy: 0.0028
+Nadajnik nr 0: wygenerowane: 29925; nadane: 529; stracone: 45; odebrane: 483; retransmisje: 427; stopa bledow: 0.0850662; srednia liczba retransmisji: 0.884058
+Nadajnik nr 1: wygenerowane: 34164; nadane: 589; stracone: 45; odebrane: 544; retransmisje: 411; stopa bledow: 0.0764007; srednia liczba retransmisji: 0.755515
+Nadajnik nr 2: wygenerowane: 41684; nadane: 662; stracone: 53; odebrane: 610; retransmisje: 427; stopa bledow: 0.0800604; srednia liczba retransmisji: 0.7
+Nadajnik nr 3: wygenerowane: 37186; nadane: 621; stracone: 51; odebrane: 570; retransmisje: 410; stopa bledow: 0.0821256; srednia liczba retransmisji: 0.719298
+Nadajnik nr 4: wygenerowane: 30503; nadane: 542; stracone: 47; odebrane: 495; retransmisje: 394; stopa bledow: 0.0867159; srednia liczba retransmisji: 0.79596
+Nadajnik nr 5: wygenerowane: 33837; nadane: 562; stracone: 53; odebrane: 508; retransmisje: 424; stopa bledow: 0.094306; srednia liczba retransmisji: 0.834646
+Nadajnik nr 6: wygenerowane: 33702; nadane: 594; stracone: 61; odebrane: 532; retransmisje: 422; stopa bledow: 0.102694; srednia liczba retransmisji: 0.793233
+Nadajnik nr 7: wygenerowane: 32281; nadane: 579; stracone: 35; odebrane: 544; retransmisje: 374; stopa bledow: 0.0604491; srednia liczba retransmisji: 0.6875
+Nadajnik nr 8: wygenerowane: 29721; nadane: 547; stracone: 40; odebrane: 507; retransmisje: 377; stopa bledow: 0.0731261; srednia liczba retransmisji: 0.74359
+Nadajnik nr 9: wygenerowane: 27856; nadane: 537; stracone: 45; odebrane: 491; retransmisje: 386; stopa bledow: 0.0837989; srednia liczba retransmisji: 0.786151
+Laczna liczba wygenerowanych pakietow: 330859
+Laczna liczba nadanych pakietow: 5762
+Laczna liczba straconych pakietow: 475
+Laczna liczba odebranych pakietow: 5284
+Srednia pakietowa stopa bledow: 0.0824742
+Maksymalna pakietowa stopa bledow: 0.102694; nadajnik nr: 6
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.766843
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.68
+Srednie opoznienie pakietu: 63.3157
+Sredni czas oczekiwania: 34.2651
+Statystyki symulacji nr: 4 dla lambdy: 0.0028
+Nadajnik nr 0: wygenerowane: 28833; nadane: 535; stracone: 57; odebrane: 478; retransmisje: 412; stopa bledow: 0.106542; srednia liczba retransmisji: 0.861925
+Nadajnik nr 1: wygenerowane: 37794; nadane: 615; stracone: 51; odebrane: 564; retransmisje: 446; stopa bledow: 0.0829268; srednia liczba retransmisji: 0.79078
+Nadajnik nr 2: wygenerowane: 39396; nadane: 675; stracone: 51; odebrane: 625; retransmisje: 431; stopa bledow: 0.0755556; srednia liczba retransmisji: 0.6896
+Nadajnik nr 3: wygenerowane: 37754; nadane: 653; stracone: 57; odebrane: 595; retransmisje: 440; stopa bledow: 0.0872894; srednia liczba retransmisji: 0.739496
+Nadajnik nr 4: wygenerowane: 33890; nadane: 607; stracone: 46; odebrane: 561; retransmisje: 404; stopa bledow: 0.0757825; srednia liczba retransmisji: 0.720143
+Nadajnik nr 5: wygenerowane: 27757; nadane: 516; stracone: 54; odebrane: 462; retransmisje: 431; stopa bledow: 0.104651; srednia liczba retransmisji: 0.9329
+Nadajnik nr 6: wygenerowane: 35697; nadane: 574; stracone: 52; odebrane: 522; retransmisje: 428; stopa bledow: 0.0905923; srednia liczba retransmisji: 0.819923
+Nadajnik nr 7: wygenerowane: 30825; nadane: 515; stracone: 62; odebrane: 452; retransmisje: 465; stopa bledow: 0.120388; srednia liczba retransmisji: 1.02876
+Nadajnik nr 8: wygenerowane: 30470; nadane: 532; stracone: 46; odebrane: 486; retransmisje: 415; stopa bledow: 0.0864662; srednia liczba retransmisji: 0.853909
+Nadajnik nr 9: wygenerowane: 39219; nadane: 634; stracone: 53; odebrane: 580; retransmisje: 440; stopa bledow: 0.0835962; srednia liczba retransmisji: 0.758621
+Laczna liczba wygenerowanych pakietow: 341635
+Laczna liczba nadanych pakietow: 5856
+Laczna liczba straconych pakietow: 529
+Laczna liczba odebranych pakietow: 5325
+Srednia pakietowa stopa bledow: 0.0913791
+Maksymalna pakietowa stopa bledow: 0.120388; nadajnik nr: 7
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.809765
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 106.5
+Srednie opoznienie pakietu: 62.1312
+Sredni czas oczekiwania: 33.8708
+Statystyki symulacji nr: 5 dla lambdy: 0.0028
+Nadajnik nr 0: wygenerowane: 29342; nadane: 530; stracone: 39; odebrane: 492; retransmisje: 414; stopa bledow: 0.0735849; srednia liczba retransmisji: 0.841463
+Nadajnik nr 1: wygenerowane: 38621; nadane: 624; stracone: 52; odebrane: 572; retransmisje: 442; stopa bledow: 0.0833333; srednia liczba retransmisji: 0.772727
+Nadajnik nr 2: wygenerowane: 33861; nadane: 568; stracone: 54; odebrane: 513; retransmisje: 447; stopa bledow: 0.0950704; srednia liczba retransmisji: 0.871345
+Nadajnik nr 3: wygenerowane: 35862; nadane: 585; stracone: 52; odebrane: 533; retransmisje: 434; stopa bledow: 0.0888889; srednia liczba retransmisji: 0.814259
+Nadajnik nr 4: wygenerowane: 26587; nadane: 516; stracone: 63; odebrane: 453; retransmisje: 454; stopa bledow: 0.122093; srednia liczba retransmisji: 1.00221
+Nadajnik nr 5: wygenerowane: 33400; nadane: 571; stracone: 43; odebrane: 528; retransmisje: 444; stopa bledow: 0.0753065; srednia liczba retransmisji: 0.840909
+Nadajnik nr 6: wygenerowane: 62353; nadane: 849; stracone: 48; odebrane: 801; retransmisje: 427; stopa bledow: 0.0565371; srednia liczba retransmisji: 0.533084
+Nadajnik nr 7: wygenerowane: 27120; nadane: 516; stracone: 51; odebrane: 465; retransmisje: 424; stopa bledow: 0.0988372; srednia liczba retransmisji: 0.911828
+Nadajnik nr 8: wygenerowane: 36496; nadane: 586; stracone: 54; odebrane: 532; retransmisje: 440; stopa bledow: 0.0921502; srednia liczba retransmisji: 0.827068
+Nadajnik nr 9: wygenerowane: 31460; nadane: 568; stracone: 51; odebrane: 517; retransmisje: 437; stopa bledow: 0.0897887; srednia liczba retransmisji: 0.845261
+Laczna liczba wygenerowanych pakietow: 355102
+Laczna liczba nadanych pakietow: 5913
+Laczna liczba straconych pakietow: 507
+Laczna liczba odebranych pakietow: 5406
+Srednia pakietowa stopa bledow: 0.087559
+Maksymalna pakietowa stopa bledow: 0.122093; nadajnik nr: 4
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.807066
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 108.12
+Srednie opoznienie pakietu: 62.1706
+Sredni czas oczekiwania: 32.2006
+Statystyki symulacji nr: 6 dla lambdy: 0.0028
+Nadajnik nr 0: wygenerowane: 36365; nadane: 589; stracone: 50; odebrane: 539; retransmisje: 434; stopa bledow: 0.0848896; srednia liczba retransmisji: 0.805195
+Nadajnik nr 1: wygenerowane: 34067; nadane: 577; stracone: 52; odebrane: 524; retransmisje: 435; stopa bledow: 0.0901213; srednia liczba retransmisji: 0.830153
+Nadajnik nr 2: wygenerowane: 37538; nadane: 595; stracone: 62; odebrane: 534; retransmisje: 461; stopa bledow: 0.104202; srednia liczba retransmisji: 0.863296
+Nadajnik nr 3: wygenerowane: 36857; nadane: 603; stracone: 52; odebrane: 550; retransmisje: 463; stopa bledow: 0.0862355; srednia liczba retransmisji: 0.841818
+Nadajnik nr 4: wygenerowane: 34026; nadane: 565; stracone: 53; odebrane: 511; retransmisje: 450; stopa bledow: 0.0938053; srednia liczba retransmisji: 0.880626
+Nadajnik nr 5: wygenerowane: 49186; nadane: 721; stracone: 52; odebrane: 668; retransmisje: 440; stopa bledow: 0.0721221; srednia liczba retransmisji: 0.658683
+Nadajnik nr 6: wygenerowane: 29288; nadane: 553; stracone: 42; odebrane: 510; retransmisje: 413; stopa bledow: 0.0759494; srednia liczba retransmisji: 0.809804
+Nadajnik nr 7: wygenerowane: 40909; nadane: 617; stracone: 55; odebrane: 561; retransmisje: 430; stopa bledow: 0.089141; srednia liczba retransmisji: 0.766488
+Nadajnik nr 8: wygenerowane: 34749; nadane: 576; stracone: 55; odebrane: 521; retransmisje: 439; stopa bledow: 0.0954861; srednia liczba retransmisji: 0.84261
+Nadajnik nr 9: wygenerowane: 41331; nadane: 649; stracone: 55; odebrane: 594; retransmisje: 425; stopa bledow: 0.0847458; srednia liczba retransmisji: 0.715488
+Laczna liczba wygenerowanych pakietow: 374316
+Laczna liczba nadanych pakietow: 6045
+Laczna liczba straconych pakietow: 528
+Laczna liczba odebranych pakietow: 5512
+Srednia pakietowa stopa bledow: 0.0876698
+Maksymalna pakietowa stopa bledow: 0.104202; nadajnik nr: 2
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.796444
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 110.24
+Srednie opoznienie pakietu: 63.2184
+Sredni czas oczekiwania: 34.8285
+Statystyki symulacji nr: 7 dla lambdy: 0.0028
+Nadajnik nr 0: wygenerowane: 37192; nadane: 609; stracone: 53; odebrane: 556; retransmisje: 433; stopa bledow: 0.0870279; srednia liczba retransmisji: 0.778777
+Nadajnik nr 1: wygenerowane: 38885; nadane: 645; stracone: 47; odebrane: 598; retransmisje: 415; stopa bledow: 0.0728682; srednia liczba retransmisji: 0.69398
+Nadajnik nr 2: wygenerowane: 32957; nadane: 573; stracone: 40; odebrane: 533; retransmisje: 403; stopa bledow: 0.069808; srednia liczba retransmisji: 0.756098
+Nadajnik nr 3: wygenerowane: 32078; nadane: 551; stracone: 42; odebrane: 508; retransmisje: 410; stopa bledow: 0.076225; srednia liczba retransmisji: 0.807087
+Nadajnik nr 4: wygenerowane: 33373; nadane: 591; stracone: 48; odebrane: 543; retransmisje: 422; stopa bledow: 0.0812183; srednia liczba retransmisji: 0.777164
+Nadajnik nr 5: wygenerowane: 29285; nadane: 531; stracone: 42; odebrane: 488; retransmisje: 383; stopa bledow: 0.079096; srednia liczba retransmisji: 0.784836
+Nadajnik nr 6: wygenerowane: 29058; nadane: 523; stracone: 50; odebrane: 473; retransmisje: 421; stopa bledow: 0.0956023; srednia liczba retransmisji: 0.890063
+Nadajnik nr 7: wygenerowane: 37154; nadane: 616; stracone: 45; odebrane: 571; retransmisje: 402; stopa bledow: 0.0730519; srednia liczba retransmisji: 0.704028
+Nadajnik nr 8: wygenerowane: 32576; nadane: 547; stracone: 43; odebrane: 504; retransmisje: 411; stopa bledow: 0.0786106; srednia liczba retransmisji: 0.815476
+Nadajnik nr 9: wygenerowane: 46807; nadane: 708; stracone: 50; odebrane: 657; retransmisje: 423; stopa bledow: 0.0706215; srednia liczba retransmisji: 0.643836
+Laczna liczba wygenerowanych pakietow: 349365
+Laczna liczba nadanych pakietow: 5894
+Laczna liczba straconych pakietow: 460
+Laczna liczba odebranych pakietow: 5431
+Srednia pakietowa stopa bledow: 0.078413
+Maksymalna pakietowa stopa bledow: 0.0956023; nadajnik nr: 6
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.75916
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 108.62
+Srednie opoznienie pakietu: 63.9356
+Sredni czas oczekiwania: 35.8883
+Statystyki symulacji nr: 8 dla lambdy: 0.0028
+Nadajnik nr 0: wygenerowane: 37424; nadane: 609; stracone: 54; odebrane: 554; retransmisje: 451; stopa bledow: 0.08867; srednia liczba retransmisji: 0.814079
+Nadajnik nr 1: wygenerowane: 30561; nadane: 565; stracone: 63; odebrane: 501; retransmisje: 447; stopa bledow: 0.111504; srednia liczba retransmisji: 0.892216
+Nadajnik nr 2: wygenerowane: 50010; nadane: 750; stracone: 54; odebrane: 697; retransmisje: 461; stopa bledow: 0.072; srednia liczba retransmisji: 0.661406
+Nadajnik nr 3: wygenerowane: 31920; nadane: 544; stracone: 53; odebrane: 490; retransmisje: 417; stopa bledow: 0.0974265; srednia liczba retransmisji: 0.85102
+Nadajnik nr 4: wygenerowane: 34073; nadane: 565; stracone: 64; odebrane: 500; retransmisje: 474; stopa bledow: 0.113274; srednia liczba retransmisji: 0.948
+Nadajnik nr 5: wygenerowane: 28474; nadane: 513; stracone: 55; odebrane: 458; retransmisje: 427; stopa bledow: 0.107212; srednia liczba retransmisji: 0.932314
+Nadajnik nr 6: wygenerowane: 40253; nadane: 630; stracone: 55; odebrane: 575; retransmisje: 440; stopa bledow: 0.0873016; srednia liczba retransmisji: 0.765217
+Nadajnik nr 7: wygenerowane: 40342; nadane: 636; stracone: 64; odebrane: 572; retransmisje: 461; stopa bledow: 0.100629; srednia liczba retransmisji: 0.805944
+Nadajnik nr 8: wygenerowane: 30267; nadane: 517; stracone: 54; odebrane: 463; retransmisje: 423; stopa bledow: 0.104449; srednia liczba retransmisji: 0.913607
+Nadajnik nr 9: wygenerowane: 45462; nadane: 670; stracone: 50; odebrane: 619; retransmisje: 441; stopa bledow: 0.0746269; srednia liczba retransmisji: 0.712439
+Laczna liczba wygenerowanych pakietow: 368786
+Laczna liczba nadanych pakietow: 5999
+Laczna liczba straconych pakietow: 566
+Laczna liczba odebranych pakietow: 5429
+Srednia pakietowa stopa bledow: 0.0957094
+Maksymalna pakietowa stopa bledow: 0.113274; nadajnik nr: 4
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.818199
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 108.58
+Srednie opoznienie pakietu: 62.8804
+Sredni czas oczekiwania: 34.1914
+Statystyki symulacji nr: 9 dla lambdy: 0.0028
+Nadajnik nr 0: wygenerowane: 35176; nadane: 581; stracone: 49; odebrane: 531; retransmisje: 418; stopa bledow: 0.0843373; srednia liczba retransmisji: 0.787194
+Nadajnik nr 1: wygenerowane: 40909; nadane: 628; stracone: 55; odebrane: 573; retransmisje: 462; stopa bledow: 0.0875796; srednia liczba retransmisji: 0.806283
+Nadajnik nr 2: wygenerowane: 35907; nadane: 592; stracone: 53; odebrane: 538; retransmisje: 424; stopa bledow: 0.089527; srednia liczba retransmisji: 0.788104
+Nadajnik nr 3: wygenerowane: 35336; nadane: 579; stracone: 48; odebrane: 531; retransmisje: 461; stopa bledow: 0.0829016; srednia liczba retransmisji: 0.868173
+Nadajnik nr 4: wygenerowane: 36057; nadane: 608; stracone: 47; odebrane: 561; retransmisje: 428; stopa bledow: 0.0773026; srednia liczba retransmisji: 0.762923
+Nadajnik nr 5: wygenerowane: 33952; nadane: 597; stracone: 54; odebrane: 542; retransmisje: 449; stopa bledow: 0.0904523; srednia liczba retransmisji: 0.828413
+Nadajnik nr 6: wygenerowane: 45065; nadane: 687; stracone: 53; odebrane: 633; retransmisje: 446; stopa bledow: 0.077147; srednia liczba retransmisji: 0.704581
+Nadajnik nr 7: wygenerowane: 31127; nadane: 528; stracone: 49; odebrane: 480; retransmisje: 449; stopa bledow: 0.092803; srednia liczba retransmisji: 0.935417
+Nadajnik nr 8: wygenerowane: 38763; nadane: 607; stracone: 49; odebrane: 557; retransmisje: 438; stopa bledow: 0.0807249; srednia liczba retransmisji: 0.786355
+Nadajnik nr 9: wygenerowane: 43264; nadane: 651; stracone: 51; odebrane: 599; retransmisje: 446; stopa bledow: 0.078341; srednia liczba retransmisji: 0.744574
+Laczna liczba wygenerowanych pakietow: 375556
+Laczna liczba nadanych pakietow: 6058
+Laczna liczba straconych pakietow: 508
+Laczna liczba odebranych pakietow: 5545
+Srednia pakietowa stopa bledow: 0.0841116
+Maksymalna pakietowa stopa bledow: 0.092803; nadajnik nr: 7
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.797295
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 110.9
+Srednie opoznienie pakietu: 63.5434
+Sredni czas oczekiwania: 33.5408
+Statystyki symulacji nr: 10 dla lambdy: 0.0028
+Nadajnik nr 0: wygenerowane: 36778; nadane: 608; stracone: 46; odebrane: 561; retransmisje: 431; stopa bledow: 0.0756579; srednia liczba retransmisji: 0.768271
+Nadajnik nr 1: wygenerowane: 26781; nadane: 503; stracone: 51; odebrane: 452; retransmisje: 421; stopa bledow: 0.101392; srednia liczba retransmisji: 0.931416
+Nadajnik nr 2: wygenerowane: 35580; nadane: 615; stracone: 53; odebrane: 562; retransmisje: 430; stopa bledow: 0.0861789; srednia liczba retransmisji: 0.765125
+Nadajnik nr 3: wygenerowane: 32127; nadane: 579; stracone: 58; odebrane: 520; retransmisje: 444; stopa bledow: 0.100173; srednia liczba retransmisji: 0.853846
+Nadajnik nr 4: wygenerowane: 30816; nadane: 556; stracone: 59; odebrane: 497; retransmisje: 458; stopa bledow: 0.106115; srednia liczba retransmisji: 0.921529
+Nadajnik nr 5: wygenerowane: 55674; nadane: 791; stracone: 57; odebrane: 733; retransmisje: 458; stopa bledow: 0.0720607; srednia liczba retransmisji: 0.624829
+Nadajnik nr 6: wygenerowane: 31330; nadane: 542; stracone: 45; odebrane: 497; retransmisje: 414; stopa bledow: 0.0830258; srednia liczba retransmisji: 0.832998
+Nadajnik nr 7: wygenerowane: 28012; nadane: 514; stracone: 48; odebrane: 466; retransmisje: 408; stopa bledow: 0.0933852; srednia liczba retransmisji: 0.875536
+Nadajnik nr 8: wygenerowane: 30988; nadane: 579; stracone: 52; odebrane: 527; retransmisje: 433; stopa bledow: 0.08981; srednia liczba retransmisji: 0.821632
+Nadajnik nr 9: wygenerowane: 33840; nadane: 599; stracone: 56; odebrane: 542; retransmisje: 422; stopa bledow: 0.0934891; srednia liczba retransmisji: 0.778598
+Laczna liczba wygenerowanych pakietow: 341926
+Laczna liczba nadanych pakietow: 5886
+Laczna liczba straconych pakietow: 525
+Laczna liczba odebranych pakietow: 5357
+Srednia pakietowa stopa bledow: 0.0901287
+Maksymalna pakietowa stopa bledow: 0.106115; nadajnik nr: 4
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.806235
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.14
+Srednie opoznienie pakietu: 61.0047
+Sredni czas oczekiwania: 33.7333
+Statystyki symulacji nr: 1 dla lambdy: 0.003
+Nadajnik nr 0: wygenerowane: 36723; nadane: 595; stracone: 56; odebrane: 539; retransmisje: 458; stopa bledow: 0.0941176; srednia liczba retransmisji: 0.849722
+Nadajnik nr 1: wygenerowane: 34404; nadane: 573; stracone: 58; odebrane: 514; retransmisje: 453; stopa bledow: 0.101222; srednia liczba retransmisji: 0.881323
+Nadajnik nr 2: wygenerowane: 28244; nadane: 492; stracone: 54; odebrane: 437; retransmisje: 468; stopa bledow: 0.109756; srednia liczba retransmisji: 1.07094
+Nadajnik nr 3: wygenerowane: 49677; nadane: 673; stracone: 61; odebrane: 611; retransmisje: 466; stopa bledow: 0.0906389; srednia liczba retransmisji: 0.762684
+Nadajnik nr 4: wygenerowane: 28971; nadane: 519; stracone: 61; odebrane: 457; retransmisje: 453; stopa bledow: 0.117534; srednia liczba retransmisji: 0.991247
+Nadajnik nr 5: wygenerowane: 28765; nadane: 543; stracone: 60; odebrane: 483; retransmisje: 443; stopa bledow: 0.110497; srednia liczba retransmisji: 0.917184
+Nadajnik nr 6: wygenerowane: 34546; nadane: 586; stracone: 51; odebrane: 535; retransmisje: 442; stopa bledow: 0.0870307; srednia liczba retransmisji: 0.826168
+Nadajnik nr 7: wygenerowane: 30110; nadane: 531; stracone: 64; odebrane: 466; retransmisje: 460; stopa bledow: 0.120527; srednia liczba retransmisji: 0.987124
+Nadajnik nr 8: wygenerowane: 35344; nadane: 596; stracone: 61; odebrane: 534; retransmisje: 487; stopa bledow: 0.102349; srednia liczba retransmisji: 0.911985
+Nadajnik nr 9: wygenerowane: 33740; nadane: 600; stracone: 54; odebrane: 545; retransmisje: 435; stopa bledow: 0.09; srednia liczba retransmisji: 0.798165
+Laczna liczba wygenerowanych pakietow: 340524
+Laczna liczba nadanych pakietow: 5708
+Laczna liczba straconych pakietow: 580
+Laczna liczba odebranych pakietow: 5121
+Srednia pakietowa stopa bledow: 0.102367
+Maksymalna pakietowa stopa bledow: 0.120527; nadajnik nr: 7
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.891427
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 102.42
+Srednie opoznienie pakietu: 61.2958
+Sredni czas oczekiwania: 31.2335
+Statystyki symulacji nr: 2 dla lambdy: 0.003
+Nadajnik nr 0: wygenerowane: 39058; nadane: 622; stracone: 60; odebrane: 561; retransmisje: 452; stopa bledow: 0.096463; srednia liczba retransmisji: 0.805704
+Nadajnik nr 1: wygenerowane: 34745; nadane: 568; stracone: 53; odebrane: 515; retransmisje: 445; stopa bledow: 0.0933099; srednia liczba retransmisji: 0.864078
+Nadajnik nr 2: wygenerowane: 39762; nadane: 579; stracone: 51; odebrane: 529; retransmisje: 440; stopa bledow: 0.0880829; srednia liczba retransmisji: 0.831758
+Nadajnik nr 3: wygenerowane: 36838; nadane: 604; stracone: 59; odebrane: 545; retransmisje: 459; stopa bledow: 0.0976821; srednia liczba retransmisji: 0.842202
+Nadajnik nr 4: wygenerowane: 37439; nadane: 621; stracone: 48; odebrane: 572; retransmisje: 432; stopa bledow: 0.0772947; srednia liczba retransmisji: 0.755245
+Nadajnik nr 5: wygenerowane: 32682; nadane: 555; stracone: 58; odebrane: 497; retransmisje: 443; stopa bledow: 0.104505; srednia liczba retransmisji: 0.891348
+Nadajnik nr 6: wygenerowane: 34600; nadane: 531; stracone: 49; odebrane: 481; retransmisje: 443; stopa bledow: 0.0922787; srednia liczba retransmisji: 0.920998
+Nadajnik nr 7: wygenerowane: 29033; nadane: 517; stracone: 62; odebrane: 454; retransmisje: 455; stopa bledow: 0.119923; srednia liczba retransmisji: 1.0022
+Nadajnik nr 8: wygenerowane: 37868; nadane: 601; stracone: 56; odebrane: 545; retransmisje: 442; stopa bledow: 0.093178; srednia liczba retransmisji: 0.811009
+Nadajnik nr 9: wygenerowane: 42626; nadane: 639; stracone: 49; odebrane: 590; retransmisje: 448; stopa bledow: 0.0766823; srednia liczba retransmisji: 0.759322
+Laczna liczba wygenerowanych pakietow: 364651
+Laczna liczba nadanych pakietow: 5837
+Laczna liczba straconych pakietow: 545
+Laczna liczba odebranych pakietow: 5289
+Srednia pakietowa stopa bledow: 0.0939399
+Maksymalna pakietowa stopa bledow: 0.119923; nadajnik nr: 7
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.843071
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.78
+Srednie opoznienie pakietu: 63.5464
+Sredni czas oczekiwania: 33.5894
+Statystyki symulacji nr: 3 dla lambdy: 0.003
+Nadajnik nr 0: wygenerowane: 38345; nadane: 604; stracone: 59; odebrane: 545; retransmisje: 479; stopa bledow: 0.0976821; srednia liczba retransmisji: 0.878899
+Nadajnik nr 1: wygenerowane: 35939; nadane: 590; stracone: 57; odebrane: 533; retransmisje: 467; stopa bledow: 0.0966102; srednia liczba retransmisji: 0.876173
+Nadajnik nr 2: wygenerowane: 39972; nadane: 604; stracone: 62; odebrane: 542; retransmisje: 509; stopa bledow: 0.102649; srednia liczba retransmisji: 0.939114
+Nadajnik nr 3: wygenerowane: 35653; nadane: 596; stracone: 54; odebrane: 542; retransmisje: 481; stopa bledow: 0.090604; srednia liczba retransmisji: 0.887454
+Nadajnik nr 4: wygenerowane: 32673; nadane: 498; stracone: 59; odebrane: 438; retransmisje: 489; stopa bledow: 0.118474; srednia liczba retransmisji: 1.11644
+Nadajnik nr 5: wygenerowane: 38175; nadane: 596; stracone: 56; odebrane: 539; retransmisje: 481; stopa bledow: 0.0939597; srednia liczba retransmisji: 0.892393
+Nadajnik nr 6: wygenerowane: 34294; nadane: 531; stracone: 50; odebrane: 480; retransmisje: 472; stopa bledow: 0.094162; srednia liczba retransmisji: 0.983333
+Nadajnik nr 7: wygenerowane: 37039; nadane: 543; stracone: 75; odebrane: 467; retransmisje: 514; stopa bledow: 0.138122; srednia liczba retransmisji: 1.10064
+Nadajnik nr 8: wygenerowane: 37317; nadane: 594; stracone: 58; odebrane: 536; retransmisje: 472; stopa bledow: 0.0976431; srednia liczba retransmisji: 0.880597
+Nadajnik nr 9: wygenerowane: 34173; nadane: 579; stracone: 47; odebrane: 531; retransmisje: 465; stopa bledow: 0.0811744; srednia liczba retransmisji: 0.875706
+Laczna liczba wygenerowanych pakietow: 363580
+Laczna liczba nadanych pakietow: 5735
+Laczna liczba straconych pakietow: 577
+Laczna liczba odebranych pakietow: 5153
+Srednia pakietowa stopa bledow: 0.101108
+Maksymalna pakietowa stopa bledow: 0.138122; nadajnik nr: 7
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.937124
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 103.06
+Srednie opoznienie pakietu: 64.3952
+Sredni czas oczekiwania: 32.0455
+Statystyki symulacji nr: 4 dla lambdy: 0.003
+Nadajnik nr 0: wygenerowane: 33758; nadane: 537; stracone: 58; odebrane: 479; retransmisje: 471; stopa bledow: 0.108007; srednia liczba retransmisji: 0.983299
+Nadajnik nr 1: wygenerowane: 41445; nadane: 610; stracone: 42; odebrane: 567; retransmisje: 436; stopa bledow: 0.0688525; srednia liczba retransmisji: 0.768959
+Nadajnik nr 2: wygenerowane: 69725; nadane: 837; stracone: 44; odebrane: 794; retransmisje: 458; stopa bledow: 0.0525687; srednia liczba retransmisji: 0.576826
+Nadajnik nr 3: wygenerowane: 39540; nadane: 616; stracone: 52; odebrane: 563; retransmisje: 443; stopa bledow: 0.0844156; srednia liczba retransmisji: 0.786856
+Nadajnik nr 4: wygenerowane: 32577; nadane: 528; stracone: 44; odebrane: 483; retransmisje: 429; stopa bledow: 0.0833333; srednia liczba retransmisji: 0.888199
+Nadajnik nr 5: wygenerowane: 34474; nadane: 574; stracone: 52; odebrane: 521; retransmisje: 428; stopa bledow: 0.0905923; srednia liczba retransmisji: 0.821497
+Nadajnik nr 6: wygenerowane: 35945; nadane: 564; stracone: 58; odebrane: 506; retransmisje: 441; stopa bledow: 0.102837; srednia liczba retransmisji: 0.871542
+Nadajnik nr 7: wygenerowane: 39533; nadane: 593; stracone: 49; odebrane: 543; retransmisje: 449; stopa bledow: 0.0826307; srednia liczba retransmisji: 0.826888
+Nadajnik nr 8: wygenerowane: 37293; nadane: 597; stracone: 49; odebrane: 547; retransmisje: 432; stopa bledow: 0.0820771; srednia liczba retransmisji: 0.789762
+Nadajnik nr 9: wygenerowane: 38669; nadane: 585; stracone: 51; odebrane: 533; retransmisje: 434; stopa bledow: 0.0871795; srednia liczba retransmisji: 0.814259
+Laczna liczba wygenerowanych pakietow: 402959
+Laczna liczba nadanych pakietow: 6041
+Laczna liczba straconych pakietow: 499
+Laczna liczba odebranych pakietow: 5536
+Srednia pakietowa stopa bledow: 0.0842494
+Maksymalna pakietowa stopa bledow: 0.108007; nadajnik nr: 0
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.798591
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 110.72
+Srednie opoznienie pakietu: 63.2661
+Sredni czas oczekiwania: 33.8259
+Statystyki symulacji nr: 5 dla lambdy: 0.003
+Nadajnik nr 0: wygenerowane: 40332; nadane: 635; stracone: 57; odebrane: 578; retransmisje: 466; stopa bledow: 0.0897638; srednia liczba retransmisji: 0.806228
+Nadajnik nr 1: wygenerowane: 35716; nadane: 545; stracone: 59; odebrane: 486; retransmisje: 483; stopa bledow: 0.108257; srednia liczba retransmisji: 0.993827
+Nadajnik nr 2: wygenerowane: 36811; nadane: 580; stracone: 67; odebrane: 512; retransmisje: 501; stopa bledow: 0.115517; srednia liczba retransmisji: 0.978516
+Nadajnik nr 3: wygenerowane: 38227; nadane: 568; stracone: 63; odebrane: 504; retransmisje: 486; stopa bledow: 0.110915; srednia liczba retransmisji: 0.964286
+Nadajnik nr 4: wygenerowane: 33661; nadane: 548; stracone: 62; odebrane: 486; retransmisje: 486; stopa bledow: 0.113139; srednia liczba retransmisji: 1
+Nadajnik nr 5: wygenerowane: 38539; nadane: 580; stracone: 61; odebrane: 518; retransmisje: 490; stopa bledow: 0.105172; srednia liczba retransmisji: 0.945946
+Nadajnik nr 6: wygenerowane: 66599; nadane: 805; stracone: 68; odebrane: 736; retransmisje: 477; stopa bledow: 0.084472; srednia liczba retransmisji: 0.648098
+Nadajnik nr 7: wygenerowane: 34813; nadane: 566; stracone: 65; odebrane: 501; retransmisje: 500; stopa bledow: 0.114841; srednia liczba retransmisji: 0.998004
+Nadajnik nr 8: wygenerowane: 37034; nadane: 597; stracone: 54; odebrane: 542; retransmisje: 477; stopa bledow: 0.0904523; srednia liczba retransmisji: 0.880074
+Nadajnik nr 9: wygenerowane: 36644; nadane: 559; stracone: 62; odebrane: 496; retransmisje: 492; stopa bledow: 0.110912; srednia liczba retransmisji: 0.991935
+Laczna liczba wygenerowanych pakietow: 398376
+Laczna liczba nadanych pakietow: 5983
+Laczna liczba straconych pakietow: 618
+Laczna liczba odebranych pakietow: 5359
+Srednia pakietowa stopa bledow: 0.104344
+Maksymalna pakietowa stopa bledow: 0.115517; nadajnik nr: 2
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.906512
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.18
+Srednie opoznienie pakietu: 62.7705
+Sredni czas oczekiwania: 32.4194
+Statystyki symulacji nr: 6 dla lambdy: 0.003
+Nadajnik nr 0: wygenerowane: 39577; nadane: 599; stracone: 48; odebrane: 550; retransmisje: 459; stopa bledow: 0.0801336; srednia liczba retransmisji: 0.834545
+Nadajnik nr 1: wygenerowane: 39394; nadane: 582; stracone: 62; odebrane: 519; retransmisje: 476; stopa bledow: 0.106529; srednia liczba retransmisji: 0.917148
+Nadajnik nr 2: wygenerowane: 40088; nadane: 623; stracone: 52; odebrane: 571; retransmisje: 455; stopa bledow: 0.0834671; srednia liczba retransmisji: 0.796848
+Nadajnik nr 3: wygenerowane: 45105; nadane: 629; stracone: 55; odebrane: 574; retransmisje: 492; stopa bledow: 0.0874404; srednia liczba retransmisji: 0.857143
+Nadajnik nr 4: wygenerowane: 36811; nadane: 548; stracone: 73; odebrane: 474; retransmisje: 513; stopa bledow: 0.133212; srednia liczba retransmisji: 1.08228
+Nadajnik nr 5: wygenerowane: 51442; nadane: 684; stracone: 66; odebrane: 618; retransmisje: 509; stopa bledow: 0.0964912; srednia liczba retransmisji: 0.823625
+Nadajnik nr 6: wygenerowane: 34619; nadane: 543; stracone: 56; odebrane: 487; retransmisje: 448; stopa bledow: 0.103131; srednia liczba retransmisji: 0.919918
+Nadajnik nr 7: wygenerowane: 40133; nadane: 589; stracone: 52; odebrane: 537; retransmisje: 468; stopa bledow: 0.0882852; srednia liczba retransmisji: 0.871508
+Nadajnik nr 8: wygenerowane: 37126; nadane: 584; stracone: 59; odebrane: 524; retransmisje: 473; stopa bledow: 0.101027; srednia liczba retransmisji: 0.902672
+Nadajnik nr 9: wygenerowane: 46186; nadane: 629; stracone: 57; odebrane: 571; retransmisje: 494; stopa bledow: 0.09062; srednia liczba retransmisji: 0.865149
+Laczna liczba wygenerowanych pakietow: 410481
+Laczna liczba nadanych pakietow: 6010
+Laczna liczba straconych pakietow: 580
+Laczna liczba odebranych pakietow: 5425
+Srednia pakietowa stopa bledow: 0.0970337
+Maksymalna pakietowa stopa bledow: 0.133212; nadajnik nr: 4
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.882396
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 108.5
+Srednie opoznienie pakietu: 63.9661
+Sredni czas oczekiwania: 33.7706
+Statystyki symulacji nr: 7 dla lambdy: 0.003
+Nadajnik nr 0: wygenerowane: 39115; nadane: 605; stracone: 55; odebrane: 550; retransmisje: 484; stopa bledow: 0.0909091; srednia liczba retransmisji: 0.88
+Nadajnik nr 1: wygenerowane: 38716; nadane: 591; stracone: 68; odebrane: 523; retransmisje: 492; stopa bledow: 0.115059; srednia liczba retransmisji: 0.940727
+Nadajnik nr 2: wygenerowane: 36699; nadane: 612; stracone: 57; odebrane: 554; retransmisje: 467; stopa bledow: 0.0931373; srednia liczba retransmisji: 0.84296
+Nadajnik nr 3: wygenerowane: 37935; nadane: 609; stracone: 47; odebrane: 562; retransmisje: 469; stopa bledow: 0.0771757; srednia liczba retransmisji: 0.83452
+Nadajnik nr 4: wygenerowane: 34538; nadane: 555; stracone: 59; odebrane: 495; retransmisje: 484; stopa bledow: 0.106306; srednia liczba retransmisji: 0.977778
+Nadajnik nr 5: wygenerowane: 31271; nadane: 525; stracone: 56; odebrane: 469; retransmisje: 454; stopa bledow: 0.106667; srednia liczba retransmisji: 0.968017
+Nadajnik nr 6: wygenerowane: 36282; nadane: 573; stracone: 59; odebrane: 514; retransmisje: 487; stopa bledow: 0.102967; srednia liczba retransmisji: 0.947471
+Nadajnik nr 7: wygenerowane: 34740; nadane: 568; stracone: 47; odebrane: 520; retransmisje: 474; stopa bledow: 0.0827465; srednia liczba retransmisji: 0.911538
+Nadajnik nr 8: wygenerowane: 35450; nadane: 552; stracone: 57; odebrane: 496; retransmisje: 459; stopa bledow: 0.103261; srednia liczba retransmisji: 0.925403
+Nadajnik nr 9: wygenerowane: 36903; nadane: 572; stracone: 58; odebrane: 514; retransmisje: 473; stopa bledow: 0.101399; srednia liczba retransmisji: 0.920233
+Laczna liczba wygenerowanych pakietow: 361649
+Laczna liczba nadanych pakietow: 5762
+Laczna liczba straconych pakietow: 563
+Laczna liczba odebranych pakietow: 5197
+Srednia pakietowa stopa bledow: 0.0979627
+Maksymalna pakietowa stopa bledow: 0.115059; nadajnik nr: 1
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.912642
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 103.94
+Srednie opoznienie pakietu: 65.2643
+Sredni czas oczekiwania: 34.577
+Statystyki symulacji nr: 8 dla lambdy: 0.003
+Nadajnik nr 0: wygenerowane: 35551; nadane: 543; stracone: 57; odebrane: 485; retransmisje: 470; stopa bledow: 0.104972; srednia liczba retransmisji: 0.969072
+Nadajnik nr 1: wygenerowane: 40164; nadane: 601; stracone: 57; odebrane: 544; retransmisje: 479; stopa bledow: 0.0948419; srednia liczba retransmisji: 0.880515
+Nadajnik nr 2: wygenerowane: 49055; nadane: 675; stracone: 62; odebrane: 614; retransmisje: 487; stopa bledow: 0.0918519; srednia liczba retransmisji: 0.79316
+Nadajnik nr 3: wygenerowane: 37563; nadane: 567; stracone: 63; odebrane: 503; retransmisje: 485; stopa bledow: 0.111111; srednia liczba retransmisji: 0.964215
+Nadajnik nr 4: wygenerowane: 39248; nadane: 595; stracone: 46; odebrane: 548; retransmisje: 454; stopa bledow: 0.0773109; srednia liczba retransmisji: 0.828467
+Nadajnik nr 5: wygenerowane: 39047; nadane: 559; stracone: 59; odebrane: 500; retransmisje: 480; stopa bledow: 0.105546; srednia liczba retransmisji: 0.96
+Nadajnik nr 6: wygenerowane: 41380; nadane: 606; stracone: 56; odebrane: 549; retransmisje: 495; stopa bledow: 0.0924092; srednia liczba retransmisji: 0.901639
+Nadajnik nr 7: wygenerowane: 51515; nadane: 704; stracone: 56; odebrane: 648; retransmisje: 464; stopa bledow: 0.0795455; srednia liczba retransmisji: 0.716049
+Nadajnik nr 8: wygenerowane: 38540; nadane: 577; stracone: 64; odebrane: 512; retransmisje: 464; stopa bledow: 0.110919; srednia liczba retransmisji: 0.90625
+Nadajnik nr 9: wygenerowane: 45588; nadane: 626; stracone: 54; odebrane: 572; retransmisje: 490; stopa bledow: 0.086262; srednia liczba retransmisji: 0.856643
+Laczna liczba wygenerowanych pakietow: 417651
+Laczna liczba nadanych pakietow: 6053
+Laczna liczba straconych pakietow: 574
+Laczna liczba odebranych pakietow: 5475
+Srednia pakietowa stopa bledow: 0.0954769
+Maksymalna pakietowa stopa bledow: 0.111111; nadajnik nr: 3
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.870868
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 109.5
+Srednie opoznienie pakietu: 65.074
+Sredni czas oczekiwania: 34.2858
+Statystyki symulacji nr: 9 dla lambdy: 0.003
+Nadajnik nr 0: wygenerowane: 37904; nadane: 565; stracone: 59; odebrane: 506; retransmisje: 461; stopa bledow: 0.104425; srednia liczba retransmisji: 0.911067
+Nadajnik nr 1: wygenerowane: 39917; nadane: 561; stracone: 66; odebrane: 495; retransmisje: 478; stopa bledow: 0.117647; srednia liczba retransmisji: 0.965657
+Nadajnik nr 2: wygenerowane: 45146; nadane: 642; stracone: 61; odebrane: 581; retransmisje: 489; stopa bledow: 0.0950156; srednia liczba retransmisji: 0.841652
+Nadajnik nr 3: wygenerowane: 47452; nadane: 673; stracone: 58; odebrane: 614; retransmisje: 487; stopa bledow: 0.0861813; srednia liczba retransmisji: 0.79316
+Nadajnik nr 4: wygenerowane: 39631; nadane: 588; stracone: 62; odebrane: 525; retransmisje: 488; stopa bledow: 0.105442; srednia liczba retransmisji: 0.929524
+Nadajnik nr 5: wygenerowane: 48239; nadane: 657; stracone: 59; odebrane: 599; retransmisje: 495; stopa bledow: 0.0898021; srednia liczba retransmisji: 0.826377
+Nadajnik nr 6: wygenerowane: 53225; nadane: 689; stracone: 61; odebrane: 628; retransmisje: 504; stopa bledow: 0.0885341; srednia liczba retransmisji: 0.802548
+Nadajnik nr 7: wygenerowane: 37408; nadane: 579; stracone: 56; odebrane: 522; retransmisje: 500; stopa bledow: 0.0967185; srednia liczba retransmisji: 0.957854
+Nadajnik nr 8: wygenerowane: 44274; nadane: 650; stracone: 47; odebrane: 603; retransmisje: 465; stopa bledow: 0.0723077; srednia liczba retransmisji: 0.771144
+Nadajnik nr 9: wygenerowane: 45764; nadane: 622; stracone: 51; odebrane: 570; retransmisje: 477; stopa bledow: 0.0819936; srednia liczba retransmisji: 0.836842
+Laczna liczba wygenerowanych pakietow: 438960
+Laczna liczba nadanych pakietow: 6226
+Laczna liczba straconych pakietow: 580
+Laczna liczba odebranych pakietow: 5643
+Srednia pakietowa stopa bledow: 0.0938067
+Maksymalna pakietowa stopa bledow: 0.117647; nadajnik nr: 1
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.858409
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 112.86
+Srednie opoznienie pakietu: 64.0391
+Sredni czas oczekiwania: 33.262
+Statystyki symulacji nr: 10 dla lambdy: 0.003
+Nadajnik nr 0: wygenerowane: 34451; nadane: 573; stracone: 56; odebrane: 517; retransmisje: 441; stopa bledow: 0.0977312; srednia liczba retransmisji: 0.852998
+Nadajnik nr 1: wygenerowane: 31736; nadane: 521; stracone: 60; odebrane: 460; retransmisje: 450; stopa bledow: 0.115163; srednia liczba retransmisji: 0.978261
+Nadajnik nr 2: wygenerowane: 31285; nadane: 564; stracone: 64; odebrane: 500; retransmisje: 462; stopa bledow: 0.113475; srednia liczba retransmisji: 0.924
+Nadajnik nr 3: wygenerowane: 31107; nadane: 527; stracone: 52; odebrane: 475; retransmisje: 436; stopa bledow: 0.0986717; srednia liczba retransmisji: 0.917895
+Nadajnik nr 4: wygenerowane: 31996; nadane: 560; stracone: 63; odebrane: 496; retransmisje: 473; stopa bledow: 0.1125; srednia liczba retransmisji: 0.953629
+Nadajnik nr 5: wygenerowane: 69016; nadane: 874; stracone: 64; odebrane: 810; retransmisje: 500; stopa bledow: 0.0732265; srednia liczba retransmisji: 0.617284
+Nadajnik nr 6: wygenerowane: 29225; nadane: 476; stracone: 52; odebrane: 425; retransmisje: 434; stopa bledow: 0.109244; srednia liczba retransmisji: 1.02118
+Nadajnik nr 7: wygenerowane: 31955; nadane: 562; stracone: 62; odebrane: 500; retransmisje: 457; stopa bledow: 0.11032; srednia liczba retransmisji: 0.914
+Nadajnik nr 8: wygenerowane: 38370; nadane: 611; stracone: 52; odebrane: 559; retransmisje: 444; stopa bledow: 0.0851064; srednia liczba retransmisji: 0.794275
+Nadajnik nr 9: wygenerowane: 38830; nadane: 625; stracone: 54; odebrane: 571; retransmisje: 428; stopa bledow: 0.0864; srednia liczba retransmisji: 0.749562
+Laczna liczba wygenerowanych pakietow: 367971
+Laczna liczba nadanych pakietow: 5893
+Laczna liczba straconych pakietow: 579
+Laczna liczba odebranych pakietow: 5313
+Srednia pakietowa stopa bledow: 0.100184
+Maksymalna pakietowa stopa bledow: 0.115163; nadajnik nr: 1
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.851685
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 106.26
+Srednie opoznienie pakietu: 60.8244
+Sredni czas oczekiwania: 33.1946
+Statystyki symulacji nr: 1 dla lambdy: 0.0031
+Nadajnik nr 0: wygenerowane: 37738; nadane: 586; stracone: 51; odebrane: 534; retransmisje: 436; stopa bledow: 0.0870307; srednia liczba retransmisji: 0.816479
+Nadajnik nr 1: wygenerowane: 42922; nadane: 622; stracone: 63; odebrane: 559; retransmisje: 449; stopa bledow: 0.101286; srednia liczba retransmisji: 0.80322
+Nadajnik nr 2: wygenerowane: 39362; nadane: 595; stracone: 48; odebrane: 546; retransmisje: 435; stopa bledow: 0.0806723; srednia liczba retransmisji: 0.796703
+Nadajnik nr 3: wygenerowane: 42244; nadane: 612; stracone: 56; odebrane: 555; retransmisje: 439; stopa bledow: 0.0915033; srednia liczba retransmisji: 0.790991
+Nadajnik nr 4: wygenerowane: 32817; nadane: 561; stracone: 51; odebrane: 509; retransmisje: 430; stopa bledow: 0.0909091; srednia liczba retransmisji: 0.844794
+Nadajnik nr 5: wygenerowane: 30129; nadane: 508; stracone: 60; odebrane: 448; retransmisje: 423; stopa bledow: 0.11811; srednia liczba retransmisji: 0.944196
+Nadajnik nr 6: wygenerowane: 40625; nadane: 594; stracone: 63; odebrane: 531; retransmisje: 473; stopa bledow: 0.106061; srednia liczba retransmisji: 0.890772
+Nadajnik nr 7: wygenerowane: 36701; nadane: 587; stracone: 56; odebrane: 530; retransmisje: 455; stopa bledow: 0.0954003; srednia liczba retransmisji: 0.858491
+Nadajnik nr 8: wygenerowane: 44901; nadane: 626; stracone: 50; odebrane: 575; retransmisje: 442; stopa bledow: 0.0798722; srednia liczba retransmisji: 0.768696
+Nadajnik nr 9: wygenerowane: 39786; nadane: 613; stracone: 63; odebrane: 550; retransmisje: 464; stopa bledow: 0.102773; srednia liczba retransmisji: 0.843636
+Laczna liczba wygenerowanych pakietow: 387225
+Laczna liczba nadanych pakietow: 5904
+Laczna liczba straconych pakietow: 561
+Laczna liczba odebranych pakietow: 5337
+Srednia pakietowa stopa bledow: 0.0953618
+Maksymalna pakietowa stopa bledow: 0.11811; nadajnik nr: 5
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.833052
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 106.74
+Srednie opoznienie pakietu: 62.2877
+Sredni czas oczekiwania: 33.6518
+Statystyki symulacji nr: 2 dla lambdy: 0.0031
+Nadajnik nr 0: wygenerowane: 40202; nadane: 632; stracone: 57; odebrane: 574; retransmisje: 463; stopa bledow: 0.0901899; srednia liczba retransmisji: 0.80662
+Nadajnik nr 1: wygenerowane: 38621; nadane: 598; stracone: 55; odebrane: 543; retransmisje: 468; stopa bledow: 0.0919732; srednia liczba retransmisji: 0.861878
+Nadajnik nr 2: wygenerowane: 39214; nadane: 605; stracone: 54; odebrane: 551; retransmisje: 472; stopa bledow: 0.0892562; srednia liczba retransmisji: 0.856624
+Nadajnik nr 3: wygenerowane: 40723; nadane: 627; stracone: 59; odebrane: 567; retransmisje: 455; stopa bledow: 0.0940989; srednia liczba retransmisji: 0.802469
+Nadajnik nr 4: wygenerowane: 40199; nadane: 600; stracone: 59; odebrane: 541; retransmisje: 469; stopa bledow: 0.0983333; srednia liczba retransmisji: 0.866913
+Nadajnik nr 5: wygenerowane: 32570; nadane: 531; stracone: 57; odebrane: 474; retransmisje: 458; stopa bledow: 0.107345; srednia liczba retransmisji: 0.966245
+Nadajnik nr 6: wygenerowane: 35483; nadane: 546; stracone: 58; odebrane: 488; retransmisje: 486; stopa bledow: 0.106227; srednia liczba retransmisji: 0.995902
+Nadajnik nr 7: wygenerowane: 36057; nadane: 555; stracone: 57; odebrane: 498; retransmisje: 492; stopa bledow: 0.102703; srednia liczba retransmisji: 0.987952
+Nadajnik nr 8: wygenerowane: 37715; nadane: 574; stracone: 62; odebrane: 512; retransmisje: 465; stopa bledow: 0.108014; srednia liczba retransmisji: 0.908203
+Nadajnik nr 9: wygenerowane: 42492; nadane: 613; stracone: 57; odebrane: 555; retransmisje: 477; stopa bledow: 0.0929853; srednia liczba retransmisji: 0.859459
+Laczna liczba wygenerowanych pakietow: 383276
+Laczna liczba nadanych pakietow: 5881
+Laczna liczba straconych pakietow: 575
+Laczna liczba odebranych pakietow: 5303
+Srednia pakietowa stopa bledow: 0.0981125
+Maksymalna pakietowa stopa bledow: 0.108014; nadajnik nr: 8
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.887234
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 106.06
+Srednie opoznienie pakietu: 62.7448
+Sredni czas oczekiwania: 33.6077
+Statystyki symulacji nr: 3 dla lambdy: 0.0031
+Nadajnik nr 0: wygenerowane: 37667; nadane: 576; stracone: 66; odebrane: 509; retransmisje: 495; stopa bledow: 0.114583; srednia liczba retransmisji: 0.972495
+Nadajnik nr 1: wygenerowane: 35675; nadane: 535; stracone: 59; odebrane: 475; retransmisje: 477; stopa bledow: 0.11028; srednia liczba retransmisji: 1.00421
+Nadajnik nr 2: wygenerowane: 47923; nadane: 651; stracone: 48; odebrane: 603; retransmisje: 456; stopa bledow: 0.0737327; srednia liczba retransmisji: 0.756219
+Nadajnik nr 3: wygenerowane: 43300; nadane: 654; stracone: 66; odebrane: 587; retransmisje: 494; stopa bledow: 0.100917; srednia liczba retransmisji: 0.841567
+Nadajnik nr 4: wygenerowane: 36666; nadane: 565; stracone: 57; odebrane: 507; retransmisje: 464; stopa bledow: 0.100885; srednia liczba retransmisji: 0.915187
+Nadajnik nr 5: wygenerowane: 34212; nadane: 534; stracone: 68; odebrane: 465; retransmisje: 477; stopa bledow: 0.127341; srednia liczba retransmisji: 1.02581
+Nadajnik nr 6: wygenerowane: 35979; nadane: 564; stracone: 46; odebrane: 517; retransmisje: 464; stopa bledow: 0.0815603; srednia liczba retransmisji: 0.897485
+Nadajnik nr 7: wygenerowane: 41133; nadane: 599; stracone: 66; odebrane: 532; retransmisje: 508; stopa bledow: 0.110184; srednia liczba retransmisji: 0.954887
+Nadajnik nr 8: wygenerowane: 37631; nadane: 594; stracone: 52; odebrane: 542; retransmisje: 459; stopa bledow: 0.0875421; srednia liczba retransmisji: 0.846863
+Nadajnik nr 9: wygenerowane: 36900; nadane: 557; stracone: 61; odebrane: 495; retransmisje: 454; stopa bledow: 0.109515; srednia liczba retransmisji: 0.917172
+Laczna liczba wygenerowanych pakietow: 387086
+Laczna liczba nadanych pakietow: 5829
+Laczna liczba straconych pakietow: 589
+Laczna liczba odebranych pakietow: 5232
+Srednia pakietowa stopa bledow: 0.101654
+Maksymalna pakietowa stopa bledow: 0.127341; nadajnik nr: 5
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.907492
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 104.64
+Srednie opoznienie pakietu: 63.7902
+Sredni czas oczekiwania: 33.5896
+Statystyki symulacji nr: 4 dla lambdy: 0.0031
+Nadajnik nr 0: wygenerowane: 37140; nadane: 582; stracone: 65; odebrane: 516; retransmisje: 486; stopa bledow: 0.111684; srednia liczba retransmisji: 0.94186
+Nadajnik nr 1: wygenerowane: 42360; nadane: 619; stracone: 55; odebrane: 563; retransmisje: 454; stopa bledow: 0.088853; srednia liczba retransmisji: 0.806394
+Nadajnik nr 2: wygenerowane: 43178; nadane: 681; stracone: 66; odebrane: 615; retransmisje: 496; stopa bledow: 0.0969163; srednia liczba retransmisji: 0.806504
+Nadajnik nr 3: wygenerowane: 44025; nadane: 642; stracone: 65; odebrane: 576; retransmisje: 495; stopa bledow: 0.101246; srednia liczba retransmisji: 0.859375
+Nadajnik nr 4: wygenerowane: 35234; nadane: 555; stracone: 63; odebrane: 491; retransmisje: 472; stopa bledow: 0.113514; srednia liczba retransmisji: 0.961303
+Nadajnik nr 5: wygenerowane: 34496; nadane: 553; stracone: 54; odebrane: 498; retransmisje: 466; stopa bledow: 0.0976492; srednia liczba retransmisji: 0.935743
+Nadajnik nr 6: wygenerowane: 35283; nadane: 548; stracone: 62; odebrane: 485; retransmisje: 500; stopa bledow: 0.113139; srednia liczba retransmisji: 1.03093
+Nadajnik nr 7: wygenerowane: 40216; nadane: 587; stracone: 52; odebrane: 534; retransmisje: 442; stopa bledow: 0.088586; srednia liczba retransmisji: 0.827715
+Nadajnik nr 8: wygenerowane: 34455; nadane: 531; stracone: 57; odebrane: 473; retransmisje: 458; stopa bledow: 0.107345; srednia liczba retransmisji: 0.968288
+Nadajnik nr 9: wygenerowane: 34944; nadane: 555; stracone: 52; odebrane: 502; retransmisje: 476; stopa bledow: 0.0936937; srednia liczba retransmisji: 0.948207
+Laczna liczba wygenerowanych pakietow: 381331
+Laczna liczba nadanych pakietow: 5853
+Laczna liczba straconych pakietow: 591
+Laczna liczba odebranych pakietow: 5253
+Srednia pakietowa stopa bledow: 0.101262
+Maksymalna pakietowa stopa bledow: 0.113514; nadajnik nr: 4
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.903293
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.06
+Srednie opoznienie pakietu: 62.509
+Sredni czas oczekiwania: 33.1508
+Statystyki symulacji nr: 5 dla lambdy: 0.0031
+Nadajnik nr 0: wygenerowane: 35402; nadane: 539; stracone: 66; odebrane: 474; retransmisje: 503; stopa bledow: 0.122449; srednia liczba retransmisji: 1.06118
+Nadajnik nr 1: wygenerowane: 42834; nadane: 636; stracone: 67; odebrane: 569; retransmisje: 481; stopa bledow: 0.105346; srednia liczba retransmisji: 0.845343
+Nadajnik nr 2: wygenerowane: 36728; nadane: 555; stracone: 66; odebrane: 489; retransmisje: 465; stopa bledow: 0.118919; srednia liczba retransmisji: 0.95092
+Nadajnik nr 3: wygenerowane: 40213; nadane: 586; stracone: 57; odebrane: 528; retransmisje: 488; stopa bledow: 0.0972696; srednia liczba retransmisji: 0.924242
+Nadajnik nr 4: wygenerowane: 33717; nadane: 536; stracone: 59; odebrane: 476; retransmisje: 477; stopa bledow: 0.110075; srednia liczba retransmisji: 1.0021
+Nadajnik nr 5: wygenerowane: 39309; nadane: 604; stracone: 60; odebrane: 544; retransmisje: 479; stopa bledow: 0.0993377; srednia liczba retransmisji: 0.880515
+Nadajnik nr 6: wygenerowane: 65349; nadane: 801; stracone: 63; odebrane: 738; retransmisje: 503; stopa bledow: 0.0786517; srednia liczba retransmisji: 0.681572
+Nadajnik nr 7: wygenerowane: 34902; nadane: 563; stracone: 60; odebrane: 503; retransmisje: 471; stopa bledow: 0.106572; srednia liczba retransmisji: 0.936382
+Nadajnik nr 8: wygenerowane: 33792; nadane: 538; stracone: 60; odebrane: 477; retransmisje: 477; stopa bledow: 0.111524; srednia liczba retransmisji: 1
+Nadajnik nr 9: wygenerowane: 38975; nadane: 558; stracone: 60; odebrane: 498; retransmisje: 485; stopa bledow: 0.107527; srednia liczba retransmisji: 0.973896
+Laczna liczba wygenerowanych pakietow: 401221
+Laczna liczba nadanych pakietow: 5916
+Laczna liczba straconych pakietow: 618
+Laczna liczba odebranych pakietow: 5296
+Srednia pakietowa stopa bledow: 0.105767
+Maksymalna pakietowa stopa bledow: 0.122449; nadajnik nr: 0
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.91182
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.92
+Srednie opoznienie pakietu: 63.2899
+Sredni czas oczekiwania: 32.7832
+Statystyki symulacji nr: 6 dla lambdy: 0.0031
+Nadajnik nr 0: wygenerowane: 44467; nadane: 605; stracone: 61; odebrane: 543; retransmisje: 472; stopa bledow: 0.100826; srednia liczba retransmisji: 0.869245
+Nadajnik nr 1: wygenerowane: 39777; nadane: 576; stracone: 46; odebrane: 530; retransmisje: 452; stopa bledow: 0.0798611; srednia liczba retransmisji: 0.85283
+Nadajnik nr 2: wygenerowane: 36324; nadane: 548; stracone: 60; odebrane: 489; retransmisje: 465; stopa bledow: 0.109489; srednia liczba retransmisji: 0.95092
+Nadajnik nr 3: wygenerowane: 44286; nadane: 619; stracone: 63; odebrane: 556; retransmisje: 486; stopa bledow: 0.101777; srednia liczba retransmisji: 0.874101
+Nadajnik nr 4: wygenerowane: 40095; nadane: 595; stracone: 51; odebrane: 543; retransmisje: 454; stopa bledow: 0.0857143; srednia liczba retransmisji: 0.836096
+Nadajnik nr 5: wygenerowane: 51183; nadane: 665; stracone: 55; odebrane: 609; retransmisje: 472; stopa bledow: 0.0827068; srednia liczba retransmisji: 0.775041
+Nadajnik nr 6: wygenerowane: 38894; nadane: 589; stracone: 55; odebrane: 533; retransmisje: 460; stopa bledow: 0.0933786; srednia liczba retransmisji: 0.863039
+Nadajnik nr 7: wygenerowane: 43535; nadane: 609; stracone: 66; odebrane: 543; retransmisje: 505; stopa bledow: 0.108374; srednia liczba retransmisji: 0.930018
+Nadajnik nr 8: wygenerowane: 41257; nadane: 594; stracone: 50; odebrane: 543; retransmisje: 458; stopa bledow: 0.0841751; srednia liczba retransmisji: 0.843462
+Nadajnik nr 9: wygenerowane: 45253; nadane: 632; stracone: 61; odebrane: 570; retransmisje: 501; stopa bledow: 0.096519; srednia liczba retransmisji: 0.878947
+Laczna liczba wygenerowanych pakietow: 425071
+Laczna liczba nadanych pakietow: 6032
+Laczna liczba straconych pakietow: 568
+Laczna liczba odebranych pakietow: 5459
+Srednia pakietowa stopa bledow: 0.0942822
+Maksymalna pakietowa stopa bledow: 0.109489; nadajnik nr: 2
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.865543
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 109.18
+Srednie opoznienie pakietu: 65.0435
+Sredni czas oczekiwania: 34.9575
+Statystyki symulacji nr: 7 dla lambdy: 0.0031
+Nadajnik nr 0: wygenerowane: 39604; nadane: 568; stracone: 56; odebrane: 511; retransmisje: 441; stopa bledow: 0.0985915; srednia liczba retransmisji: 0.863014
+Nadajnik nr 1: wygenerowane: 35640; nadane: 599; stracone: 58; odebrane: 540; retransmisje: 440; stopa bledow: 0.096828; srednia liczba retransmisji: 0.814815
+Nadajnik nr 2: wygenerowane: 34265; nadane: 545; stracone: 57; odebrane: 487; retransmisje: 459; stopa bledow: 0.104587; srednia liczba retransmisji: 0.942505
+Nadajnik nr 3: wygenerowane: 38140; nadane: 576; stracone: 38; odebrane: 537; retransmisje: 418; stopa bledow: 0.0659722; srednia liczba retransmisji: 0.778399
+Nadajnik nr 4: wygenerowane: 37688; nadane: 592; stracone: 53; odebrane: 538; retransmisje: 450; stopa bledow: 0.089527; srednia liczba retransmisji: 0.836431
+Nadajnik nr 5: wygenerowane: 42471; nadane: 646; stracone: 60; odebrane: 585; retransmisje: 469; stopa bledow: 0.0928793; srednia liczba retransmisji: 0.801709
+Nadajnik nr 6: wygenerowane: 37032; nadane: 595; stracone: 53; odebrane: 541; retransmisje: 436; stopa bledow: 0.0890756; srednia liczba retransmisji: 0.805915
+Nadajnik nr 7: wygenerowane: 32651; nadane: 546; stracone: 46; odebrane: 499; retransmisje: 424; stopa bledow: 0.0842491; srednia liczba retransmisji: 0.849699
+Nadajnik nr 8: wygenerowane: 37273; nadane: 556; stracone: 65; odebrane: 491; retransmisje: 481; stopa bledow: 0.116906; srednia liczba retransmisji: 0.979633
+Nadajnik nr 9: wygenerowane: 44216; nadane: 626; stracone: 59; odebrane: 566; retransmisje: 474; stopa bledow: 0.0942492; srednia liczba retransmisji: 0.837456
+Laczna liczba wygenerowanych pakietow: 378980
+Laczna liczba nadanych pakietow: 5849
+Laczna liczba straconych pakietow: 545
+Laczna liczba odebranych pakietow: 5295
+Srednia pakietowa stopa bledow: 0.0932866
+Maksymalna pakietowa stopa bledow: 0.116906; nadajnik nr: 8
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.848347
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.9
+Srednie opoznienie pakietu: 63.9969
+Sredni czas oczekiwania: 34.1032
+Statystyki symulacji nr: 8 dla lambdy: 0.0031
+Nadajnik nr 0: wygenerowane: 38203; nadane: 562; stracone: 60; odebrane: 501; retransmisje: 486; stopa bledow: 0.106762; srednia liczba retransmisji: 0.97006
+Nadajnik nr 1: wygenerowane: 40311; nadane: 606; stracone: 63; odebrane: 542; retransmisje: 481; stopa bledow: 0.10396; srednia liczba retransmisji: 0.887454
+Nadajnik nr 2: wygenerowane: 42056; nadane: 604; stracone: 60; odebrane: 544; retransmisje: 491; stopa bledow: 0.0993377; srednia liczba retransmisji: 0.902574
+Nadajnik nr 3: wygenerowane: 40177; nadane: 600; stracone: 51; odebrane: 548; retransmisje: 453; stopa bledow: 0.085; srednia liczba retransmisji: 0.826642
+Nadajnik nr 4: wygenerowane: 39873; nadane: 599; stracone: 61; odebrane: 537; retransmisje: 506; stopa bledow: 0.101836; srednia liczba retransmisji: 0.942272
+Nadajnik nr 5: wygenerowane: 35381; nadane: 563; stracone: 56; odebrane: 507; retransmisje: 457; stopa bledow: 0.0994671; srednia liczba retransmisji: 0.901381
+Nadajnik nr 6: wygenerowane: 44136; nadane: 599; stracone: 67; odebrane: 531; retransmisje: 497; stopa bledow: 0.111853; srednia liczba retransmisji: 0.93597
+Nadajnik nr 7: wygenerowane: 45972; nadane: 614; stracone: 71; odebrane: 542; retransmisje: 496; stopa bledow: 0.115635; srednia liczba retransmisji: 0.915129
+Nadajnik nr 8: wygenerowane: 35675; nadane: 540; stracone: 67; odebrane: 473; retransmisje: 492; stopa bledow: 0.124074; srednia liczba retransmisji: 1.04017
+Nadajnik nr 9: wygenerowane: 58194; nadane: 719; stracone: 68; odebrane: 650; retransmisje: 480; stopa bledow: 0.0945758; srednia liczba retransmisji: 0.738462
+Laczna liczba wygenerowanych pakietow: 419978
+Laczna liczba nadanych pakietow: 6006
+Laczna liczba straconych pakietow: 624
+Laczna liczba odebranych pakietow: 5375
+Srednia pakietowa stopa bledow: 0.10425
+Maksymalna pakietowa stopa bledow: 0.124074; nadajnik nr: 8
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.900279
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.5
+Srednie opoznienie pakietu: 64.4088
+Sredni czas oczekiwania: 34.6508
+Statystyki symulacji nr: 9 dla lambdy: 0.0031
+Nadajnik nr 0: wygenerowane: 37898; nadane: 559; stracone: 59; odebrane: 499; retransmisje: 473; stopa bledow: 0.105546; srednia liczba retransmisji: 0.947896
+Nadajnik nr 1: wygenerowane: 45138; nadane: 646; stracone: 58; odebrane: 587; retransmisje: 494; stopa bledow: 0.0897833; srednia liczba retransmisji: 0.841567
+Nadajnik nr 2: wygenerowane: 45635; nadane: 617; stracone: 54; odebrane: 563; retransmisje: 489; stopa bledow: 0.0875203; srednia liczba retransmisji: 0.868561
+Nadajnik nr 3: wygenerowane: 49593; nadane: 676; stracone: 67; odebrane: 608; retransmisje: 516; stopa bledow: 0.0991124; srednia liczba retransmisji: 0.848684
+Nadajnik nr 4: wygenerowane: 45032; nadane: 588; stracone: 70; odebrane: 518; retransmisje: 524; stopa bledow: 0.119048; srednia liczba retransmisji: 1.01158
+Nadajnik nr 5: wygenerowane: 45439; nadane: 618; stracone: 59; odebrane: 559; retransmisje: 486; stopa bledow: 0.0954693; srednia liczba retransmisji: 0.86941
+Nadajnik nr 6: wygenerowane: 48934; nadane: 635; stracone: 70; odebrane: 564; retransmisje: 497; stopa bledow: 0.110236; srednia liczba retransmisji: 0.881206
+Nadajnik nr 7: wygenerowane: 51853; nadane: 691; stracone: 66; odebrane: 625; retransmisje: 521; stopa bledow: 0.0955137; srednia liczba retransmisji: 0.8336
+Nadajnik nr 8: wygenerowane: 42166; nadane: 580; stracone: 64; odebrane: 515; retransmisje: 516; stopa bledow: 0.110345; srednia liczba retransmisji: 1.00194
+Nadajnik nr 9: wygenerowane: 47001; nadane: 633; stracone: 69; odebrane: 563; retransmisje: 512; stopa bledow: 0.109005; srednia liczba retransmisji: 0.909414
+Laczna liczba wygenerowanych pakietow: 458689
+Laczna liczba nadanych pakietow: 6243
+Laczna liczba straconych pakietow: 636
+Laczna liczba odebranych pakietow: 5601
+Srednia pakietowa stopa bledow: 0.102158
+Maksymalna pakietowa stopa bledow: 0.119048; nadajnik nr: 4
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.897697
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 112.02
+Srednie opoznienie pakietu: 63.9482
+Sredni czas oczekiwania: 34.2343
+Statystyki symulacji nr: 10 dla lambdy: 0.0031
+Nadajnik nr 0: wygenerowane: 37002; nadane: 594; stracone: 52; odebrane: 541; retransmisje: 457; stopa bledow: 0.0875421; srednia liczba retransmisji: 0.844732
+Nadajnik nr 1: wygenerowane: 36284; nadane: 579; stracone: 51; odebrane: 528; retransmisje: 432; stopa bledow: 0.0880829; srednia liczba retransmisji: 0.818182
+Nadajnik nr 2: wygenerowane: 31957; nadane: 532; stracone: 58; odebrane: 473; retransmisje: 453; stopa bledow: 0.109023; srednia liczba retransmisji: 0.957717
+Nadajnik nr 3: wygenerowane: 34579; nadane: 564; stracone: 52; odebrane: 512; retransmisje: 420; stopa bledow: 0.0921986; srednia liczba retransmisji: 0.820313
+Nadajnik nr 4: wygenerowane: 38425; nadane: 592; stracone: 63; odebrane: 528; retransmisje: 456; stopa bledow: 0.106419; srednia liczba retransmisji: 0.863636
+Nadajnik nr 5: wygenerowane: 57531; nadane: 748; stracone: 60; odebrane: 688; retransmisje: 460; stopa bledow: 0.0802139; srednia liczba retransmisji: 0.668605
+Nadajnik nr 6: wygenerowane: 38958; nadane: 575; stracone: 52; odebrane: 523; retransmisje: 446; stopa bledow: 0.0904348; srednia liczba retransmisji: 0.852772
+Nadajnik nr 7: wygenerowane: 46722; nadane: 615; stracone: 63; odebrane: 552; retransmisje: 456; stopa bledow: 0.102439; srednia liczba retransmisji: 0.826087
+Nadajnik nr 8: wygenerowane: 44691; nadane: 646; stracone: 59; odebrane: 586; retransmisje: 461; stopa bledow: 0.0913313; srednia liczba retransmisji: 0.786689
+Nadajnik nr 9: wygenerowane: 37825; nadane: 564; stracone: 58; odebrane: 505; retransmisje: 470; stopa bledow: 0.102837; srednia liczba retransmisji: 0.930693
+Laczna liczba wygenerowanych pakietow: 403974
+Laczna liczba nadanych pakietow: 6009
+Laczna liczba straconych pakietow: 568
+Laczna liczba odebranych pakietow: 5436
+Srednia pakietowa stopa bledow: 0.0950521
+Maksymalna pakietowa stopa bledow: 0.109023; nadajnik nr: 2
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.829838
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 108.72
+Srednie opoznienie pakietu: 61.8454
+Sredni czas oczekiwania: 34.514
+Statystyki symulacji nr: 1 dla lambdy: 0.0032
+Nadajnik nr 0: wygenerowane: 37247; nadane: 568; stracone: 72; odebrane: 495; retransmisje: 522; stopa bledow: 0.126761; srednia liczba retransmisji: 1.05455
+Nadajnik nr 1: wygenerowane: 41854; nadane: 601; stracone: 56; odebrane: 544; retransmisje: 463; stopa bledow: 0.093178; srednia liczba retransmisji: 0.851103
+Nadajnik nr 2: wygenerowane: 32500; nadane: 542; stracone: 60; odebrane: 481; retransmisje: 452; stopa bledow: 0.110701; srednia liczba retransmisji: 0.939709
+Nadajnik nr 3: wygenerowane: 39248; nadane: 551; stracone: 59; odebrane: 491; retransmisje: 480; stopa bledow: 0.107078; srednia liczba retransmisji: 0.977597
+Nadajnik nr 4: wygenerowane: 34466; nadane: 535; stracone: 60; odebrane: 474; retransmisje: 481; stopa bledow: 0.11215; srednia liczba retransmisji: 1.01477
+Nadajnik nr 5: wygenerowane: 29911; nadane: 508; stracone: 64; odebrane: 443; retransmisje: 462; stopa bledow: 0.125984; srednia liczba retransmisji: 1.04289
+Nadajnik nr 6: wygenerowane: 53666; nadane: 700; stracone: 57; odebrane: 643; retransmisje: 448; stopa bledow: 0.0814286; srednia liczba retransmisji: 0.696734
+Nadajnik nr 7: wygenerowane: 37816; nadane: 576; stracone: 54; odebrane: 522; retransmisje: 453; stopa bledow: 0.09375; srednia liczba retransmisji: 0.867816
+Nadajnik nr 8: wygenerowane: 42900; nadane: 629; stracone: 58; odebrane: 571; retransmisje: 462; stopa bledow: 0.0922099; srednia liczba retransmisji: 0.809107
+Nadajnik nr 9: wygenerowane: 40603; nadane: 601; stracone: 63; odebrane: 537; retransmisje: 504; stopa bledow: 0.104825; srednia liczba retransmisji: 0.938547
+Laczna liczba wygenerowanych pakietow: 390211
+Laczna liczba nadanych pakietow: 5811
+Laczna liczba straconych pakietow: 603
+Laczna liczba odebranych pakietow: 5201
+Srednia pakietowa stopa bledow: 0.104807
+Maksymalna pakietowa stopa bledow: 0.126761; nadajnik nr: 0
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.908864
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 104.02
+Srednie opoznienie pakietu: 62.1074
+Sredni czas oczekiwania: 32.3861
+Statystyki symulacji nr: 2 dla lambdy: 0.0032
+Nadajnik nr 0: wygenerowane: 39345; nadane: 578; stracone: 54; odebrane: 523; retransmisje: 466; stopa bledow: 0.0934256; srednia liczba retransmisji: 0.891013
+Nadajnik nr 1: wygenerowane: 37057; nadane: 572; stracone: 52; odebrane: 520; retransmisje: 468; stopa bledow: 0.0909091; srednia liczba retransmisji: 0.9
+Nadajnik nr 2: wygenerowane: 40814; nadane: 566; stracone: 66; odebrane: 500; retransmisje: 502; stopa bledow: 0.116608; srednia liczba retransmisji: 1.004
+Nadajnik nr 3: wygenerowane: 42975; nadane: 596; stracone: 64; odebrane: 532; retransmisje: 500; stopa bledow: 0.107383; srednia liczba retransmisji: 0.93985
+Nadajnik nr 4: wygenerowane: 39153; nadane: 595; stracone: 58; odebrane: 536; retransmisje: 486; stopa bledow: 0.097479; srednia liczba retransmisji: 0.906716
+Nadajnik nr 5: wygenerowane: 36460; nadane: 558; stracone: 62; odebrane: 496; retransmisje: 478; stopa bledow: 0.111111; srednia liczba retransmisji: 0.96371
+Nadajnik nr 6: wygenerowane: 40638; nadane: 586; stracone: 57; odebrane: 528; retransmisje: 476; stopa bledow: 0.0972696; srednia liczba retransmisji: 0.901515
+Nadajnik nr 7: wygenerowane: 38904; nadane: 607; stracone: 60; odebrane: 546; retransmisje: 471; stopa bledow: 0.0988468; srednia liczba retransmisji: 0.862637
+Nadajnik nr 8: wygenerowane: 39804; nadane: 573; stracone: 57; odebrane: 515; retransmisje: 494; stopa bledow: 0.0994764; srednia liczba retransmisji: 0.959223
+Nadajnik nr 9: wygenerowane: 44084; nadane: 648; stracone: 69; odebrane: 579; retransmisje: 503; stopa bledow: 0.106481; srednia liczba retransmisji: 0.868739
+Laczna liczba wygenerowanych pakietow: 399234
+Laczna liczba nadanych pakietow: 5879
+Laczna liczba straconych pakietow: 599
+Laczna liczba odebranych pakietow: 5275
+Srednia pakietowa stopa bledow: 0.101899
+Maksymalna pakietowa stopa bledow: 0.116608; nadajnik nr: 2
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.918294
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.5
+Srednie opoznienie pakietu: 63.1998
+Sredni czas oczekiwania: 33.3972
+Statystyki symulacji nr: 3 dla lambdy: 0.0032
+Nadajnik nr 0: wygenerowane: 38949; nadane: 570; stracone: 61; odebrane: 509; retransmisje: 480; stopa bledow: 0.107018; srednia liczba retransmisji: 0.943026
+Nadajnik nr 1: wygenerowane: 40559; nadane: 568; stracone: 50; odebrane: 518; retransmisje: 461; stopa bledow: 0.0880282; srednia liczba retransmisji: 0.889961
+Nadajnik nr 2: wygenerowane: 50616; nadane: 676; stracone: 62; odebrane: 614; retransmisje: 500; stopa bledow: 0.091716; srednia liczba retransmisji: 0.814332
+Nadajnik nr 3: wygenerowane: 35741; nadane: 559; stracone: 61; odebrane: 498; retransmisje: 492; stopa bledow: 0.109123; srednia liczba retransmisji: 0.987952
+Nadajnik nr 4: wygenerowane: 37891; nadane: 546; stracone: 57; odebrane: 489; retransmisje: 459; stopa bledow: 0.104396; srednia liczba retransmisji: 0.93865
+Nadajnik nr 5: wygenerowane: 37152; nadane: 552; stracone: 59; odebrane: 492; retransmisje: 499; stopa bledow: 0.106884; srednia liczba retransmisji: 1.01423
+Nadajnik nr 6: wygenerowane: 39244; nadane: 568; stracone: 59; odebrane: 509; retransmisje: 492; stopa bledow: 0.103873; srednia liczba retransmisji: 0.966601
+Nadajnik nr 7: wygenerowane: 45462; nadane: 638; stracone: 54; odebrane: 583; retransmisje: 473; stopa bledow: 0.0846395; srednia liczba retransmisji: 0.811321
+Nadajnik nr 8: wygenerowane: 38670; nadane: 563; stracone: 62; odebrane: 501; retransmisje: 488; stopa bledow: 0.110124; srednia liczba retransmisji: 0.974052
+Nadajnik nr 9: wygenerowane: 40537; nadane: 623; stracone: 55; odebrane: 567; retransmisje: 463; stopa bledow: 0.0882825; srednia liczba retransmisji: 0.816578
+Laczna liczba wygenerowanych pakietow: 404821
+Laczna liczba nadanych pakietow: 5863
+Laczna liczba straconych pakietow: 580
+Laczna liczba odebranych pakietow: 5280
+Srednia pakietowa stopa bledow: 0.0994084
+Maksymalna pakietowa stopa bledow: 0.110124; nadajnik nr: 8
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.910417
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.6
+Srednie opoznienie pakietu: 64.2127
+Sredni czas oczekiwania: 33.6995
+Statystyki symulacji nr: 4 dla lambdy: 0.0032
+Nadajnik nr 0: wygenerowane: 37415; nadane: 572; stracone: 66; odebrane: 505; retransmisje: 513; stopa bledow: 0.115385; srednia liczba retransmisji: 1.01584
+Nadajnik nr 1: wygenerowane: 45920; nadane: 621; stracone: 63; odebrane: 557; retransmisje: 508; stopa bledow: 0.101449; srednia liczba retransmisji: 0.912029
+Nadajnik nr 2: wygenerowane: 67142; nadane: 786; stracone: 56; odebrane: 730; retransmisje: 480; stopa bledow: 0.0712468; srednia liczba retransmisji: 0.657534
+Nadajnik nr 3: wygenerowane: 47307; nadane: 622; stracone: 69; odebrane: 552; retransmisje: 546; stopa bledow: 0.110932; srednia liczba retransmisji: 0.98913
+Nadajnik nr 4: wygenerowane: 35685; nadane: 533; stracone: 69; odebrane: 463; retransmisje: 497; stopa bledow: 0.129456; srednia liczba retransmisji: 1.07343
+Nadajnik nr 5: wygenerowane: 38360; nadane: 562; stracone: 58; odebrane: 503; retransmisje: 476; stopa bledow: 0.103203; srednia liczba retransmisji: 0.946322
+Nadajnik nr 6: wygenerowane: 39127; nadane: 590; stracone: 58; odebrane: 532; retransmisje: 478; stopa bledow: 0.0983051; srednia liczba retransmisji: 0.898496
+Nadajnik nr 7: wygenerowane: 39028; nadane: 556; stracone: 61; odebrane: 494; retransmisje: 501; stopa bledow: 0.109712; srednia liczba retransmisji: 1.01417
+Nadajnik nr 8: wygenerowane: 40609; nadane: 582; stracone: 59; odebrane: 523; retransmisje: 477; stopa bledow: 0.101375; srednia liczba retransmisji: 0.912046
+Nadajnik nr 9: wygenerowane: 44034; nadane: 619; stracone: 59; odebrane: 559; retransmisje: 471; stopa bledow: 0.095315; srednia liczba retransmisji: 0.842576
+Laczna liczba wygenerowanych pakietow: 434627
+Laczna liczba nadanych pakietow: 6043
+Laczna liczba straconych pakietow: 618
+Laczna liczba odebranych pakietow: 5418
+Srednia pakietowa stopa bledow: 0.103638
+Maksymalna pakietowa stopa bledow: 0.129456; nadajnik nr: 4
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.913068
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 108.36
+Srednie opoznienie pakietu: 63.0084
+Sredni czas oczekiwania: 32.88
+Statystyki symulacji nr: 5 dla lambdy: 0.0032
+Nadajnik nr 0: wygenerowane: 42945; nadane: 597; stracone: 61; odebrane: 537; retransmisje: 477; stopa bledow: 0.102178; srednia liczba retransmisji: 0.888268
+Nadajnik nr 1: wygenerowane: 52651; nadane: 680; stracone: 54; odebrane: 625; retransmisje: 473; stopa bledow: 0.0794118; srednia liczba retransmisji: 0.7568
+Nadajnik nr 2: wygenerowane: 35585; nadane: 537; stracone: 64; odebrane: 472; retransmisje: 482; stopa bledow: 0.119181; srednia liczba retransmisji: 1.02119
+Nadajnik nr 3: wygenerowane: 40486; nadane: 573; stracone: 64; odebrane: 508; retransmisje: 504; stopa bledow: 0.111693; srednia liczba retransmisji: 0.992126
+Nadajnik nr 4: wygenerowane: 38966; nadane: 566; stracone: 60; odebrane: 505; retransmisje: 469; stopa bledow: 0.106007; srednia liczba retransmisji: 0.928713
+Nadajnik nr 5: wygenerowane: 37357; nadane: 559; stracone: 54; odebrane: 504; retransmisje: 461; stopa bledow: 0.0966011; srednia liczba retransmisji: 0.914683
+Nadajnik nr 6: wygenerowane: 63320; nadane: 761; stracone: 52; odebrane: 709; retransmisje: 451; stopa bledow: 0.0683311; srednia liczba retransmisji: 0.636107
+Nadajnik nr 7: wygenerowane: 35395; nadane: 557; stracone: 57; odebrane: 499; retransmisje: 459; stopa bledow: 0.102334; srednia liczba retransmisji: 0.91984
+Nadajnik nr 8: wygenerowane: 41904; nadane: 613; stracone: 59; odebrane: 554; retransmisje: 483; stopa bledow: 0.096248; srednia liczba retransmisji: 0.871841
+Nadajnik nr 9: wygenerowane: 41381; nadane: 582; stracone: 63; odebrane: 518; retransmisje: 490; stopa bledow: 0.108247; srednia liczba retransmisji: 0.945946
+Laczna liczba wygenerowanych pakietow: 429990
+Laczna liczba nadanych pakietow: 6025
+Laczna liczba straconych pakietow: 588
+Laczna liczba odebranych pakietow: 5431
+Srednia pakietowa stopa bledow: 0.0990231
+Maksymalna pakietowa stopa bledow: 0.119181; nadajnik nr: 2
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.874425
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 108.62
+Srednie opoznienie pakietu: 63.1667
+Sredni czas oczekiwania: 33.0325
+Statystyki symulacji nr: 6 dla lambdy: 0.0032
+Nadajnik nr 0: wygenerowane: 40526; nadane: 583; stracone: 59; odebrane: 524; retransmisje: 496; stopa bledow: 0.101201; srednia liczba retransmisji: 0.946565
+Nadajnik nr 1: wygenerowane: 39195; nadane: 564; stracone: 62; odebrane: 501; retransmisje: 483; stopa bledow: 0.109929; srednia liczba retransmisji: 0.964072
+Nadajnik nr 2: wygenerowane: 44122; nadane: 618; stracone: 66; odebrane: 552; retransmisje: 514; stopa bledow: 0.106796; srednia liczba retransmisji: 0.931159
+Nadajnik nr 3: wygenerowane: 48102; nadane: 652; stracone: 70; odebrane: 581; retransmisje: 523; stopa bledow: 0.107362; srednia liczba retransmisji: 0.900172
+Nadajnik nr 4: wygenerowane: 40611; nadane: 578; stracone: 58; odebrane: 519; retransmisje: 488; stopa bledow: 0.100346; srednia liczba retransmisji: 0.94027
+Nadajnik nr 5: wygenerowane: 55669; nadane: 712; stracone: 49; odebrane: 662; retransmisje: 482; stopa bledow: 0.0688202; srednia liczba retransmisji: 0.728097
+Nadajnik nr 6: wygenerowane: 38602; nadane: 536; stracone: 68; odebrane: 468; retransmisje: 519; stopa bledow: 0.126866; srednia liczba retransmisji: 1.10897
+Nadajnik nr 7: wygenerowane: 41012; nadane: 538; stracone: 57; odebrane: 481; retransmisje: 505; stopa bledow: 0.105948; srednia liczba retransmisji: 1.0499
+Nadajnik nr 8: wygenerowane: 41623; nadane: 568; stracone: 71; odebrane: 497; retransmisje: 528; stopa bledow: 0.125; srednia liczba retransmisji: 1.06237
+Nadajnik nr 9: wygenerowane: 47859; nadane: 634; stracone: 65; odebrane: 569; retransmisje: 516; stopa bledow: 0.102524; srednia liczba retransmisji: 0.906854
+Laczna liczba wygenerowanych pakietow: 437321
+Laczna liczba nadanych pakietow: 5983
+Laczna liczba straconych pakietow: 625
+Laczna liczba odebranych pakietow: 5354
+Srednia pakietowa stopa bledow: 0.105479
+Maksymalna pakietowa stopa bledow: 0.126866; nadajnik nr: 6
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.943967
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.08
+Srednie opoznienie pakietu: 65.3036
+Sredni czas oczekiwania: 33.6557
+Statystyki symulacji nr: 7 dla lambdy: 0.0032
+Nadajnik nr 0: wygenerowane: 50529; nadane: 683; stracone: 57; odebrane: 625; retransmisje: 501; stopa bledow: 0.0834553; srednia liczba retransmisji: 0.8016
+Nadajnik nr 1: wygenerowane: 41562; nadane: 597; stracone: 69; odebrane: 528; retransmisje: 496; stopa bledow: 0.115578; srednia liczba retransmisji: 0.939394
+Nadajnik nr 2: wygenerowane: 37640; nadane: 568; stracone: 63; odebrane: 504; retransmisje: 480; stopa bledow: 0.110915; srednia liczba retransmisji: 0.952381
+Nadajnik nr 3: wygenerowane: 40376; nadane: 572; stracone: 52; odebrane: 519; retransmisje: 454; stopa bledow: 0.0909091; srednia liczba retransmisji: 0.874759
+Nadajnik nr 4: wygenerowane: 41878; nadane: 585; stracone: 59; odebrane: 525; retransmisje: 484; stopa bledow: 0.100855; srednia liczba retransmisji: 0.921905
+Nadajnik nr 5: wygenerowane: 34653; nadane: 539; stracone: 61; odebrane: 477; retransmisje: 476; stopa bledow: 0.113173; srednia liczba retransmisji: 0.997904
+Nadajnik nr 6: wygenerowane: 37357; nadane: 566; stracone: 56; odebrane: 510; retransmisje: 462; stopa bledow: 0.0989399; srednia liczba retransmisji: 0.905882
+Nadajnik nr 7: wygenerowane: 42429; nadane: 614; stracone: 61; odebrane: 552; retransmisje: 487; stopa bledow: 0.0993485; srednia liczba retransmisji: 0.882246
+Nadajnik nr 8: wygenerowane: 36492; nadane: 539; stracone: 60; odebrane: 479; retransmisje: 498; stopa bledow: 0.111317; srednia liczba retransmisji: 1.03967
+Nadajnik nr 9: wygenerowane: 43255; nadane: 615; stracone: 69; odebrane: 545; retransmisje: 534; stopa bledow: 0.112195; srednia liczba retransmisji: 0.979817
+Laczna liczba wygenerowanych pakietow: 406171
+Laczna liczba nadanych pakietow: 5878
+Laczna liczba straconych pakietow: 607
+Laczna liczba odebranych pakietow: 5264
+Srednia pakietowa stopa bledow: 0.103669
+Maksymalna pakietowa stopa bledow: 0.115578; nadajnik nr: 1
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.925532
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.28
+Srednie opoznienie pakietu: 64.1251
+Sredni czas oczekiwania: 33.6134
+Statystyki symulacji nr: 8 dla lambdy: 0.0032
+Nadajnik nr 0: wygenerowane: 43504; nadane: 578; stracone: 69; odebrane: 509; retransmisje: 522; stopa bledow: 0.119377; srednia liczba retransmisji: 1.02554
+Nadajnik nr 1: wygenerowane: 41172; nadane: 583; stracone: 59; odebrane: 524; retransmisje: 496; stopa bledow: 0.101201; srednia liczba retransmisji: 0.946565
+Nadajnik nr 2: wygenerowane: 47497; nadane: 657; stracone: 56; odebrane: 602; retransmisje: 455; stopa bledow: 0.0852359; srednia liczba retransmisji: 0.755814
+Nadajnik nr 3: wygenerowane: 38801; nadane: 570; stracone: 57; odebrane: 512; retransmisje: 509; stopa bledow: 0.1; srednia liczba retransmisji: 0.994141
+Nadajnik nr 4: wygenerowane: 34866; nadane: 519; stracone: 57; odebrane: 461; retransmisje: 470; stopa bledow: 0.109827; srednia liczba retransmisji: 1.01952
+Nadajnik nr 5: wygenerowane: 38837; nadane: 566; stracone: 60; odebrane: 506; retransmisje: 479; stopa bledow: 0.106007; srednia liczba retransmisji: 0.94664
+Nadajnik nr 6: wygenerowane: 47353; nadane: 634; stracone: 57; odebrane: 577; retransmisje: 476; stopa bledow: 0.0899054; srednia liczba retransmisji: 0.824957
+Nadajnik nr 7: wygenerowane: 56443; nadane: 684; stracone: 65; odebrane: 619; retransmisje: 517; stopa bledow: 0.0950292; srednia liczba retransmisji: 0.835218
+Nadajnik nr 8: wygenerowane: 41990; nadane: 593; stracone: 75; odebrane: 517; retransmisje: 503; stopa bledow: 0.126476; srednia liczba retransmisji: 0.972921
+Nadajnik nr 9: wygenerowane: 49473; nadane: 652; stracone: 65; odebrane: 586; retransmisje: 499; stopa bledow: 0.0996933; srednia liczba retransmisji: 0.851536
+Laczna liczba wygenerowanych pakietow: 439936
+Laczna liczba nadanych pakietow: 6036
+Laczna liczba straconych pakietow: 620
+Laczna liczba odebranych pakietow: 5413
+Srednia pakietowa stopa bledow: 0.103275
+Maksymalna pakietowa stopa bledow: 0.126476; nadajnik nr: 8
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.910031
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 108.26
+Srednie opoznienie pakietu: 64.0597
+Sredni czas oczekiwania: 33.4336
+Statystyki symulacji nr: 9 dla lambdy: 0.0032
+Nadajnik nr 0: wygenerowane: 40414; nadane: 571; stracone: 77; odebrane: 493; retransmisje: 531; stopa bledow: 0.134851; srednia liczba retransmisji: 1.07708
+Nadajnik nr 1: wygenerowane: 43460; nadane: 606; stracone: 65; odebrane: 540; retransmisje: 527; stopa bledow: 0.107261; srednia liczba retransmisji: 0.975926
+Nadajnik nr 2: wygenerowane: 44078; nadane: 597; stracone: 68; odebrane: 528; retransmisje: 517; stopa bledow: 0.113903; srednia liczba retransmisji: 0.979167
+Nadajnik nr 3: wygenerowane: 52429; nadane: 621; stracone: 70; odebrane: 550; retransmisje: 519; stopa bledow: 0.112721; srednia liczba retransmisji: 0.943636
+Nadajnik nr 4: wygenerowane: 47488; nadane: 633; stracone: 51; odebrane: 582; retransmisje: 502; stopa bledow: 0.0805687; srednia liczba retransmisji: 0.862543
+Nadajnik nr 5: wygenerowane: 52992; nadane: 632; stracone: 58; odebrane: 574; retransmisje: 525; stopa bledow: 0.0917722; srednia liczba retransmisji: 0.914634
+Nadajnik nr 6: wygenerowane: 57730; nadane: 676; stracone: 61; odebrane: 614; retransmisje: 521; stopa bledow: 0.0902367; srednia liczba retransmisji: 0.848534
+Nadajnik nr 7: wygenerowane: 48712; nadane: 663; stracone: 65; odebrane: 597; retransmisje: 505; stopa bledow: 0.0980392; srednia liczba retransmisji: 0.845896
+Nadajnik nr 8: wygenerowane: 46372; nadane: 617; stracone: 54; odebrane: 562; retransmisje: 512; stopa bledow: 0.0875203; srednia liczba retransmisji: 0.911032
+Nadajnik nr 9: wygenerowane: 51446; nadane: 651; stracone: 72; odebrane: 578; retransmisje: 526; stopa bledow: 0.110599; srednia liczba retransmisji: 0.910035
+Laczna liczba wygenerowanych pakietow: 485121
+Laczna liczba nadanych pakietow: 6267
+Laczna liczba straconych pakietow: 641
+Laczna liczba odebranych pakietow: 5618
+Srednia pakietowa stopa bledow: 0.102747
+Maksymalna pakietowa stopa bledow: 0.134851; nadajnik nr: 0
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.922926
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 112.36
+Srednie opoznienie pakietu: 64.7864
+Sredni czas oczekiwania: 33.8872
+Statystyki symulacji nr: 10 dla lambdy: 0.0032
+Nadajnik nr 0: wygenerowane: 38211; nadane: 591; stracone: 65; odebrane: 525; retransmisje: 489; stopa bledow: 0.109983; srednia liczba retransmisji: 0.931429
+Nadajnik nr 1: wygenerowane: 34655; nadane: 512; stracone: 63; odebrane: 448; retransmisje: 477; stopa bledow: 0.123047; srednia liczba retransmisji: 1.06473
+Nadajnik nr 2: wygenerowane: 41066; nadane: 610; stracone: 59; odebrane: 550; retransmisje: 478; stopa bledow: 0.0967213; srednia liczba retransmisji: 0.869091
+Nadajnik nr 3: wygenerowane: 41062; nadane: 586; stracone: 60; odebrane: 525; retransmisje: 480; stopa bledow: 0.102389; srednia liczba retransmisji: 0.914286
+Nadajnik nr 4: wygenerowane: 34574; nadane: 531; stracone: 58; odebrane: 473; retransmisje: 463; stopa bledow: 0.109228; srednia liczba retransmisji: 0.978858
+Nadajnik nr 5: wygenerowane: 62207; nadane: 782; stracone: 61; odebrane: 721; retransmisje: 491; stopa bledow: 0.0780051; srednia liczba retransmisji: 0.680999
+Nadajnik nr 6: wygenerowane: 35236; nadane: 546; stracone: 59; odebrane: 488; retransmisje: 475; stopa bledow: 0.108059; srednia liczba retransmisji: 0.973361
+Nadajnik nr 7: wygenerowane: 42964; nadane: 589; stracone: 68; odebrane: 520; retransmisje: 515; stopa bledow: 0.11545; srednia liczba retransmisji: 0.990385
+Nadajnik nr 8: wygenerowane: 38923; nadane: 577; stracone: 59; odebrane: 517; retransmisje: 479; stopa bledow: 0.102253; srednia liczba retransmisji: 0.926499
+Nadajnik nr 9: wygenerowane: 48465; nadane: 667; stracone: 64; odebrane: 602; retransmisje: 488; stopa bledow: 0.095952; srednia liczba retransmisji: 0.810631
+Laczna liczba wygenerowanych pakietow: 417363
+Laczna liczba nadanych pakietow: 5991
+Laczna liczba straconych pakietow: 616
+Laczna liczba odebranych pakietow: 5369
+Srednia pakietowa stopa bledow: 0.104109
+Maksymalna pakietowa stopa bledow: 0.123047; nadajnik nr: 1
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.90054
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.38
+Srednie opoznienie pakietu: 62.2378
+Sredni czas oczekiwania: 33.2091
+Statystyki symulacji nr: 1 dla lambdy: 0.0034
+Nadajnik nr 0: wygenerowane: 45599; nadane: 625; stracone: 74; odebrane: 550; retransmisje: 531; stopa bledow: 0.1184; srednia liczba retransmisji: 0.965455
+Nadajnik nr 1: wygenerowane: 46233; nadane: 585; stracone: 63; odebrane: 522; retransmisje: 521; stopa bledow: 0.107692; srednia liczba retransmisji: 0.998084
+Nadajnik nr 2: wygenerowane: 40006; nadane: 556; stracone: 80; odebrane: 475; retransmisje: 537; stopa bledow: 0.143885; srednia liczba retransmisji: 1.13053
+Nadajnik nr 3: wygenerowane: 44641; nadane: 600; stracone: 72; odebrane: 527; retransmisje: 541; stopa bledow: 0.12; srednia liczba retransmisji: 1.02657
+Nadajnik nr 4: wygenerowane: 45548; nadane: 604; stracone: 63; odebrane: 540; retransmisje: 551; stopa bledow: 0.104305; srednia liczba retransmisji: 1.02037
+Nadajnik nr 5: wygenerowane: 36907; nadane: 526; stracone: 72; odebrane: 453; retransmisje: 537; stopa bledow: 0.136882; srednia liczba retransmisji: 1.18543
+Nadajnik nr 6: wygenerowane: 52703; nadane: 659; stracone: 82; odebrane: 577; retransmisje: 566; stopa bledow: 0.124431; srednia liczba retransmisji: 0.980936
+Nadajnik nr 7: wygenerowane: 36507; nadane: 530; stracone: 68; odebrane: 462; retransmisje: 523; stopa bledow: 0.128302; srednia liczba retransmisji: 1.13203
+Nadajnik nr 8: wygenerowane: 45475; nadane: 595; stracone: 79; odebrane: 515; retransmisje: 558; stopa bledow: 0.132773; srednia liczba retransmisji: 1.0835
+Nadajnik nr 9: wygenerowane: 47267; nadane: 597; stracone: 69; odebrane: 528; retransmisje: 537; stopa bledow: 0.115578; srednia liczba retransmisji: 1.01705
+Laczna liczba wygenerowanych pakietow: 440886
+Laczna liczba nadanych pakietow: 5877
+Laczna liczba straconych pakietow: 722
+Laczna liczba odebranych pakietow: 5149
+Srednia pakietowa stopa bledow: 0.123225
+Maksymalna pakietowa stopa bledow: 0.143885; nadajnik nr: 2
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 1.04914
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 102.98
+Srednie opoznienie pakietu: 63.3734
+Sredni czas oczekiwania: 32.1693
+Statystyki symulacji nr: 2 dla lambdy: 0.0034
+Nadajnik nr 0: wygenerowane: 46118; nadane: 615; stracone: 68; odebrane: 546; retransmisje: 500; stopa bledow: 0.110569; srednia liczba retransmisji: 0.915751
+Nadajnik nr 1: wygenerowane: 44624; nadane: 626; stracone: 57; odebrane: 569; retransmisje: 475; stopa bledow: 0.0910543; srednia liczba retransmisji: 0.834798
+Nadajnik nr 2: wygenerowane: 46969; nadane: 624; stracone: 68; odebrane: 557; retransmisje: 503; stopa bledow: 0.108974; srednia liczba retransmisji: 0.903052
+Nadajnik nr 3: wygenerowane: 39980; nadane: 573; stracone: 69; odebrane: 503; retransmisje: 516; stopa bledow: 0.120419; srednia liczba retransmisji: 1.02584
+Nadajnik nr 4: wygenerowane: 42054; nadane: 567; stracone: 59; odebrane: 508; retransmisje: 491; stopa bledow: 0.104056; srednia liczba retransmisji: 0.966535
+Nadajnik nr 5: wygenerowane: 42733; nadane: 600; stracone: 60; odebrane: 539; retransmisje: 468; stopa bledow: 0.1; srednia liczba retransmisji: 0.868275
+Nadajnik nr 6: wygenerowane: 41467; nadane: 558; stracone: 72; odebrane: 485; retransmisje: 513; stopa bledow: 0.129032; srednia liczba retransmisji: 1.05773
+Nadajnik nr 7: wygenerowane: 36630; nadane: 563; stracone: 69; odebrane: 493; retransmisje: 490; stopa bledow: 0.122558; srednia liczba retransmisji: 0.993915
+Nadajnik nr 8: wygenerowane: 43513; nadane: 589; stracone: 64; odebrane: 525; retransmisje: 510; stopa bledow: 0.108659; srednia liczba retransmisji: 0.971429
+Nadajnik nr 9: wygenerowane: 48561; nadane: 627; stracone: 63; odebrane: 564; retransmisje: 524; stopa bledow: 0.100478; srednia liczba retransmisji: 0.929078
+Laczna liczba wygenerowanych pakietow: 432649
+Laczna liczba nadanych pakietow: 5942
+Laczna liczba straconych pakietow: 649
+Laczna liczba odebranych pakietow: 5289
+Srednia pakietowa stopa bledow: 0.10958
+Maksymalna pakietowa stopa bledow: 0.129032; nadajnik nr: 6
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.943468
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.78
+Srednie opoznienie pakietu: 62.5663
+Sredni czas oczekiwania: 32.8063
+Statystyki symulacji nr: 3 dla lambdy: 0.0034
+Nadajnik nr 0: wygenerowane: 41610; nadane: 560; stracone: 65; odebrane: 494; retransmisje: 494; stopa bledow: 0.116071; srednia liczba retransmisji: 1
+Nadajnik nr 1: wygenerowane: 43682; nadane: 578; stracone: 65; odebrane: 512; retransmisje: 496; stopa bledow: 0.112457; srednia liczba retransmisji: 0.96875
+Nadajnik nr 2: wygenerowane: 46411; nadane: 626; stracone: 66; odebrane: 561; retransmisje: 500; stopa bledow: 0.105431; srednia liczba retransmisji: 0.891266
+Nadajnik nr 3: wygenerowane: 46193; nadane: 635; stracone: 65; odebrane: 569; retransmisje: 531; stopa bledow: 0.102362; srednia liczba retransmisji: 0.933216
+Nadajnik nr 4: wygenerowane: 44365; nadane: 588; stracone: 71; odebrane: 516; retransmisje: 515; stopa bledow: 0.120748; srednia liczba retransmisji: 0.998062
+Nadajnik nr 5: wygenerowane: 46930; nadane: 597; stracone: 73; odebrane: 524; retransmisje: 531; stopa bledow: 0.122278; srednia liczba retransmisji: 1.01336
+Nadajnik nr 6: wygenerowane: 45761; nadane: 600; stracone: 72; odebrane: 528; retransmisje: 528; stopa bledow: 0.12; srednia liczba retransmisji: 1
+Nadajnik nr 7: wygenerowane: 43884; nadane: 573; stracone: 52; odebrane: 521; retransmisje: 485; stopa bledow: 0.0907504; srednia liczba retransmisji: 0.930902
+Nadajnik nr 8: wygenerowane: 49076; nadane: 617; stracone: 54; odebrane: 562; retransmisje: 513; stopa bledow: 0.0875203; srednia liczba retransmisji: 0.912811
+Nadajnik nr 9: wygenerowane: 37144; nadane: 508; stracone: 67; odebrane: 440; retransmisje: 509; stopa bledow: 0.13189; srednia liczba retransmisji: 1.15682
+Laczna liczba wygenerowanych pakietow: 445056
+Laczna liczba nadanych pakietow: 5882
+Laczna liczba straconych pakietow: 650
+Laczna liczba odebranych pakietow: 5227
+Srednia pakietowa stopa bledow: 0.110951
+Maksymalna pakietowa stopa bledow: 0.13189; nadajnik nr: 9
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.976086
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 104.54
+Srednie opoznienie pakietu: 65.2384
+Sredni czas oczekiwania: 33.7842
+Statystyki symulacji nr: 4 dla lambdy: 0.0034
+Nadajnik nr 0: wygenerowane: 40985; nadane: 586; stracone: 62; odebrane: 524; retransmisje: 500; stopa bledow: 0.105802; srednia liczba retransmisji: 0.954198
+Nadajnik nr 1: wygenerowane: 46668; nadane: 602; stracone: 65; odebrane: 536; retransmisje: 504; stopa bledow: 0.107973; srednia liczba retransmisji: 0.940299
+Nadajnik nr 2: wygenerowane: 66392; nadane: 766; stracone: 59; odebrane: 707; retransmisje: 487; stopa bledow: 0.0770235; srednia liczba retransmisji: 0.688826
+Nadajnik nr 3: wygenerowane: 43573; nadane: 563; stracone: 63; odebrane: 500; retransmisje: 498; stopa bledow: 0.111901; srednia liczba retransmisji: 0.996
+Nadajnik nr 4: wygenerowane: 43036; nadane: 579; stracone: 65; odebrane: 514; retransmisje: 493; stopa bledow: 0.112263; srednia liczba retransmisji: 0.959144
+Nadajnik nr 5: wygenerowane: 46115; nadane: 592; stracone: 57; odebrane: 534; retransmisje: 493; stopa bledow: 0.0962838; srednia liczba retransmisji: 0.923221
+Nadajnik nr 6: wygenerowane: 46736; nadane: 596; stracone: 76; odebrane: 520; retransmisje: 529; stopa bledow: 0.127517; srednia liczba retransmisji: 1.01731
+Nadajnik nr 7: wygenerowane: 47227; nadane: 633; stracone: 55; odebrane: 578; retransmisje: 488; stopa bledow: 0.0868878; srednia liczba retransmisji: 0.844291
+Nadajnik nr 8: wygenerowane: 38765; nadane: 515; stracone: 59; odebrane: 455; retransmisje: 502; stopa bledow: 0.114563; srednia liczba retransmisji: 1.1033
+Nadajnik nr 9: wygenerowane: 45845; nadane: 607; stracone: 57; odebrane: 550; retransmisje: 492; stopa bledow: 0.0939044; srednia liczba retransmisji: 0.894545
+Laczna liczba wygenerowanych pakietow: 465342
+Laczna liczba nadanych pakietow: 6039
+Laczna liczba straconych pakietow: 618
+Laczna liczba odebranych pakietow: 5418
+Srednia pakietowa stopa bledow: 0.103412
+Maksymalna pakietowa stopa bledow: 0.127517; nadajnik nr: 6
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.920266
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 108.36
+Srednie opoznienie pakietu: 62.9009
+Sredni czas oczekiwania: 32.9105
+Statystyki symulacji nr: 5 dla lambdy: 0.0034
+Nadajnik nr 0: wygenerowane: 51171; nadane: 630; stracone: 65; odebrane: 564; retransmisje: 515; stopa bledow: 0.103175; srednia liczba retransmisji: 0.913121
+Nadajnik nr 1: wygenerowane: 41451; nadane: 547; stracone: 54; odebrane: 493; retransmisje: 482; stopa bledow: 0.0987203; srednia liczba retransmisji: 0.977688
+Nadajnik nr 2: wygenerowane: 38837; nadane: 537; stracone: 69; odebrane: 468; retransmisje: 532; stopa bledow: 0.128492; srednia liczba retransmisji: 1.13675
+Nadajnik nr 3: wygenerowane: 46066; nadane: 586; stracone: 70; odebrane: 515; retransmisje: 517; stopa bledow: 0.119454; srednia liczba retransmisji: 1.00388
+Nadajnik nr 4: wygenerowane: 52884; nadane: 640; stracone: 62; odebrane: 577; retransmisje: 514; stopa bledow: 0.096875; srednia liczba retransmisji: 0.890815
+Nadajnik nr 5: wygenerowane: 44477; nadane: 577; stracone: 66; odebrane: 510; retransmisje: 531; stopa bledow: 0.114385; srednia liczba retransmisji: 1.04118
+Nadajnik nr 6: wygenerowane: 80992; nadane: 846; stracone: 51; odebrane: 795; retransmisje: 500; stopa bledow: 0.0602837; srednia liczba retransmisji: 0.628931
+Nadajnik nr 7: wygenerowane: 42733; nadane: 597; stracone: 68; odebrane: 528; retransmisje: 508; stopa bledow: 0.113903; srednia liczba retransmisji: 0.962121
+Nadajnik nr 8: wygenerowane: 39148; nadane: 553; stracone: 65; odebrane: 487; retransmisje: 498; stopa bledow: 0.117541; srednia liczba retransmisji: 1.02259
+Nadajnik nr 9: wygenerowane: 47518; nadane: 588; stracone: 71; odebrane: 516; retransmisje: 511; stopa bledow: 0.120748; srednia liczba retransmisji: 0.99031
+Laczna liczba wygenerowanych pakietow: 485277
+Laczna liczba nadanych pakietow: 6101
+Laczna liczba straconych pakietow: 641
+Laczna liczba odebranych pakietow: 5453
+Srednia pakietowa stopa bledow: 0.107358
+Maksymalna pakietowa stopa bledow: 0.128492; nadajnik nr: 2
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.936732
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 109.06
+Srednie opoznienie pakietu: 63.7534
+Sredni czas oczekiwania: 32.8296
+Statystyki symulacji nr: 6 dla lambdy: 0.0034
+Nadajnik nr 0: wygenerowane: 46315; nadane: 613; stracone: 66; odebrane: 547; retransmisje: 535; stopa bledow: 0.107667; srednia liczba retransmisji: 0.978062
+Nadajnik nr 1: wygenerowane: 38683; nadane: 537; stracone: 62; odebrane: 474; retransmisje: 495; stopa bledow: 0.115456; srednia liczba retransmisji: 1.0443
+Nadajnik nr 2: wygenerowane: 41823; nadane: 591; stracone: 59; odebrane: 533; retransmisje: 495; stopa bledow: 0.0998308; srednia liczba retransmisji: 0.928705
+Nadajnik nr 3: wygenerowane: 50739; nadane: 644; stracone: 68; odebrane: 576; retransmisje: 516; stopa bledow: 0.10559; srednia liczba retransmisji: 0.895833
+Nadajnik nr 4: wygenerowane: 42669; nadane: 546; stracone: 73; odebrane: 472; retransmisje: 539; stopa bledow: 0.1337; srednia liczba retransmisji: 1.14195
+Nadajnik nr 5: wygenerowane: 58757; nadane: 669; stracone: 66; odebrane: 603; retransmisje: 528; stopa bledow: 0.0986547; srednia liczba retransmisji: 0.875622
+Nadajnik nr 6: wygenerowane: 43589; nadane: 579; stracone: 71; odebrane: 508; retransmisje: 516; stopa bledow: 0.122625; srednia liczba retransmisji: 1.01575
+Nadajnik nr 7: wygenerowane: 47625; nadane: 594; stracone: 70; odebrane: 524; retransmisje: 531; stopa bledow: 0.117845; srednia liczba retransmisji: 1.01336
+Nadajnik nr 8: wygenerowane: 42217; nadane: 563; stracone: 63; odebrane: 499; retransmisje: 525; stopa bledow: 0.111901; srednia liczba retransmisji: 1.0521
+Nadajnik nr 9: wygenerowane: 51430; nadane: 642; stracone: 68; odebrane: 573; retransmisje: 531; stopa bledow: 0.105919; srednia liczba retransmisji: 0.926702
+Laczna liczba wygenerowanych pakietow: 463847
+Laczna liczba nadanych pakietow: 5978
+Laczna liczba straconych pakietow: 666
+Laczna liczba odebranych pakietow: 5309
+Srednia pakietowa stopa bledow: 0.111919
+Maksymalna pakietowa stopa bledow: 0.1337; nadajnik nr: 4
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.981541
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 106.18
+Srednie opoznienie pakietu: 64.6578
+Sredni czas oczekiwania: 33.6061
+Statystyki symulacji nr: 7 dla lambdy: 0.0034
+Nadajnik nr 0: wygenerowane: 44860; nadane: 612; stracone: 68; odebrane: 544; retransmisje: 513; stopa bledow: 0.111111; srednia liczba retransmisji: 0.943015
+Nadajnik nr 1: wygenerowane: 43866; nadane: 597; stracone: 61; odebrane: 535; retransmisje: 532; stopa bledow: 0.102178; srednia liczba retransmisji: 0.994393
+Nadajnik nr 2: wygenerowane: 41951; nadane: 578; stracone: 69; odebrane: 509; retransmisje: 517; stopa bledow: 0.119377; srednia liczba retransmisji: 1.01572
+Nadajnik nr 3: wygenerowane: 43051; nadane: 574; stracone: 63; odebrane: 511; retransmisje: 503; stopa bledow: 0.109756; srednia liczba retransmisji: 0.984344
+Nadajnik nr 4: wygenerowane: 45164; nadane: 580; stracone: 54; odebrane: 525; retransmisje: 506; stopa bledow: 0.0931034; srednia liczba retransmisji: 0.96381
+Nadajnik nr 5: wygenerowane: 40876; nadane: 553; stracone: 60; odebrane: 492; retransmisje: 507; stopa bledow: 0.108499; srednia liczba retransmisji: 1.03049
+Nadajnik nr 6: wygenerowane: 40048; nadane: 569; stracone: 59; odebrane: 510; retransmisje: 498; stopa bledow: 0.103691; srednia liczba retransmisji: 0.976471
+Nadajnik nr 7: wygenerowane: 47374; nadane: 636; stracone: 67; odebrane: 569; retransmisje: 531; stopa bledow: 0.105346; srednia liczba retransmisji: 0.933216
+Nadajnik nr 8: wygenerowane: 42708; nadane: 568; stracone: 70; odebrane: 498; retransmisje: 509; stopa bledow: 0.123239; srednia liczba retransmisji: 1.02209
+Nadajnik nr 9: wygenerowane: 47651; nadane: 612; stracone: 57; odebrane: 554; retransmisje: 498; stopa bledow: 0.0931373; srednia liczba retransmisji: 0.898917
+Laczna liczba wygenerowanych pakietow: 437549
+Laczna liczba nadanych pakietow: 5879
+Laczna liczba straconych pakietow: 628
+Laczna liczba odebranych pakietow: 5247
+Srednia pakietowa stopa bledow: 0.106944
+Maksymalna pakietowa stopa bledow: 0.123239; nadajnik nr: 8
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.974652
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 104.94
+Srednie opoznienie pakietu: 64.9223
+Sredni czas oczekiwania: 32.4924
+Statystyki symulacji nr: 8 dla lambdy: 0.0034
+Nadajnik nr 0: wygenerowane: 44082; nadane: 596; stracone: 67; odebrane: 528; retransmisje: 508; stopa bledow: 0.112416; srednia liczba retransmisji: 0.962121
+Nadajnik nr 1: wygenerowane: 43092; nadane: 581; stracone: 71; odebrane: 509; retransmisje: 531; stopa bledow: 0.122203; srednia liczba retransmisji: 1.04322
+Nadajnik nr 2: wygenerowane: 43178; nadane: 589; stracone: 66; odebrane: 524; retransmisje: 525; stopa bledow: 0.112054; srednia liczba retransmisji: 1.00191
+Nadajnik nr 3: wygenerowane: 41485; nadane: 538; stracone: 71; odebrane: 466; retransmisje: 514; stopa bledow: 0.13197; srednia liczba retransmisji: 1.103
+Nadajnik nr 4: wygenerowane: 46065; nadane: 606; stracone: 60; odebrane: 546; retransmisje: 506; stopa bledow: 0.0990099; srednia liczba retransmisji: 0.92674
+Nadajnik nr 5: wygenerowane: 53114; nadane: 675; stracone: 62; odebrane: 612; retransmisje: 508; stopa bledow: 0.0918519; srednia liczba retransmisji: 0.830065
+Nadajnik nr 6: wygenerowane: 45936; nadane: 585; stracone: 70; odebrane: 515; retransmisje: 524; stopa bledow: 0.119658; srednia liczba retransmisji: 1.01748
+Nadajnik nr 7: wygenerowane: 46238; nadane: 609; stracone: 80; odebrane: 528; retransmisje: 545; stopa bledow: 0.131363; srednia liczba retransmisji: 1.0322
+Nadajnik nr 8: wygenerowane: 37445; nadane: 525; stracone: 67; odebrane: 457; retransmisje: 518; stopa bledow: 0.127619; srednia liczba retransmisji: 1.13348
+Nadajnik nr 9: wygenerowane: 53310; nadane: 671; stracone: 65; odebrane: 605; retransmisje: 530; stopa bledow: 0.0968703; srednia liczba retransmisji: 0.876033
+Laczna liczba wygenerowanych pakietow: 453945
+Laczna liczba nadanych pakietow: 5975
+Laczna liczba straconych pakietow: 679
+Laczna liczba odebranych pakietow: 5290
+Srednia pakietowa stopa bledow: 0.114502
+Maksymalna pakietowa stopa bledow: 0.13197; nadajnik nr: 3
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.984688
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.8
+Srednie opoznienie pakietu: 64.2844
+Sredni czas oczekiwania: 33.8398
+Statystyki symulacji nr: 9 dla lambdy: 0.0034
+Nadajnik nr 0: wygenerowane: 43437; nadane: 560; stracone: 82; odebrane: 477; retransmisje: 591; stopa bledow: 0.146429; srednia liczba retransmisji: 1.23899
+Nadajnik nr 1: wygenerowane: 44519; nadane: 597; stracone: 68; odebrane: 528; retransmisje: 560; stopa bledow: 0.113903; srednia liczba retransmisji: 1.06061
+Nadajnik nr 2: wygenerowane: 49985; nadane: 610; stracone: 63; odebrane: 546; retransmisje: 569; stopa bledow: 0.103279; srednia liczba retransmisji: 1.04212
+Nadajnik nr 3: wygenerowane: 55866; nadane: 647; stracone: 62; odebrane: 584; retransmisje: 553; stopa bledow: 0.0958269; srednia liczba retransmisji: 0.946918
+Nadajnik nr 4: wygenerowane: 48962; nadane: 587; stracone: 69; odebrane: 517; retransmisje: 540; stopa bledow: 0.117547; srednia liczba retransmisji: 1.04449
+Nadajnik nr 5: wygenerowane: 55386; nadane: 653; stracone: 76; odebrane: 577; retransmisje: 576; stopa bledow: 0.116386; srednia liczba retransmisji: 0.998267
+Nadajnik nr 6: wygenerowane: 57335; nadane: 661; stracone: 70; odebrane: 590; retransmisje: 590; stopa bledow: 0.1059; srednia liczba retransmisji: 1
+Nadajnik nr 7: wygenerowane: 51771; nadane: 613; stracone: 78; odebrane: 535; retransmisje: 587; stopa bledow: 0.127243; srednia liczba retransmisji: 1.0972
+Nadajnik nr 8: wygenerowane: 49399; nadane: 606; stracone: 68; odebrane: 538; retransmisje: 533; stopa bledow: 0.112211; srednia liczba retransmisji: 0.990706
+Nadajnik nr 9: wygenerowane: 54721; nadane: 652; stracone: 73; odebrane: 578; retransmisje: 552; stopa bledow: 0.111963; srednia liczba retransmisji: 0.955017
+Laczna liczba wygenerowanych pakietow: 511381
+Laczna liczba nadanych pakietow: 6186
+Laczna liczba straconych pakietow: 709
+Laczna liczba odebranych pakietow: 5470
+Srednia pakietowa stopa bledow: 0.115069
+Maksymalna pakietowa stopa bledow: 0.146429; nadajnik nr: 0
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 1.03309
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 109.4
+Srednie opoznienie pakietu: 65.1728
+Sredni czas oczekiwania: 32.7339
+Statystyki symulacji nr: 10 dla lambdy: 0.0034
+Nadajnik nr 0: wygenerowane: 42101; nadane: 563; stracone: 70; odebrane: 493; retransmisje: 528; stopa bledow: 0.124334; srednia liczba retransmisji: 1.07099
+Nadajnik nr 1: wygenerowane: 37313; nadane: 523; stracone: 61; odebrane: 461; retransmisje: 482; stopa bledow: 0.116635; srednia liczba retransmisji: 1.04555
+Nadajnik nr 2: wygenerowane: 37204; nadane: 518; stracone: 63; odebrane: 454; retransmisje: 530; stopa bledow: 0.121622; srednia liczba retransmisji: 1.1674
+Nadajnik nr 3: wygenerowane: 44767; nadane: 629; stracone: 62; odebrane: 566; retransmisje: 503; stopa bledow: 0.0985692; srednia liczba retransmisji: 0.888693
+Nadajnik nr 4: wygenerowane: 34155; nadane: 529; stracone: 62; odebrane: 466; retransmisje: 466; stopa bledow: 0.117202; srednia liczba retransmisji: 1
+Nadajnik nr 5: wygenerowane: 56347; nadane: 698; stracone: 75; odebrane: 622; retransmisje: 548; stopa bledow: 0.10745; srednia liczba retransmisji: 0.881029
+Nadajnik nr 6: wygenerowane: 37197; nadane: 539; stracone: 69; odebrane: 471; retransmisje: 515; stopa bledow: 0.128015; srednia liczba retransmisji: 1.09342
+Nadajnik nr 7: wygenerowane: 51022; nadane: 684; stracone: 58; odebrane: 625; retransmisje: 504; stopa bledow: 0.0847953; srednia liczba retransmisji: 0.8064
+Nadajnik nr 8: wygenerowane: 50248; nadane: 634; stracone: 68; odebrane: 565; retransmisje: 511; stopa bledow: 0.107256; srednia liczba retransmisji: 0.904425
+Nadajnik nr 9: wygenerowane: 48576; nadane: 644; stracone: 63; odebrane: 581; retransmisje: 510; stopa bledow: 0.0978261; srednia liczba retransmisji: 0.877797
+Laczna liczba wygenerowanych pakietow: 438930
+Laczna liczba nadanych pakietow: 5961
+Laczna liczba straconych pakietow: 651
+Laczna liczba odebranych pakietow: 5304
+Srednia pakietowa stopa bledow: 0.11037
+Maksymalna pakietowa stopa bledow: 0.128015; nadajnik nr: 6
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.960973
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 106.08
+Srednie opoznienie pakietu: 62.2869
+Sredni czas oczekiwania: 33.2666
+Statystyki symulacji nr: 1 dla lambdy: 0.0037
+Nadajnik nr 0: wygenerowane: 45551; nadane: 554; stracone: 75; odebrane: 479; retransmisje: 559; stopa bledow: 0.135379; srednia liczba retransmisji: 1.16701
+Nadajnik nr 1: wygenerowane: 53911; nadane: 597; stracone: 74; odebrane: 522; retransmisje: 567; stopa bledow: 0.123953; srednia liczba retransmisji: 1.08621
+Nadajnik nr 2: wygenerowane: 46617; nadane: 558; stracone: 84; odebrane: 474; retransmisje: 549; stopa bledow: 0.150538; srednia liczba retransmisji: 1.15823
+Nadajnik nr 3: wygenerowane: 44338; nadane: 548; stracone: 74; odebrane: 473; retransmisje: 588; stopa bledow: 0.135036; srednia liczba retransmisji: 1.24313
+Nadajnik nr 4: wygenerowane: 52093; nadane: 607; stracone: 71; odebrane: 536; retransmisje: 538; stopa bledow: 0.116969; srednia liczba retransmisji: 1.00373
+Nadajnik nr 5: wygenerowane: 43035; nadane: 569; stracone: 69; odebrane: 500; retransmisje: 531; stopa bledow: 0.121265; srednia liczba retransmisji: 1.062
+Nadajnik nr 6: wygenerowane: 55107; nadane: 630; stracone: 73; odebrane: 557; retransmisje: 553; stopa bledow: 0.115873; srednia liczba retransmisji: 0.992819
+Nadajnik nr 7: wygenerowane: 46300; nadane: 561; stracone: 74; odebrane: 487; retransmisje: 568; stopa bledow: 0.131907; srednia liczba retransmisji: 1.16632
+Nadajnik nr 8: wygenerowane: 53743; nadane: 641; stracone: 88; odebrane: 552; retransmisje: 573; stopa bledow: 0.137285; srednia liczba retransmisji: 1.03804
+Nadajnik nr 9: wygenerowane: 51431; nadane: 613; stracone: 80; odebrane: 533; retransmisje: 554; stopa bledow: 0.130506; srednia liczba retransmisji: 1.0394
+Laczna liczba wygenerowanych pakietow: 492126
+Laczna liczba nadanych pakietow: 5878
+Laczna liczba straconych pakietow: 762
+Laczna liczba odebranych pakietow: 5113
+Srednia pakietowa stopa bledow: 0.129871
+Maksymalna pakietowa stopa bledow: 0.150538; nadajnik nr: 2
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 1.09134
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 102.26
+Srednie opoznienie pakietu: 63.8467
+Sredni czas oczekiwania: 31.3038
+Statystyki symulacji nr: 2 dla lambdy: 0.0037
+Nadajnik nr 0: wygenerowane: 47906; nadane: 592; stracone: 58; odebrane: 533; retransmisje: 532; stopa bledow: 0.097973; srednia liczba retransmisji: 0.998124
+Nadajnik nr 1: wygenerowane: 43112; nadane: 574; stracone: 66; odebrane: 507; retransmisje: 504; stopa bledow: 0.114983; srednia liczba retransmisji: 0.994083
+Nadajnik nr 2: wygenerowane: 51452; nadane: 618; stracone: 56; odebrane: 562; retransmisje: 498; stopa bledow: 0.0906149; srednia liczba retransmisji: 0.886121
+Nadajnik nr 3: wygenerowane: 52467; nadane: 639; stracone: 64; odebrane: 575; retransmisje: 522; stopa bledow: 0.100156; srednia liczba retransmisji: 0.907826
+Nadajnik nr 4: wygenerowane: 46916; nadane: 582; stracone: 65; odebrane: 517; retransmisje: 506; stopa bledow: 0.111684; srednia liczba retransmisji: 0.978723
+Nadajnik nr 5: wygenerowane: 44224; nadane: 573; stracone: 63; odebrane: 510; retransmisje: 496; stopa bledow: 0.109948; srednia liczba retransmisji: 0.972549
+Nadajnik nr 6: wygenerowane: 45790; nadane: 565; stracone: 55; odebrane: 509; retransmisje: 500; stopa bledow: 0.0973451; srednia liczba retransmisji: 0.982318
+Nadajnik nr 7: wygenerowane: 40119; nadane: 560; stracone: 72; odebrane: 488; retransmisje: 496; stopa bledow: 0.128571; srednia liczba retransmisji: 1.01639
+Nadajnik nr 8: wygenerowane: 46066; nadane: 608; stracone: 67; odebrane: 541; retransmisje: 514; stopa bledow: 0.110197; srednia liczba retransmisji: 0.950092
+Nadajnik nr 9: wygenerowane: 49907; nadane: 606; stracone: 79; odebrane: 527; retransmisje: 524; stopa bledow: 0.130363; srednia liczba retransmisji: 0.994307
+Laczna liczba wygenerowanych pakietow: 467959
+Laczna liczba nadanych pakietow: 5917
+Laczna liczba straconych pakietow: 645
+Laczna liczba odebranych pakietow: 5269
+Srednia pakietowa stopa bledow: 0.109184
+Maksymalna pakietowa stopa bledow: 0.130363; nadajnik nr: 9
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.966407
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 105.38
+Srednie opoznienie pakietu: 63.1127
+Sredni czas oczekiwania: 31.9604
+Statystyki symulacji nr: 3 dla lambdy: 0.0037
+Nadajnik nr 0: wygenerowane: 47892; nadane: 583; stracone: 62; odebrane: 520; retransmisje: 534; stopa bledow: 0.106346; srednia liczba retransmisji: 1.02692
+Nadajnik nr 1: wygenerowane: 51799; nadane: 582; stracone: 71; odebrane: 510; retransmisje: 557; stopa bledow: 0.121993; srednia liczba retransmisji: 1.09216
+Nadajnik nr 2: wygenerowane: 50198; nadane: 594; stracone: 78; odebrane: 516; retransmisje: 552; stopa bledow: 0.131313; srednia liczba retransmisji: 1.06977
+Nadajnik nr 3: wygenerowane: 47754; nadane: 608; stracone: 61; odebrane: 546; retransmisje: 526; stopa bledow: 0.100329; srednia liczba retransmisji: 0.96337
+Nadajnik nr 4: wygenerowane: 46192; nadane: 565; stracone: 67; odebrane: 498; retransmisje: 510; stopa bledow: 0.118584; srednia liczba retransmisji: 1.0241
+Nadajnik nr 5: wygenerowane: 49422; nadane: 588; stracone: 68; odebrane: 519; retransmisje: 528; stopa bledow: 0.115646; srednia liczba retransmisji: 1.01734
+Nadajnik nr 6: wygenerowane: 43957; nadane: 533; stracone: 82; odebrane: 451; retransmisje: 563; stopa bledow: 0.153846; srednia liczba retransmisji: 1.24834
+Nadajnik nr 7: wygenerowane: 52928; nadane: 624; stracone: 64; odebrane: 559; retransmisje: 552; stopa bledow: 0.102564; srednia liczba retransmisji: 0.987478
+Nadajnik nr 8: wygenerowane: 46819; nadane: 582; stracone: 72; odebrane: 509; retransmisje: 553; stopa bledow: 0.123711; srednia liczba retransmisji: 1.08644
+Nadajnik nr 9: wygenerowane: 47766; nadane: 598; stracone: 72; odebrane: 525; retransmisje: 525; stopa bledow: 0.120401; srednia liczba retransmisji: 1
+Laczna liczba wygenerowanych pakietow: 484727
+Laczna liczba nadanych pakietow: 5857
+Laczna liczba straconych pakietow: 697
+Laczna liczba odebranych pakietow: 5153
+Srednia pakietowa stopa bledow: 0.119473
+Maksymalna pakietowa stopa bledow: 0.153846; nadajnik nr: 6
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 1.04793
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 103.06
+Srednie opoznienie pakietu: 65.4075
+Sredni czas oczekiwania: 33.3463
+Statystyki symulacji nr: 4 dla lambdy: 0.0037
+Nadajnik nr 0: wygenerowane: 45868; nadane: 564; stracone: 65; odebrane: 499; retransmisje: 535; stopa bledow: 0.115248; srednia liczba retransmisji: 1.07214
+Nadajnik nr 1: wygenerowane: 47726; nadane: 591; stracone: 70; odebrane: 520; retransmisje: 541; stopa bledow: 0.118443; srednia liczba retransmisji: 1.04038
+Nadajnik nr 2: wygenerowane: 79397; nadane: 772; stracone: 72; odebrane: 700; retransmisje: 557; stopa bledow: 0.0932642; srednia liczba retransmisji: 0.795714
+Nadajnik nr 3: wygenerowane: 50534; nadane: 583; stracone: 74; odebrane: 508; retransmisje: 551; stopa bledow: 0.12693; srednia liczba retransmisji: 1.08465
+Nadajnik nr 4: wygenerowane: 43066; nadane: 546; stracone: 69; odebrane: 477; retransmisje: 530; stopa bledow: 0.126374; srednia liczba retransmisji: 1.11111
+Nadajnik nr 5: wygenerowane: 52249; nadane: 628; stracone: 73; odebrane: 555; retransmisje: 553; stopa bledow: 0.116242; srednia liczba retransmisji: 0.996396
+Nadajnik nr 6: wygenerowane: 45935; nadane: 577; stracone: 59; odebrane: 517; retransmisje: 523; stopa bledow: 0.102253; srednia liczba retransmisji: 1.01161
+Nadajnik nr 7: wygenerowane: 51510; nadane: 613; stracone: 69; odebrane: 543; retransmisje: 535; stopa bledow: 0.112561; srednia liczba retransmisji: 0.985267
+Nadajnik nr 8: wygenerowane: 43022; nadane: 534; stracone: 72; odebrane: 461; retransmisje: 547; stopa bledow: 0.134831; srednia liczba retransmisji: 1.18655
+Nadajnik nr 9: wygenerowane: 53634; nadane: 626; stracone: 73; odebrane: 553; retransmisje: 564; stopa bledow: 0.116613; srednia liczba retransmisji: 1.01989
+Laczna liczba wygenerowanych pakietow: 512941
+Laczna liczba nadanych pakietow: 6034
+Laczna liczba straconych pakietow: 696
+Laczna liczba odebranych pakietow: 5333
+Srednia pakietowa stopa bledow: 0.116276
+Maksymalna pakietowa stopa bledow: 0.134831; nadajnik nr: 8
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 1.01931
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 106.66
+Srednie opoznienie pakietu: 62.7033
+Sredni czas oczekiwania: 31.3838
+Statystyki symulacji nr: 5 dla lambdy: 0.0037
+Nadajnik nr 0: wygenerowane: 51676; nadane: 577; stracone: 87; odebrane: 490; retransmisje: 572; stopa bledow: 0.15078; srednia liczba retransmisji: 1.16735
+Nadajnik nr 1: wygenerowane: 45049; nadane: 556; stracone: 72; odebrane: 483; retransmisje: 525; stopa bledow: 0.129496; srednia liczba retransmisji: 1.08696
+Nadajnik nr 2: wygenerowane: 52876; nadane: 606; stracone: 74; odebrane: 532; retransmisje: 563; stopa bledow: 0.122112; srednia liczba retransmisji: 1.05827
+Nadajnik nr 3: wygenerowane: 47297; nadane: 591; stracone: 73; odebrane: 517; retransmisje: 557; stopa bledow: 0.123519; srednia liczba retransmisji: 1.07737
+Nadajnik nr 4: wygenerowane: 59280; nadane: 666; stracone: 70; odebrane: 595; retransmisje: 565; stopa bledow: 0.105105; srednia liczba retransmisji: 0.94958
+Nadajnik nr 5: wygenerowane: 57333; nadane: 628; stracone: 71; odebrane: 556; retransmisje: 549; stopa bledow: 0.113057; srednia liczba retransmisji: 0.98741
+Nadajnik nr 6: wygenerowane: 61329; nadane: 693; stracone: 75; odebrane: 618; retransmisje: 561; stopa bledow: 0.108225; srednia liczba retransmisji: 0.907767
+Nadajnik nr 7: wygenerowane: 47756; nadane: 568; stracone: 65; odebrane: 503; retransmisje: 519; stopa bledow: 0.114437; srednia liczba retransmisji: 1.03181
+Nadajnik nr 8: wygenerowane: 55208; nadane: 603; stracone: 65; odebrane: 537; retransmisje: 523; stopa bledow: 0.107794; srednia liczba retransmisji: 0.973929
+Nadajnik nr 9: wygenerowane: 52107; nadane: 600; stracone: 81; odebrane: 518; retransmisje: 571; stopa bledow: 0.135; srednia liczba retransmisji: 1.10232
+Laczna liczba wygenerowanych pakietow: 529911
+Laczna liczba nadanych pakietow: 6088
+Laczna liczba straconych pakietow: 733
+Laczna liczba odebranych pakietow: 5349
+Srednia pakietowa stopa bledow: 0.120953
+Maksymalna pakietowa stopa bledow: 0.15078; nadajnik nr: 0
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 1.02916
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 106.98
+Srednie opoznienie pakietu: 64.4247
+Sredni czas oczekiwania: 32.792
+Statystyki symulacji nr: 6 dla lambdy: 0.0037
+Nadajnik nr 0: wygenerowane: 54836; nadane: 617; stracone: 78; odebrane: 538; retransmisje: 563; stopa bledow: 0.126418; srednia liczba retransmisji: 1.04647
+Nadajnik nr 1: wygenerowane: 46338; nadane: 576; stracone: 70; odebrane: 505; retransmisje: 521; stopa bledow: 0.121528; srednia liczba retransmisji: 1.03168
+Nadajnik nr 2: wygenerowane: 47610; nadane: 570; stracone: 75; odebrane: 495; retransmisje: 574; stopa bledow: 0.131579; srednia liczba retransmisji: 1.1596
+Nadajnik nr 3: wygenerowane: 57341; nadane: 615; stracone: 76; odebrane: 538; retransmisje: 549; stopa bledow: 0.123577; srednia liczba retransmisji: 1.02045
+Nadajnik nr 4: wygenerowane: 47311; nadane: 595; stracone: 61; odebrane: 533; retransmisje: 514; stopa bledow: 0.102521; srednia liczba retransmisji: 0.964353
+Nadajnik nr 5: wygenerowane: 57900; nadane: 639; stracone: 70; odebrane: 569; retransmisje: 551; stopa bledow: 0.109546; srednia liczba retransmisji: 0.968366
+Nadajnik nr 6: wygenerowane: 45442; nadane: 580; stracone: 69; odebrane: 510; retransmisje: 511; stopa bledow: 0.118966; srednia liczba retransmisji: 1.00196
+Nadajnik nr 7: wygenerowane: 47925; nadane: 555; stracone: 66; odebrane: 489; retransmisje: 555; stopa bledow: 0.118919; srednia liczba retransmisji: 1.13497
+Nadajnik nr 8: wygenerowane: 50115; nadane: 588; stracone: 72; odebrane: 515; retransmisje: 543; stopa bledow: 0.122449; srednia liczba retransmisji: 1.05437
+Nadajnik nr 9: wygenerowane: 54318; nadane: 631; stracone: 73; odebrane: 557; retransmisje: 579; stopa bledow: 0.115689; srednia liczba retransmisji: 1.0395
+Laczna liczba wygenerowanych pakietow: 509136
+Laczna liczba nadanych pakietow: 5966
+Laczna liczba straconych pakietow: 710
+Laczna liczba odebranych pakietow: 5249
+Srednia pakietowa stopa bledow: 0.119119
+Maksymalna pakietowa stopa bledow: 0.131579; nadajnik nr: 2
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 1.0402
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 104.98
+Srednie opoznienie pakietu: 65.4894
+Sredni czas oczekiwania: 33.2074
+Statystyki symulacji nr: 7 dla lambdy: 0.0037
+Nadajnik nr 0: wygenerowane: 55137; nadane: 602; stracone: 73; odebrane: 528; retransmisje: 581; stopa bledow: 0.121262; srednia liczba retransmisji: 1.10038
+Nadajnik nr 1: wygenerowane: 50674; nadane: 598; stracone: 66; odebrane: 531; retransmisje: 541; stopa bledow: 0.110368; srednia liczba retransmisji: 1.01883
+Nadajnik nr 2: wygenerowane: 50730; nadane: 615; stracone: 82; odebrane: 532; retransmisje: 549; stopa bledow: 0.133333; srednia liczba retransmisji: 1.03195
+Nadajnik nr 3: wygenerowane: 49414; nadane: 587; stracone: 66; odebrane: 520; retransmisje: 549; stopa bledow: 0.112436; srednia liczba retransmisji: 1.05577
+Nadajnik nr 4: wygenerowane: 48619; nadane: 594; stracone: 69; odebrane: 524; retransmisje: 544; stopa bledow: 0.116162; srednia liczba retransmisji: 1.03817
+Nadajnik nr 5: wygenerowane: 49894; nadane: 590; stracone: 74; odebrane: 515; retransmisje: 550; stopa bledow: 0.125424; srednia liczba retransmisji: 1.06796
+Nadajnik nr 6: wygenerowane: 47078; nadane: 569; stracone: 74; odebrane: 494; retransmisje: 564; stopa bledow: 0.130053; srednia liczba retransmisji: 1.1417
+Nadajnik nr 7: wygenerowane: 49561; nadane: 560; stracone: 82; odebrane: 477; retransmisje: 596; stopa bledow: 0.146429; srednia liczba retransmisji: 1.24948
+Nadajnik nr 8: wygenerowane: 49035; nadane: 591; stracone: 72; odebrane: 520; retransmisje: 552; stopa bledow: 0.121827; srednia liczba retransmisji: 1.06154
+Nadajnik nr 9: wygenerowane: 56840; nadane: 658; stracone: 80; odebrane: 577; retransmisje: 567; stopa bledow: 0.121581; srednia liczba retransmisji: 0.982669
+Laczna liczba wygenerowanych pakietow: 506982
+Laczna liczba nadanych pakietow: 5964
+Laczna liczba straconych pakietow: 738
+Laczna liczba odebranych pakietow: 5218
+Srednia pakietowa stopa bledow: 0.123887
+Maksymalna pakietowa stopa bledow: 0.146429; nadajnik nr: 7
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 1.07187
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 104.36
+Srednie opoznienie pakietu: 65.231
+Sredni czas oczekiwania: 32.9627
+Statystyki symulacji nr: 8 dla lambdy: 0.0037
+Nadajnik nr 0: wygenerowane: 48301; nadane: 572; stracone: 80; odebrane: 491; retransmisje: 546; stopa bledow: 0.13986; srednia liczba retransmisji: 1.11202
+Nadajnik nr 1: wygenerowane: 52570; nadane: 642; stracone: 67; odebrane: 574; retransmisje: 525; stopa bledow: 0.104361; srednia liczba retransmisji: 0.914634
+Nadajnik nr 2: wygenerowane: 53853; nadane: 633; stracone: 75; odebrane: 559; retransmisje: 523; stopa bledow: 0.118483; srednia liczba retransmisji: 0.935599
+Nadajnik nr 3: wygenerowane: 48336; nadane: 571; stracone: 57; odebrane: 514; retransmisje: 499; stopa bledow: 0.0998249; srednia liczba retransmisji: 0.970817
+Nadajnik nr 4: wygenerowane: 48705; nadane: 586; stracone: 65; odebrane: 520; retransmisje: 522; stopa bledow: 0.110922; srednia liczba retransmisji: 1.00385
+Nadajnik nr 5: wygenerowane: 47808; nadane: 567; stracone: 68; odebrane: 499; retransmisje: 529; stopa bledow: 0.119929; srednia liczba retransmisji: 1.06012
+Nadajnik nr 6: wygenerowane: 51956; nadane: 612; stracone: 68; odebrane: 544; retransmisje: 529; stopa bledow: 0.111111; srednia liczba retransmisji: 0.972426
+Nadajnik nr 7: wygenerowane: 58392; nadane: 653; stracone: 66; odebrane: 587; retransmisje: 522; stopa bledow: 0.101072; srednia liczba retransmisji: 0.889267
+Nadajnik nr 8: wygenerowane: 47945; nadane: 542; stracone: 61; odebrane: 481; retransmisje: 503; stopa bledow: 0.112546; srednia liczba retransmisji: 1.04574
+Nadajnik nr 9: wygenerowane: 62142; nadane: 685; stracone: 81; odebrane: 604; retransmisje: 561; stopa bledow: 0.118248; srednia liczba retransmisji: 0.928808
+Laczna liczba wygenerowanych pakietow: 520008
+Laczna liczba nadanych pakietow: 6063
+Laczna liczba straconych pakietow: 688
+Laczna liczba odebranych pakietow: 5373
+Srednia pakietowa stopa bledow: 0.113636
+Maksymalna pakietowa stopa bledow: 0.13986; nadajnik nr: 0
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 0.978783
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.46
+Srednie opoznienie pakietu: 64.8733
+Sredni czas oczekiwania: 34.448
+Statystyki symulacji nr: 9 dla lambdy: 0.0037
+Nadajnik nr 0: wygenerowane: 56222; nadane: 637; stracone: 75; odebrane: 562; retransmisje: 577; stopa bledow: 0.117739; srednia liczba retransmisji: 1.02669
+Nadajnik nr 1: wygenerowane: 50907; nadane: 606; stracone: 69; odebrane: 536; retransmisje: 575; stopa bledow: 0.113861; srednia liczba retransmisji: 1.07276
+Nadajnik nr 2: wygenerowane: 51079; nadane: 588; stracone: 74; odebrane: 514; retransmisje: 558; stopa bledow: 0.12585; srednia liczba retransmisji: 1.0856
+Nadajnik nr 3: wygenerowane: 58880; nadane: 637; stracone: 82; odebrane: 555; retransmisje: 577; stopa bledow: 0.128728; srednia liczba retransmisji: 1.03964
+Nadajnik nr 4: wygenerowane: 48947; nadane: 589; stracone: 79; odebrane: 509; retransmisje: 602; stopa bledow: 0.134126; srednia liczba retransmisji: 1.18271
+Nadajnik nr 5: wygenerowane: 56518; nadane: 613; stracone: 86; odebrane: 528; retransmisje: 600; stopa bledow: 0.140294; srednia liczba retransmisji: 1.13636
+Nadajnik nr 6: wygenerowane: 60395; nadane: 629; stracone: 94; odebrane: 535; retransmisje: 618; stopa bledow: 0.149444; srednia liczba retransmisji: 1.15514
+Nadajnik nr 7: wygenerowane: 55285; nadane: 630; stracone: 74; odebrane: 555; retransmisje: 572; stopa bledow: 0.11746; srednia liczba retransmisji: 1.03063
+Nadajnik nr 8: wygenerowane: 56237; nadane: 614; stracone: 71; odebrane: 542; retransmisje: 579; stopa bledow: 0.115635; srednia liczba retransmisji: 1.06827
+Nadajnik nr 9: wygenerowane: 54505; nadane: 599; stracone: 82; odebrane: 516; retransmisje: 605; stopa bledow: 0.136895; srednia liczba retransmisji: 1.17248
+Laczna liczba wygenerowanych pakietow: 548975
+Laczna liczba nadanych pakietow: 6142
+Laczna liczba straconych pakietow: 786
+Laczna liczba odebranych pakietow: 5352
+Srednia pakietowa stopa bledow: 0.128003
+Maksymalna pakietowa stopa bledow: 0.149444; nadajnik nr: 6
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 1.09548
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 107.04
+Srednie opoznienie pakietu: 65.1798
+Sredni czas oczekiwania: 32.3714
+Statystyki symulacji nr: 10 dla lambdy: 0.0037
+Nadajnik nr 0: wygenerowane: 52062; nadane: 609; stracone: 69; odebrane: 539; retransmisje: 569; stopa bledow: 0.1133; srednia liczba retransmisji: 1.05566
+Nadajnik nr 1: wygenerowane: 59423; nadane: 663; stracone: 77; odebrane: 587; retransmisje: 566; stopa bledow: 0.116139; srednia liczba retransmisji: 0.964225
+Nadajnik nr 2: wygenerowane: 51327; nadane: 606; stracone: 85; odebrane: 520; retransmisje: 598; stopa bledow: 0.140264; srednia liczba retransmisji: 1.15
+Nadajnik nr 3: wygenerowane: 43619; nadane: 523; stracone: 76; odebrane: 446; retransmisje: 581; stopa bledow: 0.145315; srednia liczba retransmisji: 1.30269
+Nadajnik nr 4: wygenerowane: 52552; nadane: 615; stracone: 72; odebrane: 543; retransmisje: 570; stopa bledow: 0.117073; srednia liczba retransmisji: 1.04972
+Nadajnik nr 5: wygenerowane: 51487; nadane: 607; stracone: 76; odebrane: 530; retransmisje: 588; stopa bledow: 0.125206; srednia liczba retransmisji: 1.10943
+Nadajnik nr 6: wygenerowane: 49490; nadane: 577; stracone: 81; odebrane: 495; retransmisje: 611; stopa bledow: 0.140381; srednia liczba retransmisji: 1.23434
+Nadajnik nr 7: wygenerowane: 52969; nadane: 601; stracone: 86; odebrane: 515; retransmisje: 615; stopa bledow: 0.143095; srednia liczba retransmisji: 1.19417
+Nadajnik nr 8: wygenerowane: 47267; nadane: 571; stracone: 79; odebrane: 491; retransmisje: 574; stopa bledow: 0.138354; srednia liczba retransmisji: 1.16904
+Nadajnik nr 9: wygenerowane: 48192; nadane: 592; stracone: 71; odebrane: 521; retransmisje: 556; stopa bledow: 0.119932; srednia liczba retransmisji: 1.06718
+Laczna liczba wygenerowanych pakietow: 508388
+Laczna liczba nadanych pakietow: 5964
+Laczna liczba straconych pakietow: 772
+Laczna liczba odebranych pakietow: 5187
+Srednia pakietowa stopa bledow: 0.129906
+Maksymalna pakietowa stopa bledow: 0.145315; nadajnik nr: 3
+Srednia liczba retransmisji pakietow (poprawnie odebranych): 1.12358
+Przeplywnosc systemu w jednostce czasu (pakiety odebrane na sekunde): 103.74
+Srednie opoznienie pakietu: 65.0538
+Sredni czas oczekiwania: 31.9252
+

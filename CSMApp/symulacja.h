@@ -45,8 +45,6 @@ public:
   void DodajDoKalendarza(Zdarzenie* zd);
   void UsunZKalendarza();
 
-  //void UstawKolor(string numer);
-
   double Zegar() { return zegar_; }
 
   double Lambda() { return lambda_; }

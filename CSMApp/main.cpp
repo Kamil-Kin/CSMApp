@@ -22,7 +22,7 @@ int main()
   Statystyka* statystyka = new Statystyka();
   Logi* ptr_logi = new Logi();
   Ziarno* ziarno = new Ziarno();
-  ziarno->PobierzZiarnoZPliku();
+  ziarno->GeneracjaZiaren();
 
   //Generacja histogramów
   //Histogram histogram;

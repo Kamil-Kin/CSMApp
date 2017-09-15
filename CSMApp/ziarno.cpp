@@ -12,20 +12,20 @@ Ziarno::~Ziarno()
 void Ziarno::GeneracjaZiaren()
 {
   int temp;
-  //fstream plik;
-  //plik.open("ziarno.txt", ios::in | ios::out | ios::trunc);
-  //if (plik.good() == true) {
+  fstream plik;
+  plik.open("ziarno.txt", ios::in | ios::out | ios::trunc);
+  if (plik.good() == true) {
     for (int i = 0; i < liczba_ziaren_; ++i) 
     {
       for (int j = 0; j < odstep_ziaren_; ++j) 
         uniform_->Generacja01();
       temp = uniform_->getKernel();
       ziarna[i] = temp;
-      //plik << temp << endl;
+      plik << temp << endl;
     }
-    //plik.close();
-  //}
-  //else cout << "Nie uzyskano dostepu do pliku" << endl;
+    plik.close();
+  }
+  else cout << "Nie uzyskano dostepu do pliku" << endl;
 }
 
 void Ziarno::PobierzZiarnoZPliku()
